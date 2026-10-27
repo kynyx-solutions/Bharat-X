@@ -315,7 +315,7 @@ export default function ContactPage() {
               hover="gradient"
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
-              Let’s Build What <span className="text-[#FE7701]">Comes Next.</span>
+              Let’s Build What <span className="text-[#F54900]">Comes Next.</span>
             </AnimatedHeading>
 
             {/* CTA */}
@@ -332,7 +332,7 @@ export default function ContactPage() {
                   onClick={() => {
                     document.getElementById("contact-form-section")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
                 >
                   <span>Start a Conversation</span>
                   <Icon
@@ -386,7 +386,7 @@ export default function ContactPage() {
           <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {pathways.map((p) => {
               const ctaClass =
-                "inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-[#FEA04D] hover:text-white transition-colors group/link";
+                "inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-[#FF8904] hover:text-white transition-colors group/link";
               const ctaBody = (
                 <>
                   <span>{p.cta}</span>
@@ -408,7 +408,7 @@ export default function ContactPage() {
                         className="mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                       />
 
-                      <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FEA04D] transition-colors">
+                      <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
                         {p.title}
                       </AnimatedHeading>
 
@@ -1047,7 +1047,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="relative my-6 text-center">
-                  <FeatureIcon name="building-2" accent="#FE7701" size={48} className="mx-auto mb-3 fx-icon-pop" />
+                  <FeatureIcon name="building-2" accent="#F54900" size={48} className="mx-auto mb-3 fx-icon-pop" />
                   <span className="font-heading text-lg font-medium text-white block">
                     Pan-India Operating Presence
                   </span>
@@ -1073,13 +1073,13 @@ export default function ContactPage() {
         className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#FE7701]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#FE7701]/40 bg-[#FE7701]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701] font-bold shadow-xs mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#FE7701] shadow-[0_0_8px_#FE7701]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>CO-BUILD THE FUTURE</span>
             </div>
 
@@ -1107,7 +1107,7 @@ export default function ContactPage() {
                   onClick={() => {
                     document.getElementById("contact-form-section")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-9 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-9 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
                 >
                   <span>Talk to Us</span>
                   <Icon
@@ -1130,7 +1130,7 @@ export default function ContactPage() {
 
             {/* Signature Conclusion */}
             <div className="mt-12 pt-8 border-t border-white/15 max-w-xl mx-auto">
-              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#FE7701] font-bold">
+              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
                 Building Businesses. Enabling Bharat.
               </p>
             </div>

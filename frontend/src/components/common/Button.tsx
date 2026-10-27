@@ -18,14 +18,14 @@ const base =
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "fx-shine bg-[#3026B3] text-white font-semibold shadow-md shadow-[#3026B3]/25 hover:bg-[#211B72] hover:shadow-[0_8px_30px_-4px_rgba(48,38,179,0.4)] dark:bg-[#FE7701] dark:text-[#111827] dark:hover:bg-[#e56b01] dark:hover:shadow-[0_8px_35px_-4px_rgba(254,119,1,0.5)]",
+    "fx-shine bg-[#3026B3] text-white font-semibold shadow-md shadow-[#3026B3]/25 hover:bg-[#211B72] hover:shadow-[0_8px_30px_-4px_rgba(48,38,179,0.4)] dark:bg-[#F54900] dark:text-[#111827] dark:hover:bg-[#ca3500] dark:hover:shadow-[0_8px_35px_-4px_rgba(245,73,0,0.5)]",
   secondary:
-    "border border-[#E3E5EF] bg-white text-[#111827] font-semibold shadow-sm hover:border-[#3026B3] hover:text-[#3026B3] hover:shadow-md dark:border-white/20 dark:bg-white/[0.08] dark:text-white dark:hover:border-[#FE7701] dark:hover:text-[#FE7701] dark:hover:bg-white/[0.12]",
+    "border border-[#E3E5EF] bg-white text-[#111827] font-semibold shadow-sm hover:border-[#3026B3] hover:text-[#3026B3] hover:shadow-md dark:border-white/20 dark:bg-white/[0.08] dark:text-white dark:hover:border-[#F54900] dark:hover:text-[#F54900] dark:hover:bg-white/[0.12]",
   teal: "fx-shine bg-[#00B8D9] text-white font-semibold shadow-md shadow-[#00B8D9]/25 hover:bg-[#009eb8] hover:shadow-[0_8px_30px_-4px_rgba(0,184,217,0.4)] dark:bg-[#00B8D9] dark:text-white dark:hover:bg-[#00c9ec]",
   ghost:
-    "border border-[#E3E5EF] bg-white/80 text-[#596579] backdrop-blur-sm shadow-sm hover:border-[#3026B3] hover:text-[#111827] hover:bg-white dark:border-white/15 dark:bg-white/[0.04] dark:text-ink-200 dark:hover:border-[#FE7701] dark:hover:text-white",
+    "border border-[#E3E5EF] bg-white/80 text-[#596579] backdrop-blur-sm shadow-sm hover:border-[#3026B3] hover:text-[#111827] hover:bg-white dark:border-white/15 dark:bg-white/[0.04] dark:text-ink-200 dark:hover:border-[#F54900] dark:hover:text-white",
   ember:
-    "bg-[#FE7701] text-[#111827] font-semibold shadow-md shadow-[#FE7701]/25 hover:bg-[#e56b01] hover:shadow-[0_8px_30px_-4px_rgba(254,119,1,0.4)] dark:bg-[#FE7701] dark:text-[#111827] dark:hover:bg-[#ffd054]",
+    "bg-[#F54900] text-[#111827] font-semibold shadow-md shadow-[#F54900]/25 hover:bg-[#ca3500] hover:shadow-[0_8px_30px_-4px_rgba(245,73,0,0.4)] dark:bg-[#F54900] dark:text-[#111827] dark:hover:bg-[#ffd054]",
   paper:
     "bg-[#111827] text-white font-semibold shadow-md hover:bg-[#211B72] hover:shadow-lg dark:bg-[#FAF9F6] dark:text-[#111827] dark:hover:bg-white",
 };

@@ -11,14 +11,14 @@ import FooterOrbScene from "../three/FooterOrbScene";
       <div aria-hidden className="grid-bg grid-bg-fade absolute inset-0 opacity-40 dark:opacity-60" />
       <div className="container-x relative flex flex-col items-center justify-between gap-10 lg:flex-row">
         <div className="max-w-2xl text-center lg:text-left">
-          <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-[#FE7701]/30 bg-[#FE7701]/10 px-3.5 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701]">
+          <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-[#F54900]/30 bg-[#F54900]/10 px-3.5 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900]">
             <DuotoneIcon name="sparkles" size={14} />
             <span>Connect with BharatX Group</span>
           </div>
           <h2 className="font-heading text-3xl font-medium leading-[1.1] tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl md:text-5xl lg:text-6xl transition-colors duration-300 hover:text-[#3026B3] dark:hover:text-gold-400">
             BUILDING THE FOUNDATIONS
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3026B3] via-[#FE7701] to-[#00B8D9]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3026B3] via-[#F54900] to-[#00B8D9]">
               OF MODERN BHARAT.
             </span>
           </h2>
@@ -29,7 +29,7 @@ import FooterOrbScene from "../three/FooterOrbScene";
             <Link
               to="/contact"
               data-cursor="button"
-              className="group fx-press fx-shine inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#3026B3] px-8 py-4 text-[15px] font-semibold text-white shadow-md shadow-[#3026B3]/25 transition-all duration-300 hover:bg-[#211B72] hover:shadow-[0_10px_35px_-8px_rgba(48,38,179,0.45)] dark:bg-[#FE7701] dark:text-[#111827] dark:hover:bg-[#e56b01]"
+              className="group fx-press fx-shine inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#3026B3] px-8 py-4 text-[15px] font-semibold text-white shadow-md shadow-[#3026B3]/25 transition-all duration-300 hover:bg-[#211B72] hover:shadow-[0_10px_35px_-8px_rgba(48,38,179,0.45)] dark:bg-[#F54900] dark:text-[#111827] dark:hover:bg-[#ca3500]"
             >
               Talk to BharatX
               <Icon
@@ -41,7 +41,7 @@ import FooterOrbScene from "../three/FooterOrbScene";
             </Link>
             <Link
               to="/verticals"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full border border-[#E3E5EF] bg-white px-8 py-4 text-[15px] font-semibold text-[#111827] shadow-sm transition-all duration-300 hover:border-[#3026B3] hover:text-[#3026B3] hover:shadow-md dark:border-white/15 dark:bg-white/[0.06] dark:text-white dark:hover:border-[#FE7701]"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full border border-[#E3E5EF] bg-white px-8 py-4 text-[15px] font-semibold text-[#111827] shadow-sm transition-all duration-300 hover:border-[#3026B3] hover:text-[#3026B3] hover:shadow-md dark:border-white/15 dark:bg-white/[0.06] dark:text-white dark:hover:border-[#F54900]"
             >
               Explore Services
             </Link>
@@ -82,7 +82,7 @@ export function Footer() {
               </span>
             </Link>
 
-            <p className="mt-2.5 font-sans text-xs sm:text-[13px] uppercase tracking-[0.01em] text-[#FE7701] font-semibold">
+            <p className="mt-2.5 font-sans text-xs sm:text-[13px] uppercase tracking-[0.01em] text-[#F54900] font-semibold">
               Building Businesses. Enabling Bharat.
             </p>
 
@@ -205,7 +205,7 @@ export function Footer() {
                       href={`mailto:${brandConfig.contact.email}`}
                       className="inline-flex items-center gap-2 text-[#596579] hover:text-[#3026B3] transition-colors"
                     >
-                      <DuotoneIcon name="mail" size={14} className="shrink-0 text-[#FE7701]" />
+                      <DuotoneIcon name="mail" size={14} className="shrink-0 text-[#F54900]" />
                       <span>{brandConfig.contact.email}</span>
                     </a>
                   </div>

@@ -1,195 +1,346 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { companies } from "../../data/companies";
+import { cn } from "../../utils/cn";
 import { Icon } from "../../utils/icons";
+import { cardImage } from "../common/CardSurface";
 import { SectionTransition } from "../motion/SectionTransition";
-import { Stagger, StaggerItem } from "../motion/Stagger";
-import { TiltCard } from "../three/TiltCard";
-import { CardFill } from "../common/CardSurface";
 
-interface EcosystemCard {
+interface Vertical {
   id: string;
-  sector: string;
-  description: string;
-  to: string;
-  logo?: string;
-  accent: string;
-  /** Darker accent shade for the arrow icon on its white circle. */
-  accentText: string;
-  borderHover: string;
+  label: string;
+  /**
+   * Two plain-language paragraphs, adapted from what the site already says about each business
+   * (data/companies.ts, data/industries.ts, the Businesses and Impact pages). Domain only — no company names.
+   */
+  lead: string;
+  detail: string;
+  /** The domain's business website, or an in-site anchor when it has no site yet. */
+  href: string;
+  image: string;
 }
 
-const ecosystemCards: EcosystemCard[] = [
+function company(id: string) {
+  const found = companies.find((c) => c.id === id);
+  if (!found) throw new Error(`Unknown company: ${id}`);
+  return found;
+}
+
+const verticals: Vertical[] = [
   {
-    id: "labs",
-    sector: "Innovation & Research",
-    description: "Deep-tech climate R&D, open environmental telemetry and applied research.",
-    to: "/verticals#labs",
-    logo: "/Bharatxlabs_logo.svg",
-    accent: "#0D9488",
-    accentText: "text-[#0F766E]",
-    borderHover: "hover:border-[#0D9488]",
+    id: "ai-deeptech",
+    label: "AI & Deeptech",
+    lead: "We build AI that works inside everyday business. It reads documents, predicts what comes next, automates routine work and helps teams make better decisions, all within the systems people already use.",
+    detail:
+      "Every system we deliver is built to run reliably, not just to impress in a demo. We measure it, document it and hand it over so the people who use it can own it. Our test is simple: does the business run better with it?",
+    href: company("aixperts").website,
+    image: cardImage("innovation-01-frontier-multilingual-ai"),
   },
   {
-    id: "ventures",
-    sector: "Capital & Venture Building",
-    description: "Patient balance-sheet capital, venture architecture and generational enterprise scaling.",
-    to: "/verticals#ventures",
-    logo: "/Ventures_logo.png",
-    accent: "#211B72",
-    accentText: "text-[#211B72]",
-    borderHover: "hover:border-[#211B72]",
+    id: "innovation",
+    label: "Innovation & Research",
+    lead: "Innovation is how we look ahead. We invest in research, experiments and new ideas that can grow into the businesses of tomorrow.",
+    detail:
+      "Our work spans AI that understands India's many languages, smart machines for the factory floor and science for better farming. The goal is to build key technology here in India, so our industries don't have to depend on others for it.",
+    href: "/verticals#labs",
+    image: cardImage("innovation-03-frontier-precision-robotics"),
   },
   {
-    id: "tech-ai",
-    sector: "Deep-Tech & AI",
-    description: "Enterprise artificial intelligence platforms, sovereign compute and automation systems.",
-    to: "/verticals#tech-ai",
-    logo: "/Ai-Experts_logo.png",
-    accent: "#4B40D4",
-    accentText: "text-[#4B40D4]",
-    borderHover: "hover:border-[#4B40D4]",
+    id: "agri-food",
+    label: "Agri & Food",
+    lead: "We connect Indian farms with buyers at home and around the world. We source crops at the farm, process them to export standards and get them ready for global markets.",
+    detail:
+      "Every batch is recorded from the farm it came from to the ship it leaves on, so buyers know exactly what they are getting. We treat farming as a business: inputs are planned, yields are measured and people are trained to run it well.",
+    href: company("bharatx-agro").website,
+    image: cardImage("innovation-04-frontier-agronomic-deeptech"),
   },
   {
-    id: "agri",
-    sector: "Agriculture & Food",
-    description: "Origin sourcing, certified processing and high-integrity agri-commodity supply chains.",
-    to: "/verticals#agriculture",
-    logo: "/Bharatxagro_logo.png",
-    accent: "#15966B",
-    accentText: "text-[#15966B]",
-    borderHover: "hover:border-[#15966B]",
+    id: "capital",
+    label: "Capital",
+    lead: "We don't just invest in businesses, we help build them. We bring capital, strategy and hands-on support to founders and growing companies.",
+    detail:
+      "We work alongside teams from the first idea to the first customers and beyond: shaping the business model, setting up operations and planning how to fund growth. We take a long-term view and back companies that can keep growing for a decade.",
+    href: company("ventures").website,
+    image: "/companies/bharatx-ventures/hero.jpg",
   },
   {
-    id: "infra",
-    sector: "Infrastructure & Engineering",
-    description: "Arterial transport, civil engineering and sovereign industrial infrastructure.",
-    to: "/verticals#infrastructure",
-    logo: "/Infra_logo1.png",
-    accent: "#3026B3",
-    accentText: "text-[#3026B3]",
-    borderHover: "hover:border-[#3026B3]",
+    id: "infratech",
+    label: "Infratech & Heavy Engineering",
+    lead: "We build the infrastructure a growing India runs on: roads, civil structures, industrial estates, urban works and the utilities that serve them.",
+    detail:
+      "Design, construction and operations sit under one roof. Our projects are built for the real loads they will carry, checked at every stage and handed over with clear records. We judge our work by how it holds up after years of monsoons, traffic and use.",
+    href: company("infratech").website,
+    image: "/companies/bharatx-infratech/hero.jpg",
   },
   {
-    id: "foundation",
-    sector: "Education & Social Impact",
-    description: "Education, skills and community programmes that widen opportunity across India.",
-    to: "/verticals#foundation",
-    accent: "#E06901",
-    accentText: "text-[#B45309]",
-    borderHover: "hover:border-[#E06901]",
-  },
-  {
-    id: "manuf",
-    sector: "Industrial Manufacturing",
-    description: "Precision mobility solutions, heavy-duty industrial casters and automation engineering.",
-    to: "/verticals#manufacturing",
-    logo: "/Casters_logo.png",
-    accent: "#00B8D9",
-    accentText: "text-[#008299]",
-    borderHover: "hover:border-[#00B8D9]",
+    id: "manufacturing",
+    label: "Industrial Manufacturing",
+    lead: "We make precision parts and products for industry, including caster wheels and mobility solutions used in factories, warehouses, hospitals and shops.",
+    detail:
+      "Each product is built to the exact specification our customers need, from load rating and materials to brakes and finish. We test what we make before it ships, and every part can be traced, so customers can rely on it for the life of their machines.",
+    href: company("casters").website,
+    image: cardImage("services-15-horizon-new-industrial"),
   },
   {
     id: "packaging",
-    sector: "Packaging & Materials",
-    description: "High-efficiency sustainable packaging materials, corrugated boxes and industrial protection.",
-    to: "/verticals#packaging",
-    accent: "#D97706",
-    accentText: "text-[#B45309]",
-    borderHover: "hover:border-[#D97706]",
+    label: "Packaging & Materials",
+    lead: "We supply the packaging that keeps goods safe on the move: corrugated boxes, protective cushioning, industrial packaging materials and bulk logistics containers.",
+    detail:
+      "Our focus is packaging that is efficient and sustainable. We use eco-conscious materials to protect products as they travel through the supply chain, from the factory to the customer.",
+    // BharatX Enterprises' website, as listed on the Businesses page (it isn't in data/companies.ts).
+    href: "https://srm.kynyx.com/",
+    image: cardImage("services-13-horizon-packaging"),
+  },
+  {
+    id: "education-social",
+    label: "Education & Social",
+    lead: "We believe growth should open doors for people. Through the wider Group, we support education, skills and opportunity across India.",
+    detail:
+      "We are building programmes for education, skills training and community development, so that more people can take part in India's growth and share in what it creates.",
+    href: "/verticals#foundation",
+    image: cardImage("how-we-build-19-sector-social-impact"),
   },
 ];
 
+const AUTOPLAY_MS = 6000;
+const KEY_STEP: Record<string, number> = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
+const pad = (n: number) => String(n).padStart(2, "0");
+
+/** One block of a panel; blocks fade up in sequence when their panel becomes active. */
+function PanelStep({ show, order, className, children }: { show: boolean; order: number; className?: string; children: ReactNode }) {
+  return (
+    <div
+      className={cn(
+        "transition-[opacity,translate] duration-700 ease-out motion-reduce:transition-none",
+        show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
+        className,
+      )}
+      style={{ transitionDelay: show ? `${order * 70}ms` : "0ms" }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export function BusinessEcosystemGrid() {
+  const reduced = useReducedMotion();
+  const [active, setActive] = useState(0);
+  const [hovering, setHovering] = useState(false);
+  const [keyboardFocus, setKeyboardFocus] = useState(false);
+  const [inView, setInView] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  // No autoplay for reduced-motion users; hover and keyboard focus pause it for everyone else.
+  const playing = !reduced && !hovering && !keyboardFocus && inView;
+  const count = verticals.length;
+
+  // Advance to the next vertical, looping back to the first. Any change of `active` restarts the clock.
+  useEffect(() => {
+    if (!playing) return;
+    const timer = window.setTimeout(() => setActive((i) => (i + 1) % count), AUTOPLAY_MS);
+    return () => window.clearTimeout(timer);
+  }, [active, playing, count]);
+
+  // Only rotate while the section is on screen.
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.35 });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Keep the active tab in view in the mobile tab strip, without scrolling the page.
+  useEffect(() => {
+    const list = listRef.current;
+    const tab = tabRefs.current[active];
+    if (!list || !tab || list.scrollWidth <= list.clientWidth) return;
+    list.scrollTo({
+      left: tab.offsetLeft - (list.clientWidth - tab.offsetWidth) / 2,
+      behavior: reduced ? "auto" : "smooth",
+    });
+  }, [active, reduced]);
+
+  const select = (index: number, focus = false) => {
+    const next = (index + count) % count;
+    setActive(next);
+    if (focus) tabRefs.current[next]?.focus();
+  };
+
+  const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    const step = KEY_STEP[e.key];
+    if (!step) return;
+    e.preventDefault();
+    select(active + step, true);
+  };
+
+  // Pause while a mouse is over the list or the text (touch taps don't count as hovering).
+  const hoverHandlers = {
+    onPointerEnter: (e: PointerEvent) => e.pointerType === "mouse" && setHovering(true),
+    onPointerLeave: (e: PointerEvent) => e.pointerType === "mouse" && setHovering(false),
+  };
+
   return (
     <SectionTransition
       id="businesses"
       aria-label="Our Business Ecosystem"
-      className="relative overflow-hidden bg-white py-6 sm:py-9"
+      className="relative overflow-hidden bg-[#070A1F] py-6 sm:py-9 text-white"
+      onFocus={(e) => (e.target as HTMLElement).matches(":focus-visible") && setKeyboardFocus(true)}
+      onBlur={(e) => !e.currentTarget.contains(e.relatedTarget as Node | null) && setKeyboardFocus(false)}
+      backdrop={
+        <div aria-hidden className="absolute inset-0">
+          {verticals.map((v, i) => (
+            <img
+              key={v.id}
+              src={v.image}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              className={cn(
+                // Fade in, then a slow push-out on the active image.
+                "absolute inset-0 h-full w-full object-cover [transition:opacity_900ms_ease-out,scale_7s_ease-out] motion-reduce:transition-none",
+                i === active ? "opacity-100 scale-100" : "opacity-0 scale-110",
+              )}
+            />
+          ))}
+        </div>
+      }
     >
-      <div className="container-x relative z-10">
-        {/* Header */}
-        <div className="max-w-3xl mb-6 sm:mb-8 group/header">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs cursor-default">
-            <span className="h-2 w-2 rounded-full bg-[#3026B3] transition-transform duration-300 group-hover/header:scale-125" />
-            <span>CORE VERTICALS</span>
-          </div>
-
-          <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#3026B3]">
-            Our Business Ecosystem
+      {/* No overlay on the photos: a soft text shadow keeps the copy legible instead */}
+      {/* Full width like the hero (max-w-none!), so text and list sit near the screen edges on wide screens */}
+      <div ref={rootRef} className="container-x max-w-none! relative z-10 [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_2px_10px_rgba(0,0,0,0.75),0_0_28px_rgba(0,0,0,0.55)]">
+        {/* Header: title + counter */}
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="flex items-center gap-3 whitespace-nowrap font-sans text-base sm:text-lg font-bold uppercase tracking-[0.08em]">
+            <svg viewBox="0 0 24 24" width="16" height="22" aria-hidden className="shrink-0 text-[#F54900]">
+              <path fill="currentColor" d="M12 1C12 1 4 10.5 4 15.5a8 8 0 0 0 16 0C20 10.5 12 1 12 1z" />
+            </svg>
+            Core Verticals
           </h2>
 
-          <p className="mt-3 text-base text-[#596579] max-w-2xl leading-relaxed">
-            Eight foundational verticals powering modern India across physical infrastructure, real-economy production, intelligent technology, and strategic capital.
-          </p>
+          <span aria-hidden className="whitespace-nowrap font-sans text-sm tabular-nums text-white/85 lg:-mr-4 xl:-mr-8">
+            <span className="font-semibold text-white">{pad(active + 1)}</span> / {pad(count)}
+          </span>
         </div>
 
-        {/* 4×2 Compact High-Contrast Grid with Stagger & TiltCard */}
-        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-          {ecosystemCards.map((card) => {
-            const isExternal = card.to.startsWith("http");
-
-            const cardContent = (
-              <TiltCard
-                maxTilt={5}
-                glare={true}
-                data-cursor="card"
-                className={`group relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#0D1026] p-5 sm:p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3] ${card.borderHover}`}
-              >
-                <CardFill accent={card.accent} />
-
-                {/* Top: Vertical Name & Logo */}
-                <div className="relative">
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-heading text-xl sm:text-[1.35rem] font-medium leading-snug tracking-tight text-white group-hover:text-[#FEA04D] transition-colors">
-                      {card.sector}
-                    </h3>
-
-                    {card.logo ? (
-                      <div className="h-8 w-8 rounded-lg bg-white p-1 border border-white/60 flex items-center justify-center shrink-0 shadow-xs transition-transform duration-300 group-hover:scale-110 fx-icon-pop">
-                        <img
-                          src={card.logo}
-                          alt=""
-                          className="max-h-full max-w-full object-contain"
-                        />
-                      </div>
-                    ) : null}
-                  </div>
-
-                  {/* One-Line Description */}
-                  <p className="mt-2.5 text-xs sm:text-[13px] leading-relaxed text-white/90 font-normal">
-                    {card.description}
-                  </p>
-                </div>
-
-                {/* Bottom: Action & Arrow */}
-                <div className="relative mt-6 flex items-center justify-between pt-4 border-t border-white/20">
-                  <span className="font-sans text-[10.5px] uppercase tracking-[0.16em] text-white/85 font-semibold group-hover:text-[#FEA04D] transition-colors">
-                    {isExternal ? "Visit Website" : "Explore Entity"}
-                  </span>
-                  <div
-                    className={`flex h-8 w-8 items-center justify-center rounded-full bg-white border border-white ${card.accentText} transition-all duration-300 group-hover:bg-[#FEA04D] group-hover:border-[#FEA04D] group-hover:text-[#211B72] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shadow-xs`}
+        {/* The list column is narrow and pulled into the container's right padding, so it sits near the edge as on RIL */}
+        <div className="mt-6 sm:mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:gap-16 xl:gap-28">
+          {/* Vertical list — tab strip on mobile, stacked list on desktop */}
+          <div
+            ref={listRef}
+            role="tablist"
+            aria-label="Core verticals"
+            aria-orientation="vertical"
+            onKeyDown={onKeyDown}
+            {...hoverHandlers}
+            className="relative -mx-5 flex gap-6 overflow-x-auto border-b border-white/20 px-5 [scrollbar-width:none] sm:-mx-8 sm:px-8 lg:col-start-2 lg:row-start-1 lg:ml-0 lg:-mr-4 xl:-mr-8 lg:flex-col lg:gap-0 lg:self-center lg:overflow-visible lg:border-b-0 lg:px-0"
+          >
+            {verticals.map((v, i) => {
+              const isActive = i === active;
+              return (
+                <button
+                  key={v.id}
+                  ref={(el) => {
+                    tabRefs.current[i] = el;
+                  }}
+                  type="button"
+                  role="tab"
+                  id={`vertical-tab-${v.id}`}
+                  aria-selected={isActive}
+                  aria-controls={`vertical-panel-${v.id}`}
+                  tabIndex={isActive ? 0 : -1}
+                  data-cursor="link"
+                  onMouseEnter={() => setActive(i)}
+                  onClick={() => select(i)}
+                  className={cn(
+                    "group relative flex shrink-0 items-baseline gap-3 whitespace-nowrap py-3 text-left font-sans text-[13px] sm:text-sm font-semibold uppercase tracking-[0.06em] transition-colors duration-300 focus-visible:outline-hidden focus-visible:text-white lg:whitespace-normal lg:border-b lg:border-white/30 lg:py-[1.15rem] lg:text-[17px]",
+                    isActive ? "text-white" : "text-white/85 hover:text-white",
+                  )}
+                >
+                  <span
+                    aria-hidden
+                    className={cn(
+                      "hidden font-sans text-xs tabular-nums tracking-normal transition-colors lg:inline",
+                      isActive ? "text-[#FF8904]" : "text-white/70 group-hover:text-white",
+                    )}
                   >
-                    <Icon name="arrow-up-right" width={14} height={14} strokeWidth={2.2} />
-                  </div>
-                </div>
-              </TiltCard>
-            );
+                    {pad(i + 1)}
+                  </span>
+                  <span className="transition-transform duration-300 lg:group-hover:translate-x-1">{v.label}</span>
 
-            return (
-              <StaggerItem key={card.id}>
-                {isExternal ? (
-                  <a href={card.to} target="_blank" rel="noopener noreferrer" data-cursor="card" className="block h-full fx-lift">
-                    {cardContent}
-                  </a>
-                ) : (
-                  <Link to={card.to} data-cursor="card" className="block h-full fx-lift">
-                    {cardContent}
-                  </Link>
-                )}
-              </StaggerItem>
-            );
-          })}
-        </Stagger>
+                  {/* Active marker; while autoplay runs it fills up as the countdown to the next vertical */}
+                  {isActive && (
+                    <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] overflow-hidden rounded-full lg:-bottom-px">
+                      <motion.span
+                        key={playing ? `run-${active}` : `hold-${active}`}
+                        className="block h-full origin-left bg-[#F54900]"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={playing ? { duration: AUTOPLAY_MS / 1000, ease: "linear" } : { duration: 0.45, ease: "easeOut" }}
+                      />
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Panels share one grid cell so the section keeps the tallest panel's height */}
+          <div
+            aria-live={playing ? "off" : "polite"}
+            {...hoverHandlers}
+            className="grid lg:col-start-1 lg:row-start-1 lg:max-w-2xl"
+          >
+            {verticals.map((v, i) => {
+              const show = i === active;
+              const isExternal = v.href.startsWith("http");
+              const ctaClass =
+                "inline-flex items-center gap-2 rounded-full border border-white/80 px-6 py-2.5 text-[15px] font-medium text-white transition-colors duration-300 hover:border-[#F54900] hover:bg-[#F54900] hover:text-[#111827]";
+
+              return (
+                <div
+                  key={v.id}
+                  role="tabpanel"
+                  id={`vertical-panel-${v.id}`}
+                  aria-labelledby={`vertical-tab-${v.id}`}
+                  className={cn(
+                    "col-start-1 row-start-1 transition-[visibility] duration-700",
+                    show ? "visible" : "invisible",
+                  )}
+                >
+                  <PanelStep show={show} order={0}>
+                    <h3 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.05] tracking-tight">
+                      {v.label}
+                    </h3>
+                  </PanelStep>
+
+                  {/* Narrow, evenly set copy, like the RIL businesses block */}
+                  <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] space-y-5 text-base sm:text-[17px] lg:text-lg leading-relaxed text-white/95">
+                    <p>{v.lead}</p>
+                    <p>{v.detail}</p>
+                  </PanelStep>
+
+                  <PanelStep show={show} order={2} className="mt-8">
+                    {isExternal ? (
+                      <a href={v.href} target="_blank" rel="noopener noreferrer" data-cursor="button" className={ctaClass}>
+                        Visit website
+                        <Icon name="arrow-up-right" width={16} height={16} strokeWidth={2} />
+                      </a>
+                    ) : (
+                      <Link to={v.href} data-cursor="button" className={ctaClass}>
+                        Read more
+                        <Icon name="arrow-right" width={16} height={16} strokeWidth={2} />
+                      </Link>
+                    )}
+                  </PanelStep>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </SectionTransition>
   );

@@ -12,7 +12,7 @@ export function WhyBharatXBand() {
           <div className="max-w-3xl">
             {/* Eyebrow */}
             <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3]">
-              <span className="text-[#FE7701] animate-pulse">◆</span>
+              <span className="text-[#F54900] animate-pulse">◆</span>
               <span>WHY BHARATX</span>
             </div>
 
@@ -20,7 +20,7 @@ export function WhyBharatXBand() {
             <h2 className="mt-4 font-heading text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-[#111827] hover:text-[#211B72] transition-colors duration-300">
               Built for Scale.
               <br />
-              <span className="text-[#3026B3] hover:text-[#FE7701] transition-colors duration-300">Engineered for Sovereignty.</span>
+              <span className="text-[#3026B3] hover:text-[#F54900] transition-colors duration-300">Engineered for Sovereignty.</span>
             </h2>
 
             <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-sans">

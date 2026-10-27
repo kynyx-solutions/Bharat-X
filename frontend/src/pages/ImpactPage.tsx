@@ -71,7 +71,7 @@ const impactAreas: ImpactArea[] = [
       "Through BharatX Foundation and the wider Group ecosystem, we aim to support education, skills and opportunity.",
     entityName: "BharatX Foundation",
     image: "/assets/backgrounds/impact-story.jpg",
-    accent: "#E06901",
+    accent: "#F54900",
     link: "/verticals#foundation",
   },
   {
@@ -158,7 +158,7 @@ const futureFocusAreas: { step: string; headline: string; detail: string; icon: 
     headline: "Create jobs, capabilities and opportunities.",
     detail: "Equipping grassroots producers, industrial trades, and engineering specialists across Bharat.",
     icon: "trending-up",
-    accent: "#E06901",
+    accent: "#F54900",
   },
   {
     step: "SUSTAIN",
@@ -209,7 +209,7 @@ export default function ImpactPage() {
               data-cursor="text"
             >
               From Opportunity to{" "}
-              <span className="text-[#FE7701] hover:text-[#fead67] transition-colors duration-300">Impact.</span>
+              <span className="text-[#F54900] hover:text-[#ffb86a] transition-colors duration-300">Impact.</span>
             </motion.h1>
 
             {/* CTA */}
@@ -228,7 +228,7 @@ export default function ImpactPage() {
                   }}
                   data-cursor="button"
                   data-motion="true"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
                 >
                   <span>Explore Impact Areas</span>
                   <Icon
@@ -286,7 +286,7 @@ export default function ImpactPage() {
                       data-cursor="card"
                       className="inline-flex flex-col items-center rounded-2xl border border-[#3026B3]/40 bg-gradient-to-r from-[#211B72] via-[#3026B3] to-[#211B72] px-8 py-3.5 text-white shadow-lg transition-transform hover:scale-105 fx-glow-indigo"
                     >
-                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#FE7701] font-bold">
+                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold">
                         FOUNDATIONAL CATALYST
                       </span>
                       <span className="font-heading text-xl sm:text-2xl font-medium tracking-tight mt-0.5">
@@ -410,7 +410,7 @@ export default function ImpactPage() {
 
                     {/* Sector Tag & Number */}
                     <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 font-sans text-[10px] uppercase tracking-wider text-[#FE7701] border border-white/20">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 font-sans text-[10px] uppercase tracking-wider text-[#F54900] border border-white/20">
                         {area.number} · {area.sector}
                       </span>
                     </div>
@@ -430,7 +430,7 @@ export default function ImpactPage() {
                         {area.entityName}
                       </span>
 
-                      <h3 className="font-heading text-xl sm:text-2xl font-medium text-white group-hover:text-[#FEA04D] transition-colors leading-snug duration-300 min-h-[3.25rem] sm:min-h-[3.75rem] flex items-start">
+                      <h3 className="font-heading text-xl sm:text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors leading-snug duration-300 min-h-[3.25rem] sm:min-h-[3.75rem] flex items-start">
                         {area.title}
                       </h3>
 
@@ -444,7 +444,7 @@ export default function ImpactPage() {
                       <Link
                         to={area.link}
                         data-cursor="link"
-                        className="inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-[#FEA04D] hover:text-white transition-colors group/link fx-underline"
+                        className="inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-[#FF8904] hover:text-white transition-colors group/link fx-underline"
                       >
                         <span>Explore Vertical</span>
                       </Link>
@@ -539,10 +539,10 @@ export default function ImpactPage() {
 
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#E06901]/25 border-t-4 border-t-[#E06901] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#E06901] hover:shadow-xl fx-lift"
-              style={{ backgroundColor: "color-mix(in srgb, #E06901 9%, white)" }}
+              className="group rounded-2xl border border-[#F54900]/25 border-t-4 border-t-[#F54900] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#F54900] hover:shadow-xl fx-lift"
+              style={{ backgroundColor: "color-mix(in srgb, #F54900 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#B75601] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#CA3500] block transition-transform duration-300 group-hover:scale-105">
                 14+
               </span>
               <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
@@ -630,7 +630,7 @@ export default function ImpactPage() {
                       className="mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FEA04D] transition-colors duration-300">
+                    <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors duration-300">
                       {item.title}
                     </h3>
 
@@ -655,13 +655,13 @@ export default function ImpactPage() {
         className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#FE7701]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#FE7701]/40 bg-[#FE7701]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701] font-bold shadow-xs mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#FE7701] shadow-[0_0_8px_#FE7701]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>THE FUTURE OF IMPACT</span>
             </div>
 
@@ -697,7 +697,7 @@ export default function ImpactPage() {
                         />
                       </div>
 
-                      <h4 className="font-heading text-lg font-medium text-white mb-2 leading-snug group-hover:text-[#FEA04D] transition-colors">
+                      <h4 className="font-heading text-lg font-medium text-white mb-2 leading-snug group-hover:text-[#FF8904] transition-colors">
                         {area.headline}
                       </h4>
 
@@ -722,7 +722,7 @@ export default function ImpactPage() {
                     to="/contact?inquiry=partner"
                     data-cursor="button"
                     data-motion="true"
-                    className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                    className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
                   >
                     <span>Partner With BharatX</span>
                     <Icon
@@ -750,7 +750,7 @@ export default function ImpactPage() {
               </div>
 
               <div className="mt-8">
-                <p className="font-sans text-xs uppercase tracking-[0.24em] text-[#FE7701] font-bold">
+                <p className="font-sans text-xs uppercase tracking-[0.24em] text-[#F54900] font-bold">
                   Building Businesses. Enabling Bharat.
                 </p>
               </div>

@@ -26,8 +26,8 @@ function LaunchVectorMesh() {
       <mesh position={[0, 0.4, 0]}>
         <coneGeometry args={[0.6, 2.2, 4]} />
         <meshStandardMaterial
-          color="#fea04d"
-          emissive="#fea04d"
+          color="#ff8904"
+          emissive="#ff8904"
           emissiveIntensity={1.2}
           metalness={0.9}
           roughness={0.15}
@@ -37,10 +37,10 @@ function LaunchVectorMesh() {
       {[-0.6, 0.0, 0.6, 1.2].map((y, idx) => (
         <mesh key={y} position={[0, y, 0]} rotation={[Math.PI / 2, 0, idx * 0.4]}>
           <torusGeometry args={[0.8 - idx * 0.15, 0.02, 12, 48]} />
-          <meshBasicMaterial color="#fea04d" transparent opacity={0.6 - idx * 0.1} />
+          <meshBasicMaterial color="#ff8904" transparent opacity={0.6 - idx * 0.1} />
         </mesh>
       ))}
-      <pointLight color="#fea04d" intensity={18} distance={6} />
+      <pointLight color="#ff8904" intensity={18} distance={6} />
     </group>
   );
 }
@@ -243,14 +243,14 @@ function SeedToNetworkMesh() {
       {/* Global Trade Orbital Rings */}
       <mesh rotation={[Math.PI / 2.2, 0.2, 0]}>
         <torusGeometry args={[1.5, 0.025, 16, 64]} />
-        <meshStandardMaterial color="#fea04d" metalness={0.85} roughness={0.2} />
+        <meshStandardMaterial color="#ff8904" metalness={0.85} roughness={0.2} />
       </mesh>
       {/* Global Node Beacons */}
       {[0, 1.8, 3.6, 5.2].map((ang) => (
         <group key={ang} position={[Math.cos(ang) * 1.5, Math.sin(ang) * 0.4, Math.sin(ang) * 1.5]}>
           <mesh>
             <sphereGeometry args={[0.12, 16, 16]} />
-            <meshStandardMaterial color="#fea04d" emissive="#fea04d" emissiveIntensity={1.5} />
+            <meshStandardMaterial color="#ff8904" emissive="#ff8904" emissiveIntensity={1.5} />
           </mesh>
         </group>
       ))}

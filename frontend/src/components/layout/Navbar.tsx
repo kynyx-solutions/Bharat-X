@@ -10,10 +10,13 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { cn } from "../../utils/cn";
 import { DuotoneIcon, Icon } from "../../utils/icons";
 import { MobileMenu } from "./MobileMenu";
-import { navigation } from "../../data/navigation";
+import { contactRoute, navigation } from "../../data/navigation";
 import { servicesData } from "../../data/servicesData";
 
 type MegaKey = "services" | "companies" | "ecosystem" | null;
+
+const primaryNav = navigation.filter((item) => item.to !== contactRoute.to);
+const contactNav = navigation.find((item) => item.to === contactRoute.to);
 
 const liveMetrics = [
   "DIVERSE INDUSTRIAL SECTORS • SOVEREIGN ASSETS",
@@ -59,14 +62,15 @@ export function Navbar() {
     setMobileOpen(false);
   }, [location.pathname]);
 
+  const isActive = (to: string) =>
+    location.pathname === to || (to !== "/" && location.pathname.startsWith(to));
+
   return (
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top,0px)] transition-all duration-500",
-          scrolled || mega
-            ? "bg-white shadow-[0_4px_20px_-5px_rgba(48,38,179,0.08)]"
-            : "bg-transparent",
+          "fixed inset-x-0 top-0 z-50 bg-white pt-[env(safe-area-inset-top,0px)] transition-all duration-500",
+          (scrolled || mega) && "shadow-[0_4px_20px_-5px_rgba(48,38,179,0.08)]",
         )}
         style={{ borderBottom: (scrolled || mega) ? "1px solid #E3E5EF" : "none" }}
         onMouseLeave={() => setMega(null)}
@@ -113,7 +117,7 @@ export function Navbar() {
                 <div className="flex items-center gap-5 text-white/70">
                   <Link
                     to="/verticals"
-                    className="hover:text-[#FE7701] transition-colors flex items-center gap-1.5"
+                    className="hover:text-[#F54900] transition-colors flex items-center gap-1.5"
                   >
                     <DuotoneIcon name="layers" size={12} />
                     <span>Our Services</span>
@@ -121,14 +125,14 @@ export function Navbar() {
 
                   <Link
                     to="/about"
-                    className="hover:text-[#FE7701] transition-colors"
+                    className="hover:text-[#F54900] transition-colors"
                   >
                     Governance
                   </Link>
 
                   <Link
                     to="/contact"
-                    className="hover:text-[#FE7701] transition-colors text-[#FE7701] font-medium"
+                    className="hover:text-[#F54900] transition-colors text-[#F54900] font-medium"
                   >
                     Quick Inquire →
                   </Link>
@@ -140,57 +144,49 @@ export function Navbar() {
         */}
 
         {/* Tier 2: Main Executive Navigation Command Deck */}
-        <div className="container-x flex h-[68px] sm:h-[72px] items-center justify-between gap-3">
+        <div className="container-x flex h-[72px] sm:h-[84px] items-center justify-between gap-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
           <Link
             to="/"
             aria-label="BharatX Group — home"
-            className={cn(
-              "group relative z-10 flex items-center shrink-0 rounded-xl transition-all duration-300 hover:scale-[1.02]",
-              scrolled || mega
-                ? "bg-transparent p-0 shadow-none border border-transparent"
-                : "bg-white/95 backdrop-blur-md px-3 py-1 shadow-[0_2px_14px_rgba(0,0,0,0.35)] border border-white/60",
-            )}
+            className="group relative z-10 flex items-center shrink-0 rounded-xl transition-all duration-300 hover:scale-[1.02] lg:justify-self-start"
           >
             <img
               src="/bharatxgroup.png"
               alt="BharatX Group"
-              className={cn(
-                "w-auto object-contain shrink-0 transition-all duration-300",
-                scrolled || mega
-                  ? "h-10 sm:h-11 md:h-12 max-h-[48px]"
-                  : "h-8 sm:h-9 md:h-10 max-h-[40px]",
-              )}
+              className="h-12 sm:h-14 md:h-[60px] max-h-[60px] w-auto object-contain shrink-0"
             />
           </Link>
 
-          {/* Desktop nav with all navigation items including Contact */}
+          {/* Desktop nav, centered */}
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex xl:gap-1.5">
-            {navigation.map((item) => (
+            {primaryNav.map((item) => (
               <NavItem
                 key={item.to}
                 item={item}
-                active={
-                  location.pathname === item.to ||
-                  (item.to !== "/" && location.pathname.startsWith(item.to))
-                }
+                active={isActive(item.to)}
                 mega={item.mega}
                 isMegaOpen={mega === item.mega}
                 onEnter={() => setMega(item.mega ?? null)}
-                scrolled={scrolled || Boolean(mega)}
               />
             ))}
           </nav>
+
+          {/* Contact, right-aligned */}
+          <div className="hidden items-center lg:flex lg:justify-self-end">
+            {contactNav && (
+              <NavItem
+                item={contactNav}
+                active={isActive(contactNav.to)}
+                onEnter={() => setMega(null)}
+              />
+            )}
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center lg:hidden">
             <button
               type="button"
-              className={cn(
-                "flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border transition-colors",
-                scrolled || mega
-                  ? "border-[#E3E5EF] bg-white text-[#111827] shadow-xs"
-                  : "border-white/30 bg-black/45 text-white backdrop-blur-md"
-              )}
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-[#E3E5EF] bg-white text-[#111827] shadow-xs transition-colors"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
@@ -235,14 +231,12 @@ function NavItem({
   onEnter,
   mega,
   isMegaOpen,
-  scrolled,
 }: {
   item: (typeof navigation)[number];
   active: boolean;
   onEnter: () => void;
   mega?: MegaKey;
   isMegaOpen?: boolean;
-  scrolled: boolean;
 }) {
   return (
     <div onMouseEnter={onEnter} className="relative">
@@ -250,57 +244,44 @@ function NavItem({
         to={item.to}
         data-cursor="link"
         className={cn(
-          "group relative flex items-center gap-1.5 rounded-full px-2.5 py-1.5 xl:px-3.5 xl:py-2 text-[13px] font-medium transition-all duration-300",
-          scrolled
-            ? active
-              ? "text-[#3026B3] font-semibold"
-              : "text-[#111827] hover:text-[#3026B3] hover:bg-[#3026B3]/8"
-            : active
-              ? "text-[#FE7701] font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
-              : "text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)] hover:text-[#FE7701] hover:bg-white/10",
+          "group relative flex items-center gap-1.5 rounded-full px-2.5 py-1.5 xl:px-3.5 xl:py-2 text-[14px] xl:text-[15px] font-medium transition-all duration-300",
+          active ? "text-[#3026B3] font-semibold" : "text-[#111827] hover:text-[#3026B3]",
         )}
       >
-        {active && (
-          <motion.span
-            layoutId="navbar-active-indicator"
-            className={cn(
-              "absolute inset-0 rounded-full -z-10",
-              scrolled ? "bg-[#3026B3]/10" : "bg-white/15 backdrop-blur-xs"
-            )}
-            transition={{ type: "spring", stiffness: 380, damping: 30 }}
-          />
-        )}
         <DuotoneIcon
           name={item.icon}
-          size={15}
+          size={17}
           className={cn(
             "shrink-0 transition-transform duration-300 group-hover:scale-110 fx-icon-pop",
-            scrolled
-              ? active ? "text-[#3026B3]" : "text-[#596579] group-hover:text-[#3026B3]"
-              : active ? "text-[#FE7701]" : "text-[#FE7701] group-hover:text-white",
+            active ? "text-[#3026B3]" : "text-[#596579] group-hover:text-[#3026B3]",
           )}
         />
         <span className="whitespace-nowrap">{item.label}</span>
         {item.mega && (
           <Icon
             name="chevron-down"
-            width={11}
-            height={11}
+            width={12}
+            height={12}
             strokeWidth={2}
             className={cn(
               "transition-transform duration-200 opacity-70 group-hover:opacity-100",
-              isMegaOpen ? "rotate-180 text-[#FE7701]" : "",
+              isMegaOpen ? "rotate-180 text-[#F54900]" : "",
             )}
           />
         )}
-        <span
-          aria-hidden
-          className={cn(
-            "absolute inset-x-3 -bottom-0.5 h-0.5 origin-center transition-transform duration-300 rounded-full",
-            scrolled ? "bg-[#3026B3]" : "bg-[#FE7701]",
-            active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
-          )}
-        />
+        {active ? (
+          <motion.span
+            aria-hidden
+            layoutId="navbar-active-indicator"
+            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2.5px] rounded-full bg-gradient-to-r from-[#3026B3] to-[#F54900]"
+            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+          />
+        ) : (
+          <span
+            aria-hidden
+            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2px] rounded-full bg-[#3026B3]/30 origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+          />
+        )}
       </NavLink>
     </div>
   );
@@ -317,7 +298,7 @@ function MegaPanel({ kind, className }: { kind: Exclude<MegaKey, null>; classNam
 function ServicesMega() {
   const [preview, setPreview] = useState(0);
   const activeSvc = servicesData[preview] ?? servicesData[0];
-  const accentColors = ["#3026B3", "#FE7701", "#00B8D9", "#15966B", "#211B72", "#3026B3"];
+  const accentColors = ["#3026B3", "#F54900", "#00B8D9", "#15966B", "#211B72", "#3026B3"];
 
   return (
     <div className="container-x grid grid-cols-[1fr_340px] gap-8 py-8">
@@ -380,7 +361,7 @@ function ServicesMega() {
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         <div className="absolute bottom-3 left-4 right-4">
-          <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#FE7701] block">
+          <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#F54900] block">
             {activeSvc.shortLabel}
           </span>
           <span className="text-white text-xs line-clamp-1 mt-0.5 font-medium">

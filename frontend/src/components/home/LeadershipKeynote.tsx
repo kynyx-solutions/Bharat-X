@@ -55,14 +55,14 @@ export function LeadershipKeynote() {
           <div className="mx-auto max-w-4xl text-center">
             <Reveal>
               <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/20 bg-white px-4 py-1.5 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] dark:border-gold-400/30 dark:bg-gold-400/10 dark:text-gold-400 backdrop-blur-md hover:bg-white/90 transition-colors">
-                <span className="text-[#FE7701] animate-pulse">◆</span>
+                <span className="text-[#F54900] animate-pulse">◆</span>
                 <span>ANNUAL EXECUTIVE ADDRESS</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#FE7701] transition-colors duration-300">
-                “Building sovereign industrial depth for a <span className="text-[#3026B3] dark:text-[#FE7701]">Viksit Bharat.</span>”
+              <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#F54900] transition-colors duration-300">
+                “Building sovereign industrial depth for a <span className="text-[#3026B3] dark:text-[#F54900]">Viksit Bharat.</span>”
               </h2>
             </Reveal>
 
@@ -91,7 +91,7 @@ export function LeadershipKeynote() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#FE7701] mb-3">
+                  <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#F54900] mb-3">
                     CONGLOMERATE STEWARDSHIP
                   </span>
                   <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-white font-medium max-w-2xl group-hover:text-gold-200 transition-colors">
@@ -154,7 +154,7 @@ export function LeadershipKeynote() {
                                 : "border border-[#E3E5EF] bg-white text-[#596579] hover:text-[#111827] hover:border-[#3026B3]"
                             }`}
                           >
-                            <span className={activeChapter === idx ? "text-[#FE7701]" : "text-[#FE7701] font-bold"}>
+                            <span className={activeChapter === idx ? "text-[#F54900]" : "text-[#F54900] font-bold"}>
                               {ch.number}.
                             </span>{" "}
                             <span>{ch.title}</span>
@@ -164,7 +164,7 @@ export function LeadershipKeynote() {
 
                       {/* Chapter Content */}
                       <div>
-                        <span className="font-sans text-xs text-[#FE7701] font-semibold uppercase tracking-widest">
+                        <span className="font-sans text-xs text-[#F54900] font-semibold uppercase tracking-widest">
                           CHAPTER {transcriptChapters[activeChapter].number}
                         </span>
                         <h4 className="mt-2 font-heading text-2xl text-[#211B72] transition-colors duration-300 hover:text-[#3026B3]">

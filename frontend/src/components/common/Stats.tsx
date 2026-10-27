@@ -29,7 +29,7 @@ export function Stats({
       )}
     >
       {items.map((item, i) => {
-        const accentColor = item.accent || (i === 3 ? "#fea04d" : "#00bcd4");
+        const accentColor = item.accent || (i === 3 ? "#ff8904" : "#00bcd4");
         return (
           <motion.div
             key={item.label}
@@ -78,7 +78,7 @@ export function Stats({
               {/* Main Number: heading display font, scales on hover */}
               <div className="mt-5 flex items-baseline gap-0.5 transition-transform duration-300 origin-left group-hover:scale-[1.04]">
                 <span
-                  className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold tracking-tight text-ink-900 dark:text-ink-50 leading-none select-none tabular-nums transition-colors group-hover:text-[#3026B3] dark:group-hover:text-[#FE7701]"
+                  className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold tracking-tight text-ink-900 dark:text-ink-50 leading-none select-none tabular-nums transition-colors group-hover:text-[#3026B3] dark:group-hover:text-[#F54900]"
                 >
                   <AnimatedNumber value={item.value} prefix={item.prefix} />
                 </span>

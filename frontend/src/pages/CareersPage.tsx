@@ -23,7 +23,7 @@ const whyPillars: { title: string; description: string; icon: string; accent: st
     title: "Learning",
     description: "Work across industries and continuously build new capabilities.",
     icon: "sparkles",
-    accent: "#E06901",
+    accent: "#F54900",
     image: cardImage("careers-02-value-learning"),
   },
   {
@@ -75,7 +75,7 @@ const careerDomains: { name: string; icon: string; roles: string; accent: string
     name: "Foundation",
     icon: "graduation-cap",
     roles: "Education • Programs • Community • Social Impact",
-    accent: "#E06901",
+    accent: "#F54900",
     link: "/verticals#foundation",
   },
   {
@@ -229,7 +229,7 @@ export default function CareersPage() {
               hover="gradient"
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
-              Build What <span className="text-[#FE7701]">Matters.</span>
+              Build What <span className="text-[#F54900]">Matters.</span>
             </AnimatedHeading>
 
             {/* CTA */}
@@ -246,7 +246,7 @@ export default function CareersPage() {
                   onClick={() => {
                     document.getElementById("open-opportunities")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
                 >
                   <span>View Opportunities</span>
                   <Icon
@@ -318,7 +318,7 @@ export default function CareersPage() {
                       className="mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FEA04D] transition-colors">
+                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
                       {p.title}
                     </AnimatedHeading>
 
@@ -331,7 +331,7 @@ export default function CareersPage() {
                     className="relative mt-6 pt-4 border-t border-white/20 font-sans text-[10px] font-semibold uppercase tracking-wider text-white/85 [text-shadow:0_1px_3px_rgba(13,16,38,0.9)] flex items-center justify-between"
                   >
                     <span>Core Value</span>
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[#FEA04D]">✦</span>
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[#FF8904]">✦</span>
                   </div>
                 </div>
               </StaggerItem>
@@ -381,10 +381,10 @@ export default function CareersPage() {
                         size={36}
                         className="transition-transform duration-300 group-hover:scale-110"
                       />
-                      <Icon name="arrow-up-right" width={14} height={14} className="text-white/90 group-hover:text-[#FEA04D] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      <Icon name="arrow-up-right" width={14} height={14} className="text-white/90 group-hover:text-[#FF8904] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </div>
 
-                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-xl font-medium text-white group-hover:text-[#FEA04D] transition-colors">
+                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
                       {area.name}
                     </AnimatedHeading>
 
@@ -397,7 +397,7 @@ export default function CareersPage() {
                     className="relative mt-5 pt-3 border-t border-white/20 font-sans text-[9.5px] font-semibold uppercase tracking-wider text-white/90 flex items-center justify-between"
                   >
                     <span>Explore Sector</span>
-                    <span className="text-[#FEA04D] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    <span className="text-[#FF8904] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                   </div>
                 </Link>
               </StaggerItem>
@@ -446,7 +446,7 @@ export default function CareersPage() {
                       className="mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FEA04D] transition-colors">
+                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
                       {item.title}
                     </AnimatedHeading>
 
@@ -466,7 +466,7 @@ export default function CareersPage() {
           </Stagger>
 
           {/* Central Anchor Statement */}
-          <div data-cursor="card" className="mt-14 max-w-2xl mx-auto rounded-2xl border border-white/10 border-b-4 border-b-[#FE7701] bg-[#211B72] p-6 text-center shadow-md fx-lift transition-all duration-300 hover:border-[#FE7701]">
+          <div data-cursor="card" className="mt-14 max-w-2xl mx-auto rounded-2xl border border-white/10 border-b-4 border-b-[#F54900] bg-[#211B72] p-6 text-center shadow-md fx-lift transition-all duration-300 hover:border-[#F54900]">
             <p className="font-heading text-base sm:text-lg font-medium text-white leading-relaxed">
               “We value initiative over hierarchy and outcomes over activity.”
             </p>
@@ -794,13 +794,13 @@ export default function CareersPage() {
         className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#FE7701]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#FE7701]/40 bg-[#FE7701]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701] font-bold shadow-xs mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#FE7701] shadow-[0_0_8px_#FE7701]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>JOIN THE BUILDERS</span>
             </div>
 
@@ -828,7 +828,7 @@ export default function CareersPage() {
                   onClick={() => {
                     document.getElementById("open-opportunities")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
                 >
                   <span>Explore Open Roles</span>
                   <Icon
@@ -855,7 +855,7 @@ export default function CareersPage() {
 
             {/* Signature Conclusion */}
             <div className="mt-12 pt-8 border-t border-white/15 max-w-xl mx-auto">
-              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#FE7701] font-bold">
+              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
                 Building Businesses. Enabling Bharat.
               </p>
             </div>

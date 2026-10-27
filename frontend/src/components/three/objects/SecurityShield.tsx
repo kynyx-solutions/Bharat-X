@@ -60,7 +60,7 @@ function ShieldMesh() {
       {/* Concentric Guard Rings */}
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <torusGeometry args={[0.9, 0.02, 12, 48]} />
-        <meshBasicMaterial color="#fea04d" transparent opacity={0.65} />
+        <meshBasicMaterial color="#ff8904" transparent opacity={0.65} />
       </mesh>
 
       <pointLight color="#0284c7" intensity={12} distance={5} />

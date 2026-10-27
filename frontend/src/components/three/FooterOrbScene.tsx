@@ -136,8 +136,8 @@ function FooterScene() {
       <mesh ref={coreRef}>
         <icosahedronGeometry args={[0.75, 1]} />
         <meshStandardMaterial
-          color="#fea04d"
-          emissive="#fea04d"
+          color="#ff8904"
+          emissive="#ff8904"
           emissiveIntensity={0.85}
           roughness={0.15}
           metalness={0.9}
@@ -148,7 +148,7 @@ function FooterScene() {
       {/* Wireframe outer halo around core */}
       <mesh>
         <icosahedronGeometry args={[0.98, 1]} />
-        <meshBasicMaterial color="#fea04d" wireframe transparent opacity={0.4} />
+        <meshBasicMaterial color="#ff8904" wireframe transparent opacity={0.4} />
       </mesh>
 
       {/* Inner crystal octahedron */}
@@ -166,7 +166,7 @@ function FooterScene() {
       {/* Secondary tilted golden orbital ring */}
       <mesh rotation={[Math.PI / 2.8, 0.25, 0]}>
         <torusGeometry args={[2.55, 0.014, 16, 80]} />
-        <meshBasicMaterial color="#fea04d" transparent opacity={0.4} />
+        <meshBasicMaterial color="#ff8904" transparent opacity={0.4} />
       </mesh>
 
       {/* Connecting laser lines */}
@@ -206,8 +206,8 @@ function FooterScene() {
 function FallbackFooterOrb() {
   return (
     <svg viewBox="0 0 200 200" className="h-full w-full opacity-60">
-      <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(254,160,77,0.2)" strokeDasharray="3 4" />
-      <circle cx="100" cy="100" r="20" fill="rgba(254,160,77,0.15)" stroke="#fea04d" strokeWidth="1.2" />
+      <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(255,137,4,0.2)" strokeDasharray="3 4" />
+      <circle cx="100" cy="100" r="20" fill="rgba(255,137,4,0.15)" stroke="#ff8904" strokeWidth="1.2" />
       {[0, 60, 120, 180, 240, 300].map((deg, i) => {
         const rad = (deg * Math.PI) / 180;
         const x = 100 + 60 * Math.cos(rad);
@@ -215,7 +215,7 @@ function FallbackFooterOrb() {
         const c = companies[i]?.accentColor || "#22d5b3";
         return (
           <g key={deg}>
-            <line x1="100" y1="100" x2={x} y2={y} stroke="rgba(254,160,77,0.25)" strokeWidth="0.8" />
+            <line x1="100" y1="100" x2={x} y2={y} stroke="rgba(255,137,4,0.25)" strokeWidth="0.8" />
             <circle cx={x} cy={y} r="6" fill={c} />
           </g>
         );
@@ -250,7 +250,7 @@ export default function FooterOrbScene({ className }: { className?: string }) {
         className="orb-pedestal pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[320px] w-[320px] sm:h-[420px] sm:w-[420px] rounded-full blur-3xl opacity-75 dark:opacity-75 transition-opacity"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(224,242,254,0.55) 45%, rgba(254,160,77,0.18) 70%, transparent 85%)",
+            "radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(224,242,254,0.55) 45%, rgba(255,137,4,0.18) 70%, transparent 85%)",
         }}
       />
 
@@ -263,7 +263,7 @@ export default function FooterOrbScene({ className }: { className?: string }) {
           >
             <ambientLight intensity={0.8} />
             <directionalLight position={[6, 9, 6]} intensity={1.8} color="#ffffff" />
-            <pointLight position={[4, 5, 4]} intensity={16} color="#fea04d" distance={18} decay={2} />
+            <pointLight position={[4, 5, 4]} intensity={16} color="#ff8904" distance={18} decay={2} />
             <pointLight position={[-4, -4, -4]} intensity={14} color="#00f0ff" distance={18} decay={2} />
             <FooterScene />
           </Canvas>

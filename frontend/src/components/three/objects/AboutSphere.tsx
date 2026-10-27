@@ -59,7 +59,7 @@ function DnaSphereMesh() {
         {/* Layer 1: Core Values Ring */}
         <mesh ref={ring1} rotation={[Math.PI / 2.3, 0, 0]}>
           <torusGeometry args={[1.5, 0.024, 16, 80]} />
-          <meshStandardMaterial color="#fea04d" metalness={0.85} roughness={0.2} />
+          <meshStandardMaterial color="#ff8904" metalness={0.85} roughness={0.2} />
         </mesh>
 
         {/* Layer 2: People & Governance Ring */}
@@ -79,7 +79,7 @@ function DnaSphereMesh() {
           <icosahedronGeometry args={[0.46, 1]} />
           <meshStandardMaterial
             color="#0f172a"
-            emissive="#fea04d"
+            emissive="#ff8904"
             emissiveIntensity={0.85}
             metalness={0.9}
             roughness={0.15}
@@ -88,7 +88,7 @@ function DnaSphereMesh() {
 
         {/* Internal Connected Strata Nodes */}
         {[
-          { label: "VALUES", pos: [1.1, 0.4, 0.3], col: "#fea04d" },
+          { label: "VALUES", pos: [1.1, 0.4, 0.3], col: "#ff8904" },
           { label: "PEOPLE", pos: [-0.9, -0.6, 0.5], col: "#0284c7" },
           { label: "VISION", pos: [0.2, 0.9, -0.6], col: "#10b981" },
           { label: "SYSTEMS", pos: [-0.4, -0.8, -0.7], col: "#8b5cf6" },
@@ -115,7 +115,7 @@ function DnaSphereMesh() {
       </group>
 
       {/* Internal illumination */}
-      <pointLight color="#fea04d" intensity={14} distance={6} decay={2} />
+      <pointLight color="#ff8904" intensity={14} distance={6} decay={2} />
       <pointLight color="#0284c7" intensity={12} distance={6} decay={2} />
     </group>
   );

@@ -89,7 +89,7 @@ function Rings({ scrollProgress }: { scrollProgress: MotionValue<number> }) {
         <torusGeometry args={[0.9, 0.032, 18, 100]} />
         <meshStandardMaterial
           color="#3a2a12"
-          emissive="#fea04d"
+          emissive="#ff8904"
           emissiveIntensity={0.55}
           metalness={0.85}
           roughness={0.25}
@@ -100,8 +100,8 @@ function Rings({ scrollProgress }: { scrollProgress: MotionValue<number> }) {
         <mesh position={[1.55, 0, 0]}>
           <sphereGeometry args={[0.075, 16, 16]} />
           <meshStandardMaterial
-            color="#fea04d"
-            emissive="#fea04d"
+            color="#ff8904"
+            emissive="#ff8904"
             emissiveIntensity={0.9}
             metalness={0.5}
             roughness={0.3}
@@ -133,19 +133,19 @@ function ShowcaseFallback() {
       <defs>
         <linearGradient id="sc-ring" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#43e6c5" />
-          <stop offset="100%" stopColor="#fea04d" />
+          <stop offset="100%" stopColor="#ff8904" />
         </linearGradient>
       </defs>
       <ellipse cx="240" cy="240" rx="170" ry="64" fill="none" stroke="url(#sc-ring)" strokeWidth="2" transform="rotate(-18 240 240)" />
       <ellipse cx="240" cy="240" rx="130" ry="48" fill="none" stroke="rgba(201,212,222,0.5)" strokeWidth="1.5" transform="rotate(24 240 240)" />
-      <ellipse cx="240" cy="240" rx="92" ry="34" fill="none" stroke="rgba(254,160,77,0.65)" strokeWidth="1.5" transform="rotate(-52 240 240)" />
+      <ellipse cx="240" cy="240" rx="92" ry="34" fill="none" stroke="rgba(255,137,4,0.65)" strokeWidth="1.5" transform="rotate(-52 240 240)" />
       <polygon
         points="240,180 292,210 292,270 240,300 188,270 188,210"
         fill="#141c26"
         stroke="rgba(67,230,197,0.6)"
         strokeWidth="1.5"
       />
-      <circle cx="410" cy="212" r="7" fill="#fea04d" />
+      <circle cx="410" cy="212" r="7" fill="#ff8904" />
       <circle cx="86" cy="262" r="5.5" fill="#43e6c5" />
     </svg>
   );
@@ -190,7 +190,7 @@ function LazyShowcase({ scrollProgress }: { scrollProgress: MotionValue<number> 
     >
       <ambientLight intensity={0.3} />
       <directionalLight position={[4, 6, 5]} intensity={1.1} color="#eef2f5" />
-      <pointLight position={[-6, 2, -5]} intensity={12} color="#fea04d" distance={20} decay={2} />
+      <pointLight position={[-6, 2, -5]} intensity={12} color="#ff8904" distance={20} decay={2} />
       <pointLight position={[5, -3, 4]} intensity={7} color="#22d5b3" distance={18} decay={2} />
       <Rings scrollProgress={scrollProgress} />
     </Canvas>

@@ -75,7 +75,7 @@ export function RilServicesSection() {
                 </h2>
 
                 {/* 1-Line Punchy Descriptor */}
-                <p className="mt-4 text-lg xl:text-xl font-semibold text-[#FE7701] leading-snug drop-shadow-sm">
+                <p className="mt-4 text-lg xl:text-xl font-semibold text-[#F54900] leading-snug drop-shadow-sm">
                   {activeService.descriptor}
                 </p>
 
@@ -116,7 +116,7 @@ export function RilServicesSection() {
 
                   <Link
                     to="/contact"
-                    className="group inline-flex items-center gap-2 text-[14px] text-white font-medium underline-offset-2 hover:text-[#FE7701] transition-colors duration-300"
+                    className="group inline-flex items-center gap-2 text-[14px] text-white font-medium underline-offset-2 hover:text-[#F54900] transition-colors duration-300"
                   >
                     <span>Inquire for sector partnership</span>
                     <Icon
@@ -144,8 +144,8 @@ export function RilServicesSection() {
                       onMouseEnter={() => setActiveIndex(idx)}
                       className={`group relative w-full text-left py-4 sm:py-5 px-5 transition-all duration-300 flex items-center justify-between ${
                         isActive
-                          ? "bg-white/15 backdrop-blur-md border border-[#FE7701]/30 text-white shadow-xl rounded-lg"
-                          : "border-b border-white/15 text-slate-300 hover:text-white hover:bg-white/10 hover:border-[#FE7701]/20"
+                          ? "bg-white/15 backdrop-blur-md border border-[#F54900]/30 text-white shadow-xl rounded-lg"
+                          : "border-b border-white/15 text-slate-300 hover:text-white hover:bg-white/10 hover:border-[#F54900]/20"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -155,7 +155,7 @@ export function RilServicesSection() {
                         <div className="flex flex-col">
                           <span
                             className={`font-sans text-xs sm:text-[13px] tracking-[0.16em] font-semibold uppercase transition-colors ${
-                              isActive ? "text-[#FE7701]" : "text-slate-200 group-hover:text-white"
+                              isActive ? "text-[#F54900]" : "text-slate-200 group-hover:text-white"
                             }`}
                           >
                             {svc.shortLabel}
@@ -172,7 +172,7 @@ export function RilServicesSection() {
                         height={15}
                         className={`transition-all duration-300 ${
                           isActive
-                            ? "text-[#FE7701] translate-x-1 opacity-100"
+                            ? "text-[#F54900] translate-x-1 opacity-100"
                             : "opacity-0 group-hover:opacity-60"
                         }`}
                       />
@@ -181,7 +181,7 @@ export function RilServicesSection() {
                       {isActive && (
                         <motion.div
                           layoutId="ril-active-bar"
-                          className="absolute inset-x-0 bottom-0 h-[3px] bg-[#FE7701] shadow-[0_0_10px_#FE7701]"
+                          className="absolute inset-x-0 bottom-0 h-[3px] bg-[#F54900] shadow-[0_0_10px_#F54900]"
                           transition={{ type: "spring", stiffness: 380, damping: 32 }}
                         />
                       )}
@@ -321,7 +321,7 @@ export function RilServicesSection() {
               </div>
 
               {/* Eyebrow */}
-              <div className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#FE7701] font-semibold">
+              <div className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#F54900] font-semibold">
                 {selectedModal.eyebrow}
               </div>
 

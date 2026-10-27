@@ -117,7 +117,7 @@ export function ThreeScene({
         className="orb-pedestal pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[340px] w-[340px] sm:h-[420px] sm:w-[420px] rounded-full blur-3xl opacity-75 dark:opacity-75 transition-opacity"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,255,255,0.92) 0%, rgba(224,242,254,0.6) 45%, rgba(254,160,77,0.15) 70%, transparent 85%)",
+            "radial-gradient(circle, rgba(255,255,255,0.92) 0%, rgba(224,242,254,0.6) 45%, rgba(255,137,4,0.15) 70%, transparent 85%)",
         }}
       />
 

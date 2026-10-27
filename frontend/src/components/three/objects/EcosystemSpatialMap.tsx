@@ -18,7 +18,7 @@ const capabilityNodes: CapabilityNode[] = [
   { label: "INFRASTRUCTURE", pos: [1.6, 1.2, -0.5], color: "#38bdf8" },
   { label: "PRECISION CASTER", pos: [1.9, -1.0, 0.6], color: "#3b82f6" },
   { label: "AGRO-SCIENCE", pos: [-0.4, 1.8, 0.4], color: "#10b981" },
-  { label: "VENTURE CAPITAL", pos: [0.3, -1.8, -0.4], color: "#fea04d" },
+  { label: "VENTURE CAPITAL", pos: [0.3, -1.8, -0.4], color: "#ff8904" },
 ];
 
 function SpatialMapMesh({
@@ -43,7 +43,7 @@ function SpatialMapMesh({
         <octahedronGeometry args={[0.7, 0]} />
         <meshStandardMaterial
           color="#0f172a"
-          emissive="#fea04d"
+          emissive="#ff8904"
           emissiveIntensity={0.8}
           roughness={0.15}
           metalness={0.9}

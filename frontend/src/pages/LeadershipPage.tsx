@@ -11,14 +11,14 @@ import { FeatureIcon } from "../components/common/FeatureIcon";
 const governance = [
   { icon: "scale", t: "Clear Division of Decision Rights", d: "Group stewardship governs capital discipline, risk management, and shared standards. Tactical execution belongs to sector teams.", color: "#3026B3", image: cardImage("leadership-02-governance-decision-rights") },
   { icon: "file-check", t: "Standardised Quality & Safety", d: "Quality, material integrity, and cryptographic data protocols are applied uniformly with auditable public accounting.", color: "#00B8D9", image: cardImage("leadership-03-governance-quality-safety") },
-  { icon: "eye", t: "Independent Standards Oversight", d: "Each operating sector is benchmarked against international standards by the group's standards oversight council.", color: "#FE7701", image: cardImage("leadership-04-governance-standards-oversight") },
+  { icon: "eye", t: "Independent Standards Oversight", d: "Each operating sector is benchmarked against international standards by the group's standards oversight council.", color: "#F54900", image: cardImage("leadership-04-governance-standards-oversight") },
   { icon: "shield-check", t: "Institutional Compliance", d: "Regulatory, phytosanitary, and trade compliance is embedded into foundational processes from day one.", color: "#15966B", image: cardImage("leadership-05-governance-compliance") },
 ];
 
 const operating = [
   { n: "01", t: "The group sets the standard; the sector sets the pace.", d: "Standards are non-negotiable. Execution is owned at the sector level, with authentic decision rights and measurable KPIs.", color: "#3026B3" },
   { n: "02", t: "Capital discipline, not bureaucratic delay.", d: "Capital allocation follows evidence and multi-decade compounding — reviewed transparently across all sectors.", color: "#00B8D9" },
-  { n: "03", t: "Synergies are proved, not mandated.", d: "Any cross-sector collaboration must create demonstrable economic and operational value before resources are committed.", color: "#E06901" },
+  { n: "03", t: "Synergies are proved, not mandated.", d: "Any cross-sector collaboration must create demonstrable economic and operational value before resources are committed.", color: "#F54900" },
   { n: "04", t: "Data sovereignty is absolute.", d: "Confidentiality, client data residency, and cryptographic isolation between sectors are maintained as constitutional rules.", color: "#15966B" },
 ];
 
@@ -46,14 +46,14 @@ export default function LeadershipPage() {
 
         <div className="container-x relative z-10">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701] mb-4">
+            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] mb-4">
               <span className="animate-pulse">◆</span>
               <span className="text-white">CORPORATE STEWARDSHIP</span>
             </div>
             <AnimatedHeading as="h1" effect="words" hover="color" className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] text-white">
               Led Like an Institution.
               <br />
-              <span className="italic text-[#FE7701]">Driven by National Purpose.</span>
+              <span className="italic text-[#F54900]">Driven by National Purpose.</span>
             </AnimatedHeading>
             <p className="mt-6 text-base sm:text-lg text-slate-200 leading-relaxed font-sans">
               The leadership of BharatX Group operates with long-term capital horizons, rigorous corporate governance, and an unwavering commitment to India's industrial sovereignty.
@@ -87,12 +87,12 @@ export default function LeadershipPage() {
                   Architecting <span className="text-[#3026B3]">Sovereign Industrial Depth</span> for Bharat.
                 </AnimatedHeading>
 
-                <div className="mt-6 rounded-2xl border-l-4 border-[#FE7701] bg-[#211B72] p-6 shadow-md fx-lift">
+                <div className="mt-6 rounded-2xl border-l-4 border-[#F54900] bg-[#211B72] p-6 shadow-md fx-lift">
                   <blockquote className="text-base sm:text-lg font-heading italic text-white leading-relaxed">
-                    “Aligned with the national vision of <span className="text-[#FEA04D] font-semibold not-italic">Viksit Bharat 2047</span>, we are committed to building sustainable, technology-driven industrial foundations that eliminate critical external dependencies and secure multi-generational prosperity.”
+                    “Aligned with the national vision of <span className="text-[#FF8904] font-semibold not-italic">Viksit Bharat 2047</span>, we are committed to building sustainable, technology-driven industrial foundations that eliminate critical external dependencies and secure multi-generational prosperity.”
                   </blockquote>
                   <div className="mt-3 text-xs font-sans text-[#C7C2FF] font-semibold flex items-center gap-1.5">
-                    <span className="text-[#FE7701]">◆</span>
+                    <span className="text-[#F54900]">◆</span>
                     <span>Pradeep Kumar, Institutional Founder</span>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export default function LeadershipPage() {
               <StaggerItem key={g.t}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-7 flex gap-4 items-start shadow-md cursor-card hover:border-[#FEA04D] transition-all duration-300 fx-lift hover:shadow-xl h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-7 flex gap-4 items-start shadow-md cursor-card hover:border-[#FF8904] transition-all duration-300 fx-lift hover:shadow-xl h-full"
                 >
                   <CardPhoto src={g.image} accent={g.color} />
                   <FeatureIcon
@@ -173,7 +173,7 @@ export default function LeadershipPage() {
                     className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                   />
                   <div className="relative">
-                    <h3 className="font-heading text-xl text-white font-medium group-hover:text-[#FEA04D] transition-colors">{g.t}</h3>
+                    <h3 className="font-heading text-xl text-white font-medium group-hover:text-[#FF8904] transition-colors">{g.t}</h3>
                     <p className="mt-2 text-xs sm:text-sm text-slate-200 leading-relaxed font-sans">{g.d}</p>
                   </div>
                 </div>
@@ -200,14 +200,14 @@ export default function LeadershipPage() {
               <StaggerItem key={op.n}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 flex flex-col justify-between shadow-md cursor-card hover:border-[#FEA04D] transition-all duration-300 fx-lift hover:shadow-xl h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 flex flex-col justify-between shadow-md cursor-card hover:border-[#FF8904] transition-all duration-300 fx-lift hover:shadow-xl h-full"
                 >
                   <CardFill accent={op.color} />
                   <div className="relative">
-                    <span className="font-sans text-xs font-bold block mb-3 text-[#FEA04D] transition-transform duration-300 group-hover:scale-125">
+                    <span className="font-sans text-xs font-bold block mb-3 text-[#FF8904] transition-transform duration-300 group-hover:scale-125">
                       {op.n}
                     </span>
-                    <h3 className="font-heading text-lg text-white font-medium group-hover:text-[#FEA04D] transition-colors">{op.t}</h3>
+                    <h3 className="font-heading text-lg text-white font-medium group-hover:text-[#FF8904] transition-colors">{op.t}</h3>
                     <p className="mt-2 text-xs sm:text-sm text-white/90 leading-relaxed font-sans">{op.d}</p>
                   </div>
                 </div>

@@ -12,8 +12,8 @@ import { NIGHT, WHITE, hexToRgb, hue, mix, rgb, rgba, whiteContrast } from "../.
  */
 
 /** The brand highlight (a light tint of the logo orange) for the inner fill, except on orange tiles where it would vanish. */
-const HIGHLIGHT = "#FEA04D";
-const WARM_HUES: [number, number] = [20, 60];
+const HIGHLIGHT = "#FF8904";
+const WARM_HUES: [number, number] = [14, 60];
 
 function tileColours(accent: string) {
   const base = hexToRgb(accent);

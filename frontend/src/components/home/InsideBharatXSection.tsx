@@ -17,7 +17,7 @@ export function InsideBharatXSection() {
             </div>
 
             <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827] hover:text-[#3026B3] transition-colors duration-300">
-              Inside <span className="text-[#3026B3] hover:text-[#FE7701] transition-colors duration-300">BharatX</span>
+              Inside <span className="text-[#3026B3] transition-colors">BharatX</span>
             </h2>
 
             <p className="mt-3 text-base text-[#596579] max-w-2xl leading-relaxed">
@@ -35,7 +35,7 @@ export function InsideBharatXSection() {
               transition={{ duration: 0.5 }}
               data-cursor="card"
               tabIndex={0}
-              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-between overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#FE7701] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#FE7701] focus:outline-none"
+              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-between overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#F54900] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#F54900] focus:outline-none"
             >
               {/* Background image & gradient overlay */}
               <img
@@ -48,12 +48,12 @@ export function InsideBharatXSection() {
 
               {/* Top pill */}
               <div className="relative z-10 flex items-center justify-between">
-                <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#FE7701] font-bold">
+                <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#F54900] font-bold">
                   Ideas &amp; Perspectives
                 </span>
                 <FeatureIcon
                   name="lightbulb"
-                  accent="#FE7701"
+                  accent="#F54900"
                   size={40}
                   className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                 />
@@ -61,7 +61,7 @@ export function InsideBharatXSection() {
 
               {/* Content & Action */}
               <div className="relative z-10 mt-16">
-                <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white group-hover:text-[#FE7701] transition-colors duration-300 fx-underline">
+                <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white group-hover:text-[#F54900] transition-colors duration-300 fx-underline">
                   BharatX Insights
                 </h3>
 
@@ -73,7 +73,7 @@ export function InsideBharatXSection() {
                   <Link
                     to="/about#newsroom"
                     data-cursor="link"
-                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#FE7701] transition-all hover:text-white"
+                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#F54900] transition-all hover:text-white"
                   >
                     <span>Explore Insights</span>
                     <Icon

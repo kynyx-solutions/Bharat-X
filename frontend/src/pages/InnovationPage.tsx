@@ -104,14 +104,14 @@ export default function InnovationPage() {
 
         <div className="container-x relative z-10">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701] mb-4">
+            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] mb-4">
               <span className="animate-pulse">◆</span>
               <span className="text-white">INNOVATION AGENDA</span>
             </div>
             <AnimatedHeading as="h1" effect="words" hover="color" className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] text-white">
               Innovation is a Way of Life.
               <br />
-              <span className="italic text-[#FE7701]">Engineered for Sovereignty.</span>
+              <span className="italic text-[#F54900]">Engineered for Sovereignty.</span>
             </AnimatedHeading>
             <p className="mt-6 text-base sm:text-lg text-slate-200 leading-relaxed font-sans">
               Our growth is propelled by bold research and development. We build foundational AI, precision robotics, and agrarian sciences engineered to operate without external dependency.
@@ -131,7 +131,7 @@ export default function InnovationPage() {
               </span>
             </div>
             <div data-cursor="card" className="p-4 rounded-2xl bg-[#211B72] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#FEA04D] block transition-transform hover:scale-105">Sub-Micron</span>
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#FF8904] block transition-transform hover:scale-105">Sub-Micron</span>
               <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90 mt-1 block">
                 Precision Tolerance Standards
               </span>
@@ -169,7 +169,7 @@ export default function InnovationPage() {
 
           <Stagger staggerDelay={0.08} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {innovationPillars.map((p, i) => {
-              const colors = ["#3026B3", "#00B8D9", "#FE7701", "#15966B", "#3026B3", "#00B8D9"];
+              const colors = ["#3026B3", "#00B8D9", "#F54900", "#15966B", "#3026B3", "#00B8D9"];
               const pillarColor = colors[i % colors.length];
               return (
                 <StaggerItem key={p.title}>
@@ -191,7 +191,7 @@ export default function InnovationPage() {
                         </span>
                       </div>
 
-                      <h3 className="font-heading text-xl sm:text-2xl text-white font-medium group-hover:text-[#FEA04D] transition-colors duration-300">
+                      <h3 className="font-heading text-xl sm:text-2xl text-white font-medium group-hover:text-[#FF8904] transition-colors duration-300">
                         {p.title}
                       </h3>
                       <p className="mt-3 text-xs sm:text-sm text-slate-200 leading-relaxed font-sans">
@@ -220,7 +220,7 @@ export default function InnovationPage() {
 
           <Stagger staggerDelay={0.08} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {roadmapPhases.map((phase, idx) => {
-              const phaseColors = ["#3026B3", "#00B8D9", "#FE7701", "#15966B"];
+              const phaseColors = ["#3026B3", "#00B8D9", "#F54900", "#15966B"];
               const pColor = phaseColors[idx % phaseColors.length];
               return (
                 <StaggerItem key={phase.number}>
@@ -236,7 +236,7 @@ export default function InnovationPage() {
                         </span>
                         <span className="font-sans text-[10px] uppercase text-white/90">{phase.phase}</span>
                       </div>
-                      <h3 className="font-heading text-lg text-white font-medium group-hover:text-[#FEA04D] transition-colors">{phase.title}</h3>
+                      <h3 className="font-heading text-lg text-white font-medium group-hover:text-[#FF8904] transition-colors">{phase.title}</h3>
                       <p className="mt-2 text-xs sm:text-sm text-white/90 leading-relaxed font-sans">
                         {phase.desc}
                       </p>

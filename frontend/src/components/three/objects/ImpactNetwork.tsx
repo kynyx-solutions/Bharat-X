@@ -26,7 +26,7 @@ function GrowthNetworkMesh() {
     // Secondary branches
     { start: [-1.2, 0.4, 0.4], end: [-1.8, 1.4, 0.6], label: "EDUCATION", color: "#34d399" },
     { start: [-1.2, 0.4, 0.4], end: [-0.8, 1.6, -0.2], label: "HEALTH", color: "#10b981" },
-    { start: [1.2, 0.5, -0.3], end: [1.9, 1.3, -0.1], label: "SUSTAINABILITY", color: "#fea04d" },
+    { start: [1.2, 0.5, -0.3], end: [1.9, 1.3, -0.1], label: "SUSTAINABILITY", color: "#ff8904" },
     { start: [1.2, 0.5, -0.3], end: [1.0, 1.7, 0.5], label: "INFRASTRUCTURE", color: "#0284c7" },
     { start: [0, 0.8, 0.2], end: [-0.2, 1.9, 0.1], label: "AGRICULTURE", color: "#10b981" },
   ], []);

@@ -64,7 +64,7 @@ export function SectionHeader({
       <Reveal delay={0.08}>
         <h2
           className={cn(
-            "max-w-3xl font-heading text-[1.85rem] sm:text-4xl font-semibold leading-[1.1] sm:leading-[1.1] tracking-tight md:text-5xl lg:text-[3.4rem] transition-colors hover:text-[#3026B3] dark:hover:text-[#FE7701]",
+            "max-w-3xl font-heading text-[1.85rem] sm:text-4xl font-semibold leading-[1.1] sm:leading-[1.1] tracking-tight md:text-5xl lg:text-[3.4rem] transition-colors hover:text-[#3026B3] dark:hover:text-[#F54900]",
             light ? "text-[#131a22]" : "text-ink-50",
           )}
         >

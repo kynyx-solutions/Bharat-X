@@ -58,7 +58,7 @@ function Core() {
       </mesh>
       <mesh>
         <icosahedronGeometry args={[1.42, 1]} />
-        <meshBasicMaterial color="#fea04d" wireframe transparent opacity={0.07} />
+        <meshBasicMaterial color="#ff8904" wireframe transparent opacity={0.07} />
       </mesh>
       <pointLight color="#43e6c5" intensity={6} distance={7} decay={2} />
     </group>
@@ -226,7 +226,7 @@ function OrbFallback() {
         );
       })}
       <circle cx="260" cy="260" r="46" fill="url(#orb-core)" stroke="rgba(67,230,197,0.5)" />
-      <text x="260" y="256" textAnchor="middle" fontSize="11" className="font-sans" fontWeight="600" fill="#fea04d" letterSpacing="2">
+      <text x="260" y="256" textAnchor="middle" fontSize="11" className="font-sans" fontWeight="600" fill="#ff8904" letterSpacing="2">
         BHARATX
       </text>
       <text x="260" y="272" textAnchor="middle" fontSize="8.5" className="font-sans" fill="#93a1ad" letterSpacing="4">
@@ -369,7 +369,7 @@ function LazyOrb({
     >
       <ambientLight intensity={0.35} />
       <directionalLight position={[6, 8, 5]} intensity={0.9} color="#eef2f5" />
-      <pointLight position={[-7, 3, -6]} intensity={10} color="#fea04d" distance={22} decay={2} />
+      <pointLight position={[-7, 3, -6]} intensity={10} color="#ff8904" distance={22} decay={2} />
       <pointLight position={[5, -4, 6]} intensity={6} color="#22d5b3" distance={20} decay={2} />
       <Scene hovered={hovered} onHover={onHover} scrollProgress={scrollProgress} />
     </Canvas>

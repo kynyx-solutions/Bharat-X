@@ -75,7 +75,7 @@ export function HomeImpactSection() {
             className="mt-6 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#15966B]"
           >
             Building Economic Value.<br />
-            <span className="text-[#15966B] hover:text-[#FE7701] transition-colors">Creating Wider Impact.</span>
+            <span className="text-[#15966B]">Creating Wider Impact.</span>
           </motion.h2>
 
           <motion.p
@@ -128,7 +128,7 @@ export function HomeImpactSection() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="font-heading text-2xl font-medium tracking-tight text-white group-hover:text-[#FE7701] transition-colors">
+                  <h3 className="font-heading text-2xl font-medium tracking-tight text-white group-hover:text-[#F54900] transition-colors">
                     {area.title}
                   </h3>
 
@@ -136,7 +136,7 @@ export function HomeImpactSection() {
                     {area.description}
                   </p>
 
-                  <div className="mt-4 inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-wider text-[#FE7701] font-bold fx-arrow">
+                  <div className="mt-4 inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-wider text-[#F54900] font-bold fx-arrow">
                     <span className="fx-underline">Learn More</span>
                     <Icon name="arrow-right" width={12} height={12} className="fx-arrow-icon" />
                   </div>

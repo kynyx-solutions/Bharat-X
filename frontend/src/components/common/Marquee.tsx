@@ -22,12 +22,12 @@ export function SectorMarquee() {
                 <span className="font-sans text-sm font-semibold tracking-wide text-[#111827] dark:text-white group-hover/item:text-[#3026B3] transition-colors">
                   {s.companyName}
                 </span>
-                <span className="font-sans text-[10px] uppercase text-[#3026B3] dark:text-[#FE7701] font-semibold">
+                <span className="font-sans text-[10px] uppercase text-[#3026B3] dark:text-[#F54900] font-semibold">
                   · {s.name}
                 </span>
               </span>
             </span>
-            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden className="shrink-0 text-[#FE7701]">
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden className="shrink-0 text-[#F54900]">
               <path d="M1 1 L9 9 M9 1 L1 9" stroke="currentColor" strokeWidth="1.2" />
             </svg>
           </Fragment>

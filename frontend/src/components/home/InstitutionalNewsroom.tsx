@@ -77,11 +77,11 @@ export function InstitutionalNewsroom() {
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-7 sm:mb-10">
             <div>
-              <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3] dark:text-[#FE7701] mb-2">
-                <span className="text-[#FE7701] animate-pulse">◆</span>
+              <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3] dark:text-[#F54900] mb-2">
+                <span className="text-[#F54900] animate-pulse">◆</span>
                 <span>CORPORATE DISCLOSURES</span>
               </div>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#FE7701] transition-colors duration-300">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#F54900] transition-colors duration-300">
                 Announcements &amp; News
               </h2>
             </div>
@@ -119,7 +119,7 @@ export function InstitutionalNewsroom() {
                       <span>{lead.date}</span>
                     </div>
 
-                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] dark:text-white leading-tight group-hover:text-[#3026B3] dark:group-hover:text-[#FE7701] transition-colors duration-300">
+                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] dark:text-white leading-tight group-hover:text-[#3026B3] dark:group-hover:text-[#F54900] transition-colors duration-300">
                       {lead.title}
                     </h3>
 

@@ -24,7 +24,7 @@ export function FieldLabel({
       className="mb-2 flex items-center gap-1.5 font-sans text-[10.5px] uppercase tracking-[0.2em] text-[#596579] font-medium transition-colors duration-200 group-focus-within:text-[#3026B3] dark:group-focus-within:text-gold-400"
     >
       {children}
-      {required && <span className="text-[#FE7701] font-bold">*</span>}
+      {required && <span className="text-[#F54900] font-bold">*</span>}
     </label>
   );
 }

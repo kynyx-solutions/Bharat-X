@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { cn } from "../../utils/cn";
 import { Icon } from "../../utils/icons";
+import { Button } from "../common/Button";
+import { AnimatedNumber } from "../common/Stats";
 
 export interface HeroSlide {
   id: string;
@@ -88,6 +92,14 @@ export const heroSlides: HeroSlide[] = [
 
 const SLIDE_DURATION = 5000; // 5.0 seconds per slide
 
+/** Group figures under the hero CTAs — same counts the home page sections show (verticals, operating businesses, partners, projects). */
+const heroStats: { value: number; suffix?: string; label: string }[] = [
+  { value: 8, label: "Verticals" },
+  { value: 6, label: "Businesses" },
+  { value: 6, label: "Partners" },
+  { value: 150, suffix: "+", label: "Projects" },
+];
+
 export function RilHeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -128,7 +140,7 @@ export function RilHeroSection() {
   return (
     <section
       aria-label="BharatX Group Conglomerate Hero"
-      className="relative flex min-h-[92vh] lg:min-h-screen w-full items-center justify-start overflow-hidden bg-black select-none"
+      className="relative flex min-h-[92vh] lg:min-h-screen w-full items-end justify-start overflow-hidden bg-black select-none"
     >
       {/* ── BACKGROUND FULL-BLEED IMAGERY CROSSFADE ─────────────────── */}
       <div className="absolute inset-0 z-0">
@@ -167,22 +179,23 @@ export function RilHeroSection() {
       </div>
 
       {/* ── HERO CONTENT (Dynamic 3-4 Word Tagline, Nothing Else) ─────── */}
-      <div className="container-x max-w-none! relative z-10 w-full pt-48 pb-12 sm:pt-50 sm:pb-16 lg:pt-60 lg:pb-20 translate-y-12 sm:translate-y-18 lg:translate-y-24 xl:translate-y-28">
+      {/* Pinned to the bottom of the hero; bottom padding clears the slide control (right) and scroll hint (centre) */}
+      <div className="container-x max-w-none! relative z-10 w-full pt-28 pb-32 sm:pt-36 lg:pb-24">
         <div className="max-w-6xl xl:max-w-7xl">
           {/* Subtle Conglomerate Eyebrow 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-3.5 sm:mb-4 flex items-center gap-3 font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.32em] text-[#FE7701]"
+            className="mb-3.5 sm:mb-4 flex items-center gap-3 font-sans text-[11px] sm:text-[12px] uppercase tracking-[0.32em] text-[#F54900]"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-[#FE7701] shadow-[0_0_8px_#FE7701]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
             <span>BHARATX GROUP</span>
-            <span aria-hidden className="h-px w-10 sm:w-16 bg-[#FE7701]/40" />
+            <span aria-hidden className="h-px w-10 sm:w-16 bg-[#F54900]/40" />
           </motion.div>*/}
 
           {/* Three or four word Hero Tagline that changes dynamically with images */}
-          <div className="min-h-[75px] sm:min-h-[90px] md:min-h-[105px] flex flex-col justify-start">
+          <div className="min-h-[75px] sm:min-h-[90px] md:min-h-[105px] lg:min-h-[3.6rem] xl:min-h-[4.25rem] flex flex-col justify-start">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={current.id}
@@ -190,21 +203,52 @@ export function RilHeroSection() {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.85rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.85)] min-h-[2.2em] text-balance lg:min-h-0 lg:whitespace-nowrap cursor-default transition-colors duration-300 hover:text-[#FE7701]"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.85rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.85)] min-h-[2.2em] text-balance lg:min-h-0 lg:whitespace-nowrap cursor-default transition-colors duration-300 hover:text-[#F54900]"
               >
                 {current.heroTagline}
               </motion.h1>
             </AnimatePresence>
-
-            {/* Signature Warm Gold Accent Underline */}
-            <motion.div
-              key={`underline-${current.id}`}
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="origin-left mt-4 sm:mt-5 h-[3.5px] w-24 sm:w-32 md:w-40 rounded-full bg-[#FE7701] shadow-[0_0_12px_rgba(254,119,1,0.5)]"
-            />
           </div>
+
+          {/* Hero CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4"
+          >
+            <Link to="/verticals" data-cursor="button">
+              <Button variant="ember" size="lg" withArrow>
+                Explore Our Businesses
+              </Button>
+            </Link>
+            <Link to="/contact" data-cursor="button">
+              <Button variant="secondary" size="lg">
+                Contact Us
+              </Button>
+            </Link>
+          </motion.div>
+
+          {/* Group at a glance */}
+          <motion.dl
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="relative mt-7 sm:mt-10 grid max-w-xl grid-cols-4 pt-5 sm:pt-7"
+          >
+            <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-white/45 via-white/20 to-transparent" />
+            {heroStats.map((s, i) => (
+              <div key={s.label} className={cn("flex min-w-0 flex-col", i > 0 && "border-l border-white/15 pl-3 sm:pl-6 lg:pl-8")}>
+                <dt className="font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.03em] sm:tracking-[0.16em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]">
+                  {s.label}
+                </dt>
+                <dd className="mt-2 flex items-baseline font-heading text-3xl sm:text-4xl lg:text-5xl font-medium leading-none tracking-tight text-white tabular-nums [text-shadow:0_2px_24px_rgba(0,0,0,0.65)]">
+                  <AnimatedNumber value={s.value} />
+                  {s.suffix && <span className="text-[#FF8904]">{s.suffix}</span>}
+                </dd>
+              </div>
+            ))}
+          </motion.dl>
         </div>
       </div>
 
@@ -217,15 +261,15 @@ export function RilHeroSection() {
             data-cursor="button"
             onClick={() => setIsPaused((p) => !p)}
             aria-label={isPaused ? "Play slide rotation" : "Pause slide rotation"}
-            className="flex h-5 w-5 items-center justify-center rounded-full text-[#FE7701] hover:scale-110 transition-transform"
+            className="flex h-5 w-5 items-center justify-center rounded-full text-[#F54900] hover:scale-110 transition-transform"
           >
             <span
-              className={`block h-2 w-2 rounded-full bg-[#FE7701] ${isPaused ? "opacity-40" : "animate-pulse"
+              className={`block h-2 w-2 rounded-full bg-[#F54900] ${isPaused ? "opacity-40" : "animate-pulse"
                 }`}
             />
           </button>
 
-          <span className="font-sans text-[11px] font-bold text-[#FE7701] tracking-wider">
+          <span className="font-sans text-[11px] font-bold text-[#F54900] tracking-wider">
             0{currentIndex + 1} / 0{heroSlides.length}
           </span>
 
@@ -255,7 +299,7 @@ export function RilHeroSection() {
               duration: isPaused ? 0 : SLIDE_DURATION / 1000,
               ease: "linear",
             }}
-            className="h-full bg-[#FE7701] shadow-[0_0_8px_rgba(254,119,1,0.6)]"
+            className="h-full bg-[#F54900] shadow-[0_0_8px_rgba(245,73,0,0.6)]"
           />
         </div>
 
@@ -280,7 +324,7 @@ export function RilHeroSection() {
                 onClick={() => handleSelect(idx)}
                 aria-label={`Jump to ${s.name}`}
                 className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex
-                  ? "w-6 bg-[#FE7701] shadow-[0_0_8px_#FE7701]"
+                  ? "w-6 bg-[#F54900] shadow-[0_0_8px_#F54900]"
                   : "w-2 bg-white/30 hover:bg-white/60"
                   }`}
               />

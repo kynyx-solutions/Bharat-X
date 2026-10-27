@@ -36,7 +36,7 @@ export function PageTransition({
       <motion.div
         key={`sweep-${pathname}`}
         aria-hidden="true"
-        className="pointer-events-none fixed top-0 left-0 right-0 z-50 h-[2px] bg-gradient-to-r from-[#3026B3] via-[#00B8D9] to-[#FE7701] origin-left"
+        className="pointer-events-none fixed top-0 left-0 right-0 z-50 h-[2px] bg-gradient-to-r from-[#3026B3] via-[#00B8D9] to-[#F54900] origin-left"
         initial={{ scaleX: 0, opacity: 0.8 }}
         animate={{ scaleX: 1, opacity: [0.8, 1, 0] }}
         transition={{ duration: 0.5, ease: EASINGS.premium }}

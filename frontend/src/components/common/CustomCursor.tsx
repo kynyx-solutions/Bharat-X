@@ -4,10 +4,10 @@ type CursorState = "default" | "text" | "button" | "card" | "link" | "image";
 
 const CURSOR_COLORS: Record<CursorState, string> = {
   default: "#3026B3",
-  text:    "#FE7701",
+  text:    "#F54900",
   button:  "#15966B",
   card:    "#00B8D9",
-  link:    "#FE7701",
+  link:    "#F54900",
   image:   "#211B72",
 };
 

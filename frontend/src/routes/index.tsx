@@ -10,6 +10,7 @@ import HowWeBuildPage from "../pages/HowWeBuildPage";
 import InnovationPage from "../pages/InnovationPage";
 import LeadershipPage from "../pages/LeadershipPage";
 import NotFoundPage from "../pages/NotFoundPage";
+import PartnershipsPage from "../pages/PartnershipsPage";
 import PrivacyPage from "../pages/PrivacyPage";
 import ServicesPage from "../pages/ServicesPage";
 import TermsPage from "../pages/TermsPage";
@@ -38,6 +39,7 @@ export function AppRoutes() {
         <Route path="industries" element={<IndustriesPage />} />
         <Route path="innovation" element={<InnovationPage />} />
         <Route path="impact" element={<ImpactPage />} />
+        <Route path="partnerships" element={<PartnershipsPage />} />
         <Route path="leadership" element={<LeadershipPage />} />
         <Route path="careers" element={<CareersPage />} />
         <Route path="contact" element={<ContactPage />} />

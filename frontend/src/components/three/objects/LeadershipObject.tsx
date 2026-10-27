@@ -32,7 +32,7 @@ function CompassMesh() {
         <sphereGeometry args={[0.55, 32, 32]} />
         <meshStandardMaterial
           color="#0f172a"
-          emissive="#fea04d"
+          emissive="#ff8904"
           emissiveIntensity={0.8}
           metalness={0.92}
           roughness={0.15}
@@ -49,7 +49,7 @@ function CompassMesh() {
       {/* Outer Azimuth Degree Dial Ring */}
       <mesh ref={azimuthRing} rotation={[0, 0, 0]}>
         <torusGeometry args={[2.2, 0.035, 16, 120]} />
-        <meshStandardMaterial color="#fea04d" metalness={0.85} roughness={0.2} />
+        <meshStandardMaterial color="#ff8904" metalness={0.85} roughness={0.2} />
       </mesh>
 
       {/* Inner Astrolabe Ring */}
@@ -64,8 +64,8 @@ function CompassMesh() {
         <mesh position={[0, 1.3, 0]}>
           <coneGeometry args={[0.18, 1.4, 4]} />
           <meshStandardMaterial
-            color="#fea04d"
-            emissive="#fea04d"
+            color="#ff8904"
+            emissive="#ff8904"
             emissiveIntensity={1.2}
             metalness={0.9}
             roughness={0.15}
@@ -77,7 +77,7 @@ function CompassMesh() {
           <octahedronGeometry args={[0.22, 0]} />
           <meshStandardMaterial
             color="#ffffff"
-            emissive="#fea04d"
+            emissive="#ff8904"
             emissiveIntensity={2.5}
           />
         </mesh>
@@ -103,7 +103,7 @@ function CompassMesh() {
 
       {/* Direction Cardinal Labels */}
       {[
-        { t: "N", pos: [0, 2.55, 0], col: "#fea04d" },
+        { t: "N", pos: [0, 2.55, 0], col: "#ff8904" },
         { t: "S", pos: [0, -2.55, 0], col: "#64748b" },
         { t: "E", pos: [2.55, 0, 0], col: "#64748b" },
         { t: "W", pos: [-2.55, 0, 0], col: "#64748b" },

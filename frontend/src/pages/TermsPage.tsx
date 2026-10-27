@@ -68,7 +68,7 @@ export default function TermsPage() {
       <SectionTransition className="py-6 sm:py-9">
         <div className="container-x max-w-3xl">
           <Reveal>
-            <p className="mb-10 rounded-xl border border-[#FE7701]/40 border-l-4 border-l-[#FE7701] bg-[color-mix(in_srgb,#FE7701_14%,white)] p-5 text-[13.5px] leading-relaxed text-[#374151] fx-lift transition-all">
+            <p className="mb-10 rounded-xl border border-[#F54900]/40 border-l-4 border-l-[#F54900] bg-[color-mix(in_srgb,#FE7701_14%,white)] p-5 text-[13.5px] leading-relaxed text-[#374151] fx-lift transition-all">
               Last updated: 25 September 2026. By using this website you agree
               to these terms. If you are acting on behalf of an organisation,
               you confirm you have authority to bind it.
@@ -91,8 +91,8 @@ export default function TermsPage() {
             ))}
 
             <Reveal delay={0.2}>
-              <div data-cursor="card" className="mt-8 rounded-xl border border-[#211B72] border-t-4 border-t-[#FE7701] bg-[#211B72] p-5 font-sans text-xs sm:text-[13px] text-slate-200 shadow-md fx-lift transition-all hover:border-t-[#FE7701]!">
-                <span className="font-semibold text-[#FEA04D] uppercase tracking-wider block mb-1">
+              <div data-cursor="card" className="mt-8 rounded-xl border border-[#211B72] border-t-4 border-t-[#F54900] bg-[#211B72] p-5 font-sans text-xs sm:text-[13px] text-slate-200 shadow-md fx-lift transition-all hover:border-t-[#F54900]!">
+                <span className="font-semibold text-[#FF8904] uppercase tracking-wider block mb-1">
                   Registered Headquarters:
                 </span>
                 <p>BharatX Group · Building no. 511 First Floor, Motilal Nehru Complex, New Delhi 110017, India</p>

@@ -74,7 +74,7 @@ const triadData: TriadItem[] = [
     metrics: [
       { label: "Ecosystem Portfolio", value: "₹180 Cr+", color: "#3026B3" },
       { label: "Road & Civil Works", value: "150+ KM", color: "#00B8D9" },
-      { label: "Precision Casters Built", value: "500,000+", color: "#FE7701" },
+      { label: "Precision Casters Built", value: "500,000+", color: "#F54900" },
     ],
     image: "/assets/backgrounds/impact-story.jpg",
     fallbackImage: "/assets/backgrounds/infrastructure-real.jpg",
@@ -98,10 +98,10 @@ export function StrategicTriadTabs() {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div>
                 <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3] dark:text-gold-400 mb-2">
-                  <span className="text-[#FE7701] animate-pulse">◆</span>
+                  <span className="text-[#F54900] animate-pulse">◆</span>
                   <span>STRATEGIC STORY</span>
                 </div>
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#FE7701] transition-colors duration-300">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#F54900] transition-colors duration-300">
                   Sovereign Commitment
                 </h2>
               </div>
@@ -154,7 +154,7 @@ export function StrategicTriadTabs() {
                   {current.badge}
                 </span>
 
-                <h3 className="mt-3 font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] dark:text-white leading-tight hover:text-[#3026B3] dark:hover:text-[#FE7701] transition-colors duration-300">
+                <h3 className="mt-3 font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] dark:text-white leading-tight hover:text-[#3026B3] dark:hover:text-[#F54900] transition-colors duration-300">
                   {current.headline}
                 </h3>
 
@@ -253,9 +253,9 @@ export function StrategicTriadTabs() {
                   </div>
 
                   {/* Bottom glassmorphic info bar */}
-                  <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between text-xs font-sans uppercase tracking-wider text-[#FE7701] bg-black/75 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/15">
+                  <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between text-xs font-sans uppercase tracking-wider text-[#F54900] bg-black/75 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/15">
                     <span className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#FE7701] animate-pulse" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#F54900] animate-pulse" />
                       <span>SOVEREIGNTY CHARTER</span>
                     </span>
                     <span className="text-white font-semibold">{current.tabTitle}</span>

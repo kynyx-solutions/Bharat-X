@@ -63,7 +63,7 @@ export default function CompaniesPage() {
               { value: 150, suffix: "+", label: "Enterprise Deployments", icon: "building-2" },
               { value: 480, suffix: "+", label: "Engineered Systems", icon: "layers" },
               { value: 850, suffix: "+", label: "Specialists & Workforce", icon: "network" },
-              { value: 100, suffix: "%", label: "Shared Ecosystem Standard", icon: "orbit", accent: "#fea04d" },
+              { value: 100, suffix: "%", label: "Shared Ecosystem Standard", icon: "orbit", accent: "#ff8904" },
             ]}
           />
         </div>

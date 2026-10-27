@@ -13,7 +13,7 @@ import { FeatureIcon } from "../components/common/FeatureIcon";
 const philosophyInputs = [
   { label: "Opportunity", icon: "target" as const, color: "#3026B3" },
   { label: "People", icon: "users" as const, color: "#15966B" },
-  { label: "Capital", icon: "landmark" as const, color: "#E06901" },
+  { label: "Capital", icon: "landmark" as const, color: "#F54900" },
   { label: "Technology", icon: "cpu" as const, color: "#00B8D9" },
   { label: "Execution", icon: "cog" as const, color: "#4B40D4" },
 ];
@@ -45,8 +45,8 @@ const buildCycleSteps: {
       tagline: "Turn opportunity into capability.",
       description: "We develop the product, business model, team and operating foundation required to create a viable enterprise.",
       icon: "hard-hat" as const,
-      accent: "#E06901",
-      borderHover: "hover:border-[#FE7701]",
+      accent: "#F54900",
+      borderHover: "hover:border-[#F54900]",
       image: cardImage("how-we-build-03-step-build"),
     },
     {
@@ -121,7 +121,7 @@ const buildSectors: { name: string; tag: string; icon: string; link: string; acc
   { name: "Venture Building", tag: "Capital & Enterprise GTM", icon: "landmark", link: "/verticals#ventures", accent: "#211B72", image: cardImage("how-we-build-18-sector-venture-building") },
   { name: "Agriculture", tag: "Agro Commodities & Export", icon: "sprout", link: "/verticals#agriculture", accent: "#15966B", image: cardImage("how-we-build-13-sector-agriculture") },
   { name: "Infrastructure", tag: "Civil & Transport Assets", icon: "hard-hat", link: "/verticals#infrastructure", accent: "#3026B3", image: cardImage("how-we-build-12-sector-infrastructure") },
-  { name: "Social Impact", tag: "Education & Community Programmes", icon: "graduation-cap", link: "/verticals#foundation", accent: "#E06901", image: cardImage("how-we-build-19-sector-social-impact") },
+  { name: "Social Impact", tag: "Education & Community Programmes", icon: "graduation-cap", link: "/verticals#foundation", accent: "#F54900", image: cardImage("how-we-build-19-sector-social-impact") },
   { name: "Manufacturing", tag: "Precision Casters & Mobility", icon: "cog", link: "/verticals#manufacturing", accent: "#00B8D9", image: cardImage("how-we-build-14-sector-manufacturing") },
   { name: "Technology", tag: "Applied AI & Automation", icon: "cpu", link: "/verticals#tech-ai", accent: "#4B40D4", image: cardImage("how-we-build-15-sector-technology") },
   { name: "Packaging", tag: "Sustainable Industrial Barriers", icon: "boxes", link: "/verticals#packaging", accent: "#D97706", image: cardImage("how-we-build-16-sector-packaging") },
@@ -161,7 +161,7 @@ export default function HowWeBuildPage() {
               data-cursor="text"
             >
               Building Businesses.{" "}
-              <span className="text-[#FE7701] hover:text-[#fead67] transition-colors duration-300">Creating Wider Value.</span>
+              <span className="text-[#F54900] hover:text-[#ffb86a] transition-colors duration-300">Creating Wider Value.</span>
             </motion.h1>
 
             {/* CTA */}
@@ -180,7 +180,7 @@ export default function HowWeBuildPage() {
                   }}
                   data-cursor="button"
                   data-motion="true"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/25 transition-all duration-300 fx-shine active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/25 transition-all duration-300 fx-shine active:scale-95"
                 >
                   <span>Explore The Process</span>
                   <Icon
@@ -277,7 +277,7 @@ export default function HowWeBuildPage() {
                     data-cursor="card"
                     className="rounded-2xl border border-[#3026B3]/40 bg-gradient-to-r from-[#211B72] via-[#3026B3] to-[#211B72] p-5 sm:p-6 text-center text-white shadow-xl transition-all duration-300 hover:scale-[1.02] fx-glow-indigo"
                   >
-                    <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#FE7701] font-bold block mb-1">
+                    <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold block mb-1">
                       CENTRAL OUTCOME
                     </span>
                     {/* `!` keeps the gold hover: the panel's light card-surface rule would otherwise force indigo on this dark box */}
@@ -337,7 +337,7 @@ export default function HowWeBuildPage() {
                       />
                     </div>
 
-                    <h3 className="font-sans text-sm sm:text-base font-bold tracking-[0.16em] text-white uppercase group-hover:text-[#FEA04D] transition-colors">
+                    <h3 className="font-sans text-sm sm:text-base font-bold tracking-[0.16em] text-white uppercase group-hover:text-[#FF8904] transition-colors">
                       {step.name}
                     </h3>
 
@@ -404,7 +404,7 @@ export default function HowWeBuildPage() {
                       className="mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FEA04D] transition-colors duration-300">
+                    <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors duration-300">
                       {item.pillar}
                     </h3>
 
@@ -422,7 +422,7 @@ export default function HowWeBuildPage() {
           </Stagger>
 
           {/* Central Anchor Line */}
-          <div className="mt-14 max-w-2xl mx-auto rounded-2xl border border-[#211B72] border-t-4 border-t-[#FE7701] bg-[#211B72] p-6 text-center shadow-md fx-lift">
+          <div className="mt-14 max-w-2xl mx-auto rounded-2xl border border-[#211B72] border-t-4 border-t-[#F54900] bg-[#211B72] p-6 text-center shadow-md fx-lift">
             <p className="font-heading text-base sm:text-lg font-medium text-white leading-relaxed">
               “When these capabilities come together, opportunities become scalable businesses.”
             </p>
@@ -466,7 +466,7 @@ export default function HowWeBuildPage() {
                       className="transition-transform duration-300 group-hover:scale-110"
                     />
                     <div>
-                      <h4 className="font-heading text-base font-medium text-white group-hover:text-[#FEA04D] transition-colors">
+                      <h4 className="font-heading text-base font-medium text-white group-hover:text-[#FF8904] transition-colors">
                         {sector.name}
                       </h4>
                       <span className="text-[11px] sm:text-xs font-sans text-slate-200 block">
@@ -474,7 +474,7 @@ export default function HowWeBuildPage() {
                       </span>
                     </div>
                   </div>
-                  <Icon name="arrow-up-right" width={14} height={14} className="relative text-white/80 group-hover:text-[#FEA04D] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <Icon name="arrow-up-right" width={14} height={14} className="relative text-white/80 group-hover:text-[#FF8904] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </StaggerItem>
             ))}
@@ -488,13 +488,13 @@ export default function HowWeBuildPage() {
         className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#FE7701]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#FE7701]/40 bg-[#FE7701]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701] font-bold shadow-xs mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#FE7701] shadow-[0_0_8px_#FE7701]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>THE NEXT VENTURE</span>
             </div>
 
@@ -515,7 +515,7 @@ export default function HowWeBuildPage() {
                   to="/contact?inquiry=partner"
                   data-cursor="button"
                   data-motion="true"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FE7701] hover:bg-[#e06901] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
                 >
                   <span>Partner With Us</span>
                   <Icon
@@ -558,7 +558,7 @@ export default function HowWeBuildPage() {
 
             {/* Signature Tagline */}
             <div className="mt-12 pt-8 border-t border-white/15 max-w-xl mx-auto">
-              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#FE7701] font-bold">
+              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
                 Building Businesses. Enabling Bharat.
               </p>
             </div>

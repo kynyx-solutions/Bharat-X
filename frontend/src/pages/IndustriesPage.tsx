@@ -43,14 +43,14 @@ export default function IndustriesPage() {
 
         <div className="container-x relative z-10">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FE7701] mb-4">
+            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] mb-4">
               <span className="animate-pulse">◆</span>
               <span className="text-white">STRATEGIC DOMAINS</span>
             </div>
             <AnimatedHeading as="h1" effect="words" hover="color" className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] text-white">
               Sovereign Sectors.
               <br />
-              <span className="italic text-[#FE7701]">National Priority.</span>
+              <span className="italic text-[#F54900]">National Priority.</span>
             </AnimatedHeading>
             <p className="mt-6 text-base sm:text-lg text-slate-200 leading-relaxed font-sans">
               BharatX Group operates deliberately in sectors that determine India's macroeconomic autonomy: computing infrastructure, heavy civil arteries, precision manufacturing, and sovereign food security.
@@ -82,7 +82,7 @@ export default function IndustriesPage() {
                           loading="lazy"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 group-hover:from-black/80" />
-                        <span className="absolute top-4 left-4 rounded-full bg-black/70 backdrop-blur-md px-3 py-1 font-sans text-[9px] uppercase tracking-wider text-[#FE7701] border border-white/20 transition-transform group-hover:translate-y-[-2px]">
+                        <span className="absolute top-4 left-4 rounded-full bg-black/70 backdrop-blur-md px-3 py-1 font-sans text-[9px] uppercase tracking-wider text-[#F54900] border border-white/20 transition-transform group-hover:translate-y-[-2px]">
                           0{i + 1} · {svc.shortLabel}
                         </span>
                       </div>
@@ -90,7 +90,7 @@ export default function IndustriesPage() {
                       {/* Card Content */}
                       <div className="p-6 sm:p-7">
                         <div className="flex items-center justify-between gap-3 mb-2">
-                          <span className="font-sans text-[10px] uppercase tracking-wider text-[#984701] font-semibold">
+                          <span className="font-sans text-[10px] uppercase tracking-wider text-[#9f2d00] font-semibold">
                             {svc.eyebrow}
                           </span>
                           <div className="flex items-center gap-1.5 rounded-full border border-[#E3E5EF] bg-white/90 px-2.5 py-0.5">

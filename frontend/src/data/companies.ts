@@ -27,7 +27,7 @@ export const companies: Company[] = [
     logo: "/Ventures_logo.png",
     heroImage: "/companies/bharatx-ventures/hero.jpg",
     cinematicImage: "/companies/bharatx-ventures/hero.jpg",
-    accentColor: "#fea04d",
+    accentColor: "#ff8904",
     capabilities: [
       {
         icon: "compass",

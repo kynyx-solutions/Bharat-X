@@ -16,7 +16,7 @@ const sectors: SectorMarker[] = [
   { title: "INFRASTRUCTURE", ring: 2.2, angle: 1.8, color: "#38bdf8" },
   { title: "INDUSTRIAL MOBILITY", ring: 2.2, angle: 4.2, color: "#3b82f6" },
   { title: "AGRICULTURE & TRADE", ring: 2.8, angle: 3.1, color: "#10b981" },
-  { title: "VENTURE BUILDING", ring: 2.8, angle: 5.6, color: "#fea04d" },
+  { title: "VENTURE BUILDING", ring: 2.8, angle: 5.6, color: "#ff8904" },
 ];
 
 function IndustryOrbitMesh() {
@@ -45,7 +45,7 @@ function IndustryOrbitMesh() {
         <dodecahedronGeometry args={[0.65, 0]} />
         <meshStandardMaterial
           color="#0f172a"
-          emissive="#fea04d"
+          emissive="#ff8904"
           emissiveIntensity={0.8}
           metalness={0.9}
           roughness={0.15}
@@ -71,7 +71,7 @@ function IndustryOrbitMesh() {
       {/* Orbit Ring 3: Agriculture, Food & Venture */}
       <mesh ref={ring3} rotation={[Math.PI / 2.3, -0.2, 0.3]}>
         <torusGeometry args={[2.8, 0.028, 16, 140]} />
-        <meshStandardMaterial color="#fea04d" metalness={0.8} roughness={0.2} />
+        <meshStandardMaterial color="#ff8904" metalness={0.8} roughness={0.2} />
       </mesh>
 
       {/* Sector Nodes */}

@@ -67,7 +67,7 @@ export function HoverCard({
   if (variant === "spotlight") {
     const spotlightColors = {
       indigo: "rgba(48, 38, 179, 0.14)",
-      gold: "rgba(254, 119, 1, 0.16)",
+      gold: "rgba(245, 73, 0, 0.16)",
       cyan: "rgba(0, 184, 217, 0.14)",
     };
     return (

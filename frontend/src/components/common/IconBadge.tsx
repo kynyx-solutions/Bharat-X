@@ -58,7 +58,7 @@ export function IconBadge({
         className="absolute inset-0 rounded-full opacity-60"
         style={{
           background: `radial-gradient(circle at 30% 25%, ${
-            accent ?? (tone === "gold" ? "#fea04d" : "#22d5b3")
+            accent ?? (tone === "gold" ? "#ff8904" : "#22d5b3")
           }26, transparent 65%)`,
         }}
       />

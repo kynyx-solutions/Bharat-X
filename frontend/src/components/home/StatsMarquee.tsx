@@ -6,12 +6,12 @@ import { servicesData } from "../../data/servicesData";
  * `display` overrides the label where it needs more context without the company name.
  */
 const picks: { id: string; label: string; color: string; display?: string }[] = [
-  { id: "ventures", label: "Portfolio Enterprise Value", color: "#FEA04D" },
+  { id: "ventures", label: "Portfolio Enterprise Value", color: "#FF8904" },
   { id: "infrastructure", label: "Roads & Civil Works", color: "#8F88FF" },
   { id: "agriculture", label: "Sourced & Processed", color: "#34D399", display: "Agri Commodities Sourced & Processed" },
   { id: "manufacturing", label: "Precision Casters Built", color: "#5EE4F8" },
   { id: "tech-ai", label: "AI Workflows Deployed", color: "#C4B5FD" },
-  { id: "ventures", label: "Ventures Shaped & Scaled", color: "#FEA04D" },
+  { id: "ventures", label: "Ventures Shaped & Scaled", color: "#FF8904" },
   { id: "infrastructure", label: "Civil Projects Completed", color: "#8F88FF" },
   { id: "agriculture", label: "Export Partner Ports", color: "#34D399" },
   { id: "manufacturing", label: "Export Destinations", color: "#5EE4F8" },
@@ -25,7 +25,7 @@ const stats = picks.flatMap((p) => {
 });
 
 const BRAND_LIGHT =
-  "radial-gradient(55% 140% at 12% 50%, rgba(0, 184, 217, 0.16), transparent 70%), radial-gradient(55% 140% at 88% 50%, rgba(254, 119, 1, 0.14), transparent 70%)";
+  "radial-gradient(55% 140% at 12% 50%, rgba(0, 184, 217, 0.16), transparent 70%), radial-gradient(55% 140% at 88% 50%, rgba(245, 73, 0, 0.14), transparent 70%)";
 
 function StatsRow({ hidden = false }: { hidden?: boolean }) {
   return (
@@ -38,7 +38,7 @@ function StatsRow({ hidden = false }: { hidden?: boolean }) {
             </span>
             <span className="whitespace-nowrap text-sm font-medium text-white/90">{s.label}</span>
           </div>
-          <svg aria-hidden viewBox="0 0 12 12" className="h-2.5 w-2.5 shrink-0 text-[#FE7701]">
+          <svg aria-hidden viewBox="0 0 12 12" className="h-2.5 w-2.5 shrink-0 text-[#F54900]">
             <path d="M6 0 L7.4 4.6 L12 6 L7.4 7.4 L6 12 L4.6 7.4 L0 6 L4.6 4.6 Z" fill="currentColor" />
           </svg>
         </li>

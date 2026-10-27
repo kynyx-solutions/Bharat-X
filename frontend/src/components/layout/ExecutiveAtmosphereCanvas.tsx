@@ -63,7 +63,7 @@ export function ExecutiveAtmosphereCanvas() {
 
     // Particle pool: 18 on mobile, 42 on desktop for rich network visuals with high GPU efficiency
     const particleCount = isMobile ? 18 : 42;
-    const colors = ["#3026B3", "#FE7701", "#00B8D9", "#15966B", "#211B72"];
+    const colors = ["#3026B3", "#F54900", "#00B8D9", "#15966B", "#211B72"];
 
     const particles: Particle[] = Array.from({ length: particleCount }, () => ({
       x: Math.random() * width,
@@ -120,7 +120,7 @@ export function ExecutiveAtmosphereCanvas() {
 
         ctx.strokeStyle = isDark
           ? isMajor
-            ? "rgba(254, 119, 1, 0.55)"
+            ? "rgba(245, 73, 0, 0.55)"
             : `rgba(0, 184, 217, ${alpha})`
           : isMajor
             ? "rgba(48, 38, 179, 0.3)"
@@ -162,7 +162,7 @@ export function ExecutiveAtmosphereCanvas() {
 
       // CAD Crosshairs (+) at key ray/rail intersections
       const arm = 3.5;
-      ctx.strokeStyle = isDark ? "rgba(254, 119, 1, 0.85)" : "rgba(0, 184, 217, 0.5)";
+      ctx.strokeStyle = isDark ? "rgba(245, 73, 0, 0.85)" : "rgba(0, 184, 217, 0.5)";
       ctx.lineWidth = 1;
 
       for (let r = 0; r < radialXAtBottom.length; r += 3) {
@@ -188,7 +188,7 @@ export function ExecutiveAtmosphereCanvas() {
       ctx.setLineDash([4, 7]);
       radarRadii.forEach((r, idx) => {
         ctx.strokeStyle = isDark
-          ? `rgba(254, 119, 1, ${0.4 - idx * 0.06})`
+          ? `rgba(245, 73, 0, ${0.4 - idx * 0.06})`
           : `rgba(48, 38, 179, ${0.2 - idx * 0.03})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
@@ -198,14 +198,14 @@ export function ExecutiveAtmosphereCanvas() {
         // Technical range tag
         if (!isMobile) {
           ctx.font = `9px ${bodyFont}`;
-          ctx.fillStyle = isDark ? "rgba(254, 119, 1, 0.9)" : "rgba(89, 101, 121, 0.65)";
+          ctx.fillStyle = isDark ? "rgba(245, 73, 0, 0.9)" : "rgba(89, 101, 121, 0.65)";
           ctx.fillText(`R-${r}M`, perspectiveOriginX + r + 6, horizonY + 3);
         }
       });
       ctx.setLineDash([]);
 
       // Horizon line with subtle datum ticks
-      ctx.strokeStyle = isDark ? "rgba(254, 119, 1, 0.75)" : "rgba(254, 119, 1, 0.6)";
+      ctx.strokeStyle = isDark ? "rgba(245, 73, 0, 0.75)" : "rgba(245, 73, 0, 0.6)";
       ctx.lineWidth = 1.2;
       ctx.beginPath();
       ctx.moveTo(0, horizonY);
@@ -233,13 +233,13 @@ export function ExecutiveAtmosphereCanvas() {
 
       // Color combination theme matching user requested palette
       const vibrantColors = [
-        "#FE7701", // Vibrant Saffron
+        "#F54900", // Vibrant Saffron
         "#00B8D9", // Electric Cyan
         "#3026B3", // Deep Indigo
         "#15966B", // Emerald
         "#211B72", // Midnight Indigo
       ];
-      const darkThreadColors = ["#FE7701", "#00B8D9", "#15966B", "#3026B3", "#FAF9F6"];
+      const darkThreadColors = ["#F54900", "#00B8D9", "#15966B", "#3026B3", "#FAF9F6"];
 
       // Update and draw particles
       particles.forEach((p, idx) => {
@@ -289,7 +289,7 @@ export function ExecutiveAtmosphereCanvas() {
               ? darkThreadColors[(idx + j) % darkThreadColors.length]
               : idx % 2 === 0
                 ? "#00B8D9"
-                : "#FE7701";
+                : "#F54900";
             ctx.globalAlpha = lineAlpha;
             ctx.lineWidth = isDark ? 0.95 : 1.0;
             ctx.beginPath();

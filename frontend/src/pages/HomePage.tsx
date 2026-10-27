@@ -1,5 +1,6 @@
 import { usePageMeta } from "../hooks/usePageMeta";
 import { RilHeroSection } from "../components/home/RilHeroSection";
+import { PartnershipsSection } from "../components/home/PartnershipsSection";
 import { StatsMarquee } from "../components/home/StatsMarquee";
 import { AboutBharatXSection } from "../components/home/AboutBharatXSection";
 import { BusinessEcosystemGrid } from "../components/home/BusinessEcosystemGrid";
@@ -26,10 +27,13 @@ export default function HomePage() {
       {/* ── STATS STRIP (Group figures, scrolling ticker) ───────── */}
       <StatsMarquee />
 
-      {/* ── 02. ABOUT BHARATX — WHO WE ARE ──────────────────────── */}
-      <AboutBharatXSection />
+      {/* ── PARTNERSHIPS & PROGRAMMES (Institutions, MoUs) ─────────── */}
+      <PartnershipsSection />
 
-      {/* ── 03. OUR BUSINESSES — THE CORE SECTION (4x2 Grid) ─────── */}
+      {/* ── 02. ABOUT BHARATX — WHO WE ARE ──────────────────────── */}
+      {/* <AboutBharatXSection />*/}
+
+      {/* ── 03. OUR BUSINESSES — CORE VERTICALS (RIL-style showcase) ─ */}
       <BusinessEcosystemGrid />
 
       {/* ── 04. OUR APPROACH (Opportunity to Enterprise Flow) ───── */}

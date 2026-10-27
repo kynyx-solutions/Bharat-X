@@ -90,12 +90,12 @@ html.dark {
   --color-pulse-500: #0092B0;
   --color-pulse-600: #006E85;
 
-  /* Accent 1: Vibrant Saffron (#FE7701) */
-  --color-gold-200: #FFE4CC;
-  --color-gold-300: #FEB473;
-  --color-gold-400: #FE7701;
-  --color-gold-500: #E06901;
-  --color-gold-600: #B75601;
+  /* Accent 1: Brand orange — Tailwind v4 orange-600 (#F54900); 200/300/600 map to orange-100/300/700 */
+  --color-gold-200: #FFEDD4;
+  --color-gold-300: #FFB86A;
+  --color-gold-400: #F54900;
+  --color-gold-500: #F54900;
+  --color-gold-600: #CA3500;
 
   /* Primary: Deep Indigo (#3026B3) & Midnight Indigo (#211B72) */
   --color-ember-300: #D2CFFE;
@@ -105,7 +105,7 @@ html.dark {
 
   --color-primary: #3026B3;
   --color-primary-dark: #211B72;
-  --color-accent-saffron: #FE7701;
+  --color-accent-saffron: #F54900;
   --color-accent-cyan: #00B8D9;
   --color-success: #15966B;
 
@@ -136,7 +136,7 @@ html.dark {
   --dur-reveal: 800ms;
   --fx-shadow-lift: 0 18px 40px -12px rgba(48, 38, 179, 0.22);
   --fx-glow-indigo: 0 0 0 1px rgba(48, 38, 179, 0.35), 0 18px 45px -12px rgba(48, 38, 179, 0.35);
-  --fx-glow-gold: 0 0 0 1px rgba(254, 119, 1, 0.45), 0 18px 45px -12px rgba(254, 119, 1, 0.35);
+  --fx-glow-gold: 0 0 0 1px rgba(245, 73, 0, 0.45), 0 18px 45px -12px rgba(245, 73, 0, 0.35);
   --fx-glow-cyan: 0 0 0 1px rgba(0, 184, 217, 0.45), 0 18px 45px -12px rgba(0, 184, 217, 0.35);
 }
 
@@ -201,12 +201,12 @@ textarea {
 }
 
 ::selection {
-  background: #FE7701;
+  background: #F54900;
   color: #111827;
 }
 
 .dark ::selection {
-  background: #FE7701;
+  background: #F54900;
   color: #111827;
 }
 
@@ -420,7 +420,7 @@ textarea {
   background:
     radial-gradient(55rem 32rem at 12% -5%, rgba(0, 184, 217, 0.12), transparent 60%),
     radial-gradient(48rem 28rem at 88% 6%, rgba(48, 38, 179, 0.08), transparent 62%),
-    radial-gradient(60rem 38rem at 50% 115%, rgba(254, 119, 1, 0.1), transparent 70%);
+    radial-gradient(60rem 38rem at 50% 115%, rgba(245, 73, 0, 0.1), transparent 70%);
 }
 
 .dark .aurora {
@@ -428,7 +428,7 @@ textarea {
     radial-gradient(55rem 32rem at 10% -6%, rgba(48, 38, 179, 0.4), transparent 65%),
     radial-gradient(50rem 30rem at 90% 5%, rgba(0, 184, 217, 0.3), transparent 65%),
     radial-gradient(45rem 28rem at 18% 70%, rgba(21, 150, 107, 0.25), transparent 65%),
-    radial-gradient(60rem 38rem at 50% 115%, rgba(254, 119, 1, 0.25), transparent 72%);
+    radial-gradient(60rem 38rem at 50% 115%, rgba(245, 73, 0, 0.25), transparent 72%);
 }
 
 /* ── Static Global Background ────────────────────────────────── */
@@ -470,7 +470,7 @@ textarea {
   background:
     radial-gradient(75rem 48rem at 50% -5%, rgba(48, 38, 179, 0.07), transparent 70%),
     radial-gradient(60rem 40rem at 88% 22%, rgba(0, 184, 217, 0.08), transparent 65%),
-    radial-gradient(65rem 45rem at 12% 40%, rgba(254, 119, 1, 0.06), transparent 70%),
+    radial-gradient(65rem 45rem at 12% 40%, rgba(245, 73, 0, 0.06), transparent 70%),
     radial-gradient(85rem 55rem at 50% 105%, rgba(21, 150, 107, 0.06), transparent 75%);
   transition: background 0.4s ease;
 }
@@ -479,9 +479,9 @@ textarea {
   background:
     radial-gradient(75rem 48rem at 10% -5%, rgba(48, 38, 179, 0.4), transparent 68%),
     radial-gradient(65rem 42rem at 90% 8%, rgba(0, 184, 217, 0.3), transparent 68%),
-    radial-gradient(60rem 38rem at 50% 38%, rgba(254, 119, 1, 0.22), transparent 70%),
+    radial-gradient(60rem 38rem at 50% 38%, rgba(245, 73, 0, 0.22), transparent 70%),
     radial-gradient(55rem 35rem at 8% 68%, rgba(21, 150, 107, 0.25), transparent 70%),
-    radial-gradient(80rem 50rem at 50% 115%, rgba(254, 119, 1, 0.3), transparent 78%);
+    radial-gradient(80rem 50rem at 50% 115%, rgba(245, 73, 0, 0.3), transparent 78%);
   transition: background 0.4s ease;
 }
 
@@ -521,14 +521,14 @@ textarea {
 
 .gold-glow {
   background: radial-gradient(42rem 24rem at 50% 10%,
-      rgba(254, 119, 1, 0.18),
+      rgba(245, 73, 0, 0.18),
       rgba(48, 38, 179, 0.12) 50%,
       transparent 72%);
 }
 
 .dark .gold-glow {
   background: radial-gradient(48rem 28rem at 50% 0%,
-      rgba(254, 119, 1, 0.35),
+      rgba(245, 73, 0, 0.35),
       rgba(48, 38, 179, 0.3) 45%,
       rgba(0, 184, 217, 0.2) 70%,
       transparent 78%);
@@ -538,7 +538,7 @@ textarea {
 .dark .orb-pedestal {
   opacity: 0.85 !important;
   background: radial-gradient(circle,
-      rgba(254, 119, 1, 0.45) 0%,
+      rgba(245, 73, 0, 0.45) 0%,
       rgba(48, 38, 179, 0.4) 35%,
       rgba(0, 184, 217, 0.3) 60%,
       transparent 90%) !important;
@@ -798,7 +798,7 @@ section:has(> .absolute) h3:hover,
 .card-art[data-tone="dark"] ~ :is(h1, h2, h3):hover,
 .card-surface[data-tone="dark"] ~ * :is(h1, h2, h3):hover,
 .card-surface[data-tone="dark"] ~ :is(h1, h2, h3):hover {
-  color: #FE7701 !important;
+  color: #F54900 !important;
 }
 
 /* Light generated-art cards sit inside the bg-night Layout wrapper, which would otherwise
@@ -916,7 +916,7 @@ button:hover img,
   .fx-lift-glow-gold:hover {
     transform: translateY(-8px);
     box-shadow: var(--fx-glow-gold);
-    border-color: rgba(254, 119, 1, 0.5) !important;
+    border-color: rgba(245, 73, 0, 0.5) !important;
   }
 }
 
@@ -1195,7 +1195,7 @@ button:hover img,
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(48, 38, 179, 0.3), rgba(0, 184, 217, 0.4), rgba(254, 119, 1, 0.3));
+  background: linear-gradient(135deg, rgba(48, 38, 179, 0.3), rgba(0, 184, 217, 0.4), rgba(245, 73, 0, 0.3));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -1212,7 +1212,7 @@ button:hover img,
 
 /* Gradient Text Sweep */
 .fx-gradient-text {
-  background: linear-gradient(135deg, #3026B3 0%, #00B8D9 50%, #FE7701 100%);
+  background: linear-gradient(135deg, #3026B3 0%, #00B8D9 50%, #F54900 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
