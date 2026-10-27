@@ -258,24 +258,15 @@ export function BusinessEcosystemGrid() {
                   onMouseEnter={() => setActive(i)}
                   onClick={() => select(i)}
                   className={cn(
-                    "group relative flex shrink-0 items-baseline gap-3 whitespace-nowrap py-3 text-left font-sans text-[13px] sm:text-sm font-semibold uppercase tracking-[0.06em] transition-colors duration-300 focus-visible:outline-hidden focus-visible:text-white lg:whitespace-normal lg:border-b lg:border-white/30 lg:py-[1.15rem] short:py-3 lg:text-[17px]",
+                    "group relative flex shrink-0 items-baseline gap-3 whitespace-nowrap py-3 text-left font-sans text-[13px] sm:text-sm font-semibold uppercase tracking-[0.06em] transition-colors duration-300 focus-visible:outline-hidden focus-visible:text-white lg:whitespace-normal lg:border-b-2 lg:border-white/30 lg:py-[1.15rem] short:py-3 lg:text-[17px]",
                     isActive ? "text-white" : "text-white/85 hover:text-white",
                   )}
                 >
-                  <span
-                    aria-hidden
-                    className={cn(
-                      "hidden font-sans text-xs tabular-nums tracking-normal transition-colors lg:inline",
-                      isActive ? "text-[#FF8904]" : "text-white/70 group-hover:text-white",
-                    )}
-                  >
-                    {pad(i + 1)}
-                  </span>
                   <span className="transition-transform duration-300 lg:group-hover:translate-x-1">{v.label}</span>
 
-                  {/* Active marker; while autoplay runs it fills up as the countdown to the next vertical */}
+                  {/* Active marker over the 2px divider; while autoplay runs it fills up as the countdown to the next vertical */}
                   {isActive && (
-                    <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] overflow-hidden rounded-full lg:-bottom-px">
+                    <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] overflow-hidden rounded-full lg:-bottom-0.5">
                       <motion.span
                         key={playing ? `run-${active}` : `hold-${active}`}
                         className="block h-full origin-left bg-[#F54900]"
@@ -294,7 +285,7 @@ export function BusinessEcosystemGrid() {
           <div
             aria-live={playing ? "off" : "polite"}
             {...hoverHandlers}
-            className="grid lg:col-start-1 lg:row-start-1 lg:max-w-2xl"
+            className="grid lg:col-start-1 lg:row-start-1 lg:max-w-2xl lg:self-center"
           >
             {verticals.map((v, i) => {
               const show = i === active;
@@ -309,7 +300,8 @@ export function BusinessEcosystemGrid() {
                   id={`vertical-panel-${v.id}`}
                   aria-labelledby={`vertical-tab-${v.id}`}
                   className={cn(
-                    "col-start-1 row-start-1 transition-[visibility] duration-700",
+                    // self-center: shorter panels sit mid-way in the shared cell rather than at its top
+                    "col-start-1 row-start-1 self-center transition-[visibility] duration-700",
                     show ? "visible" : "invisible",
                   )}
                 >
@@ -320,7 +312,7 @@ export function BusinessEcosystemGrid() {
                   </PanelStep>
 
                   {/* Narrow, evenly set copy, like the RIL businesses block */}
-                  <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] space-y-5 text-base sm:text-[17px] lg:text-lg short:mt-4 short:space-y-3 short:text-base leading-relaxed text-white/95">
+                  <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] space-y-5 text-base sm:text-[17px] lg:text-lg short:mt-4 short:space-y-3 short:text-base leading-relaxed text-white/95 text-justify hyphens-auto">
                     <p>{v.lead}</p>
                     <p>{v.detail}</p>
                   </PanelStep>

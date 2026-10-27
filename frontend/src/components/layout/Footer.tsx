@@ -63,7 +63,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-[#E3E5EF] bg-[#FAF9F6] text-[#111827]">
       <div aria-hidden className="grid-bg grid-bg-fade absolute inset-0 opacity-20" />
-      <div className="container-x relative z-10 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] pt-10 md:pt-12">
+      <div className="container-x relative z-10 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] pt-8 md:pt-10">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
           {/* Institutional Brand Column */}
           <div className="lg:col-span-4 flex flex-col items-center">
@@ -86,7 +86,8 @@ export function Footer() {
               Building Businesses. Enabling Bharat.
             </p>
 
-            <p className="mt-3.5 text-sm leading-relaxed text-[#596579] max-w-[280px]">
+            {/* Justified, with the last line centred so the block sits symmetrically under the logo */}
+            <p className="mt-3.5 text-sm leading-relaxed text-[#596579] max-w-[300px] text-justify [text-align-last:center] hyphens-auto">
               A diversified Indian business group bringing together businesses, capital, technology and talent to create enduring enterprises across key growth sectors.
             </p>
           </div>
@@ -95,7 +96,7 @@ export function Footer() {
           <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
             {/* 1. Businesses */}
             <nav aria-label="Businesses">
-              <div className="mb-3.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
                 <DuotoneIcon name="layers" size={14} className="text-[#3026B3]" />
                 Businesses
               </div>
@@ -120,7 +121,7 @@ export function Footer() {
 
             {/* 2. Group */}
             <nav aria-label="Group">
-              <div className="mb-3.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
                 <DuotoneIcon name="building-2" size={14} className="text-[#3026B3] fx-icon-pop" />
                 Group
               </div>
@@ -145,7 +146,7 @@ export function Footer() {
 
             {/* 3. Connect */}
             <nav aria-label="Connect">
-              <div className="mb-3.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
                 <DuotoneIcon name="share-2" size={14} className="text-[#3026B3] fx-icon-pop" />
                 Connect
               </div>
@@ -178,7 +179,7 @@ export function Footer() {
 
             {/* 4. Address */}
             <div aria-label="Address">
-              <div className="mb-3.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
                 <DuotoneIcon name="map-pin" size={14} className="text-[#3026B3]" />
                 Address
               </div>
@@ -216,7 +217,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Credits & Legal */}
-        <div className="mt-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-[#E3E5EF] pt-5 text-center">
+        <div className="mt-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-[#E3E5EF] pt-5 text-center">
           <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-[#596579] md:text-left shrink-0">
             © {new Date().getFullYear()} BharatX Group. All rights reserved.
           </p>

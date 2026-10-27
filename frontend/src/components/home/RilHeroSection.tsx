@@ -179,8 +179,12 @@ export function RilHeroSection() {
       </div>
 
       {/* ── HERO CONTENT (Dynamic 3-4 Word Tagline, Nothing Else) ─────── */}
-      {/* Pinned to the bottom of the hero; bottom padding clears the slide control (right) and scroll hint (centre) */}
-      <div className="container-x max-w-none! relative z-10 w-full pt-28 pb-32 sm:pt-36 lg:pb-24">
+      {/*
+        Pinned to the bottom-left of the hero. Desktop: a small 32px margin (the slide control sits on the
+        right, clear of it). Phones/tablets keep extra bottom padding because the slide control spans the
+        bottom there.
+      */}
+      <div className="container-x max-w-none! relative z-10 w-full pt-28 pb-32 sm:pt-36 lg:pb-8">
         <div className="max-w-6xl xl:max-w-7xl">
           {/* Subtle Conglomerate Eyebrow 
           <motion.div
@@ -343,8 +347,8 @@ export function RilHeroSection() {
         </div>
       </div>
 
-      {/* Subtle Bottom Scroll Hint */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 text-white/50 pointer-events-none animate-bounce">
+      {/* Subtle Bottom Scroll Hint — only from 1360px, where it clears the bottom-left stats row */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 hidden min-[1360px]:flex flex-col items-center gap-1.5 text-white/50 pointer-events-none animate-bounce">
         <span className="font-sans text-[9px] uppercase tracking-[0.3em]">scroll</span>
         <span className="h-5 w-px bg-gradient-to-b from-gold-400/80 to-transparent" />
       </div>
