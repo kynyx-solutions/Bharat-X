@@ -284,7 +284,7 @@ export default function ImpactPage() {
                   <div className="text-center">
                     <div
                       data-cursor="card"
-                      className="inline-flex flex-col items-center rounded-2xl border border-[#3026B3]/40 bg-gradient-to-r from-[#211B72] via-[#3026B3] to-[#211B72] px-8 py-3.5 text-white shadow-lg transition-transform hover:scale-105 fx-glow-indigo"
+                      className="inline-flex flex-col items-center rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] px-8 py-3.5 text-white shadow-lg transition-transform hover:scale-105 fx-glow-indigo"
                     >
                       <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold">
                         FOUNDATIONAL CATALYST
@@ -652,10 +652,10 @@ export default function ImpactPage() {
       {/* ── 06. THE FUTURE OF IMPACT (The Opportunity Ahead & Final CTA) ─────── */}
       <SectionTransition
         backdrop={<SectionPhoto src={cardImage("impact-cta-opportunity-ahead")} />}
-        className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9"
+        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-6xl mx-auto text-center">

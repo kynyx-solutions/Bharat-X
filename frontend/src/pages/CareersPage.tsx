@@ -466,7 +466,7 @@ export default function CareersPage() {
           </Stagger>
 
           {/* Central Anchor Statement */}
-          <div data-cursor="card" className="mt-14 max-w-2xl mx-auto rounded-2xl border border-white/10 border-b-4 border-b-[#F54900] bg-[#211B72] p-6 text-center shadow-md fx-lift transition-all duration-300 hover:border-[#F54900]">
+          <div data-cursor="card" className="mt-14 max-w-2xl mx-auto rounded-2xl border border-white/10 border-b-4 border-b-[#F54900] bg-[#0B1F47] p-6 text-center shadow-md fx-lift transition-all duration-300 hover:border-[#F54900]">
             <p className="font-heading text-base sm:text-lg font-medium text-white leading-relaxed">
               “We value initiative over hierarchy and outcomes over activity.”
             </p>
@@ -791,10 +791,10 @@ export default function CareersPage() {
       {/* ── 06. FINAL CTA (Ready to Build With Us?) ───────────────────────── */}
       <SectionTransition
         backdrop={<SectionPhoto src={cardImage("careers-cta-join-builders")} />}
-        className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9"
+        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">

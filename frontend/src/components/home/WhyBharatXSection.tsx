@@ -120,7 +120,7 @@ export function WhyBharatXSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="fx-shine group/banner mt-12 sm:mt-14 relative overflow-hidden rounded-3xl border border-[#3026B3]/30 bg-gradient-to-r from-[#211B72] via-[#3026B3] to-[#211B72] p-8 sm:p-12 md:p-14 text-center text-white shadow-2xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(48,38,179,0.35)]"
+          className="fx-shine group/banner mt-12 sm:mt-14 relative overflow-hidden rounded-3xl border border-[#163A7A]/30 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-8 sm:p-12 md:p-14 text-center text-white shadow-2xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(11,31,71,0.45)]"
         >
           {/* Subtle gold line accent */}
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#F54900] to-transparent opacity-80 transition-all duration-300 group-hover/banner:opacity-100" />

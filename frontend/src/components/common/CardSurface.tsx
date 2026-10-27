@@ -104,7 +104,7 @@ export function CardPhoto({ src, accent, position = "center", className }: CardP
 
 /** Darkest behind the centred CTA copy, lighter toward the edges so the photo still reads. */
 const SECTION_SCRIM =
-  "radial-gradient(ellipse at center, rgba(18, 14, 62, 0.8) 0%, rgba(18, 14, 62, 0.62) 50%, rgba(18, 14, 62, 0.4) 100%)";
+  "radial-gradient(ellipse at center, rgba(6, 18, 46, 0.8) 0%, rgba(6, 18, 46, 0.62) 50%, rgba(6, 18, 46, 0.4) 100%)";
 
 export interface SectionPhotoProps {
   /** Image URL, usually cardImage("home-cta-collaborate"). */

@@ -275,7 +275,7 @@ export default function HowWeBuildPage() {
                   {/* Result Node: Enterprise */}
                   <div
                     data-cursor="card"
-                    className="rounded-2xl border border-[#3026B3]/40 bg-gradient-to-r from-[#211B72] via-[#3026B3] to-[#211B72] p-5 sm:p-6 text-center text-white shadow-xl transition-all duration-300 hover:scale-[1.02] fx-glow-indigo"
+                    className="rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-5 sm:p-6 text-center text-white shadow-xl transition-all duration-300 hover:scale-[1.02] fx-glow-indigo"
                   >
                     <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold block mb-1">
                       CENTRAL OUTCOME
@@ -422,7 +422,7 @@ export default function HowWeBuildPage() {
           </Stagger>
 
           {/* Central Anchor Line */}
-          <div className="mt-14 max-w-2xl mx-auto rounded-2xl border border-[#211B72] border-t-4 border-t-[#F54900] bg-[#211B72] p-6 text-center shadow-md fx-lift">
+          <div className="mt-14 max-w-2xl mx-auto rounded-2xl border border-[#0B1F47] border-t-4 border-t-[#F54900] bg-[#0B1F47] p-6 text-center shadow-md fx-lift">
             <p className="font-heading text-base sm:text-lg font-medium text-white leading-relaxed">
               “When these capabilities come together, opportunities become scalable businesses.”
             </p>
@@ -485,10 +485,10 @@ export default function HowWeBuildPage() {
       {/* ── 06. CLOSING CTA (The Next Business Could Be Built Here.) ─────────── */}
       <SectionTransition
         backdrop={<SectionPhoto src={cardImage("how-we-build-cta-next-venture")} />}
-        className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9"
+        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">

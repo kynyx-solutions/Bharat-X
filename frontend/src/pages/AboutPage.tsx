@@ -480,7 +480,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Result Node: Enduring Enterprises */}
-                  <div className="rounded-2xl border border-[#3026B3]/40 bg-gradient-to-r from-[#211B72] via-[#3026B3] to-[#211B72] p-5 sm:p-6 text-center text-white shadow-xl fx-shine">
+                  <div className="rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-5 sm:p-6 text-center text-white shadow-xl fx-shine">
                     <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold block mb-1">
                       End State
                     </span>
@@ -827,7 +827,7 @@ export default function AboutPage() {
                     {/* Featured Decorated Quote Block */}
                     <div
                       data-cursor="card"
-                      className="relative overflow-hidden mt-6 rounded-2xl border-l-4 border-l-[#F54900] border-y border-r border-white/10 bg-[#211B72] p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-lg fx-lift"
+                      className="relative overflow-hidden mt-6 rounded-2xl border-l-4 border-l-[#F54900] border-y border-r border-white/10 bg-[#0B1F47] p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-lg fx-lift"
                     >
                       <div aria-hidden className="absolute -top-3 right-6 font-heading text-7xl font-semibold text-[#F54900]/20 select-none pointer-events-none">
                         “
@@ -910,7 +910,7 @@ export default function AboutPage() {
               <CardFill accent="#3026B3" tone="tint" />
               {/* Tree Root: BHARATX GROUP */}
               <div className="relative flex flex-col items-center text-center">
-                <div className="inline-flex flex-col items-center rounded-2xl border border-[#3026B3]/40 bg-gradient-to-r from-[#211B72] via-[#3026B3] to-[#211B72] px-8 py-4 text-white shadow-xl fx-shine">
+                <div className="inline-flex flex-col items-center rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] px-8 py-4 text-white shadow-xl fx-shine">
                   <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold">
                     CONGLOMERATE CORE
                   </span>
@@ -1024,10 +1024,10 @@ export default function AboutPage() {
 
       {/* ── 07. CLOSING / LEADERSHIP STATEMENT (The Journey Ahead) ─────── */}
       <SectionTransition>
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] text-white py-6 sm:py-9">
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9">
           <SectionPhoto src={cardImage("about-cta-journey-ahead")} />
           {/* Ambient radial lighting */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
 
           <div className="container-x relative z-10">
             <div className="max-w-4xl mx-auto text-center">

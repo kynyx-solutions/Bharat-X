@@ -171,7 +171,7 @@ export default function PartnershipsPage() {
                     className={cn(
                       "inline-flex items-center gap-2 rounded-full border px-4 py-2 font-sans text-sm font-semibold transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3] focus-visible:ring-offset-2",
                       active
-                        ? "border-[#211B72] bg-[#211B72] text-white shadow-md shadow-[#211B72]/20"
+                        ? "border-[#0B1F47] bg-[#0B1F47] text-white shadow-md shadow-[#0B1F47]/20"
                         : "border-[#E3E5EF] bg-white text-[#374151] hover:border-[#3026B3] hover:text-[#3026B3]",
                     )}
                   >
@@ -242,9 +242,9 @@ export default function PartnershipsPage() {
       {/* ── 04. CTA ───────────────────────────────────────────────────── */}
       <SectionTransition
         aria-label="Partner with BharatX"
-        className="relative overflow-hidden bg-gradient-to-br from-[#211B72] via-[#1D1763] to-[#120E3E] py-6 sm:py-9 text-white"
+        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] py-6 sm:py-9 text-white"
       >
-        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[420px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#3026B3]/30 via-[#F54900]/20 to-transparent blur-[140px] sm:w-[700px]" />
+        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[420px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] sm:w-[700px]" />
         <div className="container-x relative z-10">
           <div className="mx-auto max-w-3xl py-6 text-center sm:py-8">
             <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.1] tracking-tight">

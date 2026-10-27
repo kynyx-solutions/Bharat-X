@@ -92,7 +92,7 @@ export default function PrivacyPage() {
             ))}
 
             <Reveal delay={0.2}>
-              <div data-cursor="card" className="mt-8 rounded-xl border border-[#211B72] border-t-4 border-t-[#F54900] bg-[#211B72] p-5 font-sans text-xs sm:text-[13px] text-slate-200 shadow-md fx-lift transition-all hover:border-t-[#F54900]!">
+              <div data-cursor="card" className="mt-8 rounded-xl border border-[#0B1F47] border-t-4 border-t-[#F54900] bg-[#0B1F47] p-5 font-sans text-xs sm:text-[13px] text-slate-200 shadow-md fx-lift transition-all hover:border-t-[#F54900]!">
                 <span className="font-semibold text-[#FF8904] uppercase tracking-wider block mb-1">
                   Official Communication Address:
                 </span>

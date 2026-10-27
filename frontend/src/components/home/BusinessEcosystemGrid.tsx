@@ -187,7 +187,9 @@ export function BusinessEcosystemGrid() {
     <SectionTransition
       id="businesses"
       aria-label="Our Business Ecosystem"
-      className="relative overflow-hidden bg-[#070A1F] py-6 sm:py-9 text-white"
+      // Fills one screen (svh = the visible height on phones). Top padding minus bottom padding equals the
+      // fixed navbar's height (72px, 84px from sm), so the content is centred in the area below it.
+      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-[#070A1F] pt-28 pb-10 sm:pt-32 sm:pb-11 short:pt-[6.25rem] short:pb-4 text-white"
       onFocus={(e) => (e.target as HTMLElement).matches(":focus-visible") && setKeyboardFocus(true)}
       onBlur={(e) => !e.currentTarget.contains(e.relatedTarget as Node | null) && setKeyboardFocus(false)}
       backdrop={
@@ -227,7 +229,7 @@ export function BusinessEcosystemGrid() {
         </div>
 
         {/* The list column is narrow and pulled into the container's right padding, so it sits near the edge as on RIL */}
-        <div className="mt-6 sm:mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:gap-16 xl:gap-28">
+        <div className="mt-6 sm:mt-8 short:mt-4 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:gap-16 xl:gap-28">
           {/* Vertical list — tab strip on mobile, stacked list on desktop */}
           <div
             ref={listRef}
@@ -256,7 +258,7 @@ export function BusinessEcosystemGrid() {
                   onMouseEnter={() => setActive(i)}
                   onClick={() => select(i)}
                   className={cn(
-                    "group relative flex shrink-0 items-baseline gap-3 whitespace-nowrap py-3 text-left font-sans text-[13px] sm:text-sm font-semibold uppercase tracking-[0.06em] transition-colors duration-300 focus-visible:outline-hidden focus-visible:text-white lg:whitespace-normal lg:border-b lg:border-white/30 lg:py-[1.15rem] lg:text-[17px]",
+                    "group relative flex shrink-0 items-baseline gap-3 whitespace-nowrap py-3 text-left font-sans text-[13px] sm:text-sm font-semibold uppercase tracking-[0.06em] transition-colors duration-300 focus-visible:outline-hidden focus-visible:text-white lg:whitespace-normal lg:border-b lg:border-white/30 lg:py-[1.15rem] short:py-3 lg:text-[17px]",
                     isActive ? "text-white" : "text-white/85 hover:text-white",
                   )}
                 >
@@ -318,12 +320,12 @@ export function BusinessEcosystemGrid() {
                   </PanelStep>
 
                   {/* Narrow, evenly set copy, like the RIL businesses block */}
-                  <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] space-y-5 text-base sm:text-[17px] lg:text-lg leading-relaxed text-white/95">
+                  <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] space-y-5 text-base sm:text-[17px] lg:text-lg short:mt-4 short:space-y-3 short:text-base leading-relaxed text-white/95">
                     <p>{v.lead}</p>
                     <p>{v.detail}</p>
                   </PanelStep>
 
-                  <PanelStep show={show} order={2} className="mt-8">
+                  <PanelStep show={show} order={2} className="mt-8 short:mt-5">
                     {isExternal ? (
                       <a href={v.href} target="_blank" rel="noopener noreferrer" data-cursor="button" className={ctaClass}>
                         Visit website

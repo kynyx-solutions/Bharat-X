@@ -17,7 +17,7 @@ export function ContactCTAStrip() {
             loading="lazy"
           />
           {/* multi-layer overlay for max readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#211B72]/95 via-[#3026B3]/75 to-[#211B72]/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F47]/95 via-[#163A7A]/75 to-[#0B1F47]/90" />
           <div className="absolute inset-0 bg-black/30" />
         </div>
 

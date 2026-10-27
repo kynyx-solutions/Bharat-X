@@ -130,7 +130,7 @@ export default function InnovationPage() {
                 Regional Indian Dialects Supported
               </span>
             </div>
-            <div data-cursor="card" className="p-4 rounded-2xl bg-[#211B72] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
+            <div data-cursor="card" className="p-4 rounded-2xl bg-[#0B1F47] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
               <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#FF8904] block transition-transform hover:scale-105">Sub-Micron</span>
               <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90 mt-1 block">
                 Precision Tolerance Standards

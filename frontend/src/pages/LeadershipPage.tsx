@@ -87,7 +87,7 @@ export default function LeadershipPage() {
                   Architecting <span className="text-[#3026B3]">Sovereign Industrial Depth</span> for Bharat.
                 </AnimatedHeading>
 
-                <div className="mt-6 rounded-2xl border-l-4 border-[#F54900] bg-[#211B72] p-6 shadow-md fx-lift">
+                <div className="mt-6 rounded-2xl border-l-4 border-[#F54900] bg-[#0B1F47] p-6 shadow-md fx-lift">
                   <blockquote className="text-base sm:text-lg font-heading italic text-white leading-relaxed">
                     “Aligned with the national vision of <span className="text-[#FF8904] font-semibold not-italic">Viksit Bharat 2047</span>, we are committed to building sustainable, technology-driven industrial foundations that eliminate critical external dependencies and secure multi-generational prosperity.”
                   </blockquote>
