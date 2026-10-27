@@ -258,7 +258,11 @@ export function Footer() {
               </span>
             ))}
             <span className="inline-flex items-center gap-2 ml-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#15966B]" />
+              <img
+                src="/Make-in-India_Logo.webp"
+                alt="Make in India"
+                className="h-4 w-auto object-contain mix-blend-multiply shrink-0"
+              />
               <span className="uppercase tracking-[0.16em]">Made in India</span>
               <span aria-hidden className="text-xs leading-none">🇮🇳</span>
             </span>

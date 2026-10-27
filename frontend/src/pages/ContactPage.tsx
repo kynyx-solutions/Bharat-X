@@ -3,14 +3,14 @@ import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { Icon } from "../utils/icons";
-import { brandConfig } from "../config/brand";
 import { submitContact } from "../services/api";
 import { SectionTransition } from "../components/motion/SectionTransition";
 import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { AnimatedHeading } from "../components/motion/AnimatedHeading";
 import { MagneticButton } from "../components/common/MagneticButton";
-import { CardFill, CardPhoto, SectionPhoto, cardImage } from "../components/common/CardSurface";
+import { CardPhoto, SectionPhoto, cardImage } from "../components/common/CardSurface";
 import { FeatureIcon } from "../components/common/FeatureIcon";
+import { OfficeDirectory } from "../components/contact/OfficeDirectory";
 
 // Contact pathway cards. `option` pre-selects the form's interest; `to` links out instead.
 const pathways: {
@@ -955,7 +955,7 @@ export default function ContactPage() {
           <div className="max-w-3xl text-center mx-auto mb-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#15966B]/30 bg-[#15966B]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#15966B] font-bold shadow-xs mb-4">
               <span className="h-2 w-2 rounded-full bg-[#15966B]" />
-              <span>GROUP OFFICE</span>
+              <span>OUR OFFICES</span>
             </div>
 
             <AnimatedHeading
@@ -964,106 +964,15 @@ export default function ContactPage() {
               hover="color"
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
             >
-              BharatX Group <span className="text-[#3026B3]">Office</span>
+              BharatX Group <span className="text-[#3026B3]">Offices</span>
             </AnimatedHeading>
 
             <p className="mt-3 text-base text-[#596579]">
-              Corporate headquarters and official communications directorate.
+              Our registered office in New Delhi, with offices in Bihar and Uttar Pradesh.
             </p>
           </div>
 
-          <div data-cursor="card" className="relative overflow-hidden max-w-4xl mx-auto rounded-3xl border border-[#15966B]/25 border-t-4 border-t-[#15966B] bg-white p-8 sm:p-12 shadow-lg fx-lift">
-            <CardFill accent="#15966B" tone="tint" />
-            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <span className="font-sans text-xs uppercase tracking-[0.26em] text-[#3026B3] font-bold block mb-1">
-                  BHARATX GROUP
-                </span>
-                <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-[#111827] mb-4">
-                  Registered / Corporate Office
-                </AnimatedHeading>
-
-                <p className="text-sm text-[#374151] leading-relaxed mb-6 font-normal">
-                  {brandConfig.address.full}
-                </p>
-
-                <div className="space-y-3 font-sans text-xs sm:text-[13px] text-[#111827]">
-                  <div className="flex items-center gap-3">
-                    <span className="text-[#374151] uppercase tracking-wider w-24">Email</span>
-                    <a
-                      href="mailto:contact@bharatx.group"
-                      data-cursor="link"
-                      className="font-bold text-[#3026B3] hover:underline"
-                    >
-                      contact@bharatx.group
-                    </a>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <span className="text-[#374151] uppercase tracking-wider w-24">Phone</span>
-                    <a
-                      href={`tel:${brandConfig.contact.phoneTel}`}
-                      data-cursor="link"
-                      className="font-bold text-[#111827] hover:text-[#3026B3] transition-colors"
-                    >
-                      {brandConfig.contact.phoneFormatted}
-                    </a>
-                  </div>
-
-                  <div className="flex items-start gap-3 pt-1">
-                    <span className="text-[#374151] uppercase tracking-wider w-24">Hours</span>
-                    <div>
-                      <span className="font-semibold block">Monday – Saturday</span>
-                      <span className="text-[#374151] text-[11px] sm:text-xs block">10:00 AM – 6:00 PM IST</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8">
-                  <a
-                    href={`https://maps.google.com/?q=${encodeURIComponent(brandConfig.address.full)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-cursor="button"
-                    className="inline-flex items-center gap-2 rounded-full bg-white border border-[#E3E5EF] hover:border-[#3026B3] hover:text-[#3026B3] text-[#111827] px-6 py-3 text-xs font-sans font-bold uppercase tracking-wider shadow-xs transition-all fx-lift"
-                  >
-                    <span>Get Directions</span>
-                    <Icon name="arrow-up-right" width={14} height={14} />
-                  </a>
-                </div>
-              </div>
-
-              {/* Visual Map / Graphic Panel */}
-              <div data-cursor="card" className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] text-white p-6 shadow-md flex flex-col justify-between h-full min-h-[220px] fx-lift">
-                <CardFill accent="#3026B3" />
-                <div className="relative flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-ping" />
-                    <span className="font-sans text-[11px] uppercase tracking-wider text-emerald-300 font-bold">
-                      Secretariat Active
-                    </span>
-                  </div>
-                  <span className="font-sans text-xs text-white/90">New Delhi, India</span>
-                </div>
-
-                <div className="relative my-6 text-center">
-                  <FeatureIcon name="building-2" accent="#F54900" size={48} className="mx-auto mb-3 fx-icon-pop" />
-                  <span className="font-heading text-lg font-medium text-white block">
-                    Pan-India Operating Presence
-                  </span>
-                  <span className="text-xs sm:text-[13px] text-white/90 mt-1 block">
-                    Anchoring civil, agrarian, industrial &amp; digital operations
-                  </span>
-                </div>
-
-                <div className="relative pt-3 border-t border-white/20 text-center">
-                  <span className="font-sans text-[10px] uppercase tracking-wider text-white/85">
-                    ISO Certified Corporate Governance
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <OfficeDirectory />
         </div>
       </SectionTransition>
 

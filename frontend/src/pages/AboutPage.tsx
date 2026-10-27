@@ -1,7 +1,8 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { cn } from "../utils/cn";
 import { DuotoneIcon, Icon } from "../utils/icons";
 import { FeatureIcon } from "../components/common/FeatureIcon";
 import { SectionTransition } from "../components/motion/SectionTransition";
@@ -19,56 +20,80 @@ const formulaInputs = [
 ];
 
 // ── Vision & Mission ──────────────────────────────────────────────────
-const visionMission = [
+const visionMission: {
+  label: string;
+  kicker: string;
+  /** The statement, shown large as the panel headline. */
+  statement: ReactNode;
+  /** Supporting paragraph under the statement. */
+  detail: string;
+  /** Labelled row of chips at the bottom of the card. */
+  focusLabel: string;
+  focus: { label: string; icon: string }[];
+  icon: string;
+  accentText: string;
+  /** Chip border, in the card's accent. */
+  chip: string;
+  ring: string;
+  border: string;
+  bracket: string;
+  hairline: string;
+  sweep: string;
+  glow: string;
+}[] = [
   {
     label: "Our Vision",
     kicker: "Where we’re headed",
-    title: "India’s Most Trusted Builder of Enduring Enterprises",
-    statement: "To build a group of world-class Indian businesses that strengthen the nation’s infrastructure, industry and economy, and keep creating value for generations.",
-    points: [
-      "Enterprises that outlast market cycles",
-      "Indian capability competing globally",
-      "Shared prosperity across Bharat",
+    statement: (
+      <>
+        To build world-class Indian businesses that help make India a developed nation by{" "}
+        <span className="text-[#F54900]">2047</span>.
+      </>
+    ),
+    detail:
+      "Aligned with India's national vision of Viksit Bharat @2047, BharatX Group builds world-class businesses in the sectors a developed India depends on — infrastructure, agriculture, manufacturing and technology — and creates value that lasts for generations.",
+    focusLabel: "Sectors we build in",
+    focus: [
+      { label: "Infrastructure", icon: "hard-hat" },
+      { label: "Agriculture", icon: "sprout" },
+      { label: "Manufacturing", icon: "factory" },
+      { label: "Technology", icon: "cpu" },
     ],
-    step: "01",
-    icon: "eye" as const,
+    icon: "eye",
     accentText: "text-[#3026B3]",
-    quote: "text-[#00B8D9]",
+    chip: "border-[#00B8D9]/30",
     ring: "from-[#00B8D9] to-[#3026B3]",
     border: "from-[#00B8D9]/70 via-[#3026B3]/15 to-white",
     bracket: "border-[#00B8D9]",
     hairline: "via-[#00B8D9]",
     sweep: "via-[#00B8D9]/12",
-    trace: "from-[#00B8D9]/70 to-[#3026B3]/10",
-    node: "border-[#00B8D9]/60 shadow-[0_0_10px_rgba(0,184,217,0.35)]",
     glow: "rgba(0, 184, 217, 0.35)",
   },
   {
     label: "Our Mission",
     kicker: "How we get there",
-    title: "Building the Businesses India’s Growth Depends On",
-    statement: "To identify India’s structural opportunities and build, operate and scale businesses that solve real-world problems, bringing together entrepreneurial thinking, operational capability, technology and capital.",
-    points: [
-      "Build in India’s essential growth sectors",
-      "Combine capital, technology, talent and execution",
-      "Create jobs, skills and lasting economic value",
+    statement: "To find real gaps in India's economy and build, operate and scale the businesses that fill them.",
+    // The rest of the mission statement, plus the Our Approach line from the home page.
+    detail:
+      "We do it by creating jobs, raising farmer incomes, making more in India and bringing technology to every business we touch — combining capital, technology, talent and execution to turn real opportunities into enterprises that last.",
+    focusLabel: "What we create",
+    focus: [
+      { label: "Jobs", icon: "users" },
+      { label: "Farmer incomes", icon: "wheat" },
+      { label: "Made in India", icon: "boxes" },
+      { label: "Technology", icon: "cpu" },
     ],
-    step: "02",
-    icon: "target" as const,
+    icon: "target",
     accentText: "text-[#CA3500]",
-    quote: "text-[#F54900]",
+    chip: "border-[#F54900]/25",
     ring: "from-[#FFB86A] to-[#F54900]",
     border: "from-[#F54900]/70 via-[#F54900]/15 to-white",
     bracket: "border-[#F54900]",
     hairline: "via-[#F54900]",
     sweep: "via-[#F54900]/10",
-    trace: "from-[#F54900]/70 to-[#F54900]/10",
-    node: "border-[#F54900]/60 shadow-[0_0_10px_rgba(245,73,0,0.3)]",
     glow: "rgba(245, 73, 0, 0.3)",
   },
 ];
-
-const romanNumerals = ["i", "ii", "iii", "iv"];
 
 /** Light holographic wash behind the Vision & Mission scene. */
 const visionMissionAurora = [
@@ -143,6 +168,43 @@ const purposePillars = [
     borderHover: "hover:border-[#15966B]",
   },
 ];
+
+// ── Leadership Team (photos in /public/leadership) ────────────────────
+const leadershipTeam = [
+  {
+    name: "Nitin Arora",
+    role: "Executive Vice President — Product, Technology & AI",
+    bio: "Technologist with 15+ years across product, AI and entrepreneurship at Google, Amazon, GE and Deloitte, and founder of his own startup. B.Tech and PhD in Computer Science, IIT Delhi; master’s, NYU.",
+    photo: "/leadership/nitin-arora.png",
+    linkedin: "https://www.linkedin.com/in/aronitin",
+  },
+  {
+    name: "Dharampal Singh",
+    role: "Chief Revenue & Operating Officer",
+    bio: "Operations leader with 28+ years in automotive manufacturing. Former Plant Head at Jay Ushin Ltd (JPM Group), running three plants and teams of 1,000+. Expert in Lean, Six Sigma and IATF 16949.",
+    photo: "/leadership/dharampal-singh.webp",
+    linkedin: "https://www.linkedin.com/in/dharampal-singh-995aa2228",
+  },
+  {
+    name: "Dr. Akanksha Verma",
+    role: "Chief Human Resources Officer (CHRO)",
+    bio: "Environmental scientist with an M.Phil. and Ph.D., and research in sustainability and pollution. As CHRO, she leads people, culture, hiring and talent across BharatX Group and its businesses.",
+    photo: "/leadership/akanksha-verma-passport.png",
+    linkedin: "https://www.linkedin.com/in/akanksha-verma-304a18191",
+  },
+];
+
+/** LinkedIn's "in" logo mark (brand blue). */
+function LinkedInLogo({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden className={className}>
+      <path
+        fill="#0A66C2"
+        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+      />
+    </svg>
+  );
+}
 
 // ── Group Leadership Mandates ─────────────────────────────────────────
 const leadershipMandates = [
@@ -589,14 +651,6 @@ export default function AboutPage() {
                         aria-hidden
                         className={`pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent ${item.sweep} to-transparent transition-transform duration-1000 ease-out group-hover:translate-x-[420%]`}
                       />
-                      <span
-                        aria-hidden
-                        className="pointer-events-none absolute right-8 top-2 hidden select-none font-heading text-[8.5rem] leading-none text-transparent sm:block"
-                        style={{ WebkitTextStroke: "1px rgba(48, 38, 179, 0.1)" }}
-                      >
-                        {item.step}
-                      </span>
-
                       {/* Icon in a gradient ring + label */}
                       <div className="relative flex items-center gap-4">
                         <span
@@ -609,35 +663,39 @@ export default function AboutPage() {
                         </span>
                         <div>
                           <span className={`block font-sans text-[11px] font-bold uppercase tracking-[0.3em] ${item.accentText}`}>
-                            {item.step} · {item.label}
+                            {item.label}
                           </span>
                           <span className="mt-1 block text-sm text-[#596579]">{item.kicker}</span>
                         </div>
                       </div>
 
-                      {/* The statement, set as a pull-quote */}
-                      <h3 className="relative mt-8 font-heading text-2xl sm:text-3xl lg:text-[2.1rem] font-medium leading-[1.2] tracking-tight text-[#16124A]">
-                        <span aria-hidden className={item.quote}>“</span>
-                        {item.title}
-                        <span aria-hidden className={item.quote}>”</span>
+                      {/* Same three parts in both cards: statement, supporting paragraph, chip row */}
+                      <span aria-hidden className={`relative mt-8 block h-1 w-12 rounded-full bg-gradient-to-r ${item.ring}`} />
+                      <h3 className="relative mt-5 font-heading text-[1.65rem] sm:text-3xl lg:text-[2.15rem] font-medium leading-[1.3] tracking-tight text-[#0B1F47] text-balance">
+                        {item.statement}
                       </h3>
 
-                      <p className="relative mt-5 text-sm sm:text-base leading-relaxed text-[#596579]">
-                        {item.statement}
+                      <p className="relative mt-5 text-[15px] sm:text-base leading-relaxed text-[#596579]">
+                        {item.detail}
                       </p>
 
-                      {/* Points as nodes on a circuit trace */}
-                      <ul className="relative mt-auto pt-8">
-                        <span aria-hidden className={`absolute bottom-5 left-3 top-[3.25rem] w-px bg-gradient-to-b ${item.trace}`} />
-                        {item.points.map((pt, i) => (
-                          <li key={pt} className="relative flex items-center gap-4 py-2.5 text-sm text-[#374151]">
-                            <span className={`relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full border bg-white font-heading text-[11px] italic ${item.node} ${item.accentText}`}>
-                              {romanNumerals[i]}
-                            </span>
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {/* mt-auto pins the chip row to the bottom so both cards end level */}
+                      <div className="relative mt-auto pt-7">
+                        <p className={`font-sans text-[11px] font-bold uppercase tracking-[0.24em] ${item.accentText}`}>
+                          {item.focusLabel}
+                        </p>
+                        <ul className="mt-3 flex flex-wrap gap-2">
+                          {item.focus.map((f) => (
+                            <li
+                              key={f.label}
+                              className={`inline-flex items-center gap-1.5 rounded-full border ${item.chip} bg-white/80 px-3 py-1.5 text-[13px] font-medium text-[#111827] backdrop-blur-sm`}
+                            >
+                              <Icon name={f.icon} width={14} height={14} strokeWidth={2} className={item.accentText} />
+                              {f.label}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </StaggerItem>
@@ -840,7 +898,7 @@ export default function AboutPage() {
                         , he is committed to building sustainable, technology-driven enterprises that strengthen India’s industrial ecosystem and contribute to the country’s long-term economic leadership.”
                       </blockquote>
                       <div className="relative mt-4 flex items-center justify-between pt-3 border-t border-white/15 text-xs font-sans text-slate-200">
-                        <span className="text-[#FF8904] font-bold">— Pradeep Kumar IIT Delhi & IIM Allumini</span>
+                        <span className="text-[#FF8904] font-bold">— Pradeep Kumar IIT Delhi & IIM Alumni</span>
                         <span className="font-medium text-slate-200">BharatX Group</span>
                       </div>
                     </div>
@@ -886,8 +944,86 @@ export default function AboutPage() {
         </section>
       </SectionTransition>
 
+      {/* ── LEADERSHIP TEAM (The executives running the Group's functions) ── */}
+      <SectionTransition id="leadership-team" aria-label="Leadership Team">
+        <section className="relative overflow-hidden bg-white py-6 sm:py-9">
+          <div className="container-x relative z-10">
+            <div className="max-w-3xl mb-8 sm:mb-10">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/30 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#CA3500] font-bold shadow-xs mb-4">
+                <DuotoneIcon name="users" size={14} />
+                <span>LEADERSHIP TEAM</span>
+              </div>
+
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
+                The People Leading <span className="text-[#3026B3]">BharatX.</span>
+              </h2>
+
+              <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
+                Experienced leaders across technology, operations and people, building the Group and its businesses.
+              </p>
+            </div>
+
+            <Stagger className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {leadershipTeam.map((person, i) => (
+                <StaggerItem
+                  key={person.name}
+                  className={cn(
+                    "h-full",
+                    // In the 2-column tablet layout, centre a last card that would sit alone on the left
+                    i === leadershipTeam.length - 1 &&
+                      leadershipTeam.length % 2 === 1 &&
+                      "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.75rem)] lg:col-span-1 lg:mx-0 lg:w-auto",
+                  )}
+                >
+                  <article
+                    data-cursor="card"
+                    className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[#E3E5EF] bg-[#FAF9F6] shadow-xs transition-[translate,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1.5 hover:border-[#F54900]/30 hover:shadow-[0_28px_55px_-28px_rgba(11,31,71,0.45)]"
+                  >
+                    {/* Square portrait, cropped from the top; slow zoom on hover */}
+                    <div className="relative m-3 mb-0 aspect-square overflow-hidden rounded-2xl bg-[#EEF0F6]">
+                      <img
+                        src={person.photo}
+                        alt={`${person.name}, ${person.role}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+                      <span aria-hidden className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#0B1F47]/25 to-transparent" />
+                    </div>
+
+                    <div className="flex flex-1 flex-col px-6 pb-7 pt-5 sm:px-7">
+                      {/* Name with the LinkedIn profile link on the same line */}
+                      <div className="flex items-center justify-between gap-3">
+                        <h3 className="font-heading text-2xl sm:text-[1.65rem] font-medium leading-tight tracking-tight text-[#0B1F47]">
+                          {person.name}
+                        </h3>
+                        <a
+                          href={person.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${person.name} on LinkedIn`}
+                          title={`${person.name} on LinkedIn`}
+                          data-cursor="link"
+                          className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#0A66C2] focus-visible:ring-offset-2"
+                        >
+                          <LinkedInLogo className="h-7 w-7" />
+                        </a>
+                      </div>
+                      {/* Two lines reserved from sm, so rules and bios line up when one title wraps */}
+                      <p className="mt-1.5 text-[15px] font-semibold leading-snug text-[#CA3500] sm:min-h-[2.75em]">{person.role}</p>
+                      <span aria-hidden className="mt-4 block h-0.5 w-10 rounded-full bg-gradient-to-r from-[#F54900] to-[#FFB86A] transition-all duration-500 group-hover:w-16" />
+                      <p className="mt-4 text-[15px] leading-relaxed text-[#374151]">{person.bio}</p>
+                    </div>
+                  </article>
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+        </section>
+      </SectionTransition>
+
       {/* ── 04. OUR BUSINESS ECOSYSTEM (One Group. Multiple Growth Engines) ─ */}
-      <SectionTransition>
+      {/* <SectionTransition>
         <section className="relative overflow-hidden bg-white py-6 sm:py-9">
           <div className="container-x relative z-10">
             <div className="max-w-3xl text-center mx-auto mb-10">
@@ -906,9 +1042,9 @@ export default function AboutPage() {
             </div>
 
             {/* Visual Architecture Tree */}
-            <div className="relative overflow-hidden max-w-6xl mx-auto rounded-3xl border border-[#E3E5EF] bg-white p-6 sm:p-10 shadow-lg">
+      {/* <div className="relative overflow-hidden max-w-6xl mx-auto rounded-3xl border border-[#E3E5EF] bg-white p-6 sm:p-10 shadow-lg">
               <CardFill accent="#3026B3" tone="tint" />
-              {/* Tree Root: BHARATX GROUP */}
+              {/* Tree Root: BHARATX GROUP 
               <div className="relative flex flex-col items-center text-center">
                 <div className="inline-flex flex-col items-center rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] px-8 py-4 text-white shadow-xl fx-shine">
                   <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold">
@@ -921,7 +1057,7 @@ export default function AboutPage() {
                 <div className="h-8 w-px bg-[#3026B3]/40 my-1" />
               </div>
 
-              {/* Level 1: the five BharatX-branded businesses (on two-column tablets the fifth spans the row) */}
+              {/* Level 1: the five BharatX-branded businesses (on two-column tablets the fifth spans the row) 
               <div className="relative mt-2">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:[&>*:last-child]:col-span-2 lg:[&>*:last-child]:col-span-1">
                   {tier1EcosystemNodes.map((node) => (
@@ -930,31 +1066,31 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Connecting Vertical Trunk */}
+              {/* Connecting Vertical Trunk 
               <div className="relative flex flex-col items-center my-4">
                 <div className="h-6 w-px bg-[#3026B3]/30" />
               </div>
 
-              {/* Level 2: 3 Operating Entities */}
+              {/* Level 2: 3 Operating Entities 
               <div className="relative max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3.5">
                 {tier2EcosystemNodes.map((node) => (
                   <EcosystemNodeCard key={node.company} node={node} />
                 ))}
               </div>
 
-              {/* Connecting Trunk to Anchor */}
+              {/* Connecting Trunk to Anchor 
               <div className="relative flex flex-col items-center my-4">
                 <div className="h-6 w-px bg-[#3026B3]/30" />
               </div>
 
-              {/* Level 3: Future Expansion */}
+              {/* Level 3: Future Expansion 
               <div className="relative max-w-xs sm:max-w-sm mx-auto">
                 {tier3EcosystemNodes.map((node) => (
                   <EcosystemNodeCard key={node.company} node={node} />
                 ))}
               </div>
 
-              {/* Subtext Statement */}
+              {/* Subtext Statement 
               <div className="relative mt-8 text-center pt-6 border-t border-[#E3E5EF]">
                 <p className="text-xs sm:text-sm text-[#374151] max-w-2xl mx-auto leading-relaxed">
                   Each business operates with its own market focus and capabilities while benefiting from the broader BharatX ecosystem.
@@ -962,8 +1098,8 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
-      </SectionTransition>
+        </section> 
+      </SectionTransition> */}
 
       {/* ── 06. OUR PRINCIPLES (What Guides Us) ────────────────────────── */}
       <SectionTransition>
