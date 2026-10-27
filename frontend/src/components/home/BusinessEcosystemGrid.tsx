@@ -214,7 +214,7 @@ export function BusinessEcosystemGrid() {
       <div ref={rootRef} className="container-x max-w-none! relative z-10 [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_2px_10px_rgba(0,0,0,0.75),0_0_28px_rgba(0,0,0,0.55)]">
         {/* Header: title + counter */}
         <div className="flex items-center justify-between gap-4">
-          <h2 className="flex items-center gap-3 whitespace-nowrap font-sans text-base sm:text-lg font-bold uppercase tracking-[0.08em]">
+          <h2 className="flex items-center gap-3 whitespace-nowrap font-heading text-lg sm:text-xl font-semibold uppercase tracking-[0.06em]">
             <svg viewBox="0 0 24 24" width="16" height="22" aria-hidden className="shrink-0 text-[#F54900]">
               <path fill="currentColor" d="M12 1C12 1 4 10.5 4 15.5a8 8 0 0 0 16 0C20 10.5 12 1 12 1z" />
             </svg>

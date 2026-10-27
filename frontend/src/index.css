@@ -124,7 +124,8 @@ html.dark {
   --color-ink-600: #8C9BB0;
 
   /* ── Typography ──────────────────────────────────────────── */
-  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+  /* "Noto Serif" is loaded for "&" only (index.html), so headings take that one glyph from it and the rest from Fraunces */
+  --font-heading: "Noto Serif", "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* ── Motion System Tokens ────────────────────────────────── */

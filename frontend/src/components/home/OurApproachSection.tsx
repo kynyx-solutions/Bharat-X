@@ -263,7 +263,7 @@ function ApproachCard({ step }: { step: ApproachStep }) {
         </div>
 
         {/* Step Title */}
-        <h3 className="font-sans text-sm sm:text-base font-bold tracking-[0.16em] text-white uppercase group-hover:text-[#FF8904] transition-colors">
+        <h3 className="font-heading text-base sm:text-lg font-semibold tracking-[0.08em] text-white uppercase group-hover:text-[#FF8904] transition-colors">
           {step.label}
         </h3>
 
