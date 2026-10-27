@@ -70,7 +70,7 @@ export const brandConfig: BrandConfig = {
     {
       city: "Patna",
       state: "Bihar",
-      full: "5th Floor, Maurya Lok Complex, New Dak Bunglow Rd, Lodipur, Patna, Bihar 800001",
+      full: "Maurya Lok Complex, New Dak Bunglow Rd, Lodipur, Patna, Bihar 800001",
       // Exact pin supplied for the office (listed on Google as "B-HUB"); directions go to the same place.
       mapQuery: "B-HUB, Maurya Lok Complex, Patna, Bihar 800001",
       mapEmbed:
@@ -88,6 +88,7 @@ export const brandConfig: BrandConfig = {
     { label: "LinkedIn", href: "https://www.linkedin.com/company/bharatx-group" },
     { label: "Instagram", href: "https://www.instagram.com/bharatxgroup" },
     { label: "YouTube", href: "https://www.youtube.com/@bharatxgroup" },
+    { label: "Facebook", href: "https://www.facebook.com/bharatxgroup" },
     { label: "X", href: "https://x.com/bharatxgroup" },
   ],
 };

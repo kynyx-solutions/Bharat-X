@@ -257,7 +257,8 @@ export function RilHeroSection() {
       </div>
 
       {/* ── CORNER CURRENT INDUSTRY LABEL & PROGRESS BAR (RIL Style) ─── */}
-      <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-10 lg:bottom-10 lg:right-14 z-20 flex flex-col items-end gap-2.5">
+      {/* lg:right-24 keeps the control 16px clear of the floating WhatsApp button in the bottom-right corner */}
+      <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-10 lg:bottom-10 lg:right-24 z-20 flex flex-col items-end gap-2.5">
         {/* Industry Tag & Play/Pause State */}
         <div className="flex items-center gap-3 rounded-full border border-white/15 bg-black/70 backdrop-blur-xl px-4 py-2 shadow-2xl">
           <button

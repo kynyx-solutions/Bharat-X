@@ -22,6 +22,7 @@ const socialIcons: Record<string, string> = {
   LinkedIn: "arrow-up-right",
   Instagram: "arrow-up-right",
   YouTube: "arrow-up-right",
+  Facebook: "arrow-up-right",
   X: "arrow-up-right",
 };
 

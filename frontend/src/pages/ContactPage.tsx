@@ -312,7 +312,7 @@ export default function ContactPage() {
             <AnimatedHeading
               as="h1"
               effect="words"
-              hover="gradient"
+              hover="color"
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
               Let’s Build What <span className="text-[#F54900]">Comes Next.</span>

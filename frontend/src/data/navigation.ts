@@ -41,6 +41,7 @@ export const footerSections = {
     { label: "LinkedIn", to: "https://www.linkedin.com/company/bharatx-group", external: true },
     { label: "YouTube", to: "https://www.youtube.com/@bharatxgroup", external: true },
     { label: "Instagram", to: "https://www.instagram.com/bharatxgroup", external: true },
+    { label: "Facebook", to: "https://www.facebook.com/bharatxgroup", external: true },
     { label: "X", to: "https://x.com/bharatxgroup", external: true },
   ],
   legal: [
