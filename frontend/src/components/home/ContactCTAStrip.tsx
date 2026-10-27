@@ -34,7 +34,7 @@ export function ContactCTAStrip() {
               </div>
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-tight">
                 Partner with{" "}
-                <span className="text-[#F54900] hover:text-[#00B8D9] transition-colors duration-300">BharatX</span>
+                <span className="text-[#F54900] transition-colors duration-300">BharatX</span>
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
                 For sector collaborations, joint ventures,{" "}

@@ -488,7 +488,7 @@ export default function ContactPage() {
                       <Icon name="check" width={32} height={32} strokeWidth={2.5} />
                     </div>
 
-                    <h3 className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mb-3 transition-colors duration-300 hover:text-[#3026B3]">
+                    <h3 className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mb-3 transition-colors duration-300 hover:text-[#F54900]">
                       Message Received
                     </h3>
 

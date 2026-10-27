@@ -55,7 +55,7 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-6 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] hover:text-[#211B72] transition-colors duration-300"
+              className="mt-6 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] hover:text-[#F54900] transition-colors duration-300"
             >
               The Next Chapter Is{" "}
               <br />

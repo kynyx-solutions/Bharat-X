@@ -161,7 +161,7 @@ export default function HowWeBuildPage() {
               data-cursor="text"
             >
               Building Businesses.{" "}
-              <span className="text-[#F54900] hover:text-[#ffb86a] transition-colors duration-300">Creating Wider Value.</span>
+              <span className="text-[#F54900] transition-colors duration-300">Creating Wider Value.</span>
             </motion.h1>
 
             {/* CTA */}

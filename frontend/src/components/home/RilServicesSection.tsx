@@ -231,7 +231,7 @@ export function RilServicesSection() {
 
               {/* Card Body */}
               <div className="p-6">
-                <h3 className="font-heading text-2xl font-medium text-[#111827] dark:text-white transition-colors duration-300 hover:text-gold-400">
+                <h3 className="font-heading text-2xl font-medium text-[#111827] dark:text-white transition-colors duration-300 hover:text-[#F54900]">
                   {svc.name}
                 </h3>
                 <p className="mt-2 text-sm font-medium text-[#3026B3] dark:text-gold-200">
@@ -326,7 +326,7 @@ export function RilServicesSection() {
               </div>
 
               {/* Title in Serif */}
-              <h3 className="mt-2 font-heading text-3xl sm:text-4xl text-[#111827] dark:text-white transition-colors duration-300 hover:text-gold-400">
+              <h3 className="mt-2 font-heading text-3xl sm:text-4xl text-[#111827] dark:text-white transition-colors duration-300 hover:text-[#F54900]">
                 {selectedModal.name}
               </h3>
 

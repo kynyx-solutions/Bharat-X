@@ -90,7 +90,7 @@ export default function PartnershipsPage() {
             className="mt-5 max-w-4xl font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,4.4vw,4rem)] font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
           >
             Working with{" "}
-            <span className="text-[#F54900] transition-colors duration-300 hover:text-[#FFB86A]">India&apos;s institutions.</span>
+            <span className="text-[#F54900] transition-colors duration-300">India&apos;s institutions.</span>
           </motion.h1>
 
           <motion.p
@@ -228,7 +228,7 @@ export default function PartnershipsPage() {
                     size={48}
                     className="transition-transform duration-300 group-hover:scale-110 fx-icon-pop"
                   />
-                  <h3 className="mt-5 font-heading text-2xl font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#3026B3]">
+                  <h3 className="mt-5 font-heading text-2xl font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#F54900]">
                     {area.title}
                   </h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-[#596579]">{area.description}</p>

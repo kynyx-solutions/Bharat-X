@@ -209,7 +209,7 @@ export default function ImpactPage() {
               data-cursor="text"
             >
               From Opportunity to{" "}
-              <span className="text-[#F54900] hover:text-[#ffb86a] transition-colors duration-300">Impact.</span>
+              <span className="text-[#F54900] transition-colors duration-300">Impact.</span>
             </motion.h1>
 
             {/* CTA */}

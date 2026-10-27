@@ -15,7 +15,7 @@ import FooterOrbScene from "../three/FooterOrbScene";
             <DuotoneIcon name="sparkles" size={14} />
             <span>Connect with BharatX Group</span>
           </div>
-          <h2 className="font-heading text-3xl font-medium leading-[1.1] tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl md:text-5xl lg:text-6xl transition-colors duration-300 hover:text-[#3026B3] dark:hover:text-gold-400">
+          <h2 className="font-heading text-3xl font-medium leading-[1.1] tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl md:text-5xl lg:text-6xl transition-colors duration-300 hover:text-[#F54900]">
             BUILDING THE FOUNDATIONS
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3026B3] via-[#F54900] to-[#00B8D9]">

@@ -182,7 +182,7 @@ export default function ServicesPage() {
               data-cursor="text"
             >
               Building Across India’s{" "}
-              <span className="text-[#F54900] hover:text-[#ffb86a] transition-colors duration-300">Growth Economy.</span>
+              <span className="text-[#F54900] transition-colors duration-300">Growth Economy.</span>
             </motion.h1>
 
             {/* CTA */}

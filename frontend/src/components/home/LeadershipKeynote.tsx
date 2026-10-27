@@ -61,7 +61,7 @@ export function LeadershipKeynote() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#F54900] transition-colors duration-300">
+              <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111827] dark:text-white hover:text-[#F54900] transition-colors duration-300">
                 “Building sovereign industrial depth for a <span className="text-[#3026B3] dark:text-[#F54900]">Viksit Bharat.</span>”
               </h2>
             </Reveal>
@@ -167,7 +167,7 @@ export function LeadershipKeynote() {
                         <span className="font-sans text-xs text-[#F54900] font-semibold uppercase tracking-widest">
                           CHAPTER {transcriptChapters[activeChapter].number}
                         </span>
-                        <h4 className="mt-2 font-heading text-2xl text-[#211B72] transition-colors duration-300 hover:text-[#3026B3]">
+                        <h4 className="mt-2 font-heading text-2xl text-[#211B72] transition-colors duration-300 hover:text-[#F54900]">
                           {transcriptChapters[activeChapter].title}
                         </h4>
                         <div className="mt-4 space-y-4 text-sm sm:text-base text-[#596579] leading-relaxed font-sans">

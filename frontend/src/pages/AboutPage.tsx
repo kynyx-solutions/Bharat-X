@@ -388,7 +388,7 @@ export default function AboutPage() {
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] hover:text-white"
             >
               Building Enterprises for a{" "}
-              <span className="text-[#F54900] hover:text-[#00B8D9] transition-colors duration-300">Growing Bharat.</span>
+              <span className="text-[#F54900] transition-colors duration-300">Growing Bharat.</span>
             </motion.h1>
           </div>
         </div>
@@ -405,8 +405,8 @@ export default function AboutPage() {
                   <span>WHO WE ARE</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#211B72] transition-colors duration-300">
-                  More Than a <span className="text-[#3026B3] hover:text-[#F54900] transition-colors duration-300">Group of Companies</span>
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+                  More Than a <span className="text-[#3026B3] transition-colors duration-300">Group of Companies</span>
                 </h2>
 
                 <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
@@ -659,8 +659,8 @@ export default function AboutPage() {
                   <span>OUR PURPOSE</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#211B72] transition-colors duration-300">
-                  Built Around India’s <span className="text-[#3026B3] hover:text-[#F54900] transition-colors duration-300">Opportunity</span>
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+                  Built Around India’s <span className="text-[#3026B3] transition-colors duration-300">Opportunity</span>
                 </h2>
 
                 <p className="mt-5 text-base sm:text-lg text-[#111827] font-medium leading-relaxed max-w-2xl">
@@ -757,8 +757,8 @@ export default function AboutPage() {
                 <span>GROUP LEADERSHIP</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#211B72] transition-colors duration-300">
-                The Visionary Behind the <span className="text-[#3026B3] hover:text-[#F54900] transition-colors duration-300">Standard.</span>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+                The Visionary Behind the <span className="text-[#3026B3] transition-colors duration-300">Standard.</span>
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
@@ -820,8 +820,8 @@ export default function AboutPage() {
                       <span>National Economic Vision</span>
                     </div>
 
-                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] tracking-tight leading-tight hover:text-[#3026B3] transition-colors duration-300">
-                      Architecting India’s <span className="text-[#3026B3] hover:text-[#F54900] transition-colors duration-300">Next Economic Decade.</span>
+                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] tracking-tight leading-tight hover:text-[#F54900] transition-colors duration-300">
+                      Architecting India’s <span className="text-[#3026B3] transition-colors duration-300">Next Economic Decade.</span>
                     </h3>
 
                     {/* Featured Decorated Quote Block */}
@@ -896,8 +896,8 @@ export default function AboutPage() {
                 <span>ECOSYSTEM ARCHITECTURE</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#211B72] transition-colors duration-300">
-                One Group. Multiple <span className="text-[#3026B3] hover:text-[#F54900] transition-colors duration-300">Growth Engines.</span>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+                One Group. Multiple <span className="text-[#3026B3] transition-colors duration-300">Growth Engines.</span>
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed">
@@ -975,8 +975,8 @@ export default function AboutPage() {
                 <span>WHAT GUIDES US</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#211B72] transition-colors duration-300">
-                Our <span className="text-[#3026B3] hover:text-[#F54900] transition-colors duration-300">Principles</span>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+                Our <span className="text-[#3026B3] transition-colors duration-300">Principles</span>
               </h2>
 
               <p className="mt-3 text-base text-[#596579]">

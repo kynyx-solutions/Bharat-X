@@ -752,63 +752,13 @@ h6 {
   transition: color var(--dur-base) var(--ease-premium), letter-spacing var(--dur-base) ease;
 }
 
-/* Light background default hover */
-:where(body:not(.dark)) h1:hover {
-  color: #3026B3;
-}
-
-:where(body:not(.dark)) h2:hover {
-  color: #211B72;
-}
-
-:where(body:not(.dark)) h3:hover {
-  color: #3026B3;
-}
-
-/* In dark context, hero layers, or dark backgrounds: hover shifts to warm gold / bright ivory */
-.dark h1:hover,
-.dark h2:hover,
-.dark h3:hover,
-[data-theme="dark"] h1:hover,
-[data-theme="dark"] h2:hover,
-[data-theme="dark"] h3:hover,
-section:has(> .absolute) h1:hover,
-section:has(> .absolute) h2:hover,
-section:has(> .absolute) h3:hover,
-.bg-night-950 h1:hover,
-.bg-night-950 h2:hover,
-.bg-night-950 h3:hover,
-[class*="bg-night"] h1:hover,
-[class*="bg-night"] h2:hover,
-[class*="bg-night"] h3:hover,
-[class*="bg-[#111827]"] h1:hover,
-[class*="bg-[#111827]"] h2:hover,
-[class*="bg-[#111827]"] h3:hover,
-[class*="bg-[#211B72]"] h1:hover,
-[class*="bg-[#211B72]"] h2:hover,
-[class*="bg-[#211B72]"] h3:hover,
-.bg-slate-900 h1:hover,
-.bg-slate-900 h2:hover,
-.bg-slate-900 h3:hover,
-.text-white h1:hover,
-.text-white h2:hover,
-.text-white h3:hover,
-.card-art[data-tone="dark"] ~ * h1:hover,
-.card-art[data-tone="dark"] ~ * h2:hover,
-.card-art[data-tone="dark"] ~ * h3:hover,
-.card-art[data-tone="dark"] ~ :is(h1, h2, h3):hover,
-.card-surface[data-tone="dark"] ~ * :is(h1, h2, h3):hover,
-.card-surface[data-tone="dark"] ~ :is(h1, h2, h3):hover {
+/*
+ * Hovering any heading turns its own text brand orange. A coloured accent inside it
+ * (e.g. <span className="text-[#3026B3]">…</span>) sets its own colour, so it keeps it.
+ * !important so this wins over per-heading hover utilities. Don't give accent spans a hover colour.
+ */
+:is(h1, h2, h3, h4, h5, h6):hover {
   color: #F54900 !important;
-}
-
-/* Light generated-art cards sit inside the bg-night Layout wrapper, which would otherwise
-   turn their hovered headings gold on a pale background; keep the light-surface indigo. */
-.card-art[data-tone="light"] ~ * :is(h1, h2, h3):hover,
-.card-art[data-tone="light"] ~ :is(h1, h2, h3):hover,
-.card-surface[data-tone="light"] ~ * :is(h1, h2, h3):hover,
-.card-surface[data-tone="light"] ~ :is(h1, h2, h3):hover {
-  color: #3026B3 !important;
 }
 
 /* ── Interactive card: lift, border glow, shadow escalation ──── */

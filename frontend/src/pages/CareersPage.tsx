@@ -637,7 +637,7 @@ export default function CareersPage() {
                         <div className="h-14 w-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 fx-icon-pop">
                           <Icon name="check" width={28} height={28} strokeWidth={2.5} />
                         </div>
-                        <h4 className="font-heading text-2xl font-medium text-[#111827] transition-colors duration-300 hover:text-[#3026B3]">
+                        <h4 className="font-heading text-2xl font-medium text-[#111827] transition-colors duration-300 hover:text-[#F54900]">
                           Profile Received
                         </h4>
                         <p className="text-sm text-[#374151] mt-2 max-w-md mx-auto">

@@ -82,7 +82,7 @@ export default function TermsPage() {
                   data-cursor="card"
                   className="p-5 sm:p-6 rounded-xl border border-[#3026B3]/15 border-l-4 border-l-[#3026B3] bg-[color-mix(in_srgb,#3026B3_7%,white)] transition-all duration-200 hover:bg-[color-mix(in_srgb,#3026B3_11%,white)] hover:border-l-[#3026B3]!"
                 >
-                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-[#211B72] hover:text-[#3026B3]!">
+                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-[#211B72] hover:text-[#F54900]">
                     {s.t}
                   </AnimatedHeading>
                   <p className="mt-3 text-[14.5px] leading-relaxed text-[#374151]">{s.d}</p>
