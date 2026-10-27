@@ -82,7 +82,7 @@ export function InstitutionalNewsroom() {
                 <span>CORPORATE DISCLOSURES</span>
               </div>
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] dark:text-white hover:text-[#3026B3] dark:hover:text-[#F54900] transition-colors duration-300">
-                Announcements &amp; News
+                Announcement &amp; News
               </h2>
             </div>
 
