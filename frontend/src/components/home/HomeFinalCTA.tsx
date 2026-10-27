@@ -8,7 +8,7 @@ import { SectionTransition } from "../motion/SectionTransition";
 export function HomeFinalCTA() {
   return (
     <SectionTransition aria-label="Final Call to Action">
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-10 sm:py-14">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-2 sm:py-6">
         <SectionPhoto src={cardImage("home-cta-collaborate")} />
         {/* Ambient background lighting */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
@@ -33,7 +33,7 @@ export function HomeFinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-6 font-heading text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-sm hover:text-white"
+              className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-sm hover:text-white"
             >
               Let’s Build{" "}
               <span className="text-[#00B8D9]">What Comes Next.</span>
@@ -45,7 +45,7 @@ export function HomeFinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto"
+              className="mt-4 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto"
             >
               Whether you’re a business partner, investor, entrepreneur, institution or technology partner, let’s explore what we can build together.
             </motion.p>
@@ -56,7 +56,7 @@ export function HomeFinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <MagneticButton>
                 <Link
