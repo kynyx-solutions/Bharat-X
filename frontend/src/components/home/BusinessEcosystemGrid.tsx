@@ -57,7 +57,7 @@ const verticals: Vertical[] = [
   },
   {
     id: "capital",
-    label: "Capital",
+    label: "Capital & Venture Building",
     lead: "We don't just invest in businesses, we help build them. We bring capital, strategy and hands-on support to founders and growing companies.",
     detail:
       "We work alongside teams from the first idea to the first customers and beyond: shaping the business model, setting up operations and planning how to fund growth. We take a long-term view and back companies that can keep growing for a decade.",

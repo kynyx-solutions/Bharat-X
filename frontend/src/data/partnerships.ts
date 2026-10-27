@@ -26,7 +26,7 @@ export const partnerships: Partnership[] = [
     name: "Ministry of MSME",
     type: "Programme",
     description: "AI programme under the Ministry of MSME",
-    logo: "/Partners/msme.jpeg",
+    logo: "/Partners/msme.png",
     featured: true,
     affiliation: "Government of India",
   },
