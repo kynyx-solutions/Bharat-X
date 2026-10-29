@@ -15,20 +15,36 @@ export interface HeroSlide {
 
 export const heroSlides: HeroSlide[] = [
   {
-    id: "infra",
-    name: "Infrastructure & Heavy Engineering",
-    shortLabel: "INFRASTRUCTURE",
-    image: "/assets/hero1.png",
-    companyLogo: "/Infra_logo1.png",
-    heroTagline: "Building Arteries Of Bharat",
+    id: "ai-first",
+    name: "AI-First Group",
+    shortLabel: "AI-FIRST GROUP",
+    image: "/assets/slides/hero-ai-first.webp",
+    companyLogo: "/bharatxgroup.png",
+    heroTagline: "AI-First. Built For Bharat.",
   },
   {
     id: "tech-ai",
     name: "Technology, AI & Automation",
     shortLabel: "TECHNOLOGY & AI",
-    image: "/assets/hero2.jpeg",
+    image: "/assets/slides/hero-tech-ai.webp",
     companyLogo: "/Ai-Experts_logo.png",
-    heroTagline: "Intelligence Engineered For Bharat",
+    heroTagline: "Intelligence Engineered for Bharat.",
+  },
+  {
+    id: "infra",
+    name: "Infrastructure & Heavy Engineering",
+    shortLabel: "INFRASTRUCTURE",
+    image: "/assets/slides/hero-infra.webp",
+    companyLogo: "/Infra_logo1.png",
+    heroTagline: "Building Arteries of Bharat",
+  },
+  {
+    id: "agri",
+    name: "Agriculture & Food",
+    shortLabel: "AGRICULTURE",
+    image: "/assets/slides/hero-agro.webp",
+    companyLogo: "/Bharatxagro_logo.png",
+    heroTagline: "From Bharat's Field to The World",
   },
   // {
   //   id: "packaging",
@@ -38,14 +54,14 @@ export const heroSlides: HeroSlide[] = [
   //   companyLogo: "/Bharatxlabs_logo.svg",
   //   heroTagline: "Engineered For Enterprise Scale",
   // },
-  {
-    id: "labs",
-    name: "Sustainable Materials & Packaging Labs",
-    shortLabel: "BHARATX LABS",
-    image: "/assets/hero5.png",
-    companyLogo: "/Bharatxlabs_logo.svg",
-    heroTagline: "Ideas. People. Possibilities.",
-  },
+  // {
+  //   id: "labs",
+  //   name: "Sustainable Materials & Packaging Labs",
+  //   shortLabel: "BHARATX LABS",
+  //   image: "/assets/hero5.png",
+  //   companyLogo: "/Bharatxlabs_logo.svg",
+  //   heroTagline: "Ideas. People. Possibilities.",
+  // },
   {
     id: "manufacturing",
     name: "Precision Mobility & Manufacturing",
@@ -54,14 +70,14 @@ export const heroSlides: HeroSlide[] = [
     companyLogo: "/Casters_logo.png",
     heroTagline: "Precision Engineering At Scale",
   },
-  {
-    id: "civil",
-    name: "Heavy Civil & Transport Corridors",
-    shortLabel: "HEAVY ENGINEERING",
-    image: "/assets/hero6.png",
-    companyLogo: "/Infra_logo1.png",
-    heroTagline: "Connecting India's Corridors",
-  },
+  // {
+  //   id: "civil",
+  //   name: "Heavy Civil & Transport Corridors",
+  //   shortLabel: "HEAVY ENGINEERING",
+  //   image: "/assets/hero6.png",
+  //   companyLogo: "/Infra_logo1.png",
+  //   heroTagline: "Connecting India's Corridors",
+  // },
   {
     id: "sustainability",
     name: "Sustainability & Circular Economy",
@@ -248,7 +264,7 @@ export function HomeHeroSection() {
           </button>
 
           <span className="font-sans text-[11px] font-bold text-[#F54900] tracking-wider">
-            0{currentIndex + 1} / 0{heroSlides.length}
+            {String(currentIndex + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}
           </span>
 
           <span className="h-3 w-px bg-white/20" />

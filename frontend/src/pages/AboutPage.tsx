@@ -41,59 +41,59 @@ const visionMission: {
   sweep: string;
   glow: string;
 }[] = [
-  {
-    label: "Our Vision",
-    kicker: "Where we’re headed",
-    statement: (
-      <>
-        To build world-class Indian businesses that help make India a developed nation by{" "}
-        <span className="text-[#F54900]">2047</span>.
-      </>
-    ),
-    detail:
-      "Aligned with India's national vision of Viksit Bharat @2047, BharatX Group builds world-class businesses in the sectors a developed India depends on — infrastructure, agriculture, manufacturing and technology — and creates value that lasts for generations.",
-    focusLabel: "Sectors we build in",
-    focus: [
-      { label: "Infrastructure", icon: "hard-hat" },
-      { label: "Agriculture", icon: "sprout" },
-      { label: "Manufacturing", icon: "factory" },
-      { label: "Technology", icon: "cpu" },
-    ],
-    icon: "eye",
-    accentText: "text-[#3026B3]",
-    chip: "border-[#00B8D9]/30",
-    ring: "from-[#00B8D9] to-[#3026B3]",
-    border: "from-[#00B8D9]/70 via-[#3026B3]/15 to-white",
-    bracket: "border-[#00B8D9]",
-    hairline: "via-[#00B8D9]",
-    sweep: "via-[#00B8D9]/12",
-    glow: "rgba(0, 184, 217, 0.35)",
-  },
-  {
-    label: "Our Mission",
-    kicker: "How we get there",
-    statement: "To find real gaps in India's economy and build, operate and scale the businesses that fill them.",
-    // The rest of the mission statement, plus the Our Approach line from the home page.
-    detail:
-      "We do it by creating jobs, raising farmer incomes, making more in India and bringing technology to every business we touch — combining capital, technology, talent and execution to turn real opportunities into enterprises that last.",
-    focusLabel: "What we create",
-    focus: [
-      { label: "Jobs", icon: "users" },
-      { label: "Farmer incomes", icon: "wheat" },
-      { label: "Made in India", icon: "boxes" },
-      { label: "Technology", icon: "cpu" },
-    ],
-    icon: "target",
-    accentText: "text-[#CA3500]",
-    chip: "border-[#F54900]/25",
-    ring: "from-[#FFB86A] to-[#F54900]",
-    border: "from-[#F54900]/70 via-[#F54900]/15 to-white",
-    bracket: "border-[#F54900]",
-    hairline: "via-[#F54900]",
-    sweep: "via-[#F54900]/10",
-    glow: "rgba(245, 73, 0, 0.3)",
-  },
-];
+    {
+      label: "Our Vision",
+      kicker: "Where we’re headed",
+      statement: (
+        <>
+          To build world-class Indian businesses that help make India a developed nation by{" "}
+          <span className="text-[#F54900]">2047</span>.
+        </>
+      ),
+      detail:
+        "Aligned with India's national vision of Viksit Bharat @2047, BharatX Group builds world-class businesses in the sectors a developed India depends on — infrastructure, agriculture, manufacturing and technology — and creates value that lasts for generations.",
+      focusLabel: "Sectors we build in",
+      focus: [
+        { label: "Infrastructure", icon: "hard-hat" },
+        { label: "Agriculture", icon: "sprout" },
+        { label: "Manufacturing", icon: "factory" },
+        { label: "Technology", icon: "cpu" },
+      ],
+      icon: "eye",
+      accentText: "text-[#3026B3]",
+      chip: "border-[#00B8D9]/30",
+      ring: "from-[#00B8D9] to-[#3026B3]",
+      border: "from-[#00B8D9]/70 via-[#3026B3]/15 to-white",
+      bracket: "border-[#00B8D9]",
+      hairline: "via-[#00B8D9]",
+      sweep: "via-[#00B8D9]/12",
+      glow: "rgba(0, 184, 217, 0.35)",
+    },
+    {
+      label: "Our Mission",
+      kicker: "How we get there",
+      statement: "To find real gaps in India's economy and build, operate and scale the businesses that fill them.",
+      // The rest of the mission statement, plus the Our Approach line from the home page.
+      detail:
+        "We do it by creating jobs, raising farmer incomes, making more in India and bringing technology to every business we touch — combining capital, technology, talent and execution to turn real opportunities into enterprises that last.",
+      focusLabel: "What we create",
+      focus: [
+        { label: "Jobs", icon: "users" },
+        { label: "Farmer incomes", icon: "wheat" },
+        { label: "Made in India", icon: "boxes" },
+        { label: "Technology", icon: "cpu" },
+      ],
+      icon: "target",
+      accentText: "text-[#CA3500]",
+      chip: "border-[#F54900]/25",
+      ring: "from-[#FFB86A] to-[#F54900]",
+      border: "from-[#F54900]/70 via-[#F54900]/15 to-white",
+      bracket: "border-[#F54900]",
+      hairline: "via-[#F54900]",
+      sweep: "via-[#F54900]/10",
+      glow: "rgba(245, 73, 0, 0.3)",
+    },
+  ];
 
 /** Light holographic wash behind the Vision & Mission scene. */
 const visionMissionAurora = [
@@ -131,8 +131,8 @@ const purposePillars = [
     points: ["Greenfield enterprise creation", "Governance from day one"],
     icon: "hard-hat" as const,
     image: cardImage("about-03-purpose-build"),
-    accent: "#3026B3",
-    borderHover: "hover:border-[#3026B3]",
+    accent: "#163A7A",
+    borderHover: "hover:border-[#163A7A]",
   },
   {
     step: "02",
@@ -176,6 +176,8 @@ const leadershipTeam = [
     role: "Executive Vice President — Product, Technology & AI",
     bio: "Technologist with 15+ years across product, AI and entrepreneurship at Google, Amazon, GE and Deloitte, and founder of his own startup. B.Tech and PhD in Computer Science, IIT Delhi; master’s, NYU.",
     photo: "/leadership/nitin-arora.png",
+    // 4:3 head-and-shoulders crop for the desktop card frame
+    cardPhoto: "/leadership/nitin-arora-card.webp",
     linkedin: "https://www.linkedin.com/in/aronitin",
   },
   {
@@ -183,6 +185,7 @@ const leadershipTeam = [
     role: "Chief Revenue & Operating Officer",
     bio: "Operations leader with 28+ years in automotive manufacturing. Former Plant Head at Jay Ushin Ltd (JPM Group), running three plants and teams of 1,000+. Expert in Lean, Six Sigma and IATF 16949.",
     photo: "/leadership/dharampal-singh.webp",
+    cardPhoto: "/leadership/dharampal-singh-card.webp",
     linkedin: "https://www.linkedin.com/in/dharampal-singh-995aa2228",
   },
   {
@@ -190,6 +193,7 @@ const leadershipTeam = [
     role: "Chief Human Resources Officer (CHRO)",
     bio: "Environmental scientist with an M.Phil. and Ph.D., and research in sustainability and pollution. As CHRO, she leads people, culture, hiring and talent across BharatX Group and its businesses.",
     photo: "/leadership/akanksha-verma-passport.png",
+    cardPhoto: "/leadership/akanksha-verma-card.webp",
     linkedin: "https://www.linkedin.com/in/akanksha-verma-304a18191",
   },
 ];
@@ -710,8 +714,8 @@ export default function AboutPage() {
       <SectionTransition>
         <section className="relative overflow-hidden bg-white py-6 sm:py-9">
           <div className="container-x relative z-10">
-            {/* Enhanced 2-Column Split Header eliminates empty dead space */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12 sm:mb-16">
+            {/* Two balanced columns: the story (context, then purpose) beside a navy thesis panel of the same height */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch mb-12 sm:mb-16">
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#9f2d00] font-bold shadow-xs mb-4">
                   <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900] animate-pulse" />
@@ -719,37 +723,48 @@ export default function AboutPage() {
                 </div>
 
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                  Built Around India’s <span className="text-[#3026B3] transition-colors duration-300">Opportunity</span>
+                  Built Around India’s <span className="text-[#163A7A] transition-colors duration-300">Opportunity</span>
                 </h2>
 
-                <p className="mt-5 text-base sm:text-lg text-[#111827] font-medium leading-relaxed max-w-2xl">
+                <p className="mt-4 text-sm sm:text-base text-[#596579] leading-relaxed font-normal max-w-2xl">
+                  India is entering a period of extraordinary economic transformation. Infrastructure is expanding, industries are modernising, technology is reshaping businesses, agricultural value chains are evolving and sustainability is becoming a business imperative.
+                </p>
+
+                <p className="mt-4 border-l-[3px] border-[#F54900] pl-5 text-base sm:text-lg text-[#111827] font-medium leading-relaxed max-w-2xl">
                   BharatX exists to participate in this transformation—not simply by investing in opportunities, but by building the businesses capable of capturing them.
                 </p>
               </div>
 
-              <div className="lg:col-span-5 flex flex-col justify-between">
-                <p className="text-sm sm:text-base text-[#596579] leading-relaxed font-normal">
-                  India is entering a period of extraordinary economic transformation. Infrastructure is expanding, industries are modernising, technology is reshaping businesses, agricultural value chains are evolving and sustainability is becoming a business imperative.
-                </p>
+              {/* Executive thesis: navy panel stretched to the column height, with the four steps the cards below spell out */}
+              <div
+                data-cursor="card"
+                tabIndex={0}
+                className="lg:col-span-5 relative flex flex-col justify-between gap-8 overflow-hidden rounded-2xl border border-[#163A7A]/40 bg-gradient-to-br from-[#0B1F47] via-[#0F2A5C] to-[#163A7A] p-4 sm:p-8 shadow-[0_18px_40px_-16px_rgba(11,31,71,0.55)] transition-all duration-300 hover:shadow-[0_24px_50px_-16px_rgba(11,31,71,0.7)] fx-lift focus-visible:ring-2 focus-visible:ring-[#F54900] focus:outline-none"
+              >
+                <span aria-hidden className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-[#1E4A9E]/45 blur-3xl" />
+                <span aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-48 w-48 rounded-full bg-[#F54900]/10 blur-3xl" />
 
-                {/* Executive Thesis Highlight Box */}
-                <div
-                  data-cursor="card"
-                  tabIndex={0}
-                  className="relative overflow-hidden mt-6 rounded-2xl border border-white/10 bg-[#0D1026] p-5 shadow-md transition-all duration-300 hover:shadow-xl hover:border-[#3026B3] fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
-                >
-                  <CardFill accent="#3026B3" />
-                  <div className="relative flex items-start gap-3.5">
-                    <FeatureIcon name="landmark" accent="#3026B3" size={40} />
-                    <div className="min-w-0 flex-1">
-                      <span className="font-sans text-[10px] uppercase tracking-[0.24em] text-[#FF8904] font-bold block">
-                        SOVEREIGN THESIS
-                      </span>
-                      <p className="mt-0.5 text-xs sm:text-[13px] text-white font-medium leading-snug">
-                        Operator-led balance-sheet compounding across India's foundational industrial sectors.
-                      </p>
-                    </div>
+                <div className="relative">
+                  <div className="flex items-center gap-3">
+                    <FeatureIcon name="landmark" accent="#F54900" size={44} className="shrink-0" />
+                    <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#FF8904] font-bold">
+                      SOVEREIGN THESIS
+                    </span>
                   </div>
+                  <p className="mt-2 font-heading text-xl sm:text-2xl text-white font-medium leading-snug tracking-tight">
+                    Operator-led balance-sheet compounding across India's foundational industrial sectors.
+                  </p>
+                </div>
+
+                <div className="relative flex flex-wrap items-center gap-x-2 gap-y-2 border-t border-white/15 pt-3 font-sans text-[11px] font-bold uppercase tracking-[0.12em] sm:gap-x-2.5 sm:tracking-[0.2em] text-white/85">
+                  {purposePillars.map((pillar, i) => (
+                    <span key={pillar.title} className="inline-flex items-center gap-2 sm:gap-2.5">
+                      {pillar.title}
+                      {i < purposePillars.length - 1 && (
+                        <Icon name="arrow-right" width={12} height={12} className="text-[#FF8904]" />
+                      )}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -765,7 +780,7 @@ export default function AboutPage() {
                   >
                     <CardPhoto src={pillar.image} accent={pillar.accent} />
                     <div className="relative flex h-full flex-col [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
-                      <div className="flex items-center justify-between mb-5">
+                      <div className="flex items-center justify-between mb-3">
                         <FeatureIcon
                           name={pillar.icon}
                           accent={pillar.accent}
@@ -961,19 +976,23 @@ export default function AboutPage() {
 
       {/* ── LEADERSHIP TEAM (The executives running the Group's functions) ── */}
       <SectionTransition id="leadership-team" aria-label="Leadership Team">
-        <section className="relative overflow-hidden bg-white py-6 sm:py-9">
+        {/* Desktop fits the whole section on one screen (lg:/short: classes only; phones keep square portraits) */}
+        <section className="relative overflow-hidden bg-white py-6 sm:py-9 short:py-6">
           <div className="container-x relative z-10">
-            <div className="max-w-3xl mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/30 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#CA3500] font-bold shadow-xs mb-4">
-                <DuotoneIcon name="users" size={14} />
-                <span>LEADERSHIP TEAM</span>
+            {/* Desktop: the intro sits beside the heading */}
+            <div className="max-w-3xl mb-8 sm:mb-10 lg:max-w-none lg:mb-6 short:mb-4 lg:flex lg:items-end lg:justify-between lg:gap-12">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/30 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#CA3500] font-bold shadow-xs mb-4">
+                  <DuotoneIcon name="users" size={14} />
+                  <span>LEADERSHIP TEAM</span>
+                </div>
+
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
+                  The People Leading <span className="text-[#3026B3]">BharatX.</span>
+                </h2>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-                The People Leading <span className="text-[#3026B3]">BharatX.</span>
-              </h2>
-
-              <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
+              <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed font-normal lg:mt-0 lg:max-w-sm lg:shrink-0 lg:pb-1 lg:text-base">
                 Experienced leaders across technology, operations and people, building the Group and its businesses.
               </p>
             </div>
@@ -986,30 +1005,42 @@ export default function AboutPage() {
                     "h-full",
                     // In the 2-column tablet layout, centre a last card that would sit alone on the left
                     i === leadershipTeam.length - 1 &&
-                      leadershipTeam.length % 2 === 1 &&
-                      "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.75rem)] lg:col-span-1 lg:mx-0 lg:w-auto",
+                    leadershipTeam.length % 2 === 1 &&
+                    "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.75rem)] lg:col-span-1 lg:mx-0 lg:w-auto",
                   )}
                 >
                   <article
                     data-cursor="card"
                     className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[#E3E5EF] bg-[#FAF9F6] shadow-xs transition-[translate,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1.5 hover:border-[#F54900]/30 hover:shadow-[0_28px_55px_-28px_rgba(11,31,71,0.45)]"
                   >
-                    {/* Square portrait, cropped from the top; slow zoom on hover */}
-                    <div className="relative m-3 mb-0 aspect-square overflow-hidden rounded-2xl bg-[#EEF0F6]">
+                    {/*
+                      Phones: the original photo in a square frame, cropped from the top. Desktop: cardPhoto, a 4:3
+                      head-to-chest crop made for this 4:3 frame, so nothing is cut. Two plain images rather than a
+                      <picture>, so a hot reload or resize can't leave the wrong one showing; the hidden one is lazy and
+                      display:none, so it never downloads. Slow zoom on hover.
+                    */}
+                    <div className="relative m-3 mb-0 aspect-square lg:aspect-[4/3] overflow-hidden rounded-2xl bg-[#EEF0F6]">
                       <img
                         src={person.photo}
                         alt={`${person.name}, ${person.role}`}
                         loading="lazy"
                         decoding="async"
-                        className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                        className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105 lg:hidden"
+                      />
+                      <img
+                        src={person.cardPhoto}
+                        alt={`${person.name}, ${person.role}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="hidden h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105 lg:block"
                       />
                       <span aria-hidden className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#0B1F47]/25 to-transparent" />
                     </div>
 
-                    <div className="flex flex-1 flex-col px-6 pb-7 pt-5 sm:px-7">
+                    <div className="flex flex-1 flex-col px-6 pb-7 pt-5 sm:px-7 lg:pb-5 lg:pt-4 short:pb-4">
                       {/* Name with the LinkedIn profile link on the same line */}
                       <div className="flex items-center justify-between gap-3">
-                        <h3 className="font-heading text-2xl sm:text-[1.65rem] font-medium leading-tight tracking-tight text-[#0B1F47]">
+                        <h3 className="font-heading text-2xl sm:text-[1.65rem] lg:text-xl font-medium leading-tight tracking-tight text-[#0B1F47]">
                           {person.name}
                         </h3>
                         <a
@@ -1021,13 +1052,13 @@ export default function AboutPage() {
                           data-cursor="link"
                           className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#0A66C2] focus-visible:ring-offset-2"
                         >
-                          <LinkedInLogo className="h-7 w-7" />
+                          <LinkedInLogo className="h-7 w-7 lg:h-6 lg:w-6" />
                         </a>
                       </div>
                       {/* Two lines reserved from sm, so rules and bios line up when one title wraps */}
-                      <p className="mt-1.5 text-[15px] font-semibold leading-snug text-[#CA3500] sm:min-h-[2.75em]">{person.role}</p>
-                      <span aria-hidden className="mt-4 block h-0.5 w-10 rounded-full bg-gradient-to-r from-[#F54900] to-[#FFB86A] transition-all duration-500 group-hover:w-16" />
-                      <p className="mt-4 text-[15px] leading-relaxed text-[#374151]">{person.bio}</p>
+                      <p className="mt-1.5 lg:mt-1 text-[15px] lg:text-[13px] font-semibold leading-snug text-[#CA3500] sm:min-h-[2.75em]">{person.role}</p>
+                      <span aria-hidden className="mt-4 lg:mt-2.5 block h-0.5 w-10 rounded-full bg-gradient-to-r from-[#F54900] to-[#FFB86A] transition-all duration-500 group-hover:w-16" />
+                      <p className="mt-4 lg:mt-2.5 text-[15px] lg:text-[13px] leading-relaxed text-[#374151]">{person.bio}</p>
                     </div>
                   </article>
                 </StaggerItem>
@@ -1194,16 +1225,16 @@ export default function AboutPage() {
               </h2>
 
               {/* Copy */}
-              <p className="mt-6 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto">
+              <p className="mt-4 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto">
                 BharatX Group is still at the beginning of its journey.
               </p>
 
-              <p className="mt-3 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto">
+              <p className="mt-2 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-3xl mx-auto">
                 As we expand into new industries, build new businesses and develop new capabilities, our ambition remains constant: to create enduring enterprises that contribute to India’s economic progress.
               </p>
 
               {/* Signature Statement */}
-              <div className="mt-8 pt-8 border-t border-white/15 max-w-xl mx-auto">
+              <div className="mt-4 pt-4 border-t border-white/15 max-w-xl mx-auto">
                 <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
                   Building Businesses. Enabling Bharat.
                 </p>
