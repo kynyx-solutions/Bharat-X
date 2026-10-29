@@ -208,16 +208,10 @@ export function BusinessEcosystemGrid() {
               )}
             />
           ))}
-
-          {/* Navy scrims only behind the copy (left) and the list (right) on desktop; the photo's centre stays clear */}
-          <div className="absolute inset-y-0 left-0 hidden w-[min(60%,760px)] bg-gradient-to-r from-[#06122E]/80 via-[#06122E]/60 via-70% to-transparent lg:block" />
-          <div className="absolute inset-y-0 right-0 hidden w-[min(50%,560px)] bg-gradient-to-l from-[#06122E]/80 via-[#06122E]/60 via-70% to-transparent lg:block" />
-          {/* Below lg the copy spans the full width, so the scrim does too */}
-          <div className="absolute inset-0 bg-[#06122E]/55 lg:hidden" />
         </div>
       }
     >
-      {/* The scrims above plus a soft text shadow keep the copy legible */}
+      {/* No overlay on the photos: a soft text shadow keeps the copy legible instead */}
       {/* Full width like the hero (max-w-none!), so text and list sit near the screen edges on wide screens */}
       <div ref={rootRef} className="container-x max-w-none! relative z-10 [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_2px_10px_rgba(0,0,0,0.75),0_0_28px_rgba(0,0,0,0.55)]">
         {/* Header: title + counter */}
