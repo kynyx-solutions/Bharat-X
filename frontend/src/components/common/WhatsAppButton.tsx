@@ -6,7 +6,7 @@ const WHATSAPP_NUMBER = brandConfig.contact.phoneTel.replace(/\D/g, "");
 const GREETING = "Hello BharatX Group, I'd like to know more.";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(GREETING)}`;
 
-/** Sticky "Chat on WhatsApp" button, bottom-right on every page. BackToTop stacks above it. */
+/** Sticky "Chat on WhatsApp" button, bottom-right on every page. */
 export function WhatsAppButton() {
   const reduced = useReducedMotion();
 

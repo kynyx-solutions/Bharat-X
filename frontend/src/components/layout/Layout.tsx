@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { trackPageView } from "../../services/analytics";
 import { useLenis } from "../scroll/SmoothScrollProvider";
-import { BackToTop } from "../common/BackToTop";
 import { WhatsAppButton } from "../common/WhatsAppButton";
 import { ScrollProgress } from "../common/ScrollProgress";
 import { Footer } from "./Footer";
@@ -56,7 +55,6 @@ export function Layout() {
         </AnimatePresence>
         {/* {location.pathname !== "/" && <FooterCTA />} */}
         <Footer />
-        <BackToTop />
         <WhatsAppButton />
       </div>
     </div>
