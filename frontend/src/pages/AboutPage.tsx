@@ -192,8 +192,9 @@ const leadershipTeam = [
     name: "Dr. Akanksha Verma",
     role: "Chief Human Resources Officer (CHRO)",
     bio: "Environmental scientist with an M.Phil. and Ph.D., and research in sustainability and pollution. As CHRO, she leads people, culture, hiring and talent across BharatX Group and its businesses.",
-    photo: "/leadership/akanksha-verma-passport.png",
-    cardPhoto: "/leadership/akanksha-verma-card.webp",
+    // Both made from akanksha-verma-square.png, with its hard side edges faded into the white background
+    photo: "/leadership/akanksha-verma-square.webp",
+    cardPhoto: "/leadership/akanksha-verma-square-card.webp",
     linkedin: "https://www.linkedin.com/in/akanksha-verma-304a18191",
   },
 ];
@@ -1184,9 +1185,9 @@ export default function AboutPage() {
                         className="transition-transform duration-300 group-hover:scale-110 fx-icon-pop"
                       />
                       <div>
-                        <span className="font-sans text-[10px] uppercase tracking-wider block text-[#FF8904]">
+                        {/* <span className="font-sans text-[10px] uppercase tracking-wider block text-[#FF8904]">
                           Principle 0{idx + 1}
-                        </span>
+                        </span> */}
                         <h3 className="font-heading text-xl font-medium text-white transition-colors">
                           {p.title}
                         </h3>
