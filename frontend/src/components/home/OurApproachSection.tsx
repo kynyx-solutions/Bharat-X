@@ -117,7 +117,7 @@ export function OurApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]"
+            className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]"
           >
             From Opportunity to <br /> <span className="text-[#3026B3]">Enterprise</span>
           </motion.h2>
@@ -127,7 +127,7 @@ export function OurApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-5 text-base sm:text-lg leading-relaxed text-[#596579] font-normal"
+            className="mt-3 text-base sm:text-lg leading-relaxed text-[#596579] font-normal"
           >
             We combine capital, technology, talent and execution to turn opportunities into scalable enterprises.
           </motion.p>
@@ -136,7 +136,7 @@ export function OurApproachSection() {
         {/* Desktop: the steps climb a winding road, bottom-left to top-right */}
         <motion.div
           data-journey
-          className="relative mt-6 hidden lg:block xl:-mt-6"
+          className="relative mt-4 hidden lg:block xl:-mt-6"
           style={{ height: JOURNEY_HEIGHT }}
           initial="hidden"
           whileInView="shown"
@@ -194,7 +194,7 @@ export function OurApproachSection() {
         </motion.div>
 
         {/* Mobile & tablet: the same journey as a vertical road */}
-        <ol className="relative mt-10 lg:hidden">
+        <ol className="relative mt-6 lg:hidden">
           <span aria-hidden className="absolute bottom-8 left-6 top-8 w-3.5 -translate-x-1/2 rounded-full bg-[#E3E5EF]">
             <span className="absolute inset-y-2 left-1/2 -translate-x-1/2 border-l-2 border-dashed border-white" />
           </span>

@@ -9,7 +9,7 @@ import { solidTextColours } from "../common/CardSurface";
 const upcomingCards = [
   {
     title: "Packaging & Materials",
-    description: "Building efficient and sustainable packaging solutions.",
+    description: "Building efficient and sustainable packaging solutions for India's industries.",
     image: "/assets/slides/msme.png",
     accent: "#D97706",
   },
@@ -50,7 +50,7 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-6 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] hover:text-[#F54900] transition-colors duration-300"
+              className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] hover:text-[#F54900] transition-colors duration-300"
             >
               The Next Chapter Is{" "}
               <br />
@@ -62,42 +62,49 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-5 text-base sm:text-lg leading-relaxed text-[#596579] font-normal max-w-2xl mx-auto"
+              className="mt-3 text-base sm:text-lg leading-relaxed text-[#596579] font-normal max-w-2xl mx-auto"
             >
               BharatX continues to explore new opportunities across emerging industries and critical sectors of the Indian economy.
             </motion.p>
           </div>
 
-          {/* Exactly 3 High-Contrast Cards */}
-          <Stagger className="mt-14 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {/* Three image cards, each with its title and description underneath on the section background */}
+          <Stagger className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {upcomingCards.map((card) => {
-              // White copy panel; the text takes the colour the panel used to be filled with
+              // The text takes the accent shade its card panel used to be filled with
               const text = solidTextColours(card.accent);
               return (
                 <StaggerItem key={card.title} className="h-full">
                   <div
-                    data-cursor="card"
-                    tabIndex={0}
                     style={{ "--card-text": text.rest, "--card-text-deep": text.deep } as CSSProperties}
-                    className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-[#E3E5EF] bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                    className="group/item"
                   >
-                    {/* Image banner */}
-                    <div className="relative h-48 sm:h-52 w-full overflow-hidden shrink-0">
+                    {/* Image card */}
+                    <div
+                      data-cursor="card"
+                      tabIndex={0}
+                      className="group relative h-48 sm:h-52 overflow-hidden rounded-2xl border border-[#E3E5EF] shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                    >
                       <img
                         src={card.image}
                         alt={card.title}
                         data-cursor="image"
-                        className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-108"
+                        className="h-full w-full object-top object-center transition-transform duration-700 group-hover:scale-108"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     </div>
 
-                    {/* Text content */}
-                    <div className="relative flex flex-1 flex-col p-6 sm:p-7">
-                      <h3 className="font-heading text-2xl font-medium tracking-tight text-(--card-text) transition-colors duration-300">
+                    {/* Text below the card, centred, with a short accent bar that widens while the item is hovered */}
+                    <div className="mt-6 text-center">
+                      {/* data-no-hover: keeps its accent colour instead of the site-wide orange heading hover */}
+                      <h3 data-no-hover className="font-heading text-2xl sm:text-[1.65rem] font-medium tracking-tight text-(--card-text)">
                         {card.title}
                       </h3>
-                      <p className="mt-3 text-sm text-(--card-text-deep) leading-relaxed font-normal">
+                      <span
+                        aria-hidden
+                        className="mx-auto mt-3 block h-[3px] w-10 rounded-full bg-(--card-text) transition-all duration-300 group-hover/item:w-16"
+                      />
+                      <p className="mx-auto mt-3.5 max-w-sm text-sm sm:text-[15px] text-(--card-text-deep) leading-relaxed font-normal text-balance">
                         {card.description}
                       </p>
                     </div>

@@ -61,7 +61,7 @@ export function WhyBharatXSection() {
             <span>WHY BHARATX</span>
           </div>
 
-          <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]">
+          <h2 className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]">
             More Than Capital.<br /> <span className="text-[#3026B3] transition-colors">More Than Strategy.</span>
           </h2>
 
@@ -71,7 +71,7 @@ export function WhyBharatXSection() {
         </div>
 
         {/* 4 Pillars High-Contrast Grid with Stagger & fx-icon-spin */}
-        <Stagger className="mt-12 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <Stagger className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {pillars.map((pillar, idx) => (
             <StaggerItem key={pillar.title}>
               <div
@@ -91,7 +91,7 @@ export function WhyBharatXSection() {
                     name={pillar.icon}
                     accent={pillar.accent}
                     size={48}
-                    className="mb-5 transition-transform duration-500 group-hover:rotate-[360deg]"
+                    className="mb-3 transition-transform duration-500 group-hover:rotate-[360deg]"
                   />
 
                   <h3 className="font-heading text-xl sm:text-2xl font-medium tracking-tight text-white group-hover:text-[#FF8904] transition-colors">
@@ -103,7 +103,7 @@ export function WhyBharatXSection() {
                   </p>
                 </div>
 
-                <div className="relative mt-6 pt-4 border-t border-white/20 flex items-center justify-between font-sans text-[10.5px] uppercase tracking-wider text-white/85">
+                <div className="relative mt-2 pt-4 border-t border-white/20 flex items-center justify-between font-sans text-[10.5px] uppercase tracking-wider text-white/85">
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     Pillar 0{idx + 1}
                   </span>
@@ -120,7 +120,7 @@ export function WhyBharatXSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="fx-shine group/banner mt-12 sm:mt-14 relative overflow-hidden rounded-3xl border border-[#163A7A]/30 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-8 sm:p-12 md:p-14 text-center text-white shadow-2xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(11,31,71,0.45)]"
+          className="fx-shine group/banner mt-8 sm:mt-10 relative overflow-hidden rounded-3xl border border-[#163A7A]/30 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-8 sm:p-12 md:p-14 text-center text-white shadow-2xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(11,31,71,0.45)]"
         >
           {/* Subtle gold line accent */}
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#F54900] to-transparent opacity-80 transition-all duration-300 group-hover/banner:opacity-100" />
@@ -131,6 +131,7 @@ export function WhyBharatXSection() {
 
           <blockquote className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-medium leading-tight tracking-tight text-white max-w-4xl mx-auto drop-shadow-sm transition-transform duration-300 group-hover/banner:scale-[1.01]">
             “We don’t just back businesses.{" "}
+            <br />
             <span className="text-[#F54900]">We help build them.</span>”
           </blockquote>
 

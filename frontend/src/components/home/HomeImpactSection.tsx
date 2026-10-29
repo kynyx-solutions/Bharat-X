@@ -72,7 +72,7 @@ export function HomeImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]"
+            className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]"
           >
             Building Economic Value.<br />
             <span className="text-[#15966B]">Creating Wider Impact.</span>
@@ -83,14 +83,14 @@ export function HomeImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-5 text-base sm:text-lg leading-relaxed text-[#596579] font-normal max-w-2xl mx-auto"
+            className="mt-3 text-base sm:text-lg leading-relaxed text-[#596579] font-normal max-w-2xl mx-auto"
           >
             We measure our success not only by the businesses we build, but by the jobs, capabilities, infrastructure and opportunities they create.
           </motion.p>
         </div>
 
         {/* Clean Visual with Five High-Contrast Areas */}
-        <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {impactAreas.map((area, idx) => (
             <motion.div
               key={area.title}
