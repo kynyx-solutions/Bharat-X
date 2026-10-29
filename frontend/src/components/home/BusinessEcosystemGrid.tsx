@@ -234,7 +234,7 @@ export function BusinessEcosystemGrid() {
           </span>
         </div>
 
-        {/* The list column is narrow and pulled into the container's right padding, so it sits near the edge as on RIL */}
+        {/* The list column is narrow and pulled into the container's right padding, so it sits near the edge */}
         <div className="mt-6 sm:mt-8 short:mt-4 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:gap-16 xl:gap-28">
           {/* Vertical list — tab strip on mobile, stacked list on desktop */}
           <div
@@ -312,12 +312,13 @@ export function BusinessEcosystemGrid() {
                   )}
                 >
                   <PanelStep show={show} order={0}>
-                    <h3 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.05] tracking-tight">
+                    {/* data-no-hover: stays white instead of taking the site-wide orange heading hover */}
+                    <h3 data-no-hover className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.05] tracking-tight">
                       {v.label}
                     </h3>
                   </PanelStep>
 
-                  {/* Narrow, evenly set copy, like the RIL businesses block */}
+                  {/* Narrow, evenly set copy, like the businesses block */}
                   <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] space-y-5 text-base sm:text-[17px] lg:text-lg short:mt-4 short:space-y-3 short:text-base leading-relaxed text-white/95 text-justify hyphens-auto">
                     <p>{v.lead}</p>
                     <p>{v.detail}</p>

@@ -1,10 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { cn } from "../../utils/cn";
 import { Icon } from "../../utils/icons";
 import { Button } from "../common/Button";
-import { AnimatedNumber } from "../common/Stats";
 
 export interface HeroSlide {
   id: string;
@@ -92,15 +90,7 @@ export const heroSlides: HeroSlide[] = [
 
 const SLIDE_DURATION = 5000; // 5.0 seconds per slide
 
-/** Group figures under the hero CTAs — same counts the home page sections show (verticals, operating businesses, partners, projects). */
-const heroStats: { value: number; suffix?: string; label: string }[] = [
-  { value: 8, label: "Verticals" },
-  { value: 6, label: "Businesses" },
-  { value: 6, label: "Partners" },
-  { value: 150, suffix: "+", label: "Projects" },
-];
-
-export function RilHeroSection() {
+export function HomeHeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -138,9 +128,10 @@ export function RilHeroSection() {
   const current = heroSlides[currentIndex];
 
   return (
+    // flex-1: takes the height HomePage's one-screen wrapper leaves above the stats strip
     <section
       aria-label="BharatX Group Conglomerate Hero"
-      className="relative flex min-h-[92vh] lg:min-h-screen w-full items-end justify-start overflow-hidden bg-black select-none"
+      className="relative flex flex-1 w-full items-end justify-start overflow-hidden bg-black select-none"
     >
       {/* ── BACKGROUND FULL-BLEED IMAGERY CROSSFADE ─────────────────── */}
       <div className="absolute inset-0 z-0">
@@ -180,11 +171,11 @@ export function RilHeroSection() {
 
       {/* ── HERO CONTENT (Dynamic 3-4 Word Tagline, Nothing Else) ─────── */}
       {/*
-        Pinned to the bottom-left of the hero. Desktop: a small 32px margin (the slide control sits on the
-        right, clear of it). Phones/tablets keep extra bottom padding because the slide control spans the
-        bottom there.
+        Pinned to the bottom-left of the hero. Desktop: 40px up, with the slide control's pill level with the CTAs.
+        Phones/tablets keep extra bottom padding because the slide control spans the bottom there.
+        The group figures that used to sit under the CTAs now lead the stats strip (StatsMarquee).
       */}
-      <div className="container-x max-w-none! relative z-10 w-full pt-28 pb-32 sm:pt-36 lg:pb-8">
+      <div className="container-x max-w-none! relative z-10 w-full pt-28 pb-32 sm:pt-36 lg:pb-10">
         <div className="max-w-6xl xl:max-w-7xl">
           {/* Subtle Conglomerate Eyebrow 
           <motion.div
@@ -232,33 +223,15 @@ export function RilHeroSection() {
               </Button>
             </Link>
           </motion.div>
-
-          {/* Group at a glance */}
-          <motion.dl
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mt-7 sm:mt-10 grid max-w-xl grid-cols-4 pt-5 sm:pt-7"
-          >
-            <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-white/45 via-white/20 to-transparent" />
-            {heroStats.map((s, i) => (
-              <div key={s.label} className={cn("flex min-w-0 flex-col", i > 0 && "border-l border-white/15 pl-3 sm:pl-6 lg:pl-8")}>
-                <dt className="font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.03em] sm:tracking-[0.16em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]">
-                  {s.label}
-                </dt>
-                <dd className="mt-2 flex items-baseline font-heading text-3xl sm:text-4xl lg:text-5xl font-medium leading-none tracking-tight text-white tabular-nums [text-shadow:0_2px_24px_rgba(0,0,0,0.65)]">
-                  <AnimatedNumber value={s.value} />
-                  {s.suffix && <span className="text-[#FF8904]">{s.suffix}</span>}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
         </div>
       </div>
 
-      {/* ── CORNER CURRENT INDUSTRY LABEL & PROGRESS BAR (RIL Style) ─── */}
-      {/* lg:right-24 keeps the control 16px clear of the floating WhatsApp button in the bottom-right corner */}
-      <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-10 lg:bottom-10 lg:right-24 z-20 flex flex-col items-end gap-2.5">
+      {/* ── CORNER CURRENT INDUSTRY LABEL & PROGRESS BAR ─── */}
+      {/*
+        lg:right-24 keeps the control 16px clear of the floating WhatsApp button in the bottom-right corner;
+        lg:bottom-6 lines its pill up with the hero CTAs and leaves room above it for long taglines
+      */}
+      <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-10 lg:bottom-6 lg:right-24 z-20 flex flex-col items-end gap-2.5">
         {/* Industry Tag & Play/Pause State */}
         <div className="flex items-center gap-3 rounded-full border border-white/15 bg-black/70 backdrop-blur-xl px-4 py-2 shadow-2xl">
           <button

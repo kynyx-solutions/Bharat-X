@@ -1,10 +1,17 @@
 import { servicesData } from "../../data/servicesData";
 
 /**
- * Scrolling stats ticker under the home hero. Figures are looked up by business id and stat label in
- * servicesData, so they always match what the rest of the site says about each company.
- * `display` overrides the label where it needs more context without the company name.
+ * Scrolling stats ticker under the home hero. It opens with the group's headline figures, then per-business
+ * figures looked up by business id and stat label in servicesData, so they always match what the rest of the
+ * site says about each company. `display` overrides the label where it needs more context without the company name.
  */
+const groupStats = [
+  { value: "8", label: "Verticals", color: "#FF8904" },
+  { value: "6", label: "Businesses", color: "#8F88FF" },
+  { value: "6", label: "Partners", color: "#34D399" },
+  { value: "150+", label: "Projects", color: "#5EE4F8" },
+];
+
 const picks: { id: string; label: string; color: string; display?: string }[] = [
   { id: "ventures", label: "Portfolio Enterprise Value", color: "#FF8904" },
   { id: "infrastructure", label: "Roads & Civil Works", color: "#8F88FF" },
@@ -18,11 +25,14 @@ const picks: { id: string; label: string; color: string; display?: string }[] = 
   { id: "tech-ai", label: "Indic Languages Tested", color: "#C4B5FD" },
 ];
 
-const stats = picks.flatMap((p) => {
-  const service = servicesData.find((s) => s.id === p.id);
-  const stat = service?.stats.find((s) => s.label === p.label);
-  return service && stat ? [{ value: stat.value, label: p.display ?? stat.label, color: p.color, key: `${p.id}-${p.label}` }] : [];
-});
+const stats = [
+  ...groupStats.map((g) => ({ ...g, key: `group-${g.label}` })),
+  ...picks.flatMap((p) => {
+    const service = servicesData.find((s) => s.id === p.id);
+    const stat = service?.stats.find((s) => s.label === p.label);
+    return service && stat ? [{ value: stat.value, label: p.display ?? stat.label, color: p.color, key: `${p.id}-${p.label}` }] : [];
+  }),
+];
 
 const BRAND_LIGHT =
   "radial-gradient(55% 140% at 12% 50%, rgba(0, 184, 217, 0.16), transparent 70%), radial-gradient(55% 140% at 88% 50%, rgba(245, 73, 0, 0.14), transparent 70%)";

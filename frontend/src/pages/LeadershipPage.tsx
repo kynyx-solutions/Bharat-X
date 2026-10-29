@@ -32,7 +32,7 @@ export default function LeadershipPage() {
 
   return (
     <main className="min-h-screen bg-[#FAF9F6] text-[#111827] pt-24 pb-8">
-      {/* ── 1. RIL-STYLE LEADERSHIP HERO ────────────────────────────────── */}
+      {/* ── 1. LEADERSHIP HERO ────────────────────────────────── */}
       <section className="relative overflow-hidden py-12 sm:py-16">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img

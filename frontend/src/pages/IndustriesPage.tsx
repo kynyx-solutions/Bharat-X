@@ -29,7 +29,7 @@ export default function IndustriesPage() {
 
   return (
     <main className="min-h-screen bg-[#FAF9F6] text-[#111827] pt-24 pb-8">
-      {/* ── 1. RIL-STYLE SECTOR HERO ────────────────────────────────────── */}
+      {/* ── 1. SECTOR HERO ────────────────────────────────────── */}
       <section className="relative overflow-hidden py-12 sm:py-16">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img

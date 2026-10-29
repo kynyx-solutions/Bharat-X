@@ -93,7 +93,7 @@ export function StrategicTriadTabs() {
     <SectionTransition>
       <section className="relative overflow-hidden py-6 sm:py-9 bg-[#FAF9F6] text-[#111827] dark:bg-night-950 dark:text-white">
         <div className="container-x relative z-10">
-          {/* RIL-Style Horizontal Story Tab Navigation Header */}
+          {/* Horizontal Story Tab Navigation Header */}
           <div className="border-b border-[#E3E5EF] dark:border-white/10 pb-6 mb-7 sm:mb-10">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div>

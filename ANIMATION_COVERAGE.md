@@ -107,7 +107,7 @@ Status: 100% COMPLETE MOTION COVERAGE
 ### Home Page & Home Sections
 - `src/pages/HomePage.tsx`:
   - Page wrapper with sequential section orchestration and smooth viewport transitions.
-- `src/components/home/RilHeroSection.tsx`:
+- `src/components/home/HomeHeroSection.tsx`:
   - Headline: High-impact mask reveal for main title; subtitle word-by-word fade; magnetic CTA buttons with shine sweep.
 - `src/components/home/HeroBackgroundSlideshow.tsx`:
   - Cross-fade with slow Ken-Burns zoom (`scale: [1.05, 1.12]`); slide indicator pill morph (`layoutId="heroIndicator"`).
@@ -127,7 +127,7 @@ Status: 100% COMPLETE MOTION COVERAGE
   - Insight Cards: Image zoom (1.08), title underline sweep, and arrow translation on "Read More".
 - `src/components/home/HomeFinalCTA.tsx`:
   - Final CTA: Magnetic wrapper, ambient glow pulse, and button press interaction.
-- `src/components/home/RilServicesSection.tsx`:
+- `src/components/home/ServicesShowcaseSection.tsx`:
   - Operating Sector cards with image zoom, interactive modal with backdrop fade, and stat count-ups.
 - `src/components/home/ConglomerateManifesto.tsx`:
   - Word-by-word fade-up for manifesto pillars, gold accent line draw on enter.

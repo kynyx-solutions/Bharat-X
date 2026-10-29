@@ -1,5 +1,5 @@
 import { usePageMeta } from "../hooks/usePageMeta";
-import { RilHeroSection } from "../components/home/RilHeroSection";
+import { HomeHeroSection } from "../components/home/HomeHeroSection";
 import { PartnershipsSection } from "../components/home/PartnershipsSection";
 import { StatsMarquee } from "../components/home/StatsMarquee";
 import { AboutBharatXSection } from "../components/home/AboutBharatXSection";
@@ -21,11 +21,14 @@ export default function HomePage() {
 
   return (
     <main className="w-full bg-[#FAF9F6] text-[#111827] min-h-screen">
-      {/* ── 01. HERO (Brand First - Retained intact as requested) ── */}
-      <RilHeroSection />
+      {/* Hero + stats strip fill exactly one screen together (svh = the visible height on phones) */}
+      <div className="flex min-h-[100svh] flex-col">
+        {/* ── 01. HERO (Brand First - Retained intact as requested) ── */}
+        <HomeHeroSection />
 
-      {/* ── STATS STRIP (Group figures, scrolling ticker) ───────── */}
-      <StatsMarquee />
+        {/* ── STATS STRIP (Group figures, scrolling ticker) ───────── */}
+        <StatsMarquee />
+      </div>
 
       {/* ── PARTNERSHIPS & PROGRAMMES (Institutions, MoUs) ─────────── */}
       {/* <PartnershipsSection /> */}
@@ -33,7 +36,7 @@ export default function HomePage() {
       {/* ── 02. ABOUT BHARATX — WHO WE ARE ──────────────────────── */}
       {/* <AboutBharatXSection />*/}
 
-      {/* ── 03. OUR BUSINESSES — CORE VERTICALS (RIL-style showcase) ─ */}
+      {/* ── 03. OUR BUSINESSES — CORE VERTICALS ─ */}
       <BusinessEcosystemGrid />
 
       {/* ── 04. OUR APPROACH (Opportunity to Enterprise Flow) ───── */}

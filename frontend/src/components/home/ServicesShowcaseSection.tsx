@@ -5,7 +5,7 @@ import { servicesData, ServiceItem } from "../../data/servicesData";
 import { Icon } from "../../utils/icons";
 import { SectionTransition } from "../motion/SectionTransition";
 
-export function RilServicesSection() {
+export function ServicesShowcaseSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedModal, setSelectedModal] = useState<ServiceItem | null>(null);
 
@@ -14,7 +14,7 @@ export function RilServicesSection() {
   return (
     <SectionTransition id="services" aria-label="BharatX Core Services & Sectors">
       <section className="relative w-full bg-night-950 text-white overflow-hidden">
-        {/* ── DESKTOP RIL-STYLE FULL-BLEED INTERACTIVE CROSSFADE CONTAINER ── */}
+        {/* ── DESKTOP FULL-BLEED INTERACTIVE CROSSFADE CONTAINER ── */}
         <div className="hidden lg:relative lg:flex lg:min-h-[820px] lg:h-[90vh] lg:max-h-[960px] w-full items-center">
           {/* Full-Bleed Background Images Crossfade */}
           <div className="absolute inset-0 z-0 overflow-hidden">
@@ -52,7 +52,7 @@ export function RilServicesSection() {
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.45 }}
               >
-                {/* Gold Droplet / Diamond Eyebrow (Identical to RIL Screenshot 2) */}
+                {/* Gold Droplet / Diamond Eyebrow */}
                 <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-gold-400">
                   <span className="inline-block text-gold-400 text-sm">◆</span>
                   <span>OUR BUSINESSES & CAPABILITIES</span>
@@ -98,7 +98,7 @@ export function RilServicesSection() {
                   ))}
                 </div>
 
-                {/* RIL Style Pill Button: "read more →" */}
+                {/* Pill Button: "read more →" */}
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <button
                     type="button"
@@ -131,7 +131,7 @@ export function RilServicesSection() {
             </AnimatePresence>
           </div>
 
-          {/* Right Column: RIL Vertical Sector Index Deck */}
+          {/* Right Column: Vertical Sector Index Deck */}
           <div className="col-span-5 xl:col-span-5 pl-4">
             <div className="flex flex-col">
               {servicesData.map((svc, idx) => {
@@ -180,7 +180,7 @@ export function RilServicesSection() {
                       {/* Signature Saffron Line Underneath Active Item */}
                       {isActive && (
                         <motion.div
-                          layoutId="ril-active-bar"
+                          layoutId="services-active-bar"
                           className="absolute inset-x-0 bottom-0 h-[3px] bg-[#F54900] shadow-[0_0_10px_#F54900]"
                           transition={{ type: "spring", stiffness: 380, damping: 32 }}
                         />

@@ -101,7 +101,7 @@ export function InstitutionalNewsroom() {
             </Link>
           </div>
 
-          {/* Featured Lead Announcement (RIL Style) */}
+          {/* Featured Lead Announcement */}
           <Reveal>
             <div
               data-cursor="card"
@@ -154,7 +154,7 @@ export function InstitutionalNewsroom() {
             </div>
           </Reveal>
 
-          {/* 3-Card Bottom Grid (RIL Style) */}
+          {/* 3-Card Bottom Grid*/}
           <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {listItems.map((item) => (
               <StaggerItem key={item.id}>

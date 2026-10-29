@@ -73,7 +73,7 @@ export function LeadershipKeynote() {
             </Reveal>
           </div>
 
-          {/* Widescreen Keynote Card (RIL AGM Presentation Style) */}
+          {/* Widescreen Keynote Card */}
           <div className="mt-14 max-w-5xl mx-auto">
             <div
               data-cursor="card"
@@ -112,7 +112,7 @@ export function LeadershipKeynote() {
                   </span>
                 </div>
 
-                {/* RIL Styled "View Transcript" Button */}
+                {/*Styled "View Transcript" Button */}
                 <button
                   type="button"
                   data-cursor="button"
@@ -129,7 +129,7 @@ export function LeadershipKeynote() {
                 </button>
               </div>
 
-              {/* Expandable Transcript Panel (Exact RIL AGM feature) */}
+              {/* Expandable Transcript Panel */}
               <AnimatePresence>
                 {showTranscript && (
                   <motion.div
@@ -148,11 +148,10 @@ export function LeadershipKeynote() {
                             type="button"
                             data-cursor="button"
                             onClick={() => setActiveChapter(idx)}
-                            className={`rounded-full px-4 py-1.5 font-sans text-xs transition-all active:scale-95 ${
-                              activeChapter === idx
-                                ? "bg-[#3026B3] text-white font-semibold shadow-xs"
-                                : "border border-[#E3E5EF] bg-white text-[#596579] hover:text-[#111827] hover:border-[#3026B3]"
-                            }`}
+                            className={`rounded-full px-4 py-1.5 font-sans text-xs transition-all active:scale-95 ${activeChapter === idx
+                              ? "bg-[#3026B3] text-white font-semibold shadow-xs"
+                              : "border border-[#E3E5EF] bg-white text-[#596579] hover:text-[#111827] hover:border-[#3026B3]"
+                              }`}
                           >
                             <span className={activeChapter === idx ? "text-[#F54900]" : "text-[#F54900] font-bold"}>
                               {ch.number}.
