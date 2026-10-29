@@ -127,7 +127,7 @@ export function WhatComesNextSection() {
               data-motion="true"
               className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#3026B3] hover:bg-[#211B72] text-white px-8 py-4 font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md shadow-[#3026B3]/25 transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-[#F54900]"
             >
-              <span>Explore Our Future Businesses</span>
+              <span>Explore Our Businesses</span>
               <Icon
                 name="arrow-right"
                 width={14}
