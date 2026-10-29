@@ -263,7 +263,7 @@ export function Footer() {
                 alt="Make in India"
                 className="h-4 w-auto object-contain mix-blend-multiply shrink-0"
               />
-              <span className="uppercase tracking-[0.16em]">Made in India</span>
+              <span className="uppercase tracking-[0.16em]">Make in India</span>
               <span aria-hidden className="text-xs leading-none">🇮🇳</span>
             </span>
           </div>
