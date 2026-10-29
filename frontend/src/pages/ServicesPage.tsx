@@ -7,7 +7,7 @@ import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { AnimatedHeading } from "../components/motion/AnimatedHeading";
 import { MagneticButton } from "../components/common/MagneticButton";
 import { tintOnDark } from "../components/common/CardArt";
-import { CardFill, CardPhoto, SectionPhoto, cardImage } from "../components/common/CardSurface";
+import { CardFill, CardPhoto, SectionPhoto, cardImage, solidTextColours } from "../components/common/CardSurface";
 import { FeatureIcon } from "../components/common/FeatureIcon";
 
 interface BusinessVertical {
@@ -46,18 +46,6 @@ const businessPortfolio: BusinessVertical[] = [
     image: "/companies/bharatx-ventures/hero.jpg",
     accent: "#211B72",
     icon: "landmark",
-  },
-  {
-    id: "tech-ai",
-    category: "Deep-Tech & AI",
-    name: "Aixperts Labs",
-    description: "Building AI, automation and digital solutions for modern businesses.",
-    status: "Active",
-    websiteUrl: "https://aixpertslabs.com",
-    logo: "/Ai-Experts_logo.png",
-    image: "/companies/aixperts-labs/hero.jpg",
-    accent: "#4B40D4",
-    icon: "cpu",
   },
   {
     id: "agriculture",
@@ -115,6 +103,18 @@ const businessPortfolio: BusinessVertical[] = [
     image: "/assets/backgrounds/packaging.jpg",
     accent: "#D97706",
     icon: "boxes",
+  },
+  {
+    id: "tech-ai",
+    category: "Deep-Tech & AI",
+    name: "Aixperts Labs",
+    description: "Building AI, automation and digital solutions for modern businesses.",
+    status: "Active",
+    websiteUrl: "https://aixpertslabs.com",
+    logo: "/Ai-Experts_logo.png",
+    image: "/companies/aixperts-labs/hero.jpg",
+    accent: "#4B40D4",
+    icon: "cpu",
   },
   {
     id: "sustainability",
@@ -231,102 +231,85 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Clean 8-Card Grid (4 cols on lg, 2 cols on md, 1 col on mobile) */}
+          {/* Portfolio cards (3 cols on lg, 2 on md, 1 on mobile): white card, inset photo, logo tile overlapping its edge */}
           <Stagger staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {businessPortfolio.map((biz) => {
               const isActive = biz.status === "Active";
+              // The accent darkened enough for small text on white (4.5:1)
+              const accentText = solidTextColours(biz.accent).deep;
+              const domain = biz.websiteUrl ? new URL(biz.websiteUrl).hostname.replace(/^www\./, "") : null;
 
               return (
-                <StaggerItem key={biz.id}>
-                  <div
+                <StaggerItem key={biz.id} className="h-full">
+                  <article
                     id={biz.id}
                     data-cursor="card"
-                    className="group relative scroll-mt-28 flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] shadow-md transition-all duration-300 hover:border-[#3026B3] fx-lift hover:shadow-2xl h-full"
+                    className="group relative scroll-mt-28 flex h-full flex-col overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white shadow-xs transition-[translate,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1.5 hover:border-[#0B1F47]/15 hover:shadow-[0_28px_55px_-28px_rgba(11,31,71,0.45)]"
                   >
-                    <CardFill accent={biz.accent} />
-
-                    {/* Top Thumbnail Image */}
-                    <div className="relative h-44 w-full overflow-hidden bg-slate-900" data-cursor="image">
+                    {/* Inset photo; slow zoom on hover */}
+                    <div className="relative m-3 mb-0 h-40 overflow-hidden rounded-2xl bg-[#EEF0F6]" data-cursor="image">
                       <img
                         src={biz.image}
                         alt={biz.name}
-                        className="h-full w-full object-cover object-center filter brightness-[0.92] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-110"
                         loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                      {/* Category Tag */}
-                      <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 font-sans text-[10px] uppercase tracking-wider text-white border border-white/20">
-                          <DuotoneIcon name={biz.icon} size={13} className="shrink-0 text-[#FF8904]" />
-                          <span className="truncate max-w-[150px]">{biz.category}</span>
-                        </span>
-
-                        {/* Status Badge */}
-                        <span
-                          className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-0.5 text-[10px] font-sans uppercase tracking-wider font-semibold border backdrop-blur-md ${isActive
-                            ? "bg-emerald-950/75 text-emerald-300 border-emerald-400/40"
-                            : "bg-orange-950/75 text-orange-300 border-orange-400/40"
-                            }`}
-                        >
-                          {biz.status}
-                        </span>
-                      </div>
-
-                      {/* Logo Overlay if available */}
-                      {biz.logo && (
-                        <div className="absolute bottom-3 left-3 h-8 w-auto max-w-[110px] rounded-lg bg-white/95 backdrop-blur-sm p-1.5 shadow-md flex items-center justify-center transition-transform group-hover:scale-105">
-                          <img src={biz.logo} alt="" className="max-h-full max-w-full object-contain" />
-                        </div>
-                      )}
                     </div>
 
-                    {/* Card Content */}
-                    <div className="relative p-6 flex flex-col justify-between flex-1">
-                      <div>
-                        <h3 className="font-heading text-xl sm:text-2xl font-medium text-white transition-colors duration-300">
-                          {biz.name}
-                        </h3>
-
-                        <p className="mt-3 text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
-                          {biz.description}
-                        </p>
-                      </div>
-
-                      {/* Action Link / Status Footer */}
-                      <div className="mt-6 pt-4 border-t border-white/20 flex items-center justify-between">
-                        {isActive && biz.websiteUrl ? (
-                          <a
-                            href={biz.websiteUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-cursor="link"
-                            className="inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-white/90 hover:text-[#FF8904] transition-colors group/link fx-underline"
-                          >
-                            <span>Visit Website</span>
-                            {/* <Icon 
-                              // name="arrow-up-right"
-                              // width={13}
-                              // height={13}
-                              // className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
-                            // >*/}
-                          </a>
+                    <div className="flex flex-1 flex-col px-6 pb-4">
+                      {/* Logo tile overlapping the photo's bottom edge (the business icon where there's no logo) */}
+                      <div className="relative z-10 -mt-7 mb-3 flex h-14 min-w-14 w-fit items-center justify-center rounded-2xl bg-white px-2.5 shadow-md ring-4 ring-white transition-transform duration-300 group-hover:-translate-y-0.5">
+                        {biz.logo ? (
+                          <img src={biz.logo} alt={`${biz.name} logo`} className="max-h-9 max-w-[96px] object-contain" />
                         ) : (
-                          <span className="font-sans text-xs uppercase tracking-wider text-[#FF8904] font-semibold flex items-center gap-1.5">
-                            <span className="h-1.5 w-1.5 rounded-full bg-[#F54900] animate-pulse" />
-                            <span>Coming Soon</span>
-                          </span>
+                          <FeatureIcon name={biz.icon} accent={biz.accent} size={36} />
                         )}
+                      </div>
 
-                        <FeatureIcon
-                          name={biz.icon}
-                          accent={biz.accent}
-                          size={28}
-                          className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
-                        />
+                      <span className="inline-flex items-center gap-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.16em]" style={{ color: accentText }}>
+                        <DuotoneIcon name={biz.icon} size={14} className="shrink-0" />
+                        {biz.category}
+                      </span>
+
+                      <h3 className="mt-1.5 font-heading text-2xl font-medium leading-tight tracking-tight text-[#0B1F47]">
+                        {biz.name}
+                      </h3>
+
+                      {/* Footer: website link with an arrow button that fills navy on hover, or the launch note */}
+                      <div className="mt-auto pt-4">
+                        <div className="border-t border-[#E3E5EF] pt-3.5">
+                          {isActive && biz.websiteUrl ? (
+                            <a
+                              href={biz.websiteUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              data-cursor="link"
+                              className="group/link flex items-center justify-between gap-3"
+                            >
+                              <span className="min-w-0">
+                                <span className="block text-[13px] font-semibold text-[#0B1F47]">Visit website</span>
+                                <span className="block truncate text-xs text-[#596579]">{domain}</span>
+                              </span>
+                              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#0B1F47]/15 text-[#0B1F47] transition-all duration-300 group-hover/link:border-[#0B1F47] group-hover/link:bg-[#0B1F47] group-hover/link:text-white">
+                                <Icon name="arrow-up-right" width={16} height={16} className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                              </span>
+                            </a>
+                          ) : (
+                            <div className="flex items-center justify-between gap-3">
+                              <span className="min-w-0">
+                                <span className="block text-[13px] font-semibold text-[#0B1F47]">Launching soon</span>
+                                <span className="block text-xs text-[#596579]">Part of the BharatX pipeline</span>
+                              </span>
+                              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-dashed border-amber-500/50">
+                                <span className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </article>
                 </StaggerItem>
               );
             })}
@@ -545,7 +528,7 @@ export default function ServicesPage() {
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-4">
               <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>PARTNER WITH US</span>
             </div>
@@ -556,12 +539,12 @@ export default function ServicesPage() {
             </AnimatedHeading>
 
             {/* Copy */}
-            <p className="mt-6 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto">
               We welcome conversations with entrepreneurs, investors, institutions, technology partners and businesses looking to create long-term opportunities.
             </p>
 
             {/* CTAs */}
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <MagneticButton strength={0.25}>
                 <Link
                   to="/contact"
