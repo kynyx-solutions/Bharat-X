@@ -139,6 +139,7 @@ html.dark {
   --dur-reveal: 800ms;
   --fx-shadow-lift: 0 18px 40px -12px rgba(48, 38, 179, 0.22);
   --fx-glow-indigo: 0 0 0 1px rgba(48, 38, 179, 0.35), 0 18px 45px -12px rgba(48, 38, 179, 0.35);
+  --fx-glow-navy: 0 0 0 1px rgba(15, 42, 92, 0.4), 0 18px 45px -12px rgba(15, 42, 92, 0.4);
   --fx-glow-gold: 0 0 0 1px rgba(245, 73, 0, 0.45), 0 18px 45px -12px rgba(245, 73, 0, 0.35);
   --fx-glow-cyan: 0 0 0 1px rgba(0, 184, 217, 0.45), 0 18px 45px -12px rgba(0, 184, 217, 0.35);
 }
@@ -861,6 +862,18 @@ button:hover img,
   }
 }
 
+.fx-lift-glow-navy {
+  transition: transform var(--dur-base) var(--ease-premium), box-shadow var(--dur-base) var(--ease-premium), border-color var(--dur-fast) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .fx-lift-glow-navy:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--fx-glow-navy);
+    border-color: rgba(15, 42, 92, 0.5) !important;
+  }
+}
+
 .fx-lift-glow-gold {
   transition: transform var(--dur-base) var(--ease-premium), box-shadow var(--dur-base) var(--ease-premium), border-color var(--dur-fast) ease;
 }
@@ -1300,6 +1313,7 @@ button:hover img,
   [data-cursor="card"]:hover,
   .fx-lift:hover,
   .fx-lift-glow-indigo:hover,
+  .fx-lift-glow-navy:hover,
   .fx-lift-glow-gold:hover,
   .fx-lift-glow-cyan:hover,
   .fx-zoom-img:hover img,

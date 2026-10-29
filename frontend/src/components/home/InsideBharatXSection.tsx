@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Icon } from "../../utils/icons";
 import { SectionTransition } from "../motion/SectionTransition";
-import { FeatureIcon } from "../common/FeatureIcon";
 
 export function InsideBharatXSection() {
   return (
@@ -35,7 +34,7 @@ export function InsideBharatXSection() {
               transition={{ duration: 0.5 }}
               data-cursor="card"
               tabIndex={0}
-              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-between overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#F54900] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#F54900] focus:outline-none"
+              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-end overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#F54900] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#F54900] focus:outline-none"
             >
               {/* Background image & gradient overlay */}
               <img
@@ -45,19 +44,6 @@ export function InsideBharatXSection() {
                 className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/35" />
-
-              {/* Top pill */}
-              <div className="relative z-10 flex items-center justify-between">
-                <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#F54900] font-bold">
-                  Ideas &amp; Perspectives
-                </span>
-                <FeatureIcon
-                  name="lightbulb"
-                  accent="#F54900"
-                  size={40}
-                  className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
-                />
-              </div>
 
               {/* Content & Action */}
               <div className="relative z-10 mt-16">
@@ -95,7 +81,7 @@ export function InsideBharatXSection() {
               transition={{ duration: 0.5, delay: 0.15 }}
               data-cursor="card"
               tabIndex={0}
-              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-between overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#00B8D9] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#00B8D9] focus:outline-none"
+              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-end overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#00B8D9] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#00B8D9] focus:outline-none"
             >
               {/* Background image & gradient overlay */}
               <img
@@ -105,19 +91,6 @@ export function InsideBharatXSection() {
                 className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/35" />
-
-              {/* Top pill */}
-              <div className="relative z-10 flex items-center justify-between">
-                <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#00B8D9] font-bold">
-                  Talent &amp; Leadership
-                </span>
-                <FeatureIcon
-                  name="briefcase"
-                  accent="#00B8D9"
-                  size={40}
-                  className="transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"
-                />
-              </div>
 
               {/* Content & Action */}
               <div className="relative z-10 mt-16">

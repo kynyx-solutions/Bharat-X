@@ -34,6 +34,15 @@ function solidShades(accent: string, deep = false) {
   return { rest: shade(base, k), hover: shade(base, k * 0.8) };
 }
 
+/**
+ * CardFill's solid colours reused as text on white: `rest` is the fill itself (3.5:1, fine for headings),
+ * `deep` its hover shade (past 4.5:1, for body copy).
+ */
+export function solidTextColours(accent: string) {
+  const { rest, hover } = solidShades(accent);
+  return { rest: rgb(rest), deep: rgb(hover) };
+}
+
 function tintShades(accent: string) {
   const base = hexToRgb(accent);
   return { rest: mix(WHITE, base, 0.08), hover: mix(WHITE, base, 0.15) };

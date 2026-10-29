@@ -1,33 +1,28 @@
+import type { CSSProperties } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Icon } from "../../utils/icons";
 import { SectionTransition } from "../motion/SectionTransition";
 import { Stagger, StaggerItem } from "../motion/Stagger";
-import { CardFill } from "../common/CardSurface";
+import { solidTextColours } from "../common/CardSurface";
 
 const upcomingCards = [
   {
     title: "Packaging & Materials",
     description: "Building efficient and sustainable packaging solutions.",
     image: "/assets/slides/msme.png",
-    tag: "Incubating",
-    tagStyle: "border-orange-300 bg-orange-50 text-orange-800",
     accent: "#D97706",
   },
   {
     title: "Waste & Circular Economy",
     description: "Creating smarter approaches to waste management and resource recovery.",
     image: "/assets/backgrounds/sustainability-story.jpg",
-    tag: "Incubating",
-    tagStyle: "border-emerald-300 bg-emerald-50 text-emerald-800",
     accent: "#059669",
   },
   {
     title: "Emerging Businesses",
     description: "Exploring new opportunities across technology, manufacturing and the real economy.",
     image: "/assets/backgrounds/industrial.jpg",
-    tag: "Pipeline",
-    tagStyle: "border-indigo-300 bg-indigo-50 text-indigo-800",
     accent: "#3026B3",
   },
 ];
@@ -75,48 +70,41 @@ export function WhatComesNextSection() {
 
           {/* Exactly 3 High-Contrast Cards */}
           <Stagger className="mt-14 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-            {upcomingCards.map((card) => (
-              <StaggerItem key={card.title} className="h-full">
-                <div
-                  data-cursor="card"
-                  tabIndex={0}
-                  className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
-                >
-                  {/* Solid accent fill behind the copy panel (starts where the h-48 / sm:h-52 photo banner ends) */}
-                  <CardFill accent={card.accent} className="top-48 sm:top-52 rounded-t-none" />
+            {upcomingCards.map((card) => {
+              // White copy panel; the text takes the colour the panel used to be filled with
+              const text = solidTextColours(card.accent);
+              return (
+                <StaggerItem key={card.title} className="h-full">
+                  <div
+                    data-cursor="card"
+                    tabIndex={0}
+                    style={{ "--card-text": text.rest, "--card-text-deep": text.deep } as CSSProperties}
+                    className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-[#E3E5EF] bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                  >
+                    {/* Image banner */}
+                    <div className="relative h-48 sm:h-52 w-full overflow-hidden shrink-0">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        data-cursor="image"
+                        className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-108"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    </div>
 
-                  {/* Image banner */}
-                  <div className="relative h-48 sm:h-52 w-full overflow-hidden shrink-0">
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      data-cursor="image"
-                      className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-108"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-
-                    {/* Positioned wrapper: .fx-pulse-ring forces position:relative on the tag itself */}
-                    <div className="absolute top-4 left-4">
-                      <span
-                        className={`inline-block rounded-md border px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-wider shadow-xs fx-pulse-ring ${card.tagStyle}`}
-                      >
-                        {card.tag}
-                      </span>
+                    {/* Text content */}
+                    <div className="relative flex flex-1 flex-col p-6 sm:p-7">
+                      <h3 className="font-heading text-2xl font-medium tracking-tight text-(--card-text) transition-colors duration-300">
+                        {card.title}
+                      </h3>
+                      <p className="mt-3 text-sm text-(--card-text-deep) leading-relaxed font-normal">
+                        {card.description}
+                      </p>
                     </div>
                   </div>
-
-                  {/* Text content */}
-                  <div className="relative flex flex-1 flex-col p-6 sm:p-7">
-                    <h3 className="font-heading text-2xl font-medium tracking-tight text-white group-hover:text-[#FF8904] transition-colors duration-300">
-                      {card.title}
-                    </h3>
-                    <p className="mt-3 text-sm text-white/90 leading-relaxed font-normal">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
+                </StaggerItem>
+              );
+            })}
           </Stagger>
 
           {/* Action Button: Explore Our Future Businesses → */}

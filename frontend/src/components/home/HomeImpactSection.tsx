@@ -116,12 +116,12 @@ export function HomeImpactSection() {
 
                 {/* Top Badge */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <span
+                  {/* <span
                     className={`font-sans text-[10px] uppercase tracking-wider text-white font-bold px-2.5 py-1 rounded-md ${area.badgeBg} shadow-xs transition-transform duration-300 group-hover:scale-105`}
                   >
                     Area 0{idx + 1}
-                  </span>
-                  <div className="h-7 w-7 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  </span> */}
+                  <div className="ml-auto h-7 w-7 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                     <Icon name="arrow-up-right" width={13} height={13} strokeWidth={2.2} />
                   </div>
                 </div>

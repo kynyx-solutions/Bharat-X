@@ -28,7 +28,7 @@ export default function HomePage() {
       <StatsMarquee />
 
       {/* ── PARTNERSHIPS & PROGRAMMES (Institutions, MoUs) ─────────── */}
-      <PartnershipsSection />
+      {/* <PartnershipsSection /> */}
 
       {/* ── 02. ABOUT BHARATX — WHO WE ARE ──────────────────────── */}
       {/* <AboutBharatXSection />*/}

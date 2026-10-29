@@ -16,9 +16,9 @@ const pillars: {
       title: "Capital",
       description: "Access to capital and financial resources.",
       icon: "landmark",
-      accent: "#3026B3",
-      borderHover: "hover:border-[#3026B3]",
-      glowClass: "fx-lift-glow-indigo",
+      accent: "#0F2A5C",
+      borderHover: "hover:border-[#0F2A5C]",
+      glowClass: "fx-lift-glow-navy",
     },
     {
       title: "Technology",

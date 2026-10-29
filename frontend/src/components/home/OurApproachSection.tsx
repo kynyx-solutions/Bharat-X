@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionTransition } from "../motion/SectionTransition";
 import { SpotlightCard } from "../motion/SpotlightCard";
-import { tintOnDark } from "../common/CardArt";
 import { CardPhoto, cardImage } from "../common/CardSurface";
 import { FeatureIcon } from "../common/FeatureIcon";
 
@@ -246,31 +245,34 @@ function ApproachCard({ step }: { step: ApproachStep }) {
       <CardPhoto src={step.image} accent={step.accent} />
 
       <SpotlightCard spotlightColor={step.spotlight} className="relative h-full rounded-[inherit] p-6 [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
-        {/* Step Top Bar */}
-        <div className="flex items-center justify-between mb-4">
-          <span
-            className="font-sans text-xs font-bold tracking-widest transition-transform duration-300 group-hover:scale-125 inline-block origin-left"
-            style={{ color: tintOnDark(step.accent) }}
-          >
-            {step.num}
-          </span>
+        {/* Icon and title share a row (stacked on the narrow lg columns); the description sits below on the same left edge */}
+        <div className="flex items-center gap-3 lg:flex-col lg:items-start xl:flex-row xl:items-center">
           <FeatureIcon
             name={step.icon}
             accent={step.accent}
             size={36}
-            className="transition-transform duration-300 group-hover:scale-110 fx-icon-pop"
+            className="shrink-0 transition-transform duration-300 group-hover:scale-110 fx-icon-pop"
           />
+          <h3 className="font-heading text-base sm:text-lg font-semibold tracking-[0.08em] text-white uppercase group-hover:text-[#FF8904] transition-colors">
+            {step.label}
+          </h3>
         </div>
 
-        {/* Step Title */}
-        <h3 className="font-heading text-base sm:text-lg font-semibold tracking-[0.08em] text-white uppercase group-hover:text-[#FF8904] transition-colors">
-          {step.label}
-        </h3>
-
-        {/* Step Description */}
-        <p className="mt-2.5 text-xs sm:text-[13px] text-slate-200 leading-relaxed font-normal">
-          {step.description}
-        </p>
+        {/*
+          Step Description. Every step's text is laid out in the same cell and only this one is shown,
+          so all cards take the height of the longest description at any width.
+        */}
+        <div className="mt-3 grid">
+          {approachSteps.map((s) => (
+            <p
+              key={s.label}
+              aria-hidden={s !== step || undefined}
+              className={`col-start-1 row-start-1 text-xs sm:text-[13px] text-slate-200 leading-relaxed font-normal ${s === step ? "" : "invisible"}`}
+            >
+              {s.description}
+            </p>
+          ))}
+        </div>
       </SpotlightCard>
     </div>
   );
