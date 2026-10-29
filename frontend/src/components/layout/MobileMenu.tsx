@@ -3,7 +3,7 @@ import { useEffect, type CSSProperties } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { cn } from "../../utils/cn";
 import { DuotoneIcon, Icon } from "../../utils/icons";
-import { servicesData } from "../../data/servicesData";
+import { menuServices } from "../../data/servicesData";
 import { brandConfig } from "../../config/brand";
 import { navigation } from "../../data/navigation";
 import { Logo } from "./Logo";
@@ -99,7 +99,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                 Core Operating Sectors
               </div>
               <div className="grid grid-cols-2 gap-2">
-                {servicesData.map((svc, i) => {
+                {menuServices.map((svc, i) => {
                   const accent = sectorAccents[svc.id] ?? "#3026B3";
                   return (
                     <Link

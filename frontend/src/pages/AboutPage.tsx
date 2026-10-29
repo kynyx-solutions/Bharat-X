@@ -192,9 +192,9 @@ const leadershipTeam = [
     name: "Dr. Akanksha Verma",
     role: "Chief Human Resources Officer (CHRO)",
     bio: "Environmental scientist with an M.Phil. and Ph.D., and research in sustainability and pollution. As CHRO, she leads people, culture, hiring and talent across BharatX Group and its businesses.",
-    // Both made from akanksha-verma-square.png, with its hard side edges faded into the white background
-    photo: "/leadership/akanksha-verma-square.webp",
-    cardPhoto: "/leadership/akanksha-verma-square-card.webp",
+    // Both cropped from "Akanksha Verma.png" (square for phones, 4:3 head-to-chest for the desktop card)
+    photo: "/leadership/akanksha-verma.webp",
+    cardPhoto: "/leadership/akanksha-verma-card.webp",
     linkedin: "https://www.linkedin.com/in/akanksha-verma-304a18191",
   },
 ];

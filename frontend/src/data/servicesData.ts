@@ -173,3 +173,13 @@ export const servicesData: ServiceItem[] = [
     heroTagline: "Precision Engineering At Scale",
   },
 ];
+
+/**
+ * The Businesses menus (navbar dropdown and mobile menu) list the businesses in the same order as the Home page's
+ * Core Verticals (components/home/BusinessEcosystemGrid): AI & Deeptech, Innovation & Research (Labs), Agri & Food,
+ * Capital & Venture Building, Infratech, Manufacturing. Any business not listed here goes last.
+ */
+const MENU_ORDER = ["tech-ai", "labs", "agriculture", "ventures", "infrastructure", "manufacturing"];
+const menuRank = (id: string) => (MENU_ORDER.includes(id) ? MENU_ORDER.indexOf(id) : MENU_ORDER.length);
+
+export const menuServices: ServiceItem[] = [...servicesData].sort((a, b) => menuRank(a.id) - menuRank(b.id));

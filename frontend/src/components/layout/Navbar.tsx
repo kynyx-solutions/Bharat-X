@@ -11,7 +11,7 @@ import { cn } from "../../utils/cn";
 import { DuotoneIcon, Icon } from "../../utils/icons";
 import { MobileMenu } from "./MobileMenu";
 import { contactRoute, navigation } from "../../data/navigation";
-import { servicesData } from "../../data/servicesData";
+import { menuServices } from "../../data/servicesData";
 
 type MegaKey = "services" | "companies" | "ecosystem" | null;
 
@@ -297,13 +297,13 @@ function MegaPanel({ kind, className }: { kind: Exclude<MegaKey, null>; classNam
 
 function ServicesMega() {
   const [preview, setPreview] = useState(0);
-  const activeSvc = servicesData[preview] ?? servicesData[0];
+  const activeSvc = menuServices[preview] ?? menuServices[0];
   const accentColors = ["#3026B3", "#F54900", "#00B8D9", "#15966B", "#211B72", "#3026B3"];
 
   return (
     <div className="container-x grid grid-cols-[1fr_340px] gap-8 py-8">
       <div className="grid grid-cols-2 gap-2">
-        {servicesData.map((svc, i) => {
+        {menuServices.map((svc, i) => {
           const accent = accentColors[i % accentColors.length];
           return (
             <Link
@@ -346,7 +346,7 @@ function ServicesMega() {
 
       {/* Right Image Preview Deck */}
       <div className="relative hidden h-[260px] overflow-hidden rounded-2xl border border-[#E3E5EF] shadow-sm lg:block">
-        {servicesData.map((svc, i) => (
+        {menuServices.map((svc, i) => (
           <img
             key={svc.id}
             src={svc.image}
