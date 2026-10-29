@@ -15,7 +15,7 @@ export function InsideBharatXSection() {
               <span>INSIDE BHARATX</span>
             </div>
 
-            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827] hover:text-[#F54900] transition-colors duration-300">
+            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300">
               Inside <span className="text-[#3026B3] transition-colors">BharatX</span>
             </h2>
 
@@ -47,7 +47,7 @@ export function InsideBharatXSection() {
 
               {/* Content & Action */}
               <div className="relative z-10 mt-16">
-                <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white group-hover:text-[#F54900] transition-colors duration-300 fx-underline">
+                <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white transition-colors duration-300 fx-underline">
                   BharatX Insights
                 </h3>
 
@@ -94,7 +94,7 @@ export function InsideBharatXSection() {
 
               {/* Content & Action */}
               <div className="relative z-10 mt-16">
-                <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white group-hover:text-[#00B8D9] transition-colors duration-300 fx-underline">
+                <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white transition-colors duration-300 fx-underline">
                   Careers
                 </h3>
 

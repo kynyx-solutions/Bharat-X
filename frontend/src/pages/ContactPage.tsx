@@ -408,7 +408,7 @@ export default function ContactPage() {
                         className="mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                       />
 
-                      <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
+                      <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white transition-colors">
                         {p.title}
                       </AnimatedHeading>
 
@@ -488,7 +488,7 @@ export default function ContactPage() {
                       <Icon name="check" width={32} height={32} strokeWidth={2.5} />
                     </div>
 
-                    <h3 className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mb-3 transition-colors duration-300 hover:text-[#F54900]">
+                    <h3 className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mb-3 transition-colors duration-300">
                       Message Received
                     </h3>
 

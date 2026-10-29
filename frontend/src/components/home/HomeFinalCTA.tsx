@@ -33,7 +33,7 @@ export function HomeFinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-sm hover:text-white"
+              className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-sm"
             >
               Let’s Build{" "}
               <span className="text-[#00B8D9]">What Comes Next.</span>

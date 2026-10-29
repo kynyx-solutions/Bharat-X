@@ -173,7 +173,7 @@ export default function LeadershipPage() {
                     className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                   />
                   <div className="relative">
-                    <h3 className="font-heading text-xl text-white font-medium group-hover:text-[#FF8904] transition-colors">{g.t}</h3>
+                    <h3 className="font-heading text-xl text-white font-medium transition-colors">{g.t}</h3>
                     <p className="mt-2 text-xs sm:text-sm text-slate-200 leading-relaxed font-sans">{g.d}</p>
                   </div>
                 </div>
@@ -207,7 +207,7 @@ export default function LeadershipPage() {
                     <span className="font-sans text-xs font-bold block mb-3 text-[#FF8904] transition-transform duration-300 group-hover:scale-125">
                       {op.n}
                     </span>
-                    <h3 className="font-heading text-lg text-white font-medium group-hover:text-[#FF8904] transition-colors">{op.t}</h3>
+                    <h3 className="font-heading text-lg text-white font-medium transition-colors">{op.t}</h3>
                     <p className="mt-2 text-xs sm:text-sm text-white/90 leading-relaxed font-sans">{op.d}</p>
                   </div>
                 </div>

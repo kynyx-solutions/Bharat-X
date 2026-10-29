@@ -473,7 +473,7 @@ export default function BharatXLabsPage() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 fx-icon-pop">
                   <Icon name="shield-check" width={32} height={32} />
                 </div>
-                <h3 className="mt-6 font-heading text-2xl font-semibold text-ink-900 dark:text-ink-50 transition-colors duration-300 hover:text-[#F54900]">
+                <h3 className="mt-6 font-heading text-2xl font-semibold text-ink-900 dark:text-ink-50 transition-colors duration-300">
                   Application Logged into Secure Protocol
                 </h3>
                 <p className="mt-3 text-sm text-ink-600 dark:text-ink-300 max-w-md mx-auto">

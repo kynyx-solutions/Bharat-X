@@ -318,7 +318,7 @@ export default function CareersPage() {
                       className="mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
+                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white transition-colors">
                       {p.title}
                     </AnimatedHeading>
 
@@ -384,7 +384,7 @@ export default function CareersPage() {
                       <Icon name="arrow-up-right" width={14} height={14} className="text-white/90 group-hover:text-[#FF8904] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </div>
 
-                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
+                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-xl font-medium text-white transition-colors">
                       {area.name}
                     </AnimatedHeading>
 
@@ -446,7 +446,7 @@ export default function CareersPage() {
                       className="mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
+                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-white transition-colors">
                       {item.title}
                     </AnimatedHeading>
 
@@ -637,7 +637,7 @@ export default function CareersPage() {
                         <div className="h-14 w-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 fx-icon-pop">
                           <Icon name="check" width={28} height={28} strokeWidth={2.5} />
                         </div>
-                        <h4 className="font-heading text-2xl font-medium text-[#111827] transition-colors duration-300 hover:text-[#F54900]">
+                        <h4 className="font-heading text-2xl font-medium text-[#111827] transition-colors duration-300">
                           Profile Received
                         </h4>
                         <p className="text-sm text-[#374151] mt-2 max-w-md mx-auto">

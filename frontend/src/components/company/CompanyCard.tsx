@@ -100,7 +100,7 @@ export function CompanyCard({ company, layout = "stacked", className }: CompanyC
             </span>
           </div>
 
-          <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight text-ink-50 transition-colors duration-300 group-hover:text-gold-400 break-words">
+          <h3 className="mt-4 font-heading text-2xl font-semibold tracking-tight text-ink-50 transition-colors duration-300 break-words">
             {company.name}
           </h3>
           <p className="mt-2.5 line-clamp-3 text-[14px] leading-relaxed text-ink-400">

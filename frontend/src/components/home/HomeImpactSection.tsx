@@ -72,7 +72,7 @@ export function HomeImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]"
+            className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors"
           >
             Building Economic Value.<br />
             <span className="text-[#15966B]">Creating Wider Impact.</span>
@@ -128,7 +128,7 @@ export function HomeImpactSection() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="font-heading text-2xl font-medium tracking-tight text-white group-hover:text-[#F54900] transition-colors">
+                  <h3 className="font-heading text-2xl font-medium tracking-tight text-white transition-colors">
                     {area.title}
                   </h3>
 

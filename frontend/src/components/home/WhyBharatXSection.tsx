@@ -61,7 +61,7 @@ export function WhyBharatXSection() {
             <span>WHY BHARATX</span>
           </div>
 
-          <h2 className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]">
+          <h2 className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors">
             More Than Capital.<br /> <span className="text-[#3026B3] transition-colors">More Than Strategy.</span>
           </h2>
 
@@ -94,7 +94,7 @@ export function WhyBharatXSection() {
                     className="mb-3 transition-transform duration-500 group-hover:rotate-[360deg]"
                   />
 
-                  <h3 className="font-heading text-xl sm:text-2xl font-medium tracking-tight text-white group-hover:text-[#FF8904] transition-colors">
+                  <h3 className="font-heading text-xl sm:text-2xl font-medium tracking-tight text-white transition-colors">
                     {pillar.title}
                   </h3>
 

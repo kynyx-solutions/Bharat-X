@@ -228,7 +228,7 @@ export default function PartnershipsPage() {
                     size={48}
                     className="transition-transform duration-300 group-hover:scale-110 fx-icon-pop"
                   />
-                  <h3 className="mt-5 font-heading text-2xl font-medium tracking-tight text-[#111827] transition-colors group-hover:text-[#F54900]">
+                  <h3 className="mt-5 font-heading text-2xl font-medium tracking-tight text-[#111827] transition-colors">
                     {area.title}
                   </h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-[#596579]">{area.description}</p>

@@ -191,7 +191,7 @@ export default function InnovationPage() {
                         </span>
                       </div>
 
-                      <h3 className="font-heading text-xl sm:text-2xl text-white font-medium group-hover:text-[#FF8904] transition-colors duration-300">
+                      <h3 className="font-heading text-xl sm:text-2xl text-white font-medium transition-colors duration-300">
                         {p.title}
                       </h3>
                       <p className="mt-3 text-xs sm:text-sm text-slate-200 leading-relaxed font-sans">
@@ -236,7 +236,7 @@ export default function InnovationPage() {
                         </span>
                         <span className="font-sans text-[10px] uppercase text-white/90">{phase.phase}</span>
                       </div>
-                      <h3 className="font-heading text-lg text-white font-medium group-hover:text-[#FF8904] transition-colors">{phase.title}</h3>
+                      <h3 className="font-heading text-lg text-white font-medium transition-colors">{phase.title}</h3>
                       <p className="mt-2 text-xs sm:text-sm text-white/90 leading-relaxed font-sans">
                         {phase.desc}
                       </p>

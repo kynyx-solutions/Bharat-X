@@ -70,7 +70,7 @@ export function ServicesShowcaseSection() {
                 </div>
 
                 {/* Majestic Serif Headline */}
-                <h2 className="mt-3 font-heading text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-[1.1] tracking-tight text-white drop-shadow-lg transition-colors duration-300 hover:text-gold-400">
+                <h2 className="mt-3 font-heading text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-[1.1] tracking-tight text-white drop-shadow-lg transition-colors duration-300">
                   {activeService.name}
                 </h2>
 
@@ -201,7 +201,7 @@ export function ServicesShowcaseSection() {
             <span className="text-gold-400">◆</span>
             <span>OUR BUSINESSES & SERVICES</span>
           </div>
-          <h2 className="mt-2 font-heading text-3xl sm:text-4xl text-white transition-colors duration-300 hover:text-gold-400">
+          <h2 className="mt-2 font-heading text-3xl sm:text-4xl text-white transition-colors duration-300">
             Core Operating Sectors
           </h2>
           <p className="mt-2 text-sm text-slate-400">
@@ -231,7 +231,7 @@ export function ServicesShowcaseSection() {
 
               {/* Card Body */}
               <div className="p-6">
-                <h3 className="font-heading text-2xl font-medium text-[#111827] dark:text-white transition-colors duration-300 hover:text-[#F54900]">
+                <h3 className="font-heading text-2xl font-medium text-[#111827] dark:text-white transition-colors duration-300">
                   {svc.name}
                 </h3>
                 <p className="mt-2 text-sm font-medium text-[#3026B3] dark:text-gold-200">
@@ -326,7 +326,7 @@ export function ServicesShowcaseSection() {
               </div>
 
               {/* Title in Serif */}
-              <h3 className="mt-2 font-heading text-3xl sm:text-4xl text-[#111827] dark:text-white transition-colors duration-300 hover:text-[#F54900]">
+              <h3 className="mt-2 font-heading text-3xl sm:text-4xl text-[#111827] dark:text-white transition-colors duration-300">
                 {selectedModal.name}
               </h3>
 

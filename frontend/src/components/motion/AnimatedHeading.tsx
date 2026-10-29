@@ -42,7 +42,7 @@ export function AnimatedHeading({
   const reduced = useReducedMotion();
 
   const hoverClass = {
-    color: "", // Handled by CSS / brand-aware
+    color: "", // Handled by the global CSS rule, which only turns h1s (hero titles) orange on hover
     shift: "hover:translate-x-1 transition-transform duration-300",
     tracking: "fx-tracking",
     underline: "fx-underline",

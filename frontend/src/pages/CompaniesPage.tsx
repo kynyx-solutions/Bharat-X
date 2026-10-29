@@ -112,7 +112,7 @@ export default function CompaniesPage() {
               <div className="flex items-center gap-4">
                 <IconBadge icon="orbit" size="lg" />
                 <div>
-                  <h3 className="font-heading text-lg font-semibold text-ink-50 transition-colors duration-300 hover:text-gold-400">
+                  <h3 className="font-heading text-lg font-semibold text-ink-50 transition-colors duration-300">
                     See portfolio companies, live, in one place
                   </h3>
                   <p className="mt-1 text-[13.5px] text-ink-400">

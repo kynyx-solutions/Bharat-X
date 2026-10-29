@@ -117,7 +117,7 @@ export function OurApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors hover:text-[#F54900]"
+            className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors"
           >
             From Opportunity to <br /> <span className="text-[#3026B3]">Enterprise</span>
           </motion.h2>
@@ -253,7 +253,7 @@ function ApproachCard({ step }: { step: ApproachStep }) {
             size={36}
             className="shrink-0 transition-transform duration-300 group-hover:scale-110 fx-icon-pop"
           />
-          <h3 className="font-heading text-base sm:text-lg font-semibold tracking-[0.08em] text-white uppercase group-hover:text-[#FF8904] transition-colors">
+          <h3 className="font-heading text-base sm:text-lg font-semibold tracking-[0.08em] text-white uppercase transition-colors">
             {step.label}
           </h3>
         </div>

@@ -390,7 +390,7 @@ function EcosystemNodeCard({ node }: { node: EcosystemNode }) {
             {node.badge}
           </span>
         </div>
-        <h4 className="font-heading text-base font-medium text-white group-hover:text-[#FF8904] transition-colors">
+        <h4 className="font-heading text-base font-medium text-white transition-colors">
           {node.company}
         </h4>
       </div>
@@ -468,7 +468,7 @@ export default function AboutPage() {
                   <span>WHO WE ARE</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
                   More Than a <span className="text-[#3026B3] transition-colors duration-300">Group of Companies</span>
                 </h2>
 
@@ -547,7 +547,7 @@ export default function AboutPage() {
                     <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold block mb-1">
                       End State
                     </span>
-                    <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight text-white hover:text-[#F54900] transition-colors duration-300">
+                    <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight text-white transition-colors duration-300">
                       Enduring Enterprises
                     </h3>
                     <p className="mt-2 text-xs sm:text-[13px] text-slate-200 font-normal">
@@ -718,7 +718,7 @@ export default function AboutPage() {
                   <span>OUR PURPOSE</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
                   Built Around India’s <span className="text-[#3026B3] transition-colors duration-300">Opportunity</span>
                 </h2>
 
@@ -781,7 +781,7 @@ export default function AboutPage() {
                         {pillar.descriptor}
                       </span>
 
-                      <h3 className="font-heading text-2xl font-medium tracking-tight text-white group-hover:text-[#FF8904] transition-colors">
+                      <h3 className="font-heading text-2xl font-medium tracking-tight text-white transition-colors">
                         {pillar.title}
                       </h3>
 
@@ -816,7 +816,7 @@ export default function AboutPage() {
                 <span>GROUP LEADERSHIP</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
                 The Visionary Behind the <span className="text-[#3026B3] transition-colors duration-300">Standard.</span>
               </h2>
 
@@ -893,7 +893,7 @@ export default function AboutPage() {
                       <span>National Economic Vision</span>
                     </div>
 
-                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] tracking-tight leading-tight hover:text-[#F54900] transition-colors duration-300">
+                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] tracking-tight leading-tight transition-colors duration-300">
                       Architecting India’s <span className="text-[#3026B3] transition-colors duration-300">Next Economic Decade.</span>
                     </h3>
 
@@ -1047,7 +1047,7 @@ export default function AboutPage() {
                 <span>ECOSYSTEM ARCHITECTURE</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
                 One Group. Multiple <span className="text-[#3026B3] transition-colors duration-300">Growth Engines.</span>
               </h2>
 
@@ -1126,7 +1126,7 @@ export default function AboutPage() {
                 <span>WHAT GUIDES US</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight hover:text-[#F54900] transition-colors duration-300">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
                 Our <span className="text-[#3026B3] transition-colors duration-300">Principles</span>
               </h2>
 
@@ -1156,7 +1156,7 @@ export default function AboutPage() {
                         <span className="font-sans text-[10px] uppercase tracking-wider block text-[#FF8904]">
                           Principle 0{idx + 1}
                         </span>
-                        <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors">
+                        <h3 className="font-heading text-xl font-medium text-white transition-colors">
                           {p.title}
                         </h3>
                       </div>
@@ -1189,7 +1189,7 @@ export default function AboutPage() {
               </div>
 
               {/* Headline */}
-              <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-white hover:text-white">
+              <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-white">
                 The Journey Ahead
               </h2>
 

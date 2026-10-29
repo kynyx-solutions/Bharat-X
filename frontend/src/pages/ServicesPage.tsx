@@ -284,7 +284,7 @@ export default function ServicesPage() {
                     {/* Card Content */}
                     <div className="relative p-6 flex flex-col justify-between flex-1">
                       <div>
-                        <h3 className="font-heading text-xl sm:text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors duration-300">
+                        <h3 className="font-heading text-xl sm:text-2xl font-medium text-white transition-colors duration-300">
                           {biz.name}
                         </h3>
 
@@ -391,7 +391,7 @@ export default function ServicesPage() {
                       <span className="font-sans text-xs uppercase tracking-[0.24em] font-bold block text-[#FF8904]">
                         BUILD
                       </span>
-                      <h4 className="font-heading text-xl font-medium text-white mt-1 group-hover:text-[#FF8904] transition-colors">
+                      <h4 className="font-heading text-xl font-medium text-white mt-1 transition-colors">
                         New Businesses
                       </h4>
                       <p className="mt-2 text-xs sm:text-[13px] text-white/90 leading-relaxed">
@@ -418,7 +418,7 @@ export default function ServicesPage() {
                       <span className="font-sans text-xs uppercase tracking-[0.24em] font-bold block text-[#FF8904]">
                         OPERATE
                       </span>
-                      <h4 className="font-heading text-xl font-medium text-white mt-1 group-hover:text-[#FF8904] transition-colors">
+                      <h4 className="font-heading text-xl font-medium text-white mt-1 transition-colors">
                         Core Companies
                       </h4>
                       <p className="mt-2 text-xs sm:text-[13px] text-white/90 leading-relaxed">
@@ -445,7 +445,7 @@ export default function ServicesPage() {
                       <span className="font-sans text-xs uppercase tracking-[0.24em] font-bold block text-[#FF8904]">
                         INVEST
                       </span>
-                      <h4 className="font-heading text-xl font-medium text-white mt-1 group-hover:text-[#FF8904] transition-colors">
+                      <h4 className="font-heading text-xl font-medium text-white mt-1 transition-colors">
                         Ventures
                       </h4>
                       <p className="mt-2 text-xs sm:text-[13px] text-white/90 leading-relaxed">
@@ -471,7 +471,7 @@ export default function ServicesPage() {
                 <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold block mb-1">
                   NATIONAL VALUE CREATION
                 </span>
-                <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight text-white transition-colors duration-300 hover:text-gold-400">
+                <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight text-white transition-colors duration-300">
                   IMPACT
                 </h3>
                 <p className="mt-2 text-xs sm:text-sm text-slate-100 font-normal max-w-xl mx-auto">
@@ -519,7 +519,7 @@ export default function ServicesPage() {
                       <span className="text-xs font-sans text-white/80">2026+</span>
                     </div>
 
-                    <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors duration-300">
+                    <h3 className="font-heading text-xl font-medium text-white transition-colors duration-300">
                       {item.title}
                     </h3>
 

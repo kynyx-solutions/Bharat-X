@@ -103,7 +103,7 @@ export function PartnershipCard({ partnership: p }: { partnership: Partnership }
         </div>
 
         <div className="border-t border-[#EEF0F6] pt-4">
-          <h3 className="font-heading text-xl sm:text-[1.4rem] font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300 group-hover:text-[#F54900]">
+          <h3 className="font-heading text-xl sm:text-[1.4rem] font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300">
             {p.name}
           </h3>
           <p className="mt-1.5 text-[13.5px] leading-snug text-[#596579]">{p.description}</p>

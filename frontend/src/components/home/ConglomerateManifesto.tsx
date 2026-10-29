@@ -19,7 +19,7 @@ export function ConglomerateManifesto() {
 
             {/* Grand Headline in Serif */}
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.18] tracking-tight text-[#111827] dark:text-white hover:text-[#F54900] transition-colors duration-300">
+              <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.18] tracking-tight text-[#111827] dark:text-white transition-colors duration-300">
                 An integrated conglomerate building{" "}
                 <span className="italic text-[#3026B3] dark:text-[#F54900] hover:underline transition-all">critical technologies, infrastructure,</span>{" "}
                 and sovereign capabilities for Bharat.
@@ -88,7 +88,7 @@ export function ConglomerateManifesto() {
                       <Icon name={item.icon} width={15} height={15} />
                     </div>
                   </div>
-                  <h3 className="mt-4 font-heading text-lg font-medium text-[#111827] dark:text-white group-hover:text-[#F54900] transition-colors duration-300">
+                  <h3 className="mt-4 font-heading text-lg font-medium text-[#111827] dark:text-white transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-xs sm:text-[13px] leading-relaxed text-[#596579] dark:text-slate-300">

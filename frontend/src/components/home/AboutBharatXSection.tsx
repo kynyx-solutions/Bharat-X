@@ -89,7 +89,7 @@ export function AboutBharatXSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.12] tracking-tight text-[#111827] transition-colors hover:text-[#F54900]"
+            className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.12] tracking-tight text-[#111827] transition-colors"
           >
             Building Across India’s{" "}
             <span className="text-[#3026B3] transition-colors">Growth Economy</span>

@@ -17,7 +17,7 @@ export function WhyBharatXBand() {
             </div>
 
             {/* Heading */}
-            <h2 className="mt-4 font-heading text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-[#111827] hover:text-[#F54900] transition-colors duration-300">
+            <h2 className="mt-4 font-heading text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-[#111827] transition-colors duration-300">
               Built for Scale.
               <br />
               <span className="text-[#3026B3] transition-colors duration-300">Engineered for Sovereignty.</span>
@@ -62,7 +62,7 @@ export function WhyBharatXBand() {
                   >
                     {pillar.num}
                   </span>
-                  <h3 className="mt-3 font-heading text-xl sm:text-2xl font-medium text-[#211B72] group-hover:text-[#F54900] transition-colors">
+                  <h3 className="mt-3 font-heading text-xl sm:text-2xl font-medium text-[#211B72] transition-colors">
                     {pillar.title}
                   </h3>
                   <p className="mt-2 text-sm text-[#596579] leading-relaxed">

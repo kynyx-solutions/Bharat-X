@@ -102,7 +102,7 @@ export function CinematicSection({
             </div>
           </Reveal>
         )}
-        <h2 className="font-heading font-semibold leading-[1.1] sm:leading-[1.1] tracking-tight text-ink-50 text-[1.85rem] xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl transition-colors duration-300 hover:text-gold-400/90">
+        <h2 className="font-heading font-semibold leading-[1.1] sm:leading-[1.1] tracking-tight text-ink-50 text-[1.85rem] xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl transition-colors duration-300">
           {lines.map((line, i) => (
             <MaskReveal key={i} delay={0.06 * i} className="text-balance">
               {line}

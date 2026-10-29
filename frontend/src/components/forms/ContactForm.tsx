@@ -145,7 +145,7 @@ export function ContactForm({
         >
           <Icon name="check" width={28} height={28} strokeWidth={2} />
         </motion.span>
-        <h3 className="mt-6 font-heading text-2xl font-semibold text-[#111827] transition-colors duration-300 hover:text-[#F54900]">Thank you.</h3>
+        <h3 className="mt-6 font-heading text-2xl font-semibold text-[#111827] transition-colors duration-300">Thank you.</h3>
         <p className="mt-3 max-w-sm text-[14.5px] leading-relaxed text-[#596579]">
           Your inquiry has been received. Our team will review it and get back
           to you.

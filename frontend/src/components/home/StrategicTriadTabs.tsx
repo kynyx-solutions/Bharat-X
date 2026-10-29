@@ -101,7 +101,7 @@ export function StrategicTriadTabs() {
                   <span className="text-[#F54900] animate-pulse">◆</span>
                   <span>STRATEGIC STORY</span>
                 </div>
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] dark:text-white hover:text-[#F54900] transition-colors duration-300">
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] dark:text-white transition-colors duration-300">
                   Sovereign Commitment
                 </h2>
               </div>
@@ -154,7 +154,7 @@ export function StrategicTriadTabs() {
                   {current.badge}
                 </span>
 
-                <h3 className="mt-3 font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] dark:text-white leading-tight hover:text-[#F54900] transition-colors duration-300">
+                <h3 className="mt-3 font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] dark:text-white leading-tight transition-colors duration-300">
                   {current.headline}
                 </h3>
 

@@ -290,7 +290,7 @@ function CompanyProfile({ company }: { company: (typeof companies)[number] }) {
                   <Reveal key={f} delay={i * 0.08}>
                     <div data-cursor="card" className="group flex items-center gap-6 py-6 transition-all hover:pl-2">
                       <span className="font-sans text-sm text-gold-400">{String(i + 1).padStart(2, "0")}</span>
-                      <h3 className="font-heading text-xl font-medium tracking-tight text-ink-100 transition-colors group-hover:text-white md:text-2xl">
+                      <h3 className="font-heading text-xl font-medium tracking-tight text-ink-100 transition-colors md:text-2xl">
                         {f}
                       </h3>
                       <span className="ml-auto h-px w-16 bg-white/10 transition-all duration-500 group-hover:w-24 group-hover:bg-gold-400/50" />

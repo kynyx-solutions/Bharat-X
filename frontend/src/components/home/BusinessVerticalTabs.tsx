@@ -186,7 +186,7 @@ export function BusinessVerticalTabs() {
 
                   {/* Main Company Title & Narrative */}
                   <div className="mt-6">
-                    <h3 className="font-heading text-2xl font-semibold tracking-tight text-ink-100 dark:text-ink-50 sm:text-3xl md:text-4xl transition-colors duration-300 hover:text-gold-400">
+                    <h3 className="font-heading text-2xl font-semibold tracking-tight text-ink-100 dark:text-ink-50 sm:text-3xl md:text-4xl transition-colors duration-300">
                       {activeCompany.name}
                     </h3>
                     <p className="mt-4 text-base leading-relaxed text-ink-300 dark:text-ink-300 md:text-[15px]">

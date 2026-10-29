@@ -50,7 +50,7 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] hover:text-[#F54900] transition-colors duration-300"
+              className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300"
             >
               The Next Chapter Is{" "}
               <br />
@@ -96,8 +96,7 @@ export function WhatComesNextSection() {
 
                     {/* Text below the card, centred, with a short accent bar that widens while the item is hovered */}
                     <div className="mt-6 text-center">
-                      {/* data-no-hover: keeps its accent colour instead of the site-wide orange heading hover */}
-                      <h3 data-no-hover className="font-heading text-2xl sm:text-[1.65rem] font-medium tracking-tight text-(--card-text)">
+                      <h3 className="font-heading text-2xl sm:text-[1.65rem] font-medium tracking-tight text-(--card-text)">
                         {card.title}
                       </h3>
                       <span

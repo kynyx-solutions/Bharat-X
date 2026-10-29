@@ -281,7 +281,7 @@ export default function HowWeBuildPage() {
                       CENTRAL OUTCOME
                     </span>
                     {/* `!` keeps the gold hover: the panel's light card-surface rule would otherwise force indigo on this dark box */}
-                    <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight text-white transition-colors duration-300 hover:text-gold-400!">
+                    <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight text-white transition-colors duration-300">
                       Enterprise
                     </h3>
                     <p className="mt-2 text-xs sm:text-[13px] text-slate-200 font-normal">
@@ -337,7 +337,7 @@ export default function HowWeBuildPage() {
                       />
                     </div>
 
-                    <h3 className="font-heading text-base sm:text-lg font-semibold tracking-[0.08em] text-white uppercase group-hover:text-[#FF8904] transition-colors">
+                    <h3 className="font-heading text-base sm:text-lg font-semibold tracking-[0.08em] text-white uppercase transition-colors">
                       {step.name}
                     </h3>
 
@@ -404,7 +404,7 @@ export default function HowWeBuildPage() {
                       className="mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors duration-300">
+                    <h3 className="font-heading text-xl font-medium text-white transition-colors duration-300">
                       {item.pillar}
                     </h3>
 
@@ -466,7 +466,7 @@ export default function HowWeBuildPage() {
                       className="transition-transform duration-300 group-hover:scale-110"
                     />
                     <div>
-                      <h4 className="font-heading text-base font-medium text-white group-hover:text-[#FF8904] transition-colors">
+                      <h4 className="font-heading text-base font-medium text-white transition-colors">
                         {sector.name}
                       </h4>
                       <span className="text-[11px] sm:text-xs font-sans text-slate-200 block">

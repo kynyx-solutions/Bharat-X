@@ -312,8 +312,7 @@ export function BusinessEcosystemGrid() {
                   )}
                 >
                   <PanelStep show={show} order={0}>
-                    {/* data-no-hover: stays white instead of taking the site-wide orange heading hover */}
-                    <h3 data-no-hover className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.05] tracking-tight">
+                    <h3 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.05] tracking-tight">
                       {v.label}
                     </h3>
                   </PanelStep>

@@ -430,7 +430,7 @@ export default function ImpactPage() {
                         {area.entityName}
                       </span>
 
-                      <h3 className="font-heading text-xl sm:text-2xl font-medium text-white group-hover:text-[#FF8904] transition-colors leading-snug duration-300 min-h-[3.25rem] sm:min-h-[3.75rem] flex items-start">
+                      <h3 className="font-heading text-xl sm:text-2xl font-medium text-white transition-colors leading-snug duration-300 min-h-[3.25rem] sm:min-h-[3.75rem] flex items-start">
                         {area.title}
                       </h3>
 
@@ -630,7 +630,7 @@ export default function ImpactPage() {
                       className="mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                     />
 
-                    <h3 className="font-heading text-xl font-medium text-white group-hover:text-[#FF8904] transition-colors duration-300">
+                    <h3 className="font-heading text-xl font-medium text-white transition-colors duration-300">
                       {item.title}
                     </h3>
 
@@ -697,7 +697,7 @@ export default function ImpactPage() {
                         />
                       </div>
 
-                      <h4 className="font-heading text-lg font-medium text-white mb-2 leading-snug group-hover:text-[#FF8904] transition-colors">
+                      <h4 className="font-heading text-lg font-medium text-white mb-2 leading-snug transition-colors">
                         {area.headline}
                       </h4>
 
@@ -712,7 +712,7 @@ export default function ImpactPage() {
 
             {/* Final CTA Action */}
             <div className="mt-14 pt-10 border-t border-white/15 max-w-2xl mx-auto">
-              <h3 className="font-heading text-2xl sm:text-3xl font-medium text-white mb-6 transition-colors duration-300 hover:text-gold-400">
+              <h3 className="font-heading text-2xl sm:text-3xl font-medium text-white mb-6 transition-colors duration-300">
                 Build a Better Bharat With Us.
               </h3>
 

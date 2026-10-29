@@ -102,7 +102,7 @@ export default function IndustriesPage() {
                             </span>
                           </div>
                         </div>
-                        <h2 className="mt-2 font-heading text-2xl font-medium text-[#111827] group-hover:text-[#F54900] transition-colors duration-300">
+                        <h2 className="mt-2 font-heading text-2xl font-medium text-[#111827] transition-colors duration-300">
                           {svc.name}
                         </h2>
                         <p className="mt-2 text-sm font-semibold text-[#3026B3]">

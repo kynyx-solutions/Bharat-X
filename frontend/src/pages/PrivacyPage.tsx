@@ -83,7 +83,7 @@ export default function PrivacyPage() {
                   data-cursor="card"
                   className="scroll-mt-28 p-5 sm:p-6 rounded-xl border border-[#15966B]/20 border-l-4 border-l-[#15966B] bg-[color-mix(in_srgb,#15966B_7%,white)] transition-all duration-200 hover:bg-[color-mix(in_srgb,#15966B_11%,white)] hover:border-l-[#15966B]!"
                 >
-                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-[#111827] hover:text-[#F54900]">
+                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-[#111827]">
                     {s.t}
                   </AnimatedHeading>
                   <p className="mt-3 text-[14.5px] leading-relaxed text-[#374151]">{s.d}</p>
