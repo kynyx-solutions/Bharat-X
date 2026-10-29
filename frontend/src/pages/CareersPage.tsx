@@ -2,13 +2,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { Icon } from "../utils/icons";
+import { DuotoneIcon, Icon } from "../utils/icons";
 import { submitContact } from "../services/api";
 import { SectionTransition } from "../components/motion/SectionTransition";
 import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { AnimatedHeading } from "../components/motion/AnimatedHeading";
 import { MagneticButton } from "../components/common/MagneticButton";
-import { CardFill, CardPhoto, SectionPhoto, cardImage } from "../components/common/CardSurface";
+import { CardPhoto, SectionPhoto, cardImage, solidTextColours } from "../components/common/CardSurface";
 import { FeatureIcon } from "../components/common/FeatureIcon";
 
 const whyPillars: { title: string; description: string; icon: string; accent: string; image: string }[] = [
@@ -42,65 +42,75 @@ const whyPillars: { title: string; description: string; icon: string; accent: st
   },
 ];
 
-const careerDomains: { name: string; icon: string; roles: string; accent: string; link: string }[] = [
-  {
-    name: "Labs & Research",
-    icon: "flask-conical",
-    roles: "Research • Innovation • Prototyping • Entrepreneurship",
-    accent: "#0D9488",
-    link: "/verticals#labs",
-  },
-  {
-    name: "Ventures & Strategy",
-    icon: "landmark",
-    roles: "Investment • Consulting • Strategy • Business Development",
-    accent: "#211B72",
-    link: "/verticals#ventures",
-  },
-  {
-    name: "Agriculture & Food",
-    icon: "sprout",
-    roles: "Operations • Supply Chain • Export • Business Development",
-    accent: "#15966B",
-    link: "/verticals#agriculture",
-  },
-  {
-    name: "Infrastructure",
-    icon: "hard-hat",
-    roles: "Engineering • Project Management • Operations • Procurement",
-    accent: "#3026B3",
-    link: "/verticals#infrastructure",
-  },
-  {
-    name: "Foundation",
-    icon: "graduation-cap",
-    roles: "Education • Programs • Community • Social Impact",
-    accent: "#F54900",
-    link: "/verticals#foundation",
-  },
-  {
-    name: "Manufacturing",
-    icon: "cog",
-    roles: "Engineering • Production • Quality • Sales",
-    accent: "#00B8D9",
-    link: "/verticals#manufacturing",
-  },
+/** `code`: the three-letter code on each card's ticket stub. */
+const careerDomains: { name: string; code: string; icon: string; roles: string; accent: string; link: string }[] = [
   {
     name: "Technology & AI",
+    code: "TEC",
     icon: "cpu",
     roles: "Software • AI • Product • Design • Data",
     accent: "#4B40D4",
     link: "/verticals#tech-ai",
   },
   {
+    name: "Labs & Research",
+    code: "LAB",
+    icon: "flask-conical",
+    roles: "Research • Innovation • Prototyping • Entrepreneurship",
+    accent: "#0D9488",
+    link: "/verticals#labs",
+  },
+  {
+    name: "Agriculture & Food",
+    code: "AGR",
+    icon: "sprout",
+    roles: "Operations • Supply Chain • Export • Business Development",
+    accent: "#15966B",
+    link: "/verticals#agriculture",
+  },
+  {
+    name: "Ventures & Strategy",
+    code: "VEN",
+    icon: "landmark",
+    roles: "Investment • Consulting • Strategy • Business Development",
+    accent: "#211B72",
+    link: "/verticals#ventures",
+  },
+  {
+    name: "Infrastructure",
+    code: "INF",
+    icon: "hard-hat",
+    roles: "Engineering • Project Management • Operations • Procurement",
+    accent: "#3026B3",
+    link: "/verticals#infrastructure",
+  },
+  {
+    name: "Manufacturing",
+    code: "MFG",
+    icon: "cog",
+    roles: "Engineering • Production • Quality • Sales",
+    accent: "#00B8D9",
+    link: "/verticals#manufacturing",
+  },
+  {
     name: "Packaging",
+    code: "PKG",
     icon: "boxes",
     roles: "Product • Manufacturing • Operations • Sales",
     accent: "#D97706",
     link: "/verticals#packaging",
   },
   {
+    name: "Foundation",
+    code: "FDN",
+    icon: "graduation-cap",
+    roles: "Education • Programs • Community • Social Impact",
+    accent: "#F54900",
+    link: "/verticals#foundation",
+  },
+  {
     name: "Sustainability",
+    code: "SUS",
     icon: "recycle",
     roles: "Waste Management • Operations • Sustainability • Circular Economy",
     accent: "#059669",
@@ -363,41 +373,66 @@ export default function CareersPage() {
             </p>
           </div>
 
-          {/* 8 Career Area Cards Grid */}
+          {/*
+            Career domain cards styled as boarding passes ("your ticket to build"): a stub tinted in the domain colour with
+            the icon and a three-letter code, a dashed tear line with half-circle notches cut into the top and bottom edges,
+            then the name, the roles as tags and an "Explore sector" line. Hover: the stub deepens, the icon turns, the
+            arrow moves. The card outline is a ring (not a border), so the global card rule's border colour doesn't apply.
+            Tablet (2 columns): the 9th card is centred rather than left alone on the left.
+          */}
           <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             {careerDomains.map((area) => (
-              <StaggerItem key={area.name}>
+              <StaggerItem
+                key={area.name}
+                className="h-full md:last:odd:col-span-2 md:last:odd:mx-auto md:last:odd:w-[calc(50%-0.625rem)] lg:last:odd:col-span-1 lg:last:odd:mx-0 lg:last:odd:w-auto"
+              >
                 <Link
                   to={area.link}
                   data-cursor="card"
-                  className="group relative overflow-hidden flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-lg fx-lift h-full"
+                  aria-label={`${area.name}: explore the sector`}
+                  style={
+                    {
+                      "--accent": area.accent,
+                      // The domain colour darkened enough for small text and icons on light tints
+                      "--ink": solidTextColours(area.accent).deep,
+                      "--tint": `color-mix(in srgb, ${area.accent} 10%, white)`,
+                      "--tint-strong": `color-mix(in srgb, ${area.accent} 17%, white)`,
+                      "--ring": `color-mix(in srgb, ${area.accent} 35%, white)`,
+                    } as React.CSSProperties
+                  }
+                  className="group relative flex h-full overflow-hidden rounded-2xl bg-white shadow-[0_1px_2px_rgba(11,31,71,0.04),0_14px_34px_-22px_rgba(11,31,71,0.3)] ring-1 ring-[#E7E9F2] transition-[box-shadow] duration-300 hover:ring-(--ring) focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-(--accent)"
                 >
-                  <CardFill accent={area.accent} />
-                  <div className="relative">
-                    <div className="flex items-center justify-between mb-3">
-                      <FeatureIcon
-                        name={area.icon}
-                        accent={area.accent}
-                        size={36}
-                        className="transition-transform duration-300 group-hover:scale-110"
-                      />
-                      <Icon name="arrow-up-right" width={14} height={14} className="text-white/90 group-hover:text-[#FF8904] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </div>
-
-                    <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-xl font-medium text-white transition-colors">
-                      {area.name}
-                    </AnimatedHeading>
-
-                    <p className="mt-3 text-xs sm:text-[13px] text-white/90 leading-relaxed font-normal">
-                      {area.roles}
-                    </p>
+                  {/* Stub: icon and three-letter code */}
+                  <div className="flex w-24 shrink-0 flex-col items-center justify-center gap-3 bg-(--tint) px-2 py-6 transition-colors duration-500 group-hover:bg-(--tint-strong)">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-(--ink) shadow-[0_6px_16px_-8px_rgba(11,31,71,0.45)] transition-transform duration-500 group-hover:-rotate-12 group-hover:scale-110">
+                      <DuotoneIcon name={area.icon} size={24} />
+                    </span>
+                    <span className="font-heading text-xl font-semibold tracking-[0.12em] text-(--ink)">{area.code}</span>
                   </div>
 
-                  <div
-                    className="relative mt-5 pt-3 border-t border-white/20 font-sans text-[9.5px] font-semibold uppercase tracking-wider text-white/90 flex items-center justify-between"
-                  >
-                    <span>Explore Sector</span>
-                    <span className="text-[#FF8904] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  {/* Tear line with notches cut into the top and bottom edges */}
+                  <div aria-hidden className="relative w-0 shrink-0">
+                    <span className="absolute inset-y-4 left-0 border-l-2 border-dashed border-[#E3E5EF]" />
+                    <span className="absolute -left-2.5 -top-2.5 h-5 w-5 rounded-full bg-[#FAF9F6] ring-1 ring-[#E7E9F2]" />
+                    <span className="absolute -bottom-2.5 -left-2.5 h-5 w-5 rounded-full bg-[#FAF9F6] ring-1 ring-[#E7E9F2]" />
+                  </div>
+
+                  {/* Body */}
+                  <div className="flex min-w-0 flex-1 flex-col p-5 pl-6">
+                    <h3 className="font-heading text-xl font-medium tracking-tight text-[#0B1F47]">{area.name}</h3>
+
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {area.roles.split("•").map((role) => (
+                        <span key={role} className="rounded-full border border-[#E7E9F2] bg-[#F7F8FB] px-2.5 py-0.5 text-xs font-medium text-[#374151]">
+                          {role.trim()}
+                        </span>
+                      ))}
+                    </div>
+
+                    <span className="mt-auto inline-flex items-center gap-1.5 pt-4 font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-(--ink)">
+                      Explore sector
+                      <Icon name="arrow-right" width={13} height={13} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
                   </div>
                 </Link>
               </StaggerItem>

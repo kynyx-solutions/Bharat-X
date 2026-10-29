@@ -10,7 +10,8 @@ const upcomingCards = [
   {
     title: "Packaging & Materials",
     description: "Building efficient and sustainable packaging solutions for India's industries.",
-    image: "/assets/slides/msme.png",
+    // From BharatX Enterprises' site (srm.kynyx.com): its range of packaging materials
+    image: "/assets/backgrounds/packaging-materials.webp",
     accent: "#D97706",
   },
   {
