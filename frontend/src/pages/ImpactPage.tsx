@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { Icon } from "../utils/icons";
+import { cn } from "../utils/cn";
+import { DuotoneIcon, Icon } from "../utils/icons";
 import { SectionTransition } from "../components/motion/SectionTransition";
 import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { AnimatedHeading } from "../components/motion/AnimatedHeading";
 import { MagneticButton } from "../components/common/MagneticButton";
-import { CardFill, CardPhoto, SectionPhoto, cardImage } from "../components/common/CardSurface";
+import { CardFill, CardPhoto, cardImage, solidTextColours } from "../components/common/CardSurface";
 import { FeatureIcon } from "../components/common/FeatureIcon";
 
 interface ImpactArea {
@@ -112,6 +113,17 @@ const impactAreas: ImpactArea[] = [
     accent: "#00B8D9",
     link: "/verticals#manufacturing",
   },
+];
+
+/** Grid placement for the seven impactAreas cards, in order (see the Where We Create Impact section). */
+const AREA_LAYOUT = [
+  "md:col-span-2 lg:col-span-6",
+  "lg:col-span-3",
+  "lg:col-span-3",
+  "lg:col-span-3",
+  "lg:col-span-3",
+  "lg:col-span-3",
+  "lg:col-span-3",
 ];
 
 const commitmentPrinciples: { title: string; description: string; icon: string; accent: string; image: string }[] = [
@@ -389,78 +401,77 @@ export default function ImpactPage() {
             </p>
           </div>
 
-          {/* 6 Large Visual Cards Grid */}
-          <Stagger staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr items-stretch lg:[&>*:last-child:nth-child(3n+1)]:col-start-2">
-            {impactAreas.map((area) => (
-              <StaggerItem key={area.id} className="h-full">
-                <div
-                  data-cursor="card"
-                  className="group relative flex flex-col h-full overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift"
-                >
-                  <CardFill accent={area.accent} />
-                  {/* Image Container with Visual Depth */}
-                  <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-900 shrink-0" data-cursor="image">
+          {/*
+            Bento grid of photo-first cards: the photo fills the card, with only a slim frosted strip (sector, title, arrow)
+            at the bottom. Desktop: two rows on 12 columns, a wide feature card and two medium cards (6+3+3), then four
+            even cards (3+3+3+3). Tablet: the feature card spans both columns so the other six pair up. AREA_LAYOUT
+            assumes the seven impactAreas.
+          */}
+          <Stagger staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5">
+            {impactAreas.map((area, i) => {
+              const isFeature = i === 0;
+              // The accent darkened enough for small text on the light panel (4.5:1)
+              const accentText = solidTextColours(area.accent).deep;
+
+              return (
+                <StaggerItem key={area.id} className={cn("h-full", AREA_LAYOUT[i])}>
+                  <Link
+                    to={area.link}
+                    data-cursor="card"
+                    aria-label={`${area.title}: explore ${area.entityName}`}
+                    className={cn(
+                      "group relative flex h-full min-h-[320px] flex-col justify-between overflow-hidden rounded-3xl bg-[#0B1F47] p-3 shadow-sm transition-[translate,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_28px_55px_-26px_rgba(11,31,71,0.6)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#F54900] focus-visible:ring-offset-2",
+                      i < 3 ? "lg:min-h-[400px]" : "lg:min-h-[340px]",
+                    )}
+                  >
+                    {/* Full-bleed photo; slow zoom on hover */}
                     <img
                       src={area.image}
-                      alt={area.title}
-                      className="h-full w-full object-cover object-center filter brightness-[0.92] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-110"
+                      alt=""
                       loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                    <span aria-hidden className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/45 to-transparent" />
 
-                    {/* Sector Tag & Number */}
-                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 font-sans text-[10px] uppercase tracking-wider text-[#F54900] border border-white/20">
-                        {area.number} · {area.sector}
+                    {/* Top: large number and the company logo (or its name, where there's no logo) */}
+                    <div className="relative flex items-start justify-between gap-3 p-2">
+                      <span className="font-heading text-4xl font-medium leading-none tracking-tight text-white [text-shadow:0_2px_14px_rgba(0,0,0,0.55)]">
+                        {area.number}
+                      </span>
+                      <span className="flex h-10 items-center rounded-xl bg-white/95 px-2.5 shadow-md backdrop-blur-sm">
+                        {area.logo ? (
+                          // h-7 w-auto: the Labs SVG has no built-in size, so it needs a set height to get a width
+                          <img src={area.logo} alt={`${area.entityName} logo`} className="h-7 w-auto max-w-[88px] object-contain" />
+                        ) : (
+                          <span className="whitespace-nowrap text-[11px] font-semibold text-[#0B1F47]">{area.entityName}</span>
+                        )}
                       </span>
                     </div>
 
-                    {/* Logo Overlay if present */}
-                    {area.logo && (
-                      <div className="absolute bottom-3 left-3.5 h-7 w-auto max-w-[110px] rounded-md bg-white/95 backdrop-blur-sm px-2 py-1 shadow-md flex items-center justify-center transition-transform group-hover:scale-105">
-                        <img src={area.logo} alt="" className="max-h-full max-w-full object-contain" />
+                    {/* Slim frosted strip: sector, title and an arrow that fills navy on hover */}
+                    <div
+                      className={cn(
+                        "relative flex items-center justify-between gap-3 rounded-2xl bg-white/90 px-4 py-3.5 shadow-lg ring-1 ring-white/70 backdrop-blur-md transition-transform duration-500 group-hover:-translate-y-0.5",
+                        isFeature && "lg:max-w-[440px] lg:px-5 lg:py-4",
+                      )}
+                    >
+                      <div className="min-w-0">
+                        <span className="block font-sans text-[10.5px] font-bold uppercase tracking-[0.18em]" style={{ color: accentText }}>
+                          {area.sector}
+                        </span>
+                        <h3 className={cn("mt-1 font-heading font-medium leading-snug tracking-tight text-[#0B1F47]", isFeature ? "text-xl sm:text-2xl" : "text-lg")}>
+                          {area.title}
+                        </h3>
                       </div>
-                    )}
-                  </div>
-
-                  {/* Card Body & Footer */}
-                  <div className="relative flex flex-1 flex-col justify-between p-5 sm:p-6">
-                    <div className="flex-1 flex flex-col">
-                      <span className="font-sans text-[10px] uppercase tracking-[0.22em] font-bold block mb-1 truncate text-white/90">
-                        {area.entityName}
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#0B1F47]/15 text-[#0B1F47] transition-all duration-300 group-hover:border-[#0B1F47] group-hover:bg-[#0B1F47] group-hover:text-white">
+                        <Icon name="arrow-up-right" width={15} height={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </span>
-
-                      <h3 className="font-heading text-xl sm:text-2xl font-medium text-white transition-colors leading-snug duration-300 min-h-[3.25rem] sm:min-h-[3.75rem] flex items-start">
-                        {area.title}
-                      </h3>
-
-                      <p className="mt-2.5 text-xs sm:text-[13.5px] text-white/90 leading-relaxed font-normal min-h-[3.5rem] sm:min-h-[4rem]">
-                        {area.description}
-                      </p>
                     </div>
-
-                    {/* Footer Link */}
-                    <div className="mt-4 pt-3.5 border-t border-white/20 flex items-center justify-between">
-                      <Link
-                        to={area.link}
-                        data-cursor="link"
-                        className="inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-[#FF8904] hover:text-white transition-colors group/link fx-underline"
-                      >
-                        <span>Explore Vertical</span>
-                      </Link>
-
-                      <Link
-                        to={area.link}
-                        aria-label={`Explore ${area.sector}`}
-                        className="h-7 w-7 rounded-lg bg-white/15 ring-1 ring-white/25 text-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
-                      >
-                        <Icon name="arrow-right" width={13} height={13} />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
+                  </Link>
+                </StaggerItem>
+              );
+            })}
           </Stagger>
         </div>
       </SectionTransition>
@@ -650,69 +661,84 @@ export default function ImpactPage() {
       </SectionTransition>
 
       {/* ── 06. THE FUTURE OF IMPACT (The Opportunity Ahead & Final CTA) ─────── */}
+      {/* Light by request: warm off-white, the city photo at 30% fading up from the bottom, soft glows */}
       <SectionTransition
-        backdrop={<SectionPhoto src={cardImage("impact-cta-opportunity-ahead")} />}
-        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9"
+        backdrop={
+          <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+            <img
+              src={cardImage("impact-cta-opportunity-ahead")}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-x-0 bottom-0 h-[75%] w-full object-cover object-bottom opacity-30 [mask-image:linear-gradient(to_top,black_25%,transparent)]"
+            />
+            <div className="absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-[#F54900]/10 blur-[120px]" />
+            <div className="absolute -bottom-24 left-[8%] h-72 w-72 rounded-full bg-[#163A7A]/10 blur-[110px]" />
+          </div>
+        }
+        className="relative overflow-hidden bg-[#FAF9F6] text-[#111827] py-6 sm:py-9"
       >
-        {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
-
         <div className="container-x relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#9f2d00] font-bold shadow-xs mb-4">
               <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>THE FUTURE OF IMPACT</span>
             </div>
 
             {/* Headline */}
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-white">
-              The Opportunity Ahead
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-[#111827]">
+              The Opportunity <span className="text-[#3026B3]">Ahead</span>
             </AnimatedHeading>
 
             {/* Copy */}
-            <p className="mt-6 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-3xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-[#596579] max-w-3xl mx-auto">
               As BharatX expands into packaging, waste management, sustainability and new industrial businesses, our opportunity to create measurable impact grows with it.
             </p>
 
-            {/* Four Focus Areas: Build | Enable | Sustain | Measure */}
-            <Stagger staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12 text-left">
+            {/*
+              Four Focus Areas (Build, Enable, Sustain, Measure) as small, simple cards: white with a thin border, the step icon
+              in an outlined circle, the step name and the headline. Hover: the global card rule lifts the card; the circle
+              fills with the step colour, the border takes that colour and a thin line runs along the bottom. The `!` on the
+              hover border beats the global rule's !important card border. Step colours are only accents; text sits on white.
+            */}
+            <Stagger staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 text-left">
               {futureFocusAreas.map((area) => (
-                <StaggerItem key={area.step}>
+                <StaggerItem key={area.step} className="h-full">
                   <div
                     data-cursor="card"
-                    className="group relative overflow-hidden rounded-2xl border border-white/15 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:border-white/30 hover:shadow-xl fx-lift h-full"
+                    style={
+                      {
+                        "--accent": area.accent,
+                        // The step colour darkened enough for small text and icons on white (4.5:1)
+                        "--ink": solidTextColours(area.accent).deep,
+                        "--ring": `color-mix(in srgb, ${area.accent} 30%, white)`,
+                      } as React.CSSProperties
+                    }
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E7E9F2] bg-white p-6 shadow-[0_1px_2px_rgba(11,31,71,0.04),0_14px_34px_-22px_rgba(11,31,71,0.3)] hover:border-(--ring)!"
                   >
-                    <CardFill accent={area.accent} />
-                    <div className="relative">
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="font-sans text-xs uppercase tracking-[0.24em] font-bold text-white/90">
-                          {area.step}
-                        </span>
-                        <FeatureIcon
-                          name={area.icon}
-                          accent={area.accent}
-                          size={32}
-                          className="transition-transform group-hover:scale-110"
-                        />
-                      </div>
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-(--ring) text-(--ink) transition-colors duration-300 group-hover:border-(--accent) group-hover:bg-(--accent) group-hover:text-white">
+                      <DuotoneIcon name={area.icon} size={20} />
+                    </span>
 
-                      <h4 className="font-heading text-lg font-medium text-white mb-2 leading-snug transition-colors">
-                        {area.headline}
-                      </h4>
+                    <span className="mt-3 font-sans text-[11px] font-bold uppercase tracking-[0.22em] text-(--ink)">
+                      {area.step}
+                    </span>
 
-                      <p className="text-xs sm:text-[13px] text-white/90 leading-relaxed font-normal">
-                        {area.detail}
-                      </p>
-                    </div>
+                    <h3 className="mt-1.5 font-heading text-lg font-medium leading-snug tracking-tight text-[#0B1F47]">
+                      {area.headline}
+                    </h3>
+
+                    {/* Thin line along the bottom that runs across on hover */}
+                    <span aria-hidden className="absolute bottom-0 left-0 h-[3px] w-0 bg-(--accent) transition-all duration-500 ease-out group-hover:w-full" />
                   </div>
                 </StaggerItem>
               ))}
             </Stagger>
 
             {/* Final CTA Action */}
-            <div className="mt-14 pt-10 border-t border-white/15 max-w-2xl mx-auto">
-              <h3 className="font-heading text-2xl sm:text-3xl font-medium text-white mb-6 transition-colors duration-300">
+            <div className="mt-8 pt-8 border-t border-[#E3E5EF] max-w-2xl mx-auto">
+              <h3 className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mb-4 transition-colors duration-300">
                 Build a Better Bharat With Us.
               </h3>
 
@@ -737,7 +763,7 @@ export default function ImpactPage() {
                 <Link
                   to="/verticals"
                   data-cursor="button"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 hover:bg-white/20 px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:border-white shadow-xs fx-lift"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#0B1F47]/20 bg-white px-8 py-4 text-[15px] font-semibold text-[#0B1F47] transition-all duration-300 hover:border-[#0B1F47] shadow-xs fx-lift"
                 >
                   <span>Explore Our Businesses</span>
                   <Icon
@@ -750,7 +776,7 @@ export default function ImpactPage() {
               </div>
 
               <div className="mt-8">
-                <p className="font-sans text-xs uppercase tracking-[0.24em] text-[#F54900] font-bold">
+                <p className="font-sans text-xs uppercase tracking-[0.24em] text-[#CA3500] font-bold">
                   Building Businesses. Enabling Bharat.
                 </p>
               </div>

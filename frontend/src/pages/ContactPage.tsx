@@ -25,51 +25,51 @@ const pathways: {
   option?: string;
   to?: string;
 }[] = [
-  {
-    key: "partnerships",
-    icon: "handshake",
-    title: "Business Partnerships",
-    description: "For companies, institutions and organisations interested in partnerships, projects or commercial opportunities.",
-    accent: "#3026B3",
-    borderHover: "hover:border-[#3026B3]",
-    image: cardImage("contact-01-pathway-partnerships"),
-    cta: "Discuss a Partnership",
-    option: "Business Partnership",
-  },
-  {
-    key: "investors",
-    icon: "landmark",
-    title: "Investors & Capital",
-    description: "For investors, funds and strategic partners interested in BharatX and its venture-building ecosystem.",
-    accent: "#211B72",
-    borderHover: "hover:border-[#211B72]",
-    image: cardImage("contact-02-pathway-investors"),
-    cta: "Connect With Ventures",
-    option: "Investment / Capital",
-  },
-  {
-    key: "founders",
-    icon: "rocket",
-    title: "Entrepreneurs & Founders",
-    description: "For entrepreneurs interested in building, partnering or exploring opportunities with BharatX.",
-    accent: "#00B8D9",
-    borderHover: "hover:border-[#00B8D9]",
-    image: cardImage("contact-03-pathway-founders"),
-    cta: "Build With Us",
-    option: "Venture Building",
-  },
-  {
-    key: "careers",
-    icon: "briefcase",
-    title: "Careers",
-    description: "Looking to join one of the businesses within the BharatX ecosystem?",
-    accent: "#15966B",
-    borderHover: "hover:border-[#15966B]",
-    image: cardImage("contact-04-pathway-careers"),
-    cta: "Explore Careers",
-    to: "/careers",
-  },
-];
+    {
+      key: "partnerships",
+      icon: "handshake",
+      title: "Business Partnerships",
+      description: "For companies, institutions and organisations interested in partnerships, projects or commercial opportunities.",
+      accent: "#3026B3",
+      borderHover: "hover:border-[#3026B3]",
+      image: cardImage("contact-01-pathway-partnerships"),
+      cta: "Discuss a Partnership",
+      option: "Business Partnership",
+    },
+    {
+      key: "investors",
+      icon: "landmark",
+      title: "Investors & Capital",
+      description: "For investors, funds and strategic partners interested in BharatX and its venture-building ecosystem.",
+      accent: "#211B72",
+      borderHover: "hover:border-[#211B72]",
+      image: cardImage("contact-02-pathway-investors"),
+      cta: "Connect With Ventures",
+      option: "Investment / Capital",
+    },
+    {
+      key: "founders",
+      icon: "rocket",
+      title: "Entrepreneurs & Founders",
+      description: "For entrepreneurs interested in building, partnering or exploring opportunities with BharatX.",
+      accent: "#00B8D9",
+      borderHover: "hover:border-[#00B8D9]",
+      image: cardImage("contact-03-pathway-founders"),
+      cta: "Build With Us",
+      option: "Venture Building",
+    },
+    {
+      key: "careers",
+      icon: "briefcase",
+      title: "Careers",
+      description: "Looking to join one of the businesses within the BharatX ecosystem?",
+      accent: "#15966B",
+      borderHover: "hover:border-[#15966B]",
+      image: cardImage("contact-04-pathway-careers"),
+      cta: "Explore Careers",
+      to: "/careers",
+    },
+  ];
 
 const interestOptions = [
   "Business Partnership",
@@ -202,16 +202,14 @@ export default function ContactPage() {
 
     // 1. Wrong data: red border immediately
     if (hasError) {
-      return `${base} border-2 border-red-500 bg-white text-red-900 placeholder:text-red-300 ${
-        isActive ? "ring-2 ring-red-500/25" : ""
-      }`;
+      return `${base} border-2 border-red-500 bg-white text-red-900 placeholder:text-red-300 ${isActive ? "ring-2 ring-red-500/25" : ""
+        }`;
     }
 
     // 2. Correction done: green border immediately
     if (isValid) {
-      return `${base} border-2 border-emerald-500 bg-white text-[#111827] placeholder:text-[#8E9BAE] ${
-        isActive ? "ring-2 ring-emerald-500/25" : ""
-      }`;
+      return `${base} border-2 border-emerald-500 bg-white text-[#111827] placeholder:text-[#8E9BAE] ${isActive ? "ring-2 ring-emerald-500/25" : ""
+        }`;
     }
 
     // 3. Active text field: color theme of project (#3026B3)
@@ -871,13 +869,12 @@ export default function ContactPage() {
                           Tell us briefly about your opportunity <span className="text-red-500">*</span>
                         </label>
                         <span
-                          className={`font-sans text-[11px] ${
-                            message.trim().length >= 10
-                              ? "text-emerald-600 font-semibold"
-                              : touched.message && message.trim().length < 10
+                          className={`font-sans text-[11px] ${message.trim().length >= 10
+                            ? "text-emerald-600 font-semibold"
+                            : touched.message && message.trim().length < 10
                               ? "text-red-600 font-semibold"
                               : "text-[#4B5563]"
-                          }`}
+                            }`}
                         >
                           {message.trim().length} / 10 min chars
                         </span>
@@ -987,7 +984,7 @@ export default function ContactPage() {
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-4">
               <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>CO-BUILD THE FUTURE</span>
             </div>
@@ -1003,12 +1000,12 @@ export default function ContactPage() {
             </AnimatedHeading>
 
             {/* Copy */}
-            <p className="mt-6 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-slate-200 max-w-2xl mx-auto">
               The next BharatX business could begin with a conversation.
             </p>
 
             {/* Action */}
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               <MagneticButton>
                 <button
                   type="button"
@@ -1038,7 +1035,7 @@ export default function ContactPage() {
             </div>
 
             {/* Signature Conclusion */}
-            <div className="mt-12 pt-8 border-t border-white/15 max-w-xl mx-auto">
+            <div className="mt-6 pt-6 border-t border-white/15 max-w-xl mx-auto">
               <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
                 Building Businesses. Enabling Bharat.
               </p>

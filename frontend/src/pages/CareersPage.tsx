@@ -799,7 +799,7 @@ export default function CareersPage() {
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-4">
               <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
               <span>JOIN THE BUILDERS</span>
             </div>
@@ -820,7 +820,7 @@ export default function CareersPage() {
             </p>
 
             {/* Dual CTAs */}
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               <MagneticButton>
                 <button
                   type="button"
@@ -854,7 +854,7 @@ export default function CareersPage() {
             </div>
 
             {/* Signature Conclusion */}
-            <div className="mt-12 pt-8 border-t border-white/15 max-w-xl mx-auto">
+            <div className="mt-4 pt-2 border-t border-white/15 max-w-xl mx-auto">
               <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
                 Building Businesses. Enabling Bharat.
               </p>
