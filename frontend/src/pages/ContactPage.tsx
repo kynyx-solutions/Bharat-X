@@ -30,8 +30,8 @@ const pathways: {
       icon: "handshake",
       title: "Business Partnerships",
       description: "For companies, institutions and organisations interested in partnerships, projects or commercial opportunities.",
-      accent: "#3026B3",
-      borderHover: "hover:border-[#3026B3]",
+      accent: "#163A7A",
+      borderHover: "hover:border-[#163A7A]",
       image: cardImage("contact-01-pathway-partnerships"),
       cta: "Discuss a Partnership",
       option: "Business Partnership",
@@ -41,8 +41,8 @@ const pathways: {
       icon: "landmark",
       title: "Investors & Capital",
       description: "For investors, funds and strategic partners interested in BharatX and its venture-building ecosystem.",
-      accent: "#211B72",
-      borderHover: "hover:border-[#211B72]",
+      accent: "#0F2A5C",
+      borderHover: "hover:border-[#0F2A5C]",
       image: cardImage("contact-02-pathway-investors"),
       cta: "Connect With Ventures",
       option: "Investment / Capital",
@@ -212,9 +212,9 @@ export default function ContactPage() {
         }`;
     }
 
-    // 3. Active text field: color theme of project (#3026B3)
+    // 3. Active text field: color theme of project (#163A7A)
     if (isActive) {
-      return `${base} border-2 border-[#3026B3] bg-white text-[#111827] ring-2 ring-[#3026B3]/25 shadow-sm`;
+      return `${base} border-2 border-[#163A7A] bg-white text-[#111827] ring-2 ring-[#163A7A]/25 shadow-sm`;
     }
 
     // Idle neutral state
@@ -226,7 +226,7 @@ export default function ContactPage() {
       "block text-xs font-sans font-bold uppercase tracking-wider mb-2 transition-colors duration-200";
     if (hasError) return `${base} text-red-600`;
     if (isValid) return `${base} text-emerald-700`;
-    if (isActive) return `${base} text-[#3026B3]`;
+    if (isActive) return `${base} text-[#163A7A]`;
     return `${base} text-[#111827]`;
   };
 
@@ -361,8 +361,8 @@ export default function ContactPage() {
       <SectionTransition id="contact-options" className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>CONTACT PATHWAYS</span>
             </div>
 
@@ -372,7 +372,7 @@ export default function ContactPage() {
               hover="color"
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
             >
-              Choose Your <span className="text-[#3026B3]">Pathway</span>
+              Choose Your <span className="text-[#163A7A]">Pathway</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -444,8 +444,8 @@ export default function ContactPage() {
         <div className="container-x relative z-10">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-9">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-                <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+                <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
                 <span>DIRECT INQUIRY</span>
               </div>
 
@@ -455,7 +455,7 @@ export default function ContactPage() {
                 hover="gradient"
                 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
               >
-                Start a <span className="text-[#3026B3]">Conversation</span>
+                Start a <span className="text-[#163A7A]">Conversation</span>
               </AnimatedHeading>
 
               <p className="mt-3 text-base sm:text-lg text-[#596579]">
@@ -468,9 +468,9 @@ export default function ContactPage() {
               data-cursor="card"
               className="rounded-3xl border border-t-4 p-7 sm:p-12 shadow-xl fx-lift"
               style={{
-                backgroundColor: "color-mix(in srgb, #3026B3 7%, white)",
-                borderColor: "#3026B333",
-                borderTopColor: "#3026B3",
+                backgroundColor: "color-mix(in srgb, #163A7A 7%, white)",
+                borderColor: "#163A7A33",
+                borderTopColor: "#163A7A",
               }}
             >
               <AnimatePresence mode="wait">
@@ -581,7 +581,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "fullName" && !fullNameError && !isFullNameValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#3026B3] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -651,7 +651,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "email" && !emailError && !isEmailValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#3026B3] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -726,7 +726,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "phone" && !phoneError && !isPhoneValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#3026B3] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -799,7 +799,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "organization" && !orgError && !isOrgValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#3026B3] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -922,7 +922,7 @@ export default function ContactPage() {
                         type="submit"
                         data-cursor="button"
                         disabled={submitting}
-                        className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#3026B3] hover:bg-[#211B72] text-white px-9 py-4 text-[15px] font-bold shadow-lg shadow-[#3026B3]/25 transition-all duration-300 fx-shine disabled:opacity-60 cursor-pointer"
+                        className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] text-white px-9 py-4 text-[15px] font-bold shadow-lg shadow-[#163A7A]/25 transition-all duration-300 fx-shine disabled:opacity-60 cursor-pointer"
                       >
                         <span>{submitting ? "Sending..." : "Send Message"}</span>
                         <Icon
@@ -961,7 +961,7 @@ export default function ContactPage() {
               hover="color"
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
             >
-              BharatX Group <span className="text-[#3026B3]">Offices</span>
+              BharatX Group <span className="text-[#163A7A]">Offices</span>
             </AnimatedHeading>
 
             <p className="mt-3 text-base text-[#596579]">

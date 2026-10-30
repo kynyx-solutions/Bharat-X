@@ -11,7 +11,7 @@ export function WhyBharatXBand() {
         <div className="container-x relative z-10">
           <div className="max-w-3xl">
             {/* Eyebrow */}
-            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3]">
+            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#163A7A]">
               <span className="text-[#F54900] animate-pulse">◆</span>
               <span>WHY BHARATX</span>
             </div>
@@ -20,7 +20,7 @@ export function WhyBharatXBand() {
             <h2 className="mt-4 font-heading text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-[#111827] transition-colors duration-300">
               Built for Scale.
               <br />
-              <span className="text-[#3026B3] transition-colors duration-300">Engineered for Sovereignty.</span>
+              <span className="text-[#163A7A] transition-colors duration-300">Engineered for Sovereignty.</span>
             </h2>
 
             <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-sans">
@@ -35,7 +35,7 @@ export function WhyBharatXBand() {
                 num: "01",
                 title: "Long-Term Capital Horizon",
                 desc: "Deploying permanent capital with multi-decade compounding rather than quarter-to-quarter financial speculation.",
-                color: "#3026B3",
+                color: "#163A7A",
               },
               {
                 num: "02",
@@ -54,7 +54,7 @@ export function WhyBharatXBand() {
                 <div
                   data-cursor="card"
                   tabIndex={0}
-                  className="group flex flex-col pr-4 p-4 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                  className="group flex flex-col pr-4 p-4 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
                 >
                   <span
                     className="font-sans text-xs font-bold tracking-widest"
@@ -62,7 +62,7 @@ export function WhyBharatXBand() {
                   >
                     {pillar.num}
                   </span>
-                  <h3 className="mt-3 font-heading text-xl sm:text-2xl font-medium text-[#211B72] transition-colors">
+                  <h3 className="mt-3 font-heading text-xl sm:text-2xl font-medium text-[#0F2A5C] transition-colors">
                     {pillar.title}
                   </h3>
                   <p className="mt-2 text-sm text-[#596579] leading-relaxed">
@@ -78,7 +78,7 @@ export function WhyBharatXBand() {
               to="/about"
               data-cursor="button"
               data-motion="true"
-              className="group inline-flex items-center gap-3 rounded-full bg-[#3026B3] hover:bg-[#211B72] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 active:scale-95 fx-shine"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 active:scale-95 fx-shine"
             >
               <span>Read Our Institutional Charter</span>
               <Icon

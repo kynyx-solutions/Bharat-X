@@ -10,12 +10,12 @@ import { Logo } from "./Logo";
 
 // Accent per operating sector, used for the sector tiles' tint, left border and index number.
 const sectorAccents: Record<string, string> = {
-  "tech-ai": "#4B40D4",
-  infrastructure: "#3026B3",
+  "tech-ai": "#2B5299",
+  infrastructure: "#163A7A",
   manufacturing: "#008299",
   agriculture: "#15966B",
   labs: "#047857",
-  ventures: "#211B72",
+  ventures: "#0F2A5C",
 };
 
 const socialIcons: Record<string, string> = {
@@ -95,19 +95,19 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
 
             {/* Core Sectors */}
             <div className="mt-10">
-              <div className="mb-3 font-sans text-[10px] uppercase tracking-[0.28em] text-[#3026B3] dark:text-gold-400 font-semibold">
+              <div className="mb-3 font-sans text-[10px] uppercase tracking-[0.28em] text-[#163A7A] dark:text-gold-400 font-semibold">
                 Core Operating Sectors
               </div>
               <div className="grid grid-cols-2 gap-2">
                 {menuServices.map((svc, i) => {
-                  const accent = sectorAccents[svc.id] ?? "#3026B3";
+                  const accent = sectorAccents[svc.id] ?? "#163A7A";
                   return (
                     <Link
                       key={svc.id}
                       to={`/verticals#${svc.id}`}
                       onClick={onClose}
                       data-cursor="card"
-                      className="flex flex-col gap-1 rounded-xl border border-l-4 border-[color:var(--tile-border)] border-l-[color:var(--tile-accent)] p-3 text-left transition-all hover:border-[#3026B3] fx-lift shadow-xs"
+                      className="flex flex-col gap-1 rounded-xl border border-l-4 border-[color:var(--tile-border)] border-l-[color:var(--tile-accent)] p-3 text-left transition-all hover:border-[#163A7A] fx-lift shadow-xs"
                       style={
                         {
                           backgroundColor: `color-mix(in srgb, ${accent} 9%, white)`,
@@ -131,7 +131,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                 to="/verticals"
                 onClick={onClose}
                 data-cursor="button"
-                className="group flex items-center justify-center gap-2 rounded-full bg-[#3026B3] px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#3026B3]/25 transition-all hover:bg-[#211B72] fx-press fx-shine dark:bg-gold-500 dark:text-night-950 dark:hover:bg-gold-400"
+                className="group flex items-center justify-center gap-2 rounded-full bg-[#163A7A] px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#163A7A]/25 transition-all hover:bg-[#0F2A5C] fx-press fx-shine dark:bg-gold-500 dark:text-night-950 dark:hover:bg-gold-400"
               >
                 <span>Explore All Services</span>
                 <Icon name="arrow-right" width={15} height={15} className="transition-transform group-hover:translate-x-1" />
@@ -145,7 +145,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                     rel="noreferrer"
                     aria-label={s.label}
                     data-cursor="button"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E3E5EF] bg-white dark:border-white/10 dark:bg-white/5 text-[#596579] shadow-xs transition-all hover:border-[#3026B3] hover:text-[#3026B3] fx-lift"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E3E5EF] bg-white dark:border-white/10 dark:bg-white/5 text-[#596579] shadow-xs transition-all hover:border-[#163A7A] hover:text-[#163A7A] fx-lift"
                   >
                     <Icon name={socialIcons[s.label] ?? "arrow-up-right"} width={14} height={14} className="fx-icon-pop" />
                   </a>
@@ -165,6 +165,6 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
 function mobileLinkClass(isActive: boolean): string {
   return cn(
     "flex items-center gap-3.5 border-b border-[#E3E5EF] dark:border-white/10 py-3 sm:py-3.5 font-sans text-[17px] sm:text-[19px] font-medium tracking-tight transition-colors",
-    isActive ? "text-[#3026B3] dark:text-gold-400 font-semibold" : "text-ink-900 dark:text-white hover:text-[#3026B3] dark:hover:text-gold-300",
+    isActive ? "text-[#163A7A] dark:text-gold-400 font-semibold" : "text-ink-900 dark:text-white hover:text-[#163A7A] dark:hover:text-gold-300",
   );
 }

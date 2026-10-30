@@ -44,7 +44,7 @@ const businessPortfolio: BusinessVertical[] = [
     websiteUrl: "https://bharatx.vc",
     logo: "/Ventures_logo.png",
     image: "/companies/bharatx-ventures/hero.jpg",
-    accent: "#211B72",
+    accent: "#0F2A5C",
     icon: "landmark",
   },
   {
@@ -68,7 +68,7 @@ const businessPortfolio: BusinessVertical[] = [
     websiteUrl: "https://bharatxinfratech.com",
     logo: "/Infra_logo1.png",
     image: "/companies/bharatx-infratech/hero.jpg",
-    accent: "#3026B3",
+    accent: "#163A7A",
     icon: "hard-hat",
   },
   {
@@ -113,7 +113,7 @@ const businessPortfolio: BusinessVertical[] = [
     websiteUrl: "https://aixpertslabs.com",
     logo: "/Ai-Experts_logo.png",
     image: "/companies/aixperts-labs/hero.jpg",
-    accent: "#4B40D4",
+    accent: "#2B5299",
     icon: "cpu",
   },
   {
@@ -144,7 +144,7 @@ const futureHorizons: { title: string; description: string; accent: string; imag
   {
     title: "New Industrial Businesses",
     description: "Advanced metallurgy, automated robotics components, and high-spec sovereign civil technologies.",
-    accent: "#3026B3",
+    accent: "#163A7A",
     image: cardImage("services-15-horizon-new-industrial"),
   },
 ];
@@ -217,13 +217,13 @@ export default function ServicesPage() {
       <SectionTransition className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4 hover:border-[#3026B3] transition-colors">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4 hover:border-[#163A7A] transition-colors">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>BUSINESS PORTFOLIO</span>
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Our Business <span className="text-[#3026B3]">Ecosystem</span>
+              Our Business <span className="text-[#163A7A]">Ecosystem</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed">
@@ -321,13 +321,13 @@ export default function ServicesPage() {
       <SectionTransition className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>HOW THEY CONNECT</span>
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Different Businesses. <span className="text-[#3026B3]">One Ecosystem.</span>
+              Different Businesses. <span className="text-[#163A7A]">One Ecosystem.</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -337,7 +337,7 @@ export default function ServicesPage() {
 
           {/* Interactive Flow Architecture: BUILD | OPERATE | INVEST -> IMPACT */}
           <div className="relative overflow-hidden max-w-4xl mx-auto rounded-3xl border border-[#E3E5EF] bg-white p-7 sm:p-12 shadow-xl fx-lift">
-            <CardFill accent="#3026B3" tone="tint" />
+            <CardFill accent="#163A7A" tone="tint" />
             <div className="relative">
               {/* Top Root: BHARATX GROUP */}
               <div className="flex flex-col items-center text-center">
@@ -352,7 +352,7 @@ export default function ServicesPage() {
                     BHARATX GROUP
                   </span>
                 </div>
-                <div className="h-8 w-px bg-[#3026B3]/40 my-1 animate-pulse" />
+                <div className="h-8 w-px bg-[#163A7A]/40 my-1 animate-pulse" />
               </div>
 
               {/* Tri-Column Engine: BUILD | OPERATE | INVEST */}
@@ -361,13 +361,13 @@ export default function ServicesPage() {
                 <StaggerItem>
                   <div
                     data-cursor="card"
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 text-center shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift h-full"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 text-center shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift h-full"
                   >
-                    <CardFill accent="#3026B3" />
+                    <CardFill accent="#163A7A" />
                     <div className="relative">
                       <FeatureIcon
                         name="hard-hat"
-                        accent="#3026B3"
+                        accent="#163A7A"
                         size={36}
                         className="mx-auto mb-3 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                       />
@@ -476,7 +476,7 @@ export default function ServicesPage() {
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              The Portfolio Is <span className="text-[#3026B3]">Growing</span>
+              The Portfolio Is <span className="text-[#163A7A]">Growing</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -490,7 +490,7 @@ export default function ServicesPage() {
               <StaggerItem key={item.title}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift h-full"
                 >
                   <CardPhoto src={item.image} accent={item.accent} />
                   <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">

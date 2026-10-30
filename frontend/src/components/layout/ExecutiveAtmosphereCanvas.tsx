@@ -63,7 +63,7 @@ export function ExecutiveAtmosphereCanvas() {
 
     // Particle pool: 18 on mobile, 42 on desktop for rich network visuals with high GPU efficiency
     const particleCount = isMobile ? 18 : 42;
-    const colors = ["#3026B3", "#F54900", "#00B8D9", "#15966B", "#211B72"];
+    const colors = ["#163A7A", "#F54900", "#00B8D9", "#15966B", "#0F2A5C"];
 
     const particles: Particle[] = Array.from({ length: particleCount }, () => ({
       x: Math.random() * width,
@@ -123,7 +123,7 @@ export function ExecutiveAtmosphereCanvas() {
             ? "rgba(245, 73, 0, 0.55)"
             : `rgba(0, 184, 217, ${alpha})`
           : isMajor
-            ? "rgba(48, 38, 179, 0.3)"
+            ? "rgba(22, 58, 122, 0.3)"
             : `rgba(227, 229, 239, ${Math.min(1, Number(alpha) * 3)})`;
 
         ctx.lineWidth = isMajor ? 1.4 : 1.0;
@@ -148,9 +148,9 @@ export function ExecutiveAtmosphereCanvas() {
         ctx.strokeStyle = isDark
           ? isMajorRay
             ? `rgba(21, 150, 107, ${alpha})`
-            : `rgba(48, 38, 179, ${alpha})`
+            : `rgba(22, 58, 122, ${alpha})`
           : isMajorRay
-            ? "rgba(48, 38, 179, 0.2)"
+            ? "rgba(22, 58, 122, 0.2)"
             : "rgba(227, 229, 239, 0.7)";
         ctx.lineWidth = isMajorRay ? 1.2 : 0.85;
 
@@ -189,7 +189,7 @@ export function ExecutiveAtmosphereCanvas() {
       radarRadii.forEach((r, idx) => {
         ctx.strokeStyle = isDark
           ? `rgba(245, 73, 0, ${0.4 - idx * 0.06})`
-          : `rgba(48, 38, 179, ${0.2 - idx * 0.03})`;
+          : `rgba(22, 58, 122, ${0.2 - idx * 0.03})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.arc(perspectiveOriginX, horizonY, r, 0, Math.PI);
@@ -235,11 +235,11 @@ export function ExecutiveAtmosphereCanvas() {
       const vibrantColors = [
         "#F54900", // Vibrant Saffron
         "#00B8D9", // Electric Cyan
-        "#3026B3", // Deep Indigo
+        "#163A7A", // Deep Indigo
         "#15966B", // Emerald
-        "#211B72", // Midnight Indigo
+        "#0F2A5C", // Midnight Indigo
       ];
-      const darkThreadColors = ["#F54900", "#00B8D9", "#15966B", "#3026B3", "#FAF9F6"];
+      const darkThreadColors = ["#F54900", "#00B8D9", "#15966B", "#163A7A", "#FAF9F6"];
 
       // Update and draw particles
       particles.forEach((p, idx) => {

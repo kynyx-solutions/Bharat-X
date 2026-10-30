@@ -19,10 +19,10 @@ export function SectorMarquee() {
                 <img src={s.companyLogo} alt={s.companyName} className="h-full w-full object-contain" />
               </span>
               <span className="flex items-center gap-2">
-                <span className="font-sans text-sm font-semibold tracking-wide text-[#111827] dark:text-white group-hover/item:text-[#3026B3] transition-colors">
+                <span className="font-sans text-sm font-semibold tracking-wide text-[#111827] dark:text-white group-hover/item:text-[#163A7A] transition-colors">
                   {s.companyName}
                 </span>
-                <span className="font-sans text-[10px] uppercase text-[#3026B3] dark:text-[#F54900] font-semibold">
+                <span className="font-sans text-[10px] uppercase text-[#163A7A] dark:text-[#F54900] font-semibold">
                   · {s.name}
                 </span>
               </span>

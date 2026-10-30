@@ -124,7 +124,7 @@ export default function InnovationPage() {
       <SectionTransition className="py-6 bg-[#FAF9F6]">
         <div className="container-x">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            <div data-cursor="card" className="p-4 rounded-2xl bg-[#3026B3] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
+            <div data-cursor="card" className="p-4 rounded-2xl bg-[#163A7A] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
               <span className="font-heading text-3xl sm:text-4xl font-semibold text-white block transition-transform hover:scale-105">22+</span>
               <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90 mt-1 block">
                 Regional Indian Dialects Supported
@@ -156,7 +156,7 @@ export default function InnovationPage() {
       <SectionTransition className="py-6 sm:py-9">
         <div className="container-x">
           <div className="max-w-2xl mb-6 sm:mb-8">
-            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#3026B3] font-semibold">
+            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#163A7A] font-semibold">
               CORE DISCIPLINES
             </span>
             <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827]">
@@ -169,13 +169,13 @@ export default function InnovationPage() {
 
           <Stagger staggerDelay={0.08} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {innovationPillars.map((p, i) => {
-              const colors = ["#3026B3", "#00B8D9", "#F54900", "#15966B", "#3026B3", "#00B8D9"];
+              const colors = ["#163A7A", "#00B8D9", "#F54900", "#15966B", "#163A7A", "#00B8D9"];
               const pillarColor = colors[i % colors.length];
               return (
                 <StaggerItem key={p.title}>
                   <div
                     data-cursor="card"
-                    className="group relative overflow-hidden flex flex-col justify-between h-full rounded-2xl border border-white/10 bg-[#0D1026] p-7 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-2xl fx-lift"
+                    className="group relative overflow-hidden flex flex-col justify-between h-full rounded-2xl border border-white/10 bg-[#0D1026] p-7 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-2xl fx-lift"
                   >
                     <CardPhoto src={p.image} accent={pillarColor} />
                     <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -210,7 +210,7 @@ export default function InnovationPage() {
       <SectionTransition className="relative overflow-hidden py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-2xl mb-10">
-            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#3026B3] font-semibold">
+            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#163A7A] font-semibold">
               DEVELOPMENT HORIZON
             </span>
             <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827]">
@@ -220,13 +220,13 @@ export default function InnovationPage() {
 
           <Stagger staggerDelay={0.08} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {roadmapPhases.map((phase, idx) => {
-              const phaseColors = ["#3026B3", "#00B8D9", "#F54900", "#15966B"];
+              const phaseColors = ["#163A7A", "#00B8D9", "#F54900", "#15966B"];
               const pColor = phaseColors[idx % phaseColors.length];
               return (
                 <StaggerItem key={phase.number}>
                   <div
                     data-cursor="card"
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 flex flex-col justify-between shadow-md cursor-card hover:border-[#3026B3] transition-all duration-300 fx-lift hover:shadow-xl h-full"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 flex flex-col justify-between shadow-md cursor-card hover:border-[#163A7A] transition-all duration-300 fx-lift hover:shadow-xl h-full"
                   >
                     <CardFill accent={pColor} />
                     <div className="relative">
@@ -253,7 +253,7 @@ export default function InnovationPage() {
                 to="/contact"
                 data-cursor="button"
                 data-motion="true"
-                className="inline-flex items-center gap-3 rounded-full bg-[#3026B3] text-white hover:bg-[#211B72] px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
+                className="inline-flex items-center gap-3 rounded-full bg-[#163A7A] text-white hover:bg-[#0F2A5C] px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
               >
                 <span>Inquire on Technology Licensing &amp; R&amp;D</span>
                 <Icon name="arrow-right" width={15} height={15} />

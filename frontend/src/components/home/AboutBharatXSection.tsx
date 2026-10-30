@@ -11,11 +11,11 @@ const corePillars = [
     subtext: "Enterprise Creation & Core Operations",
     icon: "hard-hat" as const,
     image: "/companies/bharatx-infratech/hero.jpg",
-    accent: "#3026B3",
+    accent: "#163A7A",
     textAccent: "text-[#B9B4FF]",
     hoverText: "group-hover:text-[#B9B4FF]",
-    tint: "from-[#3026B3]/45",
-    borderHover: "hover:border-[#3026B3]",
+    tint: "from-[#163A7A]/45",
+    borderHover: "hover:border-[#163A7A]",
     glowClass: "fx-lift-glow-indigo",
   },
   {
@@ -92,7 +92,7 @@ export function AboutBharatXSection() {
             className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.12] tracking-tight text-[#111827] transition-colors"
           >
             Building Across India’s{" "}
-            <span className="text-[#3026B3] transition-colors">Growth Economy</span>
+            <span className="text-[#163A7A] transition-colors">Growth Economy</span>
           </motion.h2>
 
           {/* Short High-Contrast Copy */}
@@ -161,7 +161,7 @@ export function AboutBharatXSection() {
 
                 {/* Connecting arrow: only between cards in the same row (2-up on tablet, 4-up on desktop) */}
                 {idx < corePillars.length - 1 && (
-                  <div className={`${idx % 2 === 0 ? "hidden sm:flex" : "hidden lg:flex"} absolute -right-3.5 sm:-right-4 lg:-right-5.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white border border-[#E3E5EF] items-center justify-center text-[#3026B3] shadow-md group-hover:scale-110 group-hover:shadow-lg transition-transform`}>
+                  <div className={`${idx % 2 === 0 ? "hidden sm:flex" : "hidden lg:flex"} absolute -right-3.5 sm:-right-4 lg:-right-5.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white border border-[#E3E5EF] items-center justify-center text-[#163A7A] shadow-md group-hover:scale-110 group-hover:shadow-lg transition-transform`}>
                     <Icon name="chevron-right" width={14} height={14} strokeWidth={2.5} />
                   </div>
                 )}

@@ -30,7 +30,7 @@ const triadData: TriadItem[] = [
       "BharatX Group is committed to achieving net-zero carbon operations across its industrial footprint by 2035, integrating low-carbon concrete formulations, recycled compounds, and solar-supported processing corridors.",
     ],
     metrics: [
-      { label: "Commodities Processed", value: "5,000+ MT", color: "#3026B3" },
+      { label: "Commodities Processed", value: "5,000+ MT", color: "#163A7A" },
       { label: "Circular Compounds", value: "100%", color: "#15966B" },
       { label: "Net-Zero Target", value: "2035", color: "#00B8D9" },
     ],
@@ -51,7 +51,7 @@ const triadData: TriadItem[] = [
       "From sub-micron precision manufacturing tooling at BharatX Engineering to autonomous edge document processing with 99.8% accuracy, we build deep-tech tailored to the operational demands of the subcontinent.",
     ],
     metrics: [
-      { label: "Indic Languages", value: "22 Dialects", color: "#3026B3" },
+      { label: "Indic Languages", value: "22 Dialects", color: "#163A7A" },
       { label: "AI Workflows", value: "45+ Deployed", color: "#00B8D9" },
       { label: "Document Precision", value: "99.8%", color: "#15966B" },
     ],
@@ -72,7 +72,7 @@ const triadData: TriadItem[] = [
       "Backed by BharatX Ventures, our founder-led ecosystem now holds over ₹180 Cr+ in cumulative portfolio value, combining precision fabrication, export food terminals, and indigenous engineering.",
     ],
     metrics: [
-      { label: "Ecosystem Portfolio", value: "₹180 Cr+", color: "#3026B3" },
+      { label: "Ecosystem Portfolio", value: "₹180 Cr+", color: "#163A7A" },
       { label: "Road & Civil Works", value: "150+ KM", color: "#00B8D9" },
       { label: "Precision Casters Built", value: "500,000+", color: "#F54900" },
     ],
@@ -97,7 +97,7 @@ export function StrategicTriadTabs() {
           <div className="border-b border-[#E3E5EF] dark:border-white/10 pb-6 mb-7 sm:mb-10">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div>
-                <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3] dark:text-gold-400 mb-2">
+                <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.28em] text-[#163A7A] dark:text-gold-400 mb-2">
                   <span className="text-[#F54900] animate-pulse">◆</span>
                   <span>STRATEGIC STORY</span>
                 </div>
@@ -120,13 +120,13 @@ export function StrategicTriadTabs() {
                       className={`relative rounded-full px-5 sm:px-6 py-2.5 font-sans text-sm sm:text-base transition-all duration-300 active:scale-95 ${
                         isActive
                           ? "text-white font-semibold shadow-md"
-                          : "border border-[#E3E5EF] bg-white font-medium text-[#596579] hover:border-[#3026B3] hover:text-[#3026B3] dark:border-white/20 dark:bg-transparent dark:text-slate-300"
+                          : "border border-[#E3E5EF] bg-white font-medium text-[#596579] hover:border-[#163A7A] hover:text-[#163A7A] dark:border-white/20 dark:bg-transparent dark:text-slate-300"
                       }`}
                     >
                       {isActive && (
                         <motion.div
                           layoutId="triad-active-tab-bg"
-                          className="absolute inset-0 rounded-full bg-[#3026B3]"
+                          className="absolute inset-0 rounded-full bg-[#163A7A]"
                           transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         />
                       )}
@@ -150,7 +150,7 @@ export function StrategicTriadTabs() {
             >
               {/* Left Narrative (7 cols) */}
               <div className="lg:col-span-6 xl:col-span-7">
-                <span className="font-sans text-[10.5px] uppercase tracking-[0.25em] text-[#3026B3] dark:text-gold-400 font-semibold">
+                <span className="font-sans text-[10.5px] uppercase tracking-[0.25em] text-[#163A7A] dark:text-gold-400 font-semibold">
                   {current.badge}
                 </span>
 
@@ -170,7 +170,7 @@ export function StrategicTriadTabs() {
                     <div key={m.label} className="group">
                       <span
                         className="block font-heading text-xl sm:text-2xl font-semibold transition-transform duration-300 group-hover:scale-105"
-                        style={{ color: m.color || "#3026B3" }}
+                        style={{ color: m.color || "#163A7A" }}
                       >
                         {m.value}
                       </span>
@@ -187,7 +187,7 @@ export function StrategicTriadTabs() {
                     to={current.route}
                     data-cursor="button"
                     data-motion="true"
-                    className="group inline-flex items-center gap-3 rounded-full bg-[#3026B3] hover:bg-[#211B72] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 active:scale-95 fx-shine"
+                    className="group inline-flex items-center gap-3 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 active:scale-95 fx-shine"
                   >
                     <span className="capitalize">{current.cta}</span>
                     <Icon
@@ -199,7 +199,7 @@ export function StrategicTriadTabs() {
                   </Link>
 
                   {/* Operating Enterprise badge */}
-                  <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#E3E5EF] bg-white shadow-xs dark:border-white/10 dark:bg-white/[0.03] transition-colors hover:border-[#3026B3]/30">
+                  <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#E3E5EF] bg-white shadow-xs dark:border-white/10 dark:bg-white/[0.03] transition-colors hover:border-[#163A7A]/30">
                     <div className="w-5 h-5 rounded bg-white p-0.5 flex items-center justify-center">
                       <img
                         src={current.companyLogo}
@@ -219,7 +219,7 @@ export function StrategicTriadTabs() {
                 <div
                   data-cursor="card"
                   tabIndex={0}
-                  className="relative h-80 sm:h-96 lg:h-[480px] w-full overflow-hidden rounded-3xl border border-white/15 shadow-2xl bg-night-900 group fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                  className="relative h-80 sm:h-96 lg:h-[480px] w-full overflow-hidden rounded-3xl border border-white/15 shadow-2xl bg-night-900 group fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
                 >
                   <img
                     src={current.image}

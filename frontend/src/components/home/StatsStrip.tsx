@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SectionTransition } from "../motion/SectionTransition";
 
 const stats = [
-  { value: "₹180 Cr+", label: "Ecosystem Portfolio Valuation", color: "#3026B3", hoverColor: "#211B72" },
+  { value: "₹180 Cr+", label: "Ecosystem Portfolio Valuation", color: "#163A7A", hoverColor: "#0F2A5C" },
   { value: "6", label: "Operating Enterprises", color: "#00B8D9", hoverColor: "#009bb8" },
   { value: "150+", label: "Completed Projects & Deployments", color: "#F54900", hoverColor: "#d99500" },
   { value: "100%", label: "Founder-Led & Sovereign", color: "#15966B", hoverColor: "#0f7252" },

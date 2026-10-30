@@ -77,7 +77,7 @@ export function InstitutionalNewsroom() {
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-7 sm:mb-10">
             <div>
-              <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3] dark:text-[#F54900] mb-2">
+              <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.28em] text-[#163A7A] dark:text-[#F54900] mb-2">
                 <span className="text-[#F54900] animate-pulse">◆</span>
                 <span>CORPORATE DISCLOSURES</span>
               </div>
@@ -89,7 +89,7 @@ export function InstitutionalNewsroom() {
             <Link
               to="/contact"
               data-cursor="link"
-              className="group inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] text-[#3026B3] hover:text-[#211B72] dark:text-gold-400 dark:hover:text-gold-300 transition-colors"
+              className="group inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] text-[#163A7A] hover:text-[#0F2A5C] dark:text-gold-400 dark:hover:text-gold-300 transition-colors"
             >
               <span>Media Relations Desk</span>
               <Icon
@@ -106,13 +106,13 @@ export function InstitutionalNewsroom() {
             <div
               data-cursor="card"
               tabIndex={0}
-              className="group relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white shadow-sm transition-all duration-300 hover:border-[#3026B3]/40 hover:shadow-xl hover:-translate-y-1 mb-8 sm:mb-12 dark:border-white/10 dark:bg-white/[0.02] fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+              className="group relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white shadow-sm transition-all duration-300 hover:border-[#163A7A]/40 hover:shadow-xl hover:-translate-y-1 mb-8 sm:mb-12 dark:border-white/10 dark:bg-white/[0.02] fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
                 <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-3 font-sans text-[10.5px] uppercase tracking-wider text-[#596579] mb-4">
-                      <span className="text-[#3026B3] dark:text-gold-400 font-semibold">{lead.category}</span>
+                      <span className="text-[#163A7A] dark:text-gold-400 font-semibold">{lead.category}</span>
                       <span>·</span>
                       <span>{lead.publisher}</span>
                       <span>·</span>
@@ -132,7 +132,7 @@ export function InstitutionalNewsroom() {
                     <Link
                       to={lead.link}
                       data-cursor="link"
-                      className="group/link inline-flex items-center gap-2 text-sm font-semibold text-[#3026B3] hover:text-[#211B72] dark:text-gold-400 dark:hover:text-gold-300 transition-colors"
+                      className="group/link inline-flex items-center gap-2 text-sm font-semibold text-[#163A7A] hover:text-[#0F2A5C] dark:text-gold-400 dark:hover:text-gold-300 transition-colors"
                     >
                       <span>Read official release</span>
                       <Icon name="arrow-right" width={14} height={14} className="transition-transform duration-300 group-hover/link:translate-x-1" />
@@ -161,7 +161,7 @@ export function InstitutionalNewsroom() {
                 <Link
                   to={item.link}
                   data-cursor="card"
-                  className="group flex flex-col justify-between h-full rounded-2xl border border-[#E3E5EF] bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#3026B3]/40 hover:shadow-xl hover:-translate-y-1.5 dark:border-white/10 dark:bg-white/[0.02] fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                  className="group flex flex-col justify-between h-full rounded-2xl border border-[#E3E5EF] bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#163A7A]/40 hover:shadow-xl hover:-translate-y-1.5 dark:border-white/10 dark:bg-white/[0.02] fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
                 >
                   <div>
                     <div className="relative h-44 w-full overflow-hidden rounded-xl mb-5">
@@ -172,7 +172,7 @@ export function InstitutionalNewsroom() {
                         className="h-full w-full object-cover object-top filter brightness-[0.95] transition-transform duration-500 group-hover:scale-108"
                         loading="lazy"
                       />
-                      <span className="absolute top-3 left-3 rounded-full bg-white/95 backdrop-blur-md px-2.5 py-0.5 font-sans text-[9px] uppercase tracking-wider text-[#3026B3] border border-[#E3E5EF] font-semibold dark:bg-black/60 dark:text-gold-400 dark:border-white/10">
+                      <span className="absolute top-3 left-3 rounded-full bg-white/95 backdrop-blur-md px-2.5 py-0.5 font-sans text-[9px] uppercase tracking-wider text-[#163A7A] border border-[#E3E5EF] font-semibold dark:bg-black/60 dark:text-gold-400 dark:border-white/10">
                         {item.category}
                       </span>
                     </div>
@@ -184,7 +184,7 @@ export function InstitutionalNewsroom() {
 
                   <div className="mt-5 flex items-center justify-between border-t border-[#E3E5EF] pt-4 font-sans text-[10px] text-[#596579] dark:border-white/10 dark:text-slate-400">
                     <span>{item.date}</span>
-                    <span className="text-[#3026B3] dark:text-gold-400 font-semibold group-hover:translate-x-1.5 transition-transform inline-flex items-center gap-1">
+                    <span className="text-[#163A7A] dark:text-gold-400 font-semibold group-hover:translate-x-1.5 transition-transform inline-flex items-center gap-1">
                       Details →
                     </span>
                   </div>

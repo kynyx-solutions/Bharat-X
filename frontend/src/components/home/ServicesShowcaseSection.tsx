@@ -110,7 +110,7 @@ export function ServicesShowcaseSection() {
                       name="arrow-right"
                       width={15}
                       height={15}
-                      className="transition-transform duration-300 group-hover:translate-x-1 text-[#3026B3]"
+                      className="transition-transform duration-300 group-hover:translate-x-1 text-[#163A7A]"
                     />
                   </button>
 
@@ -224,7 +224,7 @@ export function ServicesShowcaseSection() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur-md px-3 py-1 font-sans text-[10px] uppercase tracking-wider text-[#3026B3] border border-[#E3E5EF] font-semibold dark:bg-black/60 dark:text-gold-400">
+                <span className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur-md px-3 py-1 font-sans text-[10px] uppercase tracking-wider text-[#163A7A] border border-[#E3E5EF] font-semibold dark:bg-black/60 dark:text-gold-400">
                   0{idx + 1} · {svc.shortLabel}
                 </span>
               </div>
@@ -234,7 +234,7 @@ export function ServicesShowcaseSection() {
                 <h3 className="font-heading text-2xl font-medium text-[#111827] dark:text-white transition-colors duration-300">
                   {svc.name}
                 </h3>
-                <p className="mt-2 text-sm font-medium text-[#3026B3] dark:text-gold-200">
+                <p className="mt-2 text-sm font-medium text-[#163A7A] dark:text-gold-200">
                   {svc.descriptor}
                 </p>
                 <p className="mt-2 text-xs text-[#596579] dark:text-slate-400 leading-relaxed">
@@ -244,7 +244,7 @@ export function ServicesShowcaseSection() {
                 <div className="mt-5 grid grid-cols-2 gap-3 border-t border-[#E3E5EF] dark:border-white/10 pt-4">
                   {svc.stats.slice(0, 2).map((st) => (
                     <div key={st.label}>
-                      <span className="block font-heading text-lg font-semibold text-[#3026B3] dark:text-white">
+                      <span className="block font-heading text-lg font-semibold text-[#163A7A] dark:text-white">
                         {st.value}
                       </span>
                       <span className="block font-sans text-[9.5px] uppercase tracking-wider text-[#596579] dark:text-slate-400">
@@ -257,7 +257,7 @@ export function ServicesShowcaseSection() {
                 <button
                   type="button"
                   onClick={() => setSelectedModal(svc)}
-                  className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#3026B3] hover:bg-[#211B72] py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
+                  className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
                 >
                   <span>read more</span>
                   <Icon name="arrow-right" width={14} height={14} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -305,17 +305,17 @@ export function ServicesShowcaseSection() {
                   <img src={selectedModal.companyLogo} alt={selectedModal.companyName} className="h-full w-full object-contain" />
                 </span>
                 <div>
-                  <span className="font-sans text-[9px] uppercase tracking-[0.24em] text-[#3026B3] dark:text-gold-400 font-semibold block">
+                  <span className="font-sans text-[9px] uppercase tracking-[0.24em] text-[#163A7A] dark:text-gold-400 font-semibold block">
                     OPERATING ENTERPRISE
                   </span>
                   <a
                     href={selectedModal.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-sans text-base text-[#111827] hover:text-[#3026B3] dark:text-white dark:hover:text-gold-300 transition-colors inline-flex items-center gap-1.5 font-medium"
+                    className="font-sans text-base text-[#111827] hover:text-[#163A7A] dark:text-white dark:hover:text-gold-300 transition-colors inline-flex items-center gap-1.5 font-medium"
                   >
                     <span>{selectedModal.companyName}</span>
-                    <Icon name="arrow-up-right" width={13} height={13} className="text-[#3026B3] dark:text-gold-400" />
+                    <Icon name="arrow-up-right" width={13} height={13} className="text-[#163A7A] dark:text-gold-400" />
                   </a>
                 </div>
               </div>
@@ -331,7 +331,7 @@ export function ServicesShowcaseSection() {
               </h3>
 
               {/* Descriptor */}
-              <p className="mt-3 text-base text-[#3026B3] dark:text-gold-200 font-medium">
+              <p className="mt-3 text-base text-[#163A7A] dark:text-gold-200 font-medium">
                 {selectedModal.descriptor}
               </p>
 
@@ -351,7 +351,7 @@ export function ServicesShowcaseSection() {
                       key={cap}
                       className="flex items-center gap-2.5 rounded-xl border border-[#E3E5EF] bg-[#FAF9F6] px-3.5 py-2.5 text-xs text-[#111827] dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
                     >
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#3026B3] dark:bg-gold-400" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#163A7A] dark:bg-gold-400" />
                       <span>{cap}</span>
                     </div>
                   ))}
@@ -362,7 +362,7 @@ export function ServicesShowcaseSection() {
               <div className="mt-6 grid grid-cols-3 gap-3 border-t border-[#E3E5EF] dark:border-white/10 pt-5">
                 {selectedModal.stats.map((st) => (
                   <div key={st.label} className="text-center sm:text-left">
-                    <span className="block font-heading text-xl sm:text-2xl font-semibold text-[#3026B3] dark:text-white">
+                    <span className="block font-heading text-xl sm:text-2xl font-semibold text-[#163A7A] dark:text-white">
                       {st.value}
                     </span>
                     <span className="block font-sans text-[10px] uppercase tracking-wider text-[#596579] dark:text-slate-400">
@@ -377,7 +377,7 @@ export function ServicesShowcaseSection() {
                 <Link
                   to="/contact"
                   onClick={() => setSelectedModal(null)}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#3026B3] hover:bg-[#211B72] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors"
                 >
                   <span>Inquire for {selectedModal.name}</span>
                   <Icon name="arrow-right" width={14} height={14} />

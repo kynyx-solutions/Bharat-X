@@ -10,14 +10,14 @@ import { CardFill } from "../components/common/CardSurface";
 
 /** Card colour per sector (keyed by servicesData id): tint accent, and a darker ink for text on the tint. */
 const sectorTone: Record<string, { accent: string; ink: string }> = {
-  "tech-ai": { accent: "#4B40D4", ink: "#3026B3" },
-  infrastructure: { accent: "#3026B3", ink: "#3026B3" },
+  "tech-ai": { accent: "#2B5299", ink: "#163A7A" },
+  infrastructure: { accent: "#163A7A", ink: "#163A7A" },
   manufacturing: { accent: "#00B8D9", ink: "#007A8F" },
   agriculture: { accent: "#15966B", ink: "#0F7A56" },
   labs: { accent: "#059669", ink: "#047857" },
-  ventures: { accent: "#211B72", ink: "#211B72" },
+  ventures: { accent: "#0F2A5C", ink: "#0F2A5C" },
 };
-const fallbackTone = { accent: "#3026B3", ink: "#3026B3" };
+const fallbackTone = { accent: "#163A7A", ink: "#163A7A" };
 
 export default function IndustriesPage() {
   usePageMeta({
@@ -69,7 +69,7 @@ export default function IndustriesPage() {
                 <StaggerItem key={svc.id}>
                   <div
                     data-cursor="card"
-                    className="group relative flex flex-col justify-between h-full rounded-3xl border border-[#E3E5EF] bg-white overflow-hidden shadow-xl transition-all duration-300 hover:border-[#3026B3] hover:shadow-2xl fx-lift"
+                    className="group relative flex flex-col justify-between h-full rounded-3xl border border-[#E3E5EF] bg-white overflow-hidden shadow-xl transition-all duration-300 hover:border-[#163A7A] hover:shadow-2xl fx-lift"
                   >
                     <CardFill accent={tone.accent} tone="tint" />
                     <div className="relative">
@@ -105,7 +105,7 @@ export default function IndustriesPage() {
                         <h2 className="mt-2 font-heading text-2xl font-medium text-[#111827] transition-colors duration-300">
                           {svc.name}
                         </h2>
-                        <p className="mt-2 text-sm font-semibold text-[#3026B3]">
+                        <p className="mt-2 text-sm font-semibold text-[#163A7A]">
                           {svc.descriptor}
                         </p>
                         <p className="mt-3 text-xs sm:text-sm text-[#374151] leading-relaxed font-sans">
@@ -121,7 +121,7 @@ export default function IndustriesPage() {
                             {svc.capabilities.slice(0, 3).map((cap) => (
                               <span
                                 key={cap}
-                                className="rounded-md border border-[#E3E5EF] bg-white/90 px-2 py-0.5 text-[11px] text-[#211B72] font-medium transition-colors group-hover:border-[#3026B3]/40"
+                                className="rounded-md border border-[#E3E5EF] bg-white/90 px-2 py-0.5 text-[11px] text-[#0F2A5C] font-medium transition-colors group-hover:border-[#163A7A]/40"
                               >
                                 {cap}
                               </span>
@@ -132,7 +132,7 @@ export default function IndustriesPage() {
                     </div>
 
                     {/* Card Footer */}
-                    <div className="relative p-6 sm:p-7 border-t border-[#211B72]/10 flex items-center justify-between">
+                    <div className="relative p-6 sm:p-7 border-t border-[#0F2A5C]/10 flex items-center justify-between">
                       <div>
                         <span
                           className="block font-heading text-lg font-semibold transition-transform group-hover:scale-105"
@@ -148,7 +148,7 @@ export default function IndustriesPage() {
                       <Link
                         to={`/verticals#${svc.id}`}
                         data-cursor="button"
-                        className="inline-flex items-center gap-1.5 rounded-full bg-[#3026B3] text-white hover:bg-[#211B72] px-4 py-2 text-xs font-semibold shadow-md transition-all fx-shine group/btn"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-[#163A7A] text-white hover:bg-[#0F2A5C] px-4 py-2 text-xs font-semibold shadow-md transition-all fx-shine group/btn"
                       >
                         <span>Deep Dive</span>
                         <Icon name="arrow-right" width={12} height={12} className="transition-transform group-hover/btn:translate-x-1" />
@@ -176,7 +176,7 @@ export default function IndustriesPage() {
             </div>
 
             <div className="relative z-10">
-              <span className="font-sans text-xs uppercase tracking-[0.25em] text-[#3026B3] block mb-3 font-semibold">
+              <span className="font-sans text-xs uppercase tracking-[0.25em] text-[#163A7A] block mb-3 font-semibold">
                 CROSS-SECTOR COOPERATION
               </span>
               <AnimatedHeading as="h3" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl text-ink-900 font-medium">
@@ -191,7 +191,7 @@ export default function IndustriesPage() {
                     to="/contact"
                     data-cursor="button"
                     data-motion="true"
-                    className="inline-flex items-center gap-3 rounded-full bg-[#3026B3] text-white hover:bg-[#211B72] px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
+                    className="inline-flex items-center gap-3 rounded-full bg-[#163A7A] text-white hover:bg-[#0F2A5C] px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
                   >
                     <span>Initiate Sector Inquiry</span>
                     <Icon name="arrow-right" width={14} height={14} />

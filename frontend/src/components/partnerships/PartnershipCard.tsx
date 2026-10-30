@@ -5,7 +5,7 @@ import { FeatureIcon } from "../common/FeatureIcon";
 
 const chipStyles: Record<PartnershipType, { light: string; dark: string }> = {
   MoU: {
-    light: "bg-[#3026B3]/[0.07] text-[#3026B3] ring-[#3026B3]/20",
+    light: "bg-[#163A7A]/[0.07] text-[#163A7A] ring-[#163A7A]/20",
     dark: "bg-[#8F88FF]/15 text-[#C9C5FF] ring-[#8F88FF]/35",
   },
   Programme: {
@@ -43,7 +43,7 @@ function ReadMore({ href, tone = "light" }: { href: string; tone?: "light" | "da
       className={cn(
         "flex h-9 w-9 items-center justify-center rounded-full border transition-colors duration-300",
         tone === "light"
-          ? "border-[#E3E5EF] text-[#3026B3] hover:border-[#3026B3] hover:bg-[#3026B3] hover:text-white"
+          ? "border-[#E3E5EF] text-[#163A7A] hover:border-[#163A7A] hover:bg-[#163A7A] hover:text-white"
           : "border-white/30 text-white hover:border-[#F54900] hover:bg-[#F54900]",
       )}
     >

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { brandConfig } from "../../config/brand";
 import { footerSections } from "../../data/navigation";
 import { DuotoneIcon, Icon } from "../../utils/icons";
-import FooterOrbScene from "../three/FooterOrbScene";
 
 /*export function FooterCTA() {
  Currently commented out
@@ -18,7 +17,7 @@ import FooterOrbScene from "../three/FooterOrbScene";
           <h2 className="font-heading text-3xl font-medium leading-[1.1] tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl md:text-5xl lg:text-6xl transition-colors duration-300">
             BUILDING THE FOUNDATIONS
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3026B3] via-[#F54900] to-[#00B8D9]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#163A7A] via-[#F54900] to-[#00B8D9]">
               OF MODERN BHARAT.
             </span>
           </h2>
@@ -29,7 +28,7 @@ import FooterOrbScene from "../three/FooterOrbScene";
             <Link
               to="/contact"
               data-cursor="button"
-              className="group fx-press fx-shine inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#3026B3] px-8 py-4 text-[15px] font-semibold text-white shadow-md shadow-[#3026B3]/25 transition-all duration-300 hover:bg-[#211B72] hover:shadow-[0_10px_35px_-8px_rgba(48,38,179,0.45)] dark:bg-[#F54900] dark:text-[#111827] dark:hover:bg-[#ca3500]"
+              className="group fx-press fx-shine inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#163A7A] px-8 py-4 text-[15px] font-semibold text-white shadow-md shadow-[#163A7A]/25 transition-all duration-300 hover:bg-[#0F2A5C] hover:shadow-[0_10px_35px_-8px_rgba(22, 58, 122,0.45)] dark:bg-[#F54900] dark:text-[#111827] dark:hover:bg-[#ca3500]"
             >
               Talk to BharatX
               <Icon
@@ -41,7 +40,7 @@ import FooterOrbScene from "../three/FooterOrbScene";
             </Link>
             <Link
               to="/verticals"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full border border-[#E3E5EF] bg-white px-8 py-4 text-[15px] font-semibold text-[#111827] shadow-sm transition-all duration-300 hover:border-[#3026B3] hover:text-[#3026B3] hover:shadow-md dark:border-white/15 dark:bg-white/[0.06] dark:text-white dark:hover:border-[#F54900]"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full border border-[#E3E5EF] bg-white px-8 py-4 text-[15px] font-semibold text-[#111827] shadow-sm transition-all duration-300 hover:border-[#163A7A] hover:text-[#163A7A] hover:shadow-md dark:border-white/15 dark:bg-white/[0.06] dark:text-white dark:hover:border-[#F54900]"
             >
               Explore Services
             </Link>
@@ -97,7 +96,7 @@ export function Footer() {
             {/* 1. Businesses */}
             <nav aria-label="Businesses">
               <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="layers" size={14} className="text-[#3026B3]" />
+                <DuotoneIcon name="layers" size={14} className="text-[#163A7A]" />
                 Businesses
               </div>
               <ul className="flex flex-col gap-1.5">
@@ -106,11 +105,11 @@ export function Footer() {
                     <Link
                       to={item.to}
                       data-cursor="link"
-                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#3026B3] hover:translate-x-1"
+                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#163A7A] hover:translate-x-1"
                     >
                       <span
                         aria-hidden
-                        className="h-px w-0 bg-[#3026B3] transition-all duration-300 group-hover:w-2.5"
+                        className="h-px w-0 bg-[#163A7A] transition-all duration-300 group-hover:w-2.5"
                       />
                       <span className="fx-underline">{item.label}</span>
                     </Link>
@@ -122,7 +121,7 @@ export function Footer() {
             {/* 2. Group */}
             <nav aria-label="Group">
               <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="building-2" size={14} className="text-[#3026B3] fx-icon-pop" />
+                <DuotoneIcon name="building-2" size={14} className="text-[#163A7A] fx-icon-pop" />
                 Group
               </div>
               <ul className="flex flex-col gap-1.5">
@@ -131,11 +130,11 @@ export function Footer() {
                     <Link
                       to={item.to}
                       data-cursor="link"
-                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#3026B3] hover:translate-x-1"
+                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#163A7A] hover:translate-x-1"
                     >
                       <span
                         aria-hidden
-                        className="h-px w-0 bg-[#3026B3] transition-all duration-300 group-hover:w-2.5"
+                        className="h-px w-0 bg-[#163A7A] transition-all duration-300 group-hover:w-2.5"
                       />
                       <span className="fx-underline">{item.label}</span>
                     </Link>
@@ -147,7 +146,7 @@ export function Footer() {
             {/* 3. Connect */}
             <nav aria-label="Connect">
               <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="share-2" size={14} className="text-[#3026B3] fx-icon-pop" />
+                <DuotoneIcon name="share-2" size={14} className="text-[#163A7A] fx-icon-pop" />
                 Connect
               </div>
               <ul className="flex flex-col gap-1.5">
@@ -158,11 +157,11 @@ export function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       data-cursor="link"
-                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#3026B3] hover:translate-x-1"
+                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#163A7A] hover:translate-x-1"
                     >
                       <span
                         aria-hidden
-                        className="h-px w-0 bg-[#3026B3] transition-all duration-300 group-hover:w-2.5"
+                        className="h-px w-0 bg-[#163A7A] transition-all duration-300 group-hover:w-2.5"
                       />
                       <span className="fx-underline">{item.label}</span>
                       <Icon
@@ -180,7 +179,7 @@ export function Footer() {
             {/* 4. Address */}
             <div aria-label="Address">
               <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="map-pin" size={14} className="text-[#3026B3]" />
+                <DuotoneIcon name="map-pin" size={14} className="text-[#163A7A]" />
                 Address
               </div>
               <address className="not-italic text-[13px] leading-snug text-[#596579] space-y-2">
@@ -195,7 +194,7 @@ export function Footer() {
                   <div>
                     <a
                       href={`tel:${brandConfig.contact.phoneTel}`}
-                      className="inline-flex items-center gap-2 text-[#596579] hover:text-[#3026B3] transition-colors"
+                      className="inline-flex items-center gap-2 text-[#596579] hover:text-[#163A7A] transition-colors"
                     >
                       <DuotoneIcon name="phone" size={14} className="shrink-0 text-[#00B8D9]" />
                       <span>{brandConfig.contact.phoneFormatted}</span>
@@ -204,7 +203,7 @@ export function Footer() {
                   <div>
                     <a
                       href={`mailto:${brandConfig.contact.email}`}
-                      className="inline-flex items-center gap-2 text-[#596579] hover:text-[#3026B3] transition-colors"
+                      className="inline-flex items-center gap-2 text-[#596579] hover:text-[#163A7A] transition-colors"
                     >
                       <DuotoneIcon name="mail" size={14} className="shrink-0 text-[#F54900]" />
                       <span>{brandConfig.contact.email}</span>
@@ -227,7 +226,7 @@ export function Footer() {
               href="https://kynyx.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-[0.16em] text-[#596579] transition-colors hover:text-[#3026B3]"
+              className="group inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-[0.16em] text-[#596579] transition-colors hover:text-[#163A7A]"
             >
               <span>Made with</span>
               <Icon
@@ -238,7 +237,7 @@ export function Footer() {
               />
               <span>
                 by{" "}
-                <span className="font-bold text-[#111827] group-hover:text-[#3026B3] transition-colors">
+                <span className="font-bold text-[#111827] group-hover:text-[#163A7A] transition-colors">
                   KYNYX
                 </span>
               </span>
@@ -251,7 +250,7 @@ export function Footer() {
                 <span className="text-[#94A3B8]">•</span>
                 <Link
                   to={item.to}
-                  className="transition-colors hover:text-[#3026B3]"
+                  className="transition-colors hover:text-[#163A7A]"
                 >
                   {item.label}
                 </Link>

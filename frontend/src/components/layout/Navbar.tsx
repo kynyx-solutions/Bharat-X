@@ -70,7 +70,7 @@ export function Navbar() {
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 bg-white pt-[env(safe-area-inset-top,0px)] transition-all duration-500",
-          (scrolled || mega) && "shadow-[0_4px_20px_-5px_rgba(48,38,179,0.08)]",
+          (scrolled || mega) && "shadow-[0_4px_20px_-5px_rgba(22, 58, 122,0.08)]",
         )}
         style={{ borderBottom: (scrolled || mega) ? "1px solid #E3E5EF" : "none" }}
         onMouseLeave={() => setMega(null)}
@@ -245,7 +245,7 @@ function NavItem({
         data-cursor="link"
         className={cn(
           "group relative flex items-center gap-1.5 rounded-full px-2.5 py-1.5 xl:px-3.5 xl:py-2 text-[14px] xl:text-[15px] font-medium transition-all duration-300",
-          active ? "text-[#3026B3] font-semibold" : "text-[#111827] hover:text-[#3026B3]",
+          active ? "text-[#163A7A] font-semibold" : "text-[#111827] hover:text-[#163A7A]",
         )}
       >
         <DuotoneIcon
@@ -253,7 +253,7 @@ function NavItem({
           size={17}
           className={cn(
             "shrink-0 transition-transform duration-300 group-hover:scale-110 fx-icon-pop",
-            active ? "text-[#3026B3]" : "text-[#596579] group-hover:text-[#3026B3]",
+            active ? "text-[#163A7A]" : "text-[#596579] group-hover:text-[#163A7A]",
           )}
         />
         <span className="whitespace-nowrap">{item.label}</span>
@@ -273,13 +273,13 @@ function NavItem({
           <motion.span
             aria-hidden
             layoutId="navbar-active-indicator"
-            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2.5px] rounded-full bg-gradient-to-r from-[#3026B3] to-[#F54900]"
+            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2.5px] rounded-full bg-gradient-to-r from-[#163A7A] to-[#F54900]"
             transition={{ type: "spring", stiffness: 380, damping: 30 }}
           />
         ) : (
           <span
             aria-hidden
-            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2px] rounded-full bg-[#3026B3]/30 origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2px] rounded-full bg-[#163A7A]/30 origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
           />
         )}
       </NavLink>
@@ -298,7 +298,7 @@ function MegaPanel({ kind, className }: { kind: Exclude<MegaKey, null>; classNam
 function ServicesMega() {
   const [preview, setPreview] = useState(0);
   const activeSvc = menuServices[preview] ?? menuServices[0];
-  const accentColors = ["#3026B3", "#F54900", "#00B8D9", "#15966B", "#211B72", "#3026B3"];
+  const accentColors = ["#163A7A", "#F54900", "#00B8D9", "#15966B", "#0F2A5C", "#163A7A"];
 
   return (
     <div className="container-x grid grid-cols-[1fr_340px] gap-8 py-8">

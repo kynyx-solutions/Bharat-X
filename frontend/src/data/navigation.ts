@@ -34,7 +34,7 @@ export const footerSections = {
     { label: "How We Build", to: "/how-we-build" },
     { label: "Impact", to: "/impact" },
     { label: "Leadership", to: "/leadership" },
-    { label: "Insights", to: "/#inside-bharatx" },
+    { label: "Insights", to: "/insights" },
     { label: "Careers", to: "/careers" },
   ],
   connect: [

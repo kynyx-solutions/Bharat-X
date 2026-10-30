@@ -42,7 +42,7 @@ export interface FeatureIconProps {
   className?: string;
 }
 
-export function FeatureIcon({ name, accent = "#3026B3", size = 44, className }: FeatureIconProps) {
+export function FeatureIcon({ name, accent = "#163A7A", size = 44, className }: FeatureIconProps) {
   const style = {
     ...tileColours(accent),
     width: size,

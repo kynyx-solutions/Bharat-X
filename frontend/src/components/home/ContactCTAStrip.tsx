@@ -22,7 +22,7 @@ export function ContactCTAStrip() {
         </div>
 
         {/* Decorative glowing blobs */}
-        <div className="pointer-events-none absolute -left-32 top-1/2 -translate-y-1/2 h-80 w-80 rounded-full bg-[#3026B3]/30 blur-[90px]" />
+        <div className="pointer-events-none absolute -left-32 top-1/2 -translate-y-1/2 h-80 w-80 rounded-full bg-[#163A7A]/30 blur-[90px]" />
         <div className="pointer-events-none absolute -right-20 top-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-[#F54900]/20 blur-[70px]" />
 
         <div className="container-x relative z-10">

@@ -39,7 +39,7 @@ export function PressButton({
       data-motion="true"
       disabled={disabled}
       className={cn(
-        "cursor-pointer focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3]",
+        "cursor-pointer focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A]",
         shine && "fx-shine",
         className
       )}

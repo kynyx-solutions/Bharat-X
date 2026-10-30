@@ -54,7 +54,7 @@ export function LeadershipKeynote() {
           {/* Section Tag */}
           <div className="mx-auto max-w-4xl text-center">
             <Reveal>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/20 bg-white px-4 py-1.5 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] dark:border-gold-400/30 dark:bg-gold-400/10 dark:text-gold-400 backdrop-blur-md hover:bg-white/90 transition-colors">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/20 bg-white px-4 py-1.5 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] dark:border-gold-400/30 dark:bg-gold-400/10 dark:text-gold-400 backdrop-blur-md hover:bg-white/90 transition-colors">
                 <span className="text-[#F54900] animate-pulse">◆</span>
                 <span>ANNUAL EXECUTIVE ADDRESS</span>
               </div>
@@ -62,7 +62,7 @@ export function LeadershipKeynote() {
 
             <Reveal delay={0.1}>
               <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#111827] dark:text-white transition-colors duration-300">
-                “Building sovereign industrial depth for a <span className="text-[#3026B3] dark:text-[#F54900]">Viksit Bharat.</span>”
+                “Building sovereign industrial depth for a <span className="text-[#163A7A] dark:text-[#F54900]">Viksit Bharat.</span>”
               </h2>
             </Reveal>
 
@@ -78,7 +78,7 @@ export function LeadershipKeynote() {
             <div
               data-cursor="card"
               tabIndex={0}
-              className="group relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+              className="group relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
             >
               {/* Visual Header / Banner */}
               <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
@@ -118,7 +118,7 @@ export function LeadershipKeynote() {
                   data-cursor="button"
                   data-motion="true"
                   onClick={() => setShowTranscript((v) => !v)}
-                  className="inline-flex items-center gap-3 rounded-full bg-[#3026B3] hover:bg-[#211B72] px-6 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all shadow-sm active:scale-95 fx-shine"
+                  className="inline-flex items-center gap-3 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] px-6 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all shadow-sm active:scale-95 fx-shine"
                 >
                   <span>{showTranscript ? "Hide Transcript" : "View Official Transcript"}</span>
                   <Icon
@@ -149,8 +149,8 @@ export function LeadershipKeynote() {
                             data-cursor="button"
                             onClick={() => setActiveChapter(idx)}
                             className={`rounded-full px-4 py-1.5 font-sans text-xs transition-all active:scale-95 ${activeChapter === idx
-                              ? "bg-[#3026B3] text-white font-semibold shadow-xs"
-                              : "border border-[#E3E5EF] bg-white text-[#596579] hover:text-[#111827] hover:border-[#3026B3]"
+                              ? "bg-[#163A7A] text-white font-semibold shadow-xs"
+                              : "border border-[#E3E5EF] bg-white text-[#596579] hover:text-[#111827] hover:border-[#163A7A]"
                               }`}
                           >
                             <span className={activeChapter === idx ? "text-[#F54900]" : "text-[#F54900] font-bold"}>
@@ -166,7 +166,7 @@ export function LeadershipKeynote() {
                         <span className="font-sans text-xs text-[#F54900] font-semibold uppercase tracking-widest">
                           CHAPTER {transcriptChapters[activeChapter].number}
                         </span>
-                        <h4 className="mt-2 font-heading text-2xl text-[#211B72] transition-colors duration-300">
+                        <h4 className="mt-2 font-heading text-2xl text-[#0F2A5C] transition-colors duration-300">
                           {transcriptChapters[activeChapter].title}
                         </h4>
                         <div className="mt-4 space-y-4 text-sm sm:text-base text-[#596579] leading-relaxed font-sans">

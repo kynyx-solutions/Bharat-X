@@ -19,7 +19,7 @@ export function Breadcrumbs({
               <Link
                 to={item.to}
                 data-cursor="link"
-                className="transition-colors hover:text-[#3026B3] dark:hover:text-pulse-300 fx-underline"
+                className="transition-colors hover:text-[#163A7A] dark:hover:text-pulse-300 fx-underline"
               >
                 {item.label}
               </Link>

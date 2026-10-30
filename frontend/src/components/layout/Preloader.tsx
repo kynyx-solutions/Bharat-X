@@ -1,6 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { heroSceneReadyTimeout } from "../../config/sceneReady";
 import { track } from "../../services/analytics";
 import { LogoMark } from "./Logo"; // re-exported below for external use
 
@@ -13,8 +12,8 @@ const STATUS_LINES = [
 
 /**
  * Branded preloader (Section 46):
- * logo build-in + real progress (gated on window load, fonts and the hero
- * 3D scene, with hard caps) + cycling status line. Once per session.
+ * logo build-in + real progress (gated on window load and fonts, capped at 1.2s)
+ * + cycling status line. Once per session.
  */
 export function Preloader() {
   const reduced = useReducedMotion();
@@ -51,17 +50,14 @@ export function Preloader() {
     };
     raf = requestAnimationFrame(tick);
 
-    const gate = Promise.all([
+    const ready = Promise.all([
       window.document.readyState === "complete"
         ? Promise.resolve()
         : new Promise<void>((r) => window.addEventListener("load", () => r(), { once: true })),
-      Promise.race([
-        Promise.resolve().then(() => (document.fonts?.ready ?? null)),
-        new Promise<void>((r) => setTimeout(r, 1600)),
-      ]),
-      heroSceneReadyTimeout(2400),
-      new Promise<void>((r) => setTimeout(r, 2100)), // hard cap
-    ]).then(() => {
+      Promise.resolve().then(() => document.fonts?.ready ?? null),
+    ]);
+    // Hard cap: race (not all) so a slow image or font can never hold the page behind the loader
+    const gate = Promise.race([ready, new Promise<void>((r) => setTimeout(r, 1200))]).then(() => {
       done = true;
       setProgress(100);
     });

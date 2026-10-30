@@ -9,14 +9,14 @@ import { CardFill, CardPhoto, cardImage } from "../components/common/CardSurface
 import { FeatureIcon } from "../components/common/FeatureIcon";
 
 const governance = [
-  { icon: "scale", t: "Clear Division of Decision Rights", d: "Group stewardship governs capital discipline, risk management, and shared standards. Tactical execution belongs to sector teams.", color: "#3026B3", image: cardImage("leadership-02-governance-decision-rights") },
+  { icon: "scale", t: "Clear Division of Decision Rights", d: "Group stewardship governs capital discipline, risk management, and shared standards. Tactical execution belongs to sector teams.", color: "#163A7A", image: cardImage("leadership-02-governance-decision-rights") },
   { icon: "file-check", t: "Standardised Quality & Safety", d: "Quality, material integrity, and cryptographic data protocols are applied uniformly with auditable public accounting.", color: "#00B8D9", image: cardImage("leadership-03-governance-quality-safety") },
   { icon: "eye", t: "Independent Standards Oversight", d: "Each operating sector is benchmarked against international standards by the group's standards oversight council.", color: "#F54900", image: cardImage("leadership-04-governance-standards-oversight") },
   { icon: "shield-check", t: "Institutional Compliance", d: "Regulatory, phytosanitary, and trade compliance is embedded into foundational processes from day one.", color: "#15966B", image: cardImage("leadership-05-governance-compliance") },
 ];
 
 const operating = [
-  { n: "01", t: "The group sets the standard; the sector sets the pace.", d: "Standards are non-negotiable. Execution is owned at the sector level, with authentic decision rights and measurable KPIs.", color: "#3026B3" },
+  { n: "01", t: "The group sets the standard; the sector sets the pace.", d: "Standards are non-negotiable. Execution is owned at the sector level, with authentic decision rights and measurable KPIs.", color: "#163A7A" },
   { n: "02", t: "Capital discipline, not bureaucratic delay.", d: "Capital allocation follows evidence and multi-decade compounding — reviewed transparently across all sectors.", color: "#00B8D9" },
   { n: "03", t: "Synergies are proved, not mandated.", d: "Any cross-sector collaboration must create demonstrable economic and operational value before resources are committed.", color: "#F54900" },
   { n: "04", t: "Data sovereignty is absolute.", d: "Confidentiality, client data residency, and cryptographic isolation between sectors are maintained as constitutional rules.", color: "#15966B" },
@@ -66,7 +66,7 @@ export default function LeadershipPage() {
       <SectionTransition className="py-6 sm:py-9">
         <div className="container-x">
           <div data-cursor="card" className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white shadow-xl p-6 sm:p-10 lg:p-12 fx-lift">
-            <CardFill accent="#3026B3" tone="tint" />
+            <CardFill accent="#163A7A" tone="tint" />
             <div className="relative grid items-stretch gap-10 lg:grid-cols-12">
               {/* Portrait */}
               <div className="lg:col-span-5 relative min-h-[360px] sm:min-h-[400px] lg:h-[610px] rounded-2xl overflow-hidden border border-[#E3E5EF] group" data-cursor="image">
@@ -80,11 +80,11 @@ export default function LeadershipPage() {
 
               {/* Narrative & Quote */}
               <div className="lg:col-span-7">
-                <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#3026B3] font-semibold">
+                <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#163A7A] font-semibold">
                   NATIONAL ECONOMIC VISION
                 </span>
                 <AnimatedHeading as="h2" effect="words" hover="color" className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight">
-                  Architecting <span className="text-[#3026B3]">Sovereign Industrial Depth</span> for Bharat.
+                  Architecting <span className="text-[#163A7A]">Sovereign Industrial Depth</span> for Bharat.
                 </AnimatedHeading>
 
                 <div className="mt-6 rounded-2xl border-l-4 border-[#F54900] bg-[#0B1F47] p-6 shadow-md fx-lift">
@@ -103,7 +103,7 @@ export default function LeadershipPage() {
                       icon: "compass",
                       title: "Sovereign Industrial Capacity",
                       desc: "Deploying permanent capital across civil infrastructure, heavy logistics, and automated precision robotics.",
-                      color: "#3026B3",
+                      color: "#163A7A",
                     },
                     {
                       icon: "cpu",
@@ -121,7 +121,7 @@ export default function LeadershipPage() {
                     <div
                       key={m.title}
                       data-cursor="card"
-                      className="group flex items-start gap-3 rounded-xl border border-l-4 p-3.5 transition-all duration-300 hover:border-[#3026B3] fx-lift"
+                      className="group flex items-start gap-3 rounded-xl border border-l-4 p-3.5 transition-all duration-300 hover:border-[#163A7A] fx-lift"
                       style={{ backgroundColor: `color-mix(in srgb, ${m.color} 9%, white)`, borderColor: `${m.color}40`, borderLeftColor: m.color }}
                     >
                       <FeatureIcon
@@ -147,7 +147,7 @@ export default function LeadershipPage() {
       <SectionTransition className="py-6 sm:py-9">
         <div className="container-x">
           <div className="max-w-2xl mb-6 sm:mb-8">
-            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#3026B3] font-semibold">
+            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#163A7A] font-semibold">
               BOARDROOM ARCHITECTURE
             </span>
             <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827]">
@@ -187,7 +187,7 @@ export default function LeadershipPage() {
       <SectionTransition className="py-6 sm:py-9">
         <div className="container-x">
           <div className="max-w-2xl mb-9">
-            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#3026B3] font-semibold">
+            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#163A7A] font-semibold">
               EXECUTIVE CONSTITUTION
             </span>
             <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827]">
@@ -221,7 +221,7 @@ export default function LeadershipPage() {
                 to="/contact"
                 data-cursor="button"
                 data-motion="true"
-                className="inline-flex items-center gap-3 rounded-full bg-[#3026B3] text-white hover:bg-[#211B72] px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
+                className="inline-flex items-center gap-3 rounded-full bg-[#163A7A] text-white hover:bg-[#0F2A5C] px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
               >
                 <span>Connect with Corporate Secretariat</span>
                 <Icon name="arrow-right" width={15} height={15} />

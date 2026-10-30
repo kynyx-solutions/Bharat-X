@@ -10,13 +10,13 @@ export function InsideBharatXSection() {
         <div className="container-x relative z-10">
           {/* Header */}
           <div className="max-w-3xl mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs hover:bg-[#3026B3]/15 transition-colors">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3] animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs hover:bg-[#163A7A]/15 transition-colors">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
               <span>INSIDE BHARATX</span>
             </div>
 
             <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300">
-              Inside <span className="text-[#3026B3] transition-colors">BharatX</span>
+              Inside <span className="text-[#163A7A] transition-colors">BharatX</span>
             </h2>
 
             <p className="mt-3 text-base text-[#596579] max-w-2xl leading-relaxed">
@@ -57,7 +57,7 @@ export function InsideBharatXSection() {
 
                 <div className="mt-8">
                   <Link
-                    to="/about#newsroom"
+                    to="/insights"
                     data-cursor="link"
                     className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#F54900] transition-all hover:text-white"
                   >

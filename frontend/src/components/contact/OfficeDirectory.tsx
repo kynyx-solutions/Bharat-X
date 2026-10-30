@@ -38,7 +38,7 @@ export function OfficeDirectory() {
         <CardFill accent="#15966B" tone="tint" />
         <div className="relative grid grid-cols-1 items-stretch gap-8 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
           <div className="flex flex-col justify-center">
-            <span className="font-sans text-xs uppercase tracking-[0.26em] text-[#3026B3] font-bold block mb-1">
+            <span className="font-sans text-xs uppercase tracking-[0.26em] text-[#163A7A] font-bold block mb-1">
               BHARATX GROUP
             </span>
             <AnimatedHeading as="h3" effect="blur" hover="shift" className="font-heading text-2xl font-medium text-[#111827] mb-4">
@@ -50,7 +50,7 @@ export function OfficeDirectory() {
             <div className="space-y-3 font-sans text-xs sm:text-[13px] text-[#111827]">
               <div className="flex items-center gap-3">
                 <span className="text-[#374151] uppercase tracking-wider w-24">Email</span>
-                <a href="mailto:contact@bharatx.group" data-cursor="link" className="font-bold text-[#3026B3] hover:underline">
+                <a href="mailto:contact@bharatx.group" data-cursor="link" className="font-bold text-[#163A7A] hover:underline">
                   contact@bharatx.group
                 </a>
               </div>
@@ -60,7 +60,7 @@ export function OfficeDirectory() {
                 <a
                   href={`tel:${brandConfig.contact.phoneTel}`}
                   data-cursor="link"
-                  className="font-bold text-[#111827] hover:text-[#3026B3] transition-colors"
+                  className="font-bold text-[#111827] hover:text-[#163A7A] transition-colors"
                 >
                   {brandConfig.contact.phoneFormatted}
                 </a>
@@ -81,7 +81,7 @@ export function OfficeDirectory() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="button"
-                className="inline-flex items-center gap-2 rounded-full bg-white border border-[#E3E5EF] hover:border-[#3026B3] hover:text-[#3026B3] text-[#111827] px-6 py-3 text-xs font-sans font-bold uppercase tracking-wider shadow-xs transition-all fx-lift"
+                className="inline-flex items-center gap-2 rounded-full bg-white border border-[#E3E5EF] hover:border-[#163A7A] hover:text-[#163A7A] text-[#111827] px-6 py-3 text-xs font-sans font-bold uppercase tracking-wider shadow-xs transition-all fx-lift"
               >
                 <span>Get Directions</span>
                 <Icon name="arrow-up-right" width={14} height={14} />
@@ -169,7 +169,7 @@ export function OfficeDirectory() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-cursor="link"
-                    className="inline-flex items-center gap-1 text-[#3026B3] transition-colors hover:text-[#211B72]"
+                    className="inline-flex items-center gap-1 text-[#163A7A] transition-colors hover:text-[#0F2A5C]"
                   >
                     Directions
                     <Icon name="arrow-up-right" width={14} height={14} />

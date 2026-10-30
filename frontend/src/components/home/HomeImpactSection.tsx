@@ -9,8 +9,8 @@ const impactAreas = [
     description: "Arterial connectivity, civil utilities, and physical foundation for economic corridors.",
     image: "/assets/backgrounds/infrastructure-real.jpg",
     link: "/impact#infrastructure",
-    accent: "#3026B3",
-    badgeBg: "bg-[#3026B3]",
+    accent: "#163A7A",
+    badgeBg: "bg-[#163A7A]",
   },
   {
     title: "Agriculture",
@@ -33,8 +33,8 @@ const impactAreas = [
     description: "Sovereign enterprise intelligence, automated workflows, and digital infrastructure.",
     image: "/assets/backgrounds/ai-circuit.jpg",
     link: "/impact#technology",
-    accent: "#4B40D4",
-    badgeBg: "bg-[#4B40D4]",
+    accent: "#2B5299",
+    badgeBg: "bg-[#2B5299]",
   },
   {
     title: "Sustainability",

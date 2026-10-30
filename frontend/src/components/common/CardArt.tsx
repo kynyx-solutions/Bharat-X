@@ -37,7 +37,7 @@ export interface CardArtProps {
   /** Unique per card. Changing it gives a different image. */
   seed: string;
   motif: CardArtMotif;
-  /** Hex accent, e.g. "#3026B3". */
+  /** Hex accent, e.g. "#163A7A". */
   accent: string;
   tone?: CardArtTone;
   /** Corner the art grows from. Defaults to a seeded pick, biased to the bottom (where card copy rarely sits). */

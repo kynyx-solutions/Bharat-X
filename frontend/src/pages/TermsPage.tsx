@@ -80,9 +80,9 @@ export default function TermsPage() {
                 {/* Legal copy: opaque soft tint + accent rule; the `!` hovers beat the global card/heading hover overrides */}
                 <div
                   data-cursor="card"
-                  className="p-5 sm:p-6 rounded-xl border border-[#3026B3]/15 border-l-4 border-l-[#3026B3] bg-[color-mix(in_srgb,#3026B3_7%,white)] transition-all duration-200 hover:bg-[color-mix(in_srgb,#3026B3_11%,white)] hover:border-l-[#3026B3]!"
+                  className="p-5 sm:p-6 rounded-xl border border-[#163A7A]/15 border-l-4 border-l-[#163A7A] bg-[color-mix(in_srgb,#163A7A_7%,white)] transition-all duration-200 hover:bg-[color-mix(in_srgb,#163A7A_11%,white)] hover:border-l-[#163A7A]!"
                 >
-                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-[#211B72]">
+                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-[#0F2A5C]">
                     {s.t}
                   </AnimatedHeading>
                   <p className="mt-3 text-[14.5px] leading-relaxed text-[#374151]">{s.d}</p>

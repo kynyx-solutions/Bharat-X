@@ -30,7 +30,7 @@ const focusAreas = [
     icon: "cpu",
     title: "AI adoption",
     description: "Building AI, automation and digital solutions for modern businesses.",
-    accent: "#3026B3",
+    accent: "#163A7A",
   },
   {
     icon: "graduation-cap",
@@ -144,12 +144,12 @@ export default function PartnershipsPage() {
         <div className="container-x relative z-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl group/header">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs cursor-default">
-                <span className="h-2 w-2 rounded-full bg-[#3026B3] transition-transform duration-300 group-hover/header:scale-125" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs cursor-default">
+                <span className="h-2 w-2 rounded-full bg-[#163A7A] transition-transform duration-300 group-hover/header:scale-125" />
                 <span>OUR PARTNERS</span>
               </div>
               <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827]">
-                Institutions we <span className="text-[#3026B3]">work with</span>
+                Institutions we <span className="text-[#163A7A]">work with</span>
               </h2>
               <p className="mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-[#596579]">
                 Government programmes, premier universities and public-sector companies, partnering with us on AI
@@ -169,10 +169,10 @@ export default function PartnershipsPage() {
                     data-cursor="button"
                     onClick={() => setFilter(f.key)}
                     className={cn(
-                      "inline-flex items-center gap-2 rounded-full border px-4 py-2 font-sans text-sm font-semibold transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3] focus-visible:ring-offset-2",
+                      "inline-flex items-center gap-2 rounded-full border px-4 py-2 font-sans text-sm font-semibold transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A] focus-visible:ring-offset-2",
                       active
                         ? "border-[#0B1F47] bg-[#0B1F47] text-white shadow-md shadow-[#0B1F47]/20"
-                        : "border-[#E3E5EF] bg-white text-[#374151] hover:border-[#3026B3] hover:text-[#3026B3]",
+                        : "border-[#E3E5EF] bg-white text-[#374151] hover:border-[#163A7A] hover:text-[#163A7A]",
                     )}
                   >
                     {f.accent && <span aria-hidden className="h-2 w-2 rounded-full" style={{ background: f.accent }} />}
@@ -211,7 +211,7 @@ export default function PartnershipsPage() {
               <span>FOCUS AREAS</span>
             </div>
             <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827]">
-              What we work on <span className="text-[#3026B3]">together</span>
+              What we work on <span className="text-[#163A7A]">together</span>
             </h2>
           </div>
 
@@ -220,7 +220,7 @@ export default function PartnershipsPage() {
               <StaggerItem key={area.title} className="h-full">
                 <div
                   data-cursor="card"
-                  className="group h-full rounded-2xl border border-[#E3E5EF] bg-[#FAF9F6] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#3026B3]/30 hover:bg-white hover:shadow-[0_18px_40px_-18px_rgba(48,38,179,0.28)]"
+                  className="group h-full rounded-2xl border border-[#E3E5EF] bg-[#FAF9F6] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#163A7A]/30 hover:bg-white hover:shadow-[0_18px_40px_-18px_rgba(22, 58, 122,0.28)]"
                 >
                   <FeatureIcon
                     name={area.icon}

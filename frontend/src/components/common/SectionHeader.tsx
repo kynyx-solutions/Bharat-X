@@ -56,7 +56,7 @@ export function SectionHeader({
             aria-hidden
             className={cn(
               "h-px w-10 transition-all duration-300 group-hover/header:w-16",
-              light ? "bg-[#131a22]/20 group-hover/header:bg-[#3026B3]" : "bg-gold-400/50 group-hover/header:bg-gold-400",
+              light ? "bg-[#131a22]/20 group-hover/header:bg-[#163A7A]" : "bg-gold-400/50 group-hover/header:bg-gold-400",
             )}
           />
         </div>

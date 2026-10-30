@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { companies } from "../../data/companies";
 import { cn } from "../../utils/cn";
 import { Icon } from "../../utils/icons";
-import { cardImage } from "../common/CardSurface";
 import { SectionTransition } from "../motion/SectionTransition";
 
 interface Vertical {
@@ -35,7 +34,7 @@ const verticals: Vertical[] = [
     detail:
       "Every system we deliver is built to run reliably, not just to impress in a demo. We measure it, document it and hand it over so the people who use it can own it. Our test is simple: does the business run better with it?",
     href: company("aixperts").website,
-    image: cardImage("innovation-01-frontier-multilingual-ai"),
+    image: "/assets/verticals/vertical-ai-deeptech.webp",
   },
   {
     id: "innovation",
@@ -44,7 +43,7 @@ const verticals: Vertical[] = [
     detail:
       "Our work spans AI that understands India's many languages, smart machines for the factory floor and science for better farming. The goal is to build key technology here in India, so our industries don't have to depend on others for it.",
     href: "/verticals#labs",
-    image: cardImage("innovation-03-frontier-precision-robotics"),
+    image: "/assets/verticals/vertical-innovation.webp",
   },
   {
     id: "agri-food",
@@ -53,16 +52,16 @@ const verticals: Vertical[] = [
     detail:
       "Every batch is recorded from the farm it came from to the ship it leaves on, so buyers know exactly what they are getting. We treat farming as a business: inputs are planned, yields are measured and people are trained to run it well.",
     href: company("bharatx-agro").website,
-    image: cardImage("innovation-04-frontier-agronomic-deeptech"),
+    image: "/assets/verticals/vertical-agri-food.webp",
   },
   {
     id: "capital",
     label: "Capital & Venture Building",
-    lead: "We don't just invest in businesses, we help build them. We bring capital, strategy and hands-on support to founders and growing companies.",
+    lead: "We back founders and growing companies with capital, and with the strategy and hands-on support of people who have built businesses themselves.",
     detail:
       "We work alongside teams from the first idea to the first customers and beyond: shaping the business model, setting up operations and planning how to fund growth. We take a long-term view and back companies that can keep growing for a decade.",
     href: company("ventures").website,
-    image: "/companies/bharatx-ventures/hero.jpg",
+    image: "/assets/verticals/vertical-capital.webp",
   },
   {
     id: "infratech",
@@ -71,7 +70,7 @@ const verticals: Vertical[] = [
     detail:
       "Design, construction and operations sit under one roof. Our projects are built for the real loads they will carry, checked at every stage and handed over with clear records. We judge our work by how it holds up after years of monsoons, traffic and use.",
     href: company("infratech").website,
-    image: "/companies/bharatx-infratech/hero.jpg",
+    image: "/assets/verticals/vertical-infratech.webp",
   },
   {
     id: "manufacturing",
@@ -80,7 +79,7 @@ const verticals: Vertical[] = [
     detail:
       "Each product is built to the exact specification our customers need, from load rating and materials to brakes and finish. We test what we make before it ships, and every part can be traced, so customers can rely on it for the life of their machines.",
     href: company("casters").website,
-    image: cardImage("services-15-horizon-new-industrial"),
+    image: "/assets/verticals/vertical-manufacturing.webp",
   },
   {
     id: "packaging",
@@ -90,7 +89,7 @@ const verticals: Vertical[] = [
       "Our focus is packaging that is efficient and sustainable. We use eco-conscious materials to protect products as they travel through the supply chain, from the factory to the customer.",
     // BharatX Enterprises' website, as listed on the Businesses page (it isn't in data/companies.ts).
     href: "https://srm.kynyx.com/",
-    image: cardImage("services-13-horizon-packaging"),
+    image: "/assets/verticals/vertical-packaging.webp",
   },
   {
     id: "education-social",
@@ -99,11 +98,12 @@ const verticals: Vertical[] = [
     detail:
       "We are building programmes for education, skills training and community development, so that more people can take part in India's growth and share in what it creates.",
     href: "/verticals#foundation",
-    image: cardImage("how-we-build-19-sector-social-impact"),
+    image: "/assets/verticals/vertical-education-social.webp",
   },
 ];
 
-const AUTOPLAY_MS = 6000;
+// Long enough to read a panel (~70 words); autoplay stops for good once the visitor picks a vertical.
+const AUTOPLAY_MS = 10000;
 const KEY_STEP: Record<string, number> = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
 const pad = (n: number) => String(n).padStart(2, "0");
 
@@ -128,13 +128,15 @@ export function BusinessEcosystemGrid() {
   const [active, setActive] = useState(0);
   const [hovering, setHovering] = useState(false);
   const [keyboardFocus, setKeyboardFocus] = useState(false);
+  const [userPicked, setUserPicked] = useState(false);
   const [inView, setInView] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  // No autoplay for reduced-motion users; hover and keyboard focus pause it for everyone else.
-  const playing = !reduced && !hovering && !keyboardFocus && inView;
+  // No autoplay for reduced-motion users or after a tap/click/arrow key (phones have no hover to pause it);
+  // hover and keyboard focus pause it for everyone else.
+  const playing = !reduced && !userPicked && !hovering && !keyboardFocus && inView;
   const count = verticals.length;
 
   // Advance to the next vertical, looping back to the first. Any change of `active` restarts the clock.
@@ -167,6 +169,7 @@ export function BusinessEcosystemGrid() {
   const select = (index: number, focus = false) => {
     const next = (index + count) % count;
     setActive(next);
+    setUserPicked(true);
     if (focus) tabRefs.current[next]?.focus();
   };
 
@@ -203,15 +206,25 @@ export function BusinessEcosystemGrid() {
               decoding="async"
               className={cn(
                 // Fade in, then a slow push-out on the active image.
-                "absolute inset-0 h-full w-full object-cover [transition:opacity_900ms_ease-out,scale_7s_ease-out] motion-reduce:transition-none",
+                "absolute inset-0 h-full w-full object-cover object-[62%_50%] [transition:opacity_900ms_ease-out,scale_7s_ease-out] motion-reduce:transition-none",
                 i === active ? "opacity-100 scale-100" : "opacity-0 scale-110",
               )}
             />
           ))}
+          {/* Phones: the copy spans the whole image, so tint it evenly */}
+          <div className="absolute inset-0 bg-[#070A1F]/55 lg:hidden" />
+          {/* Desktop: darken under the copy (left) and the list (right), leave the subject band clear */}
+          <div
+            className="absolute inset-0 hidden lg:block"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(7,10,31,0.85) 0%, rgba(7,10,31,0.6) 35%, rgba(7,10,31,0) 55%, rgba(7,10,31,0) 68%, rgba(7,10,31,0.7) 100%)",
+            }}
+          />
         </div>
       }
     >
-      {/* No overlay on the photos: a soft text shadow keeps the copy legible instead */}
+      {/* The gradient above keeps the copy legible on any photo; the text shadow adds a little extra lift */}
       {/* Full width like the hero (max-w-none!), so text and list sit near the screen edges on wide screens */}
       <div ref={rootRef} className="container-x max-w-none! relative z-10 [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_2px_10px_rgba(0,0,0,0.75),0_0_28px_rgba(0,0,0,0.55)]">
         {/* Header: title + counter */}

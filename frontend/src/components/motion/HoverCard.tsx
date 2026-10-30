@@ -54,7 +54,7 @@ export function HoverCard({
         maxTilt={maxTilt}
         data-cursor="card"
         className={cn(
-          "focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3]",
+          "focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A]",
           className
         )}
         {...props}
@@ -66,7 +66,7 @@ export function HoverCard({
 
   if (variant === "spotlight") {
     const spotlightColors = {
-      indigo: "rgba(48, 38, 179, 0.14)",
+      indigo: "rgba(22, 58, 122, 0.14)",
       gold: "rgba(245, 73, 0, 0.16)",
       cyan: "rgba(0, 184, 217, 0.14)",
     };
@@ -75,7 +75,7 @@ export function HoverCard({
         spotlightColor={spotlightColors[glowColor]}
         data-cursor="card"
         className={cn(
-          "fx-lift focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3]",
+          "fx-lift focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A]",
           className
         )}
         {...props}
@@ -99,7 +99,7 @@ export function HoverCard({
       data-cursor="card"
       data-motion="true"
       className={cn(
-        "group/card transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3]",
+        "group/card transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A]",
         variantClasses,
         className
       )}

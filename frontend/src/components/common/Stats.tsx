@@ -41,7 +41,7 @@ export function Stats({
               delay: i * 0.08,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white/80 dark:bg-night-850/85 p-6 md:p-7 shadow-[0_6px_24px_-4px_rgba(15,23,42,0.05)] dark:shadow-[0_12px_32px_-10px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-300 hover:border-slate-300 dark:hover:border-white/25 hover:shadow-xl hover:-translate-y-1.5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3]"
+            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/90 dark:border-white/10 bg-white/80 dark:bg-night-850/85 p-6 md:p-7 shadow-[0_6px_24px_-4px_rgba(15,23,42,0.05)] dark:shadow-[0_12px_32px_-10px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-300 hover:border-slate-300 dark:hover:border-white/25 hover:shadow-xl hover:-translate-y-1.5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A]"
             data-cursor="card"
           >
             {/* Top Accent Hairline */}
@@ -78,7 +78,7 @@ export function Stats({
               {/* Main Number: heading display font, scales on hover */}
               <div className="mt-5 flex items-baseline gap-0.5 transition-transform duration-300 origin-left group-hover:scale-[1.04]">
                 <span
-                  className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold tracking-tight text-ink-900 dark:text-ink-50 leading-none select-none tabular-nums transition-colors group-hover:text-[#3026B3] dark:group-hover:text-[#F54900]"
+                  className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] font-semibold tracking-tight text-ink-900 dark:text-ink-50 leading-none select-none tabular-nums transition-colors group-hover:text-[#163A7A] dark:group-hover:text-[#F54900]"
                 >
                   <AnimatedNumber value={item.value} prefix={item.prefix} />
                 </span>

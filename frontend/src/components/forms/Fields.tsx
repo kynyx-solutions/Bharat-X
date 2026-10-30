@@ -4,9 +4,9 @@ import { cn } from "../../utils/cn";
 import { Icon } from "../../utils/icons";
 
 const baseField =
-  "w-full rounded-xl border bg-white px-4 py-3 text-base md:text-[14.5px] text-[#111827] placeholder:text-[#596579]/70 outline-none transition-all duration-200 shadow-2xs hover:border-[#3026B3]/40 focus:shadow-md dark:bg-night-800/70 dark:text-white dark:placeholder:text-ink-600 dark:shadow-none dark:hover:border-white/25";
+  "w-full rounded-xl border bg-white px-4 py-3 text-base md:text-[14.5px] text-[#111827] placeholder:text-[#596579]/70 outline-none transition-all duration-200 shadow-2xs hover:border-[#163A7A]/40 focus:shadow-md dark:bg-night-800/70 dark:text-white dark:placeholder:text-ink-600 dark:shadow-none dark:hover:border-white/25";
 const okBorder =
-  "border-[#E3E5EF] focus:border-[#3026B3] focus:ring-2 focus:ring-[#3026B3]/20 dark:border-white/10 dark:focus:border-pulse-400/60 dark:focus:ring-pulse-400/15";
+  "border-[#E3E5EF] focus:border-[#163A7A] focus:ring-2 focus:ring-[#163A7A]/20 dark:border-white/10 dark:focus:border-pulse-400/60 dark:focus:ring-pulse-400/15";
 const errBorder = "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/15";
 
 export function FieldLabel({
@@ -21,7 +21,7 @@ export function FieldLabel({
   return (
     <label
       htmlFor={htmlFor}
-      className="mb-2 flex items-center gap-1.5 font-sans text-[10.5px] uppercase tracking-[0.2em] text-[#596579] font-medium transition-colors duration-200 group-focus-within:text-[#3026B3] dark:group-focus-within:text-gold-400"
+      className="mb-2 flex items-center gap-1.5 font-sans text-[10.5px] uppercase tracking-[0.2em] text-[#596579] font-medium transition-colors duration-200 group-focus-within:text-[#163A7A] dark:group-focus-within:text-gold-400"
     >
       {children}
       {required && <span className="text-[#F54900] font-bold">*</span>}

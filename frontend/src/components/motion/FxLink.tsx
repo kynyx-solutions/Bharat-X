@@ -51,7 +51,7 @@ export function FxLink({
   );
 
   const sharedClass = cn(
-    "group inline-flex items-center gap-1.5 font-medium transition-colors duration-200 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3]",
+    "group inline-flex items-center gap-1.5 font-medium transition-colors duration-200 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A]",
     className
   );
 

@@ -11,11 +11,11 @@ import { FeatureIcon } from "../components/common/FeatureIcon";
 
 // ── 02. Formula items for "Our Philosophy" ───────────────────────────
 const philosophyInputs = [
-  { label: "Opportunity", icon: "target" as const, color: "#3026B3" },
+  { label: "Opportunity", icon: "target" as const, color: "#163A7A" },
   { label: "People", icon: "users" as const, color: "#15966B" },
   { label: "Capital", icon: "landmark" as const, color: "#F54900" },
   { label: "Technology", icon: "cpu" as const, color: "#00B8D9" },
-  { label: "Execution", icon: "cog" as const, color: "#4B40D4" },
+  { label: "Execution", icon: "cog" as const, color: "#2B5299" },
 ];
 
 // ── 03. Five-Step Build Cycle ─────────────────────────────────────────
@@ -35,8 +35,8 @@ const buildCycleSteps: {
       tagline: "Find the opportunity.",
       description: "We look for meaningful problems, market gaps and emerging opportunities where a strong business can be built.",
       icon: "target" as const,
-      accent: "#3026B3",
-      borderHover: "hover:border-[#3026B3]",
+      accent: "#163A7A",
+      borderHover: "hover:border-[#163A7A]",
       image: cardImage("how-we-build-02-step-identify"),
     },
     {
@@ -75,8 +75,8 @@ const buildCycleSteps: {
       tagline: "Create lasting value.",
       description: "We measure success through business performance, jobs, innovation, infrastructure, sustainability and wider economic contribution.",
       icon: "sparkles" as const,
-      accent: "#4B40D4",
-      borderHover: "hover:border-[#4B40D4]",
+      accent: "#2B5299",
+      borderHover: "hover:border-[#2B5299]",
       image: cardImage("how-we-build-06-step-impact"),
     },
   ];
@@ -87,13 +87,13 @@ const bharatxAdvantage: { pillar: string; description: string; icon: string; col
     pillar: "Capital",
     description: "Financial resources and access to strategic capital.",
     icon: "landmark" as const,
-    color: "#3026B3",
+    color: "#163A7A",
   },
   {
     pillar: "Technology",
     description: "AI, automation and digital capabilities.",
     icon: "cpu" as const,
-    color: "#4B40D4",
+    color: "#2B5299",
   },
   {
     pillar: "Talent",
@@ -118,12 +118,12 @@ const bharatxAdvantage: { pillar: string; description: string; icon: string; col
 // ── 05. Nine Sectors Where We Build ───────────────────────────────────
 const buildSectors: { name: string; tag: string; icon: string; link: string; accent: string; image: string }[] = [
   { name: "Innovation", tag: "Research & Deep-Tech Labs", icon: "flask-conical", link: "/verticals#labs", accent: "#0D9488", image: cardImage("how-we-build-20-sector-innovation") },
-  { name: "Venture Building", tag: "Capital & Enterprise GTM", icon: "landmark", link: "/verticals#ventures", accent: "#211B72", image: cardImage("how-we-build-18-sector-venture-building") },
+  { name: "Venture Building", tag: "Capital & Enterprise GTM", icon: "landmark", link: "/verticals#ventures", accent: "#0F2A5C", image: cardImage("how-we-build-18-sector-venture-building") },
   { name: "Agriculture", tag: "Agro Commodities & Export", icon: "sprout", link: "/verticals#agriculture", accent: "#15966B", image: cardImage("how-we-build-13-sector-agriculture") },
-  { name: "Infrastructure", tag: "Civil & Transport Assets", icon: "hard-hat", link: "/verticals#infrastructure", accent: "#3026B3", image: cardImage("how-we-build-12-sector-infrastructure") },
+  { name: "Infrastructure", tag: "Civil & Transport Assets", icon: "hard-hat", link: "/verticals#infrastructure", accent: "#163A7A", image: cardImage("how-we-build-12-sector-infrastructure") },
   { name: "Social Impact", tag: "Education & Community Programmes", icon: "graduation-cap", link: "/verticals#foundation", accent: "#F54900", image: cardImage("how-we-build-19-sector-social-impact") },
   { name: "Manufacturing", tag: "Precision Casters & Mobility", icon: "cog", link: "/verticals#manufacturing", accent: "#00B8D9", image: cardImage("how-we-build-14-sector-manufacturing") },
-  { name: "Technology", tag: "Applied AI & Automation", icon: "cpu", link: "/verticals#tech-ai", accent: "#4B40D4", image: cardImage("how-we-build-15-sector-technology") },
+  { name: "Technology", tag: "Applied AI & Automation", icon: "cpu", link: "/verticals#tech-ai", accent: "#2B5299", image: cardImage("how-we-build-15-sector-technology") },
   { name: "Packaging", tag: "Sustainable Industrial Barriers", icon: "boxes", link: "/verticals#packaging", accent: "#D97706", image: cardImage("how-we-build-16-sector-packaging") },
   { name: "Sustainability", tag: "Circularity & Net-Zero Systems", icon: "recycle", link: "/verticals#sustainability", accent: "#059669", image: cardImage("how-we-build-17-sector-sustainability") },
 ];
@@ -201,13 +201,13 @@ export default function HowWeBuildPage() {
         <div className="container-x relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4 hover:border-[#3026B3] transition-colors">
-                <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4 hover:border-[#163A7A] transition-colors">
+                <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
                 <span>OUR PHILOSOPHY</span>
               </div>
 
               <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-                We Are Builders, <span className="text-[#3026B3]">Not Just Investors.</span>
+                We Are Builders, <span className="text-[#163A7A]">Not Just Investors.</span>
               </AnimatedHeading>
 
               <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
@@ -222,10 +222,10 @@ export default function HowWeBuildPage() {
             {/* Visual Formula: Opportunity + People + Capital + Technology + Execution -> Enterprise */}
             <div className="lg:col-span-6">
               <div className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-[#F4F3FB] p-7 sm:p-9 shadow-lg fx-lift">
-                <CardFill accent="#3026B3" tone="tint" />
+                <CardFill accent="#163A7A" tone="tint" />
                 <div className="relative">
                   <div className="text-center mb-6">
-                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-[#3026B3] font-bold block">
+                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-[#163A7A] font-bold block">
                       The Enterprise Engine
                     </span>
                     <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
@@ -257,8 +257,8 @@ export default function HowWeBuildPage() {
 
                     {/* 6th Slot: Compounding Catalyst */}
                     <StaggerItem>
-                      <div className="flex items-center justify-center rounded-xl border border-dashed border-[#211B72]/35 bg-[color-mix(in_srgb,#211B72_7%,white)] p-3 h-full">
-                        <span className="font-sans text-xs text-[#211B72] font-bold tracking-wider">
+                      <div className="flex items-center justify-center rounded-xl border border-dashed border-[#0F2A5C]/35 bg-[color-mix(in_srgb,#0F2A5C_7%,white)] p-3 h-full">
+                        <span className="font-sans text-xs text-[#0F2A5C] font-bold tracking-wider">
                           + DISCIPLINE
                         </span>
                       </div>
@@ -267,7 +267,7 @@ export default function HowWeBuildPage() {
 
                   {/* Downward Connector */}
                   <div className="my-5 flex items-center justify-center">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#3026B3] text-white shadow-md animate-bounce">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#163A7A] text-white shadow-md animate-bounce">
                       <Icon name="arrow-right" width={16} height={16} className="rotate-90" strokeWidth={2.5} />
                     </div>
                   </div>
@@ -305,7 +305,7 @@ export default function HowWeBuildPage() {
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Our Five-Step <span className="text-[#3026B3]">Approach</span>
+              Our Five-Step <span className="text-[#163A7A]">Approach</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -352,7 +352,7 @@ export default function HowWeBuildPage() {
 
                   {/* Connecting arrow indicator on desktop */}
                   {idx < buildCycleSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 h-7 w-7 rounded-full bg-white border border-[#E3E5EF] items-center justify-center text-[#3026B3] shadow-md group-hover:scale-110 transition-transform">
+                    <div className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 h-7 w-7 rounded-full bg-white border border-[#E3E5EF] items-center justify-center text-[#163A7A] shadow-md group-hover:scale-110 transition-transform">
                       <Icon name="chevron-right" width={13} height={13} strokeWidth={2.5} />
                     </div>
                   )}
@@ -379,7 +379,7 @@ export default function HowWeBuildPage() {
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              The BharatX <span className="text-[#3026B3]">Advantage</span>
+              The BharatX <span className="text-[#163A7A]">Advantage</span>
             </AnimatedHeading>
 
             <p className="mt-3 text-base text-[#596579]">
@@ -393,7 +393,7 @@ export default function HowWeBuildPage() {
               <StaggerItem key={item.pillar}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-2xl fx-lift flex flex-col justify-between h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-2xl fx-lift flex flex-col justify-between h-full"
                 >
                   <CardFill accent={item.color} />
                   <div className="relative">
@@ -434,13 +434,13 @@ export default function HowWeBuildPage() {
       <SectionTransition className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>OPERATING FOOTPRINT</span>
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Building Across the <span className="text-[#3026B3]">Real and Digital Economy</span>
+              Building Across the <span className="text-[#163A7A]">Real and Digital Economy</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -455,7 +455,7 @@ export default function HowWeBuildPage() {
                 <Link
                   to={sector.link}
                   data-cursor="card"
-                  className="group relative overflow-hidden flex items-center justify-between rounded-xl border border-white/10 bg-[#0D1026] p-4 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift h-full"
+                  className="group relative overflow-hidden flex items-center justify-between rounded-xl border border-white/10 bg-[#0D1026] p-4 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift h-full"
                 >
                   <CardPhoto src={sector.image} accent={sector.accent} />
                   <div className="relative flex items-center gap-3 [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">

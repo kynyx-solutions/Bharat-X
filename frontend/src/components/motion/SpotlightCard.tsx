@@ -17,7 +17,7 @@ export interface SpotlightCardProps extends HTMLAttributes<HTMLDivElement> {
 export function SpotlightCard({
   children,
   className,
-  spotlightColor = "rgba(48, 38, 179, 0.12)",
+  spotlightColor = "rgba(22, 58, 122, 0.12)",
   spotlightRadius = 380,
   style,
   onPointerMove,

@@ -12,11 +12,11 @@ import { CardFill, CardPhoto, SectionPhoto, cardImage } from "../components/comm
 
 // ── 02. Formula items for "Who We Are" ──────────────────────────────
 const formulaInputs = [
-  { label: "Businesses", icon: "layers" as const, color: "#3026B3" },
+  { label: "Businesses", icon: "layers" as const, color: "#163A7A" },
   { label: "Capital", icon: "landmark" as const, color: "#F54900" },
   { label: "Technology", icon: "cpu" as const, color: "#00B8D9" },
   { label: "Talent", icon: "users" as const, color: "#15966B" },
-  { label: "Execution", icon: "cog" as const, color: "#4B40D4" },
+  { label: "Execution", icon: "cog" as const, color: "#2B5299" },
 ];
 
 // ── Vision & Mission ──────────────────────────────────────────────────
@@ -60,10 +60,10 @@ const visionMission: {
         { label: "Technology", icon: "cpu" },
       ],
       icon: "eye",
-      accentText: "text-[#3026B3]",
+      accentText: "text-[#163A7A]",
       chip: "border-[#00B8D9]/30",
-      ring: "from-[#00B8D9] to-[#3026B3]",
-      border: "from-[#00B8D9]/70 via-[#3026B3]/15 to-white",
+      ring: "from-[#00B8D9] to-[#163A7A]",
+      border: "from-[#00B8D9]/70 via-[#163A7A]/15 to-white",
       bracket: "border-[#00B8D9]",
       hairline: "via-[#00B8D9]",
       sweep: "via-[#00B8D9]/12",
@@ -98,7 +98,7 @@ const visionMission: {
 /** Light holographic wash behind the Vision & Mission scene. */
 const visionMissionAurora = [
   "radial-gradient(50% 40% at 8% 8%, rgba(0, 184, 217, 0.16), transparent 70%)",
-  "radial-gradient(45% 40% at 92% 12%, rgba(48, 38, 179, 0.14), transparent 70%)",
+  "radial-gradient(45% 40% at 92% 12%, rgba(22, 58, 122, 0.14), transparent 70%)",
   "radial-gradient(60% 45% at 50% 108%, rgba(245, 73, 0, 0.12), transparent 70%)",
   "linear-gradient(180deg, #F7F7FD 0%, #F1F0FC 55%, #FBF7F2 100%)",
 ].join(", ");
@@ -223,8 +223,8 @@ const leadershipMandates = [
   },
   {
     icon: "cpu",
-    accent: "#3026B3",
-    borderHover: "hover:border-[#3026B3]/30",
+    accent: "#163A7A",
+    borderHover: "hover:border-[#163A7A]/30",
     title: "Indigenous Technology & Silicon",
     desc: "Fostering frontier AI foundational models, robotics, and deeptech skunkworks to eliminate reliance on foreign black-box dependencies.",
   },
@@ -261,7 +261,7 @@ const tier1EcosystemNodes: EcosystemNode[] = [
     company: "BharatX Ventures",
     logo: "/Ventures_logo.png",
     link: "/verticals#ventures",
-    accent: "#211B72",
+    accent: "#0F2A5C",
     badge: "Active",
   },
   {
@@ -277,7 +277,7 @@ const tier1EcosystemNodes: EcosystemNode[] = [
     company: "BharatX Infratech",
     logo: "/Infra_logo1.png",
     link: "/verticals#infrastructure",
-    accent: "#3026B3",
+    accent: "#163A7A",
     badge: "Active",
   },
   {
@@ -295,7 +295,7 @@ const tier2EcosystemNodes: EcosystemNode[] = [
     company: "Aixperts Labs",
     logo: "/Ai-Experts_logo.png",
     link: "/verticals#tech-ai",
-    accent: "#4B40D4",
+    accent: "#2B5299",
     badge: "Active",
   },
   {
@@ -332,8 +332,8 @@ const principles = [
     image: cardImage("about-23-principle-entrepreneurial"),
     description: "We think like builders and act with ownership.",
     icon: "rocket" as const,
-    color: "#3026B3",
-    borderHover: "hover:border-[#3026B3]",
+    color: "#163A7A",
+    borderHover: "hover:border-[#163A7A]",
   },
   {
     title: "Execution-Driven",
@@ -356,8 +356,8 @@ const principles = [
     image: cardImage("about-26-principle-technology"),
     description: "We use technology to improve how businesses operate and scale.",
     icon: "cpu" as const,
-    color: "#4B40D4",
-    borderHover: "hover:border-[#4B40D4]",
+    color: "#2B5299",
+    borderHover: "hover:border-[#2B5299]",
   },
   {
     title: "Responsible",
@@ -372,8 +372,8 @@ const principles = [
     image: cardImage("about-28-principle-nation-first"),
     description: "We build sovereign enterprise capabilities that strengthen India's economic foundation.",
     icon: "badge-check" as const,
-    color: "#211B72",
-    borderHover: "hover:border-[#4B40D4]",
+    color: "#0F2A5C",
+    borderHover: "hover:border-[#2B5299]",
   },
 ];
 
@@ -381,7 +381,7 @@ const principles = [
 function EcosystemNodeCard({ node }: { node: EcosystemNode }) {
   const isExternal = node.link.startsWith("http");
   const nodeClasses =
-    "group relative overflow-hidden flex flex-col justify-between rounded-xl border border-white/10 bg-[#0D1026] p-4 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none";
+    "group relative overflow-hidden flex flex-col justify-between rounded-xl border border-white/10 bg-[#0D1026] p-4 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none";
 
   const nodeContent = (
     <>
@@ -468,13 +468,13 @@ export default function AboutPage() {
           <div className="container-x relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-                  <span className="h-2 w-2 rounded-full bg-[#3026B3] animate-pulse" />
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+                  <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
                   <span>WHO WE ARE</span>
                 </div>
 
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                  More Than a <span className="text-[#3026B3] transition-colors duration-300">Group of Companies</span>
+                  More Than a <span className="text-[#163A7A] transition-colors duration-300">Group of Companies</span>
                 </h2>
 
                 <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
@@ -495,11 +495,11 @@ export default function AboutPage() {
                 <div
                   data-cursor="card"
                   tabIndex={0}
-                  className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white p-7 sm:p-9 shadow-lg transition-all duration-300 hover:shadow-2xl fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                  className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white p-7 sm:p-9 shadow-lg transition-all duration-300 hover:shadow-2xl fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
                 >
-                  <CardFill accent="#3026B3" tone="tint" />
+                  <CardFill accent="#163A7A" tone="tint" />
                   <div className="relative text-center mb-6">
-                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-[#3026B3] font-bold block">
+                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-[#163A7A] font-bold block">
                       The Value Creation Formula
                     </span>
                     <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
@@ -533,8 +533,8 @@ export default function AboutPage() {
                     ))}
 
                     {/* Sixth slot: compounding operator icon */}
-                    <div className="flex items-center justify-center rounded-xl border border-dashed border-[#3026B3]/35 bg-[color-mix(in_srgb,#3026B3_6%,white)] p-3">
-                      <span className="font-sans text-xs text-[#211B72] font-bold tracking-wider">
+                    <div className="flex items-center justify-center rounded-xl border border-dashed border-[#163A7A]/35 bg-[color-mix(in_srgb,#163A7A_6%,white)] p-3">
+                      <span className="font-sans text-xs text-[#0F2A5C] font-bold tracking-wider">
                         + SYNERGY
                       </span>
                     </div>
@@ -542,7 +542,7 @@ export default function AboutPage() {
 
                   {/* Downward Arrow Connector */}
                   <div className="relative my-5 flex items-center justify-center">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#3026B3] text-white shadow-md transition-transform duration-300 hover:scale-110">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#163A7A] text-white shadow-md transition-transform duration-300 hover:scale-110">
                       <Icon name="arrow-right" width={16} height={16} className="rotate-90" strokeWidth={2.5} />
                     </div>
                   </div>
@@ -580,7 +580,7 @@ export default function AboutPage() {
                 style={{
                   transform: "rotateX(63deg)",
                   backgroundImage:
-                    "linear-gradient(rgba(48, 38, 179, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(48, 38, 179, 0.2) 1px, transparent 1px)",
+                    "linear-gradient(rgba(22, 58, 122, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(22, 58, 122, 0.2) 1px, transparent 1px)",
                   backgroundSize: "56px 56px",
                   WebkitMaskImage: "linear-gradient(to top, black 25%, transparent 92%)",
                   maskImage: "linear-gradient(to top, black 25%, transparent 92%)",
@@ -593,9 +593,9 @@ export default function AboutPage() {
             <div className="absolute left-1/2 top-[30%] [perspective:1200px]">
               <div className="[transform-style:preserve-3d]" style={{ transform: "rotateX(72deg)" }}>
                 {[
-                  { size: 640, dur: "38s", dot: "bg-[#00B8D9] shadow-[0_0_14px_#00B8D9]", ring: "border-[#3026B3]/20" },
+                  { size: 640, dur: "38s", dot: "bg-[#00B8D9] shadow-[0_0_14px_#00B8D9]", ring: "border-[#163A7A]/20" },
                   { size: 900, dur: "56s", dot: "bg-[#F54900] shadow-[0_0_14px_#F54900]", ring: "border-[#00B8D9]/20" },
-                  { size: 1180, dur: "80s", dot: "bg-[#3026B3] shadow-[0_0_14px_#3026B3]", ring: "border-[#3026B3]/10" },
+                  { size: 1180, dur: "80s", dot: "bg-[#163A7A] shadow-[0_0_14px_#163A7A]", ring: "border-[#163A7A]/10" },
                 ].map((o) => (
                   <div
                     key={o.size}
@@ -609,23 +609,23 @@ export default function AboutPage() {
             </div>
 
             {/* Floating wireframe cubes */}
-            <WireCube className="animate-float absolute left-[6%] top-[12%] hidden h-20 w-20 text-[#3026B3]/25 lg:block" />
+            <WireCube className="animate-float absolute left-[6%] top-[12%] hidden h-20 w-20 text-[#163A7A]/25 lg:block" />
             <WireCube className="animate-float absolute right-[7%] top-[22%] hidden h-12 w-12 text-[#00B8D9]/40 md:block" style={{ animationDelay: "-2s" }} />
             <WireCube className="animate-float absolute bottom-[8%] right-[4%] hidden h-24 w-24 text-[#F54900]/25 lg:block" style={{ animationDelay: "-3.5s" }} />
           </div>
 
           <div className="container-x relative z-10">
             <div className="max-w-3xl text-center mx-auto mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-white/80 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#3026B3] font-bold shadow-xs backdrop-blur-sm mb-5">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-white/80 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#163A7A] font-bold shadow-xs backdrop-blur-sm mb-5">
                 <span className="h-2 w-2 rounded-full bg-[#00B8D9] shadow-[0_0_8px_#00B8D9] animate-pulse" />
                 <span>WHAT DRIVES US</span>
               </div>
 
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
                 Our{" "}
-                <span className="bg-gradient-to-r from-[#3026B3] to-[#00B8D9] bg-clip-text text-transparent">Vision</span>{" "}
+                <span className="bg-gradient-to-r from-[#163A7A] to-[#00B8D9] bg-clip-text text-transparent">Vision</span>{" "}
                 <span className="font-light italic text-[#F54900]">&amp;</span>{" "}
-                <span className="bg-gradient-to-r from-[#3026B3] to-[#00B8D9] bg-clip-text text-transparent">Mission</span>
+                <span className="bg-gradient-to-r from-[#163A7A] to-[#00B8D9] bg-clip-text text-transparent">Mission</span>
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -640,7 +640,7 @@ export default function AboutPage() {
                   <div
                     data-cursor="card"
                     tabIndex={0}
-                    className={`group relative h-full rounded-[26px] bg-gradient-to-br ${item.border} p-px shadow-[0_24px_60px_-30px_rgba(48,38,179,0.35)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_-26px_var(--panel-glow)] focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none`}
+                    className={`group relative h-full rounded-[26px] bg-gradient-to-br ${item.border} p-px shadow-[0_24px_60px_-30px_rgba(22, 58, 122,0.35)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_-26px_var(--panel-glow)] focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none`}
                     style={{ "--panel-glow": item.glow } as CSSProperties}
                   >
                     <div className="relative flex h-full flex-col overflow-hidden rounded-[25px] bg-white/75 p-7 sm:p-10 backdrop-blur-xl">
@@ -777,7 +777,7 @@ export default function AboutPage() {
                   <div
                     data-cursor="card"
                     tabIndex={0}
-                    className={`group relative overflow-hidden flex flex-col h-full rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none ${pillar.borderHover}`}
+                    className={`group relative overflow-hidden flex flex-col h-full rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none ${pillar.borderHover}`}
                   >
                     <CardPhoto src={pillar.image} accent={pillar.accent} />
                     <div className="relative flex h-full flex-col [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -827,13 +827,13 @@ export default function AboutPage() {
         <section className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
           <div className="container-x relative z-10">
             <div className="max-w-3xl mb-9 sm:mb-11">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
                 <DuotoneIcon name="user-round" size={14} />
                 <span>GROUP LEADERSHIP</span>
               </div>
 
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                The Visionary Behind the <span className="text-[#3026B3] transition-colors duration-300">Standard.</span>
+                The Visionary Behind the <span className="text-[#163A7A] transition-colors duration-300">Standard.</span>
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
@@ -842,7 +842,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white p-4 sm:p-6 lg:p-8 shadow-xl">
-              <CardFill accent="#3026B3" tone="tint" />
+              <CardFill accent="#163A7A" tone="tint" />
 
               <div className="relative z-10 grid items-stretch gap-8 lg:grid-cols-[0.85fr_1.15fr]">
                 {/* Portrait Column */}
@@ -910,7 +910,7 @@ export default function AboutPage() {
                     </div>
 
                     <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] tracking-tight leading-tight transition-colors duration-300">
-                      Architecting India’s <span className="text-[#3026B3] transition-colors duration-300">Next Economic Decade.</span>
+                      Architecting India’s <span className="text-[#163A7A] transition-colors duration-300">Next Economic Decade.</span>
                     </h3>
 
                     {/* Featured Decorated Quote Block */}
@@ -989,7 +989,7 @@ export default function AboutPage() {
                 </div>
 
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-                  The People Leading <span className="text-[#3026B3]">BharatX.</span>
+                  The People Leading <span className="text-[#163A7A]">BharatX.</span>
                 </h2>
               </div>
 
@@ -1074,13 +1074,13 @@ export default function AboutPage() {
         <section className="relative overflow-hidden bg-white py-6 sm:py-9">
           <div className="container-x relative z-10">
             <div className="max-w-3xl text-center mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-                <span className="h-2 w-2 rounded-full bg-[#3026B3] animate-pulse" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+                <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
                 <span>ECOSYSTEM ARCHITECTURE</span>
               </div>
 
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                One Group. Multiple <span className="text-[#3026B3] transition-colors duration-300">Growth Engines.</span>
+                One Group. Multiple <span className="text-[#163A7A] transition-colors duration-300">Growth Engines.</span>
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed">
@@ -1090,7 +1090,7 @@ export default function AboutPage() {
 
             {/* Visual Architecture Tree */}
       {/* <div className="relative overflow-hidden max-w-6xl mx-auto rounded-3xl border border-[#E3E5EF] bg-white p-6 sm:p-10 shadow-lg">
-              <CardFill accent="#3026B3" tone="tint" />
+              <CardFill accent="#163A7A" tone="tint" />
               {/* Tree Root: BHARATX GROUP 
               <div className="relative flex flex-col items-center text-center">
                 <div className="inline-flex flex-col items-center rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] px-8 py-4 text-white shadow-xl fx-shine">
@@ -1101,7 +1101,7 @@ export default function AboutPage() {
                     BHARATX GROUP
                   </span>
                 </div>
-                <div className="h-8 w-px bg-[#3026B3]/40 my-1" />
+                <div className="h-8 w-px bg-[#163A7A]/40 my-1" />
               </div>
 
               {/* Level 1: the five BharatX-branded businesses (on two-column tablets the fifth spans the row) 
@@ -1115,7 +1115,7 @@ export default function AboutPage() {
 
               {/* Connecting Vertical Trunk 
               <div className="relative flex flex-col items-center my-4">
-                <div className="h-6 w-px bg-[#3026B3]/30" />
+                <div className="h-6 w-px bg-[#163A7A]/30" />
               </div>
 
               {/* Level 2: 3 Operating Entities 
@@ -1127,7 +1127,7 @@ export default function AboutPage() {
 
               {/* Connecting Trunk to Anchor 
               <div className="relative flex flex-col items-center my-4">
-                <div className="h-6 w-px bg-[#3026B3]/30" />
+                <div className="h-6 w-px bg-[#163A7A]/30" />
               </div>
 
               {/* Level 3: Future Expansion 
@@ -1159,7 +1159,7 @@ export default function AboutPage() {
               </div>
 
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                Our <span className="text-[#3026B3] transition-colors duration-300">Principles</span>
+                Our <span className="text-[#163A7A] transition-colors duration-300">Principles</span>
               </h2>
 
               <p className="mt-3 text-base text-[#596579]">
@@ -1174,7 +1174,7 @@ export default function AboutPage() {
                   <div
                     data-cursor="card"
                     tabIndex={0}
-                    className={`group relative overflow-hidden h-full rounded-2xl border border-white/10 bg-[#0D1026] p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 fx-lift focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none ${p.borderHover}`}
+                    className={`group relative overflow-hidden h-full rounded-2xl border border-white/10 bg-[#0D1026] p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none ${p.borderHover}`}
                   >
                     <CardPhoto src={p.image} accent={p.color} />
                     <div className="relative flex items-center gap-3.5 mb-4 [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">

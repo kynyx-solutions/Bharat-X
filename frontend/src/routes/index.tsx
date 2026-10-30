@@ -8,6 +8,7 @@ import ImpactPage from "../pages/ImpactPage";
 import IndustriesPage from "../pages/IndustriesPage";
 import HowWeBuildPage from "../pages/HowWeBuildPage";
 import InnovationPage from "../pages/InnovationPage";
+import InsightsPage from "../pages/InsightsPage";
 import LeadershipPage from "../pages/LeadershipPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import PartnershipsPage from "../pages/PartnershipsPage";
@@ -38,6 +39,7 @@ export function AppRoutes() {
         <Route path="ecosystem" element={<Navigate to="/verticals" replace />} />
         <Route path="industries" element={<IndustriesPage />} />
         <Route path="innovation" element={<InnovationPage />} />
+        <Route path="insights" element={<InsightsPage />} />
         <Route path="impact" element={<ImpactPage />} />
         <Route path="partnerships" element={<PartnershipsPage />} />
         <Route path="leadership" element={<LeadershipPage />} />

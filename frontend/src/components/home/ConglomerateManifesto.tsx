@@ -11,7 +11,7 @@ export function ConglomerateManifesto() {
           <div className="mx-auto max-w-4xl text-center">
             {/* Institutional Eyebrow */}
             <Reveal>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/20 bg-white px-4 py-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-[#3026B3] shadow-xs hover:border-[#3026B3] transition-colors">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/20 bg-white px-4 py-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-[#163A7A] shadow-xs hover:border-[#163A7A] transition-colors">
                 <span className="text-[#F54900] animate-pulse">◆</span>
                 <span>CONGLOMERATE SCALE &amp; PURPOSE</span>
               </div>
@@ -21,7 +21,7 @@ export function ConglomerateManifesto() {
             <Reveal delay={0.1}>
               <h2 className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.18] tracking-tight text-[#111827] dark:text-white transition-colors duration-300">
                 An integrated conglomerate building{" "}
-                <span className="italic text-[#3026B3] dark:text-[#F54900] hover:underline transition-all">critical technologies, infrastructure,</span>{" "}
+                <span className="italic text-[#163A7A] dark:text-[#F54900] hover:underline transition-all">critical technologies, infrastructure,</span>{" "}
                 and sovereign capabilities for Bharat.
               </h2>
             </Reveal>
@@ -55,7 +55,7 @@ export function ConglomerateManifesto() {
                 title: "Export Corridors",
                 desc: "Deploying high-tolerance components and origin-certified agro commodities worldwide.",
                 icon: "globe",
-                accent: "#3026B3",
+                accent: "#163A7A",
               },
               {
                 badge: "100% SOVEREIGN",
@@ -69,7 +69,7 @@ export function ConglomerateManifesto() {
                 <div
                   data-cursor="card"
                   tabIndex={0}
-                  className="group relative h-full rounded-2xl border border-[#E3E5EF] bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-[#3026B3]/40 hover:shadow-xl hover:-translate-y-2 dark:border-white/15 dark:bg-night-900 focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none fx-lift"
+                  className="group relative h-full rounded-2xl border border-[#E3E5EF] bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-[#163A7A]/40 hover:shadow-xl hover:-translate-y-2 dark:border-white/15 dark:bg-night-900 focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none fx-lift"
                 >
                   <div className="flex items-center justify-between">
                     <span

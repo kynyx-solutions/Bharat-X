@@ -18,17 +18,17 @@ const approachSteps: {
     {
       num: "01",
       label: "IDENTIFY",
-      description: "Spot structural market gaps and high-conviction industrial opportunities across India.",
+      description: "Find real gaps in Indian markets, where a well-run business can solve a lasting problem.",
       icon: "target",
-      accent: "#3026B3",
+      accent: "#163A7A",
       image: cardImage("home-01-approach-identify"),
-      borderHover: "hover:border-[#3026B3]",
+      borderHover: "hover:border-[#163A7A]",
       spotlight: "rgba(162, 157, 221, 0.2)",
     },
     {
       num: "02",
       label: "BUILD",
-      description: "Assemble physical infrastructure, localized technology stacks, and operational leadership.",
+      description: "Put the team, technology and operations in place, with our own people working alongside.",
       icon: "hard-hat",
       accent: "#F54900",
       image: cardImage("home-02-approach-build"),
@@ -38,7 +38,7 @@ const approachSteps: {
     {
       num: "03",
       label: "INVEST",
-      description: "Commit patient, long-horizon balance sheet capital and strategic resources.",
+      description: "Back it with long-term capital, sized to what the business needs at each stage.",
       icon: "landmark",
       accent: "#00B8D9",
       image: cardImage("home-03-approach-invest"),
@@ -48,7 +48,7 @@ const approachSteps: {
     {
       num: "04",
       label: "SCALE",
-      description: "Expand manufacturing capacity, distribution channels, and pan-India market reach.",
+      description: "Grow capacity, distribution and customers across India and into export markets.",
       icon: "trending-up",
       accent: "#15966B",
       image: cardImage("home-04-approach-scale"),
@@ -58,11 +58,11 @@ const approachSteps: {
     {
       num: "05",
       label: "IMPACT",
-      description: "Deliver compounding economic returns, job creation, and sovereign national capability.",
+      description: "Create lasting value: jobs, skills, and capabilities India no longer has to import.",
       icon: "sparkles",
-      accent: "#4B40D4",
+      accent: "#2B5299",
       image: cardImage("home-05-approach-impact"),
-      borderHover: "hover:border-[#4B40D4]",
+      borderHover: "hover:border-[#2B5299]",
       spotlight: "rgba(174, 169, 236, 0.2)",
     },
   ];
@@ -119,7 +119,7 @@ export function OurApproachSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors"
           >
-            From Opportunity to <br /> <span className="text-[#3026B3]">Enterprise</span>
+            From Opportunity to <br /> <span className="text-[#163A7A]">Enterprise</span>
           </motion.h2>
 
           <motion.p
@@ -129,7 +129,7 @@ export function OurApproachSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-3 text-base sm:text-lg leading-relaxed text-[#596579] font-normal"
           >
-            We combine capital, technology, talent and execution to turn opportunities into scalable enterprises.
+            How a new BharatX business goes from an idea to a company that stands on its own.
           </motion.p>
         </div>
 
@@ -240,7 +240,7 @@ function ApproachCard({ step }: { step: ApproachStep }) {
     // The card box carries the photo; SpotlightCard sits on top (transparent) so its cursor glow stays visible over it
     <div
       data-cursor="card"
-      className={`group relative h-full rounded-2xl border border-white/10 bg-[#0D1026] shadow-md transition-all duration-300 hover:z-20 hover:shadow-xl hover:-translate-y-1.5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3] ${step.borderHover}`}
+      className={`group relative h-full rounded-2xl border border-white/10 bg-[#0D1026] shadow-md transition-all duration-300 hover:z-20 hover:shadow-xl hover:-translate-y-1.5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A] ${step.borderHover}`}
     >
       <CardPhoto src={step.image} accent={step.accent} />
 

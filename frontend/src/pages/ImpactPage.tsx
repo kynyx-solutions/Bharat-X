@@ -60,7 +60,7 @@ const impactAreas: ImpactArea[] = [
     entityName: "BharatX Infratech",
     logo: "/Infra_logo1.png",
     image: "/companies/bharatx-infratech/hero.jpg",
-    accent: "#3026B3",
+    accent: "#163A7A",
     link: "/verticals#infrastructure",
   },
   {
@@ -85,7 +85,7 @@ const impactAreas: ImpactArea[] = [
     entityName: "Aixperts Labs",
     logo: "/Ai-Experts_logo.png",
     image: "/companies/aixperts-labs/hero.jpg",
-    accent: "#4B40D4",
+    accent: "#2B5299",
     link: "/verticals#tech-ai",
   },
   {
@@ -131,7 +131,7 @@ const commitmentPrinciples: { title: string; description: string; icon: string; 
     title: "Economic Value",
     description: "Build businesses that generate sustainable economic activity.",
     icon: "landmark",
-    accent: "#3026B3",
+    accent: "#163A7A",
     image: cardImage("impact-08-commitment-economic-value"),
   },
   {
@@ -163,7 +163,7 @@ const futureFocusAreas: { step: string; headline: string; detail: string; icon: 
     headline: "Create businesses that solve meaningful problems.",
     detail: "Targeting high-friction structural deficits across physical and industrial supply lines.",
     icon: "hard-hat",
-    accent: "#3026B3",
+    accent: "#163A7A",
   },
   {
     step: "ENABLE",
@@ -275,7 +275,7 @@ export default function ImpactPage() {
               </div>
 
               <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-                Growth Should Create <span className="text-[#3026B3]">More Than Profit.</span>
+                Growth Should Create <span className="text-[#163A7A]">More Than Profit.</span>
               </AnimatedHeading>
 
               <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
@@ -290,7 +290,7 @@ export default function ImpactPage() {
             {/* Visual Formula: BUSINESS GROWTH -> ECONOMY | PEOPLE | ENVIRONMENT */}
             <div className="lg:col-span-6">
               <div className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-[#FAF9F6] p-7 sm:p-9 shadow-lg fx-lift">
-                <CardFill accent="#3026B3" tone="tint" />
+                <CardFill accent="#163A7A" tone="tint" />
                 <div className="relative">
                   {/* Root: BUSINESS GROWTH */}
                   <div className="text-center">
@@ -309,7 +309,7 @@ export default function ImpactPage() {
 
                   {/* Downward Connector */}
                   <div className="my-5 flex items-center justify-center">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#3026B3] text-white shadow-md animate-bounce">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#163A7A] text-white shadow-md animate-bounce">
                       <Icon name="arrow-right" width={14} height={14} className="rotate-90" strokeWidth={2.5} />
                     </div>
                   </div>
@@ -318,14 +318,14 @@ export default function ImpactPage() {
                   <Stagger staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
                     {/* Economy */}
                     <StaggerItem>
-                      <div data-cursor="card" className="group rounded-2xl border border-[#3026B3]/25 border-t-4 border-t-[#3026B3] p-4 text-center shadow-xs transition-all duration-300 hover:border-[#3026B3] fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #3026B3 9%, white)" }}>
+                      <div data-cursor="card" className="group rounded-2xl border border-[#163A7A]/25 border-t-4 border-t-[#163A7A] p-4 text-center shadow-xs transition-all duration-300 hover:border-[#163A7A] fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #163A7A 9%, white)" }}>
                         <FeatureIcon
                           name="landmark"
-                          accent="#3026B3"
+                          accent="#163A7A"
                           size={32}
                           className="mx-auto mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                         />
-                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#3026B3] block">
+                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#163A7A] block">
                           ECONOMY
                         </span>
                         <ul className="mt-3 space-y-1.5 text-xs sm:text-[13px] text-[#374151]">
@@ -387,13 +387,13 @@ export default function ImpactPage() {
       <SectionTransition id="impact-areas" className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>WHERE WE CREATE IMPACT</span>
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Impact Across the <span className="text-[#3026B3]">Economy</span>
+              Impact Across the <span className="text-[#163A7A]">Economy</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed">
@@ -486,10 +486,10 @@ export default function ImpactPage() {
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Our Growing <span className="text-[#3026B3]">Footprint</span>
+              Our Growing <span className="text-[#163A7A]">Footprint</span>
             </AnimatedHeading>
 
-            <p className="mt-2 font-heading text-xl sm:text-2xl text-[#3026B3] font-medium">
+            <p className="mt-2 font-heading text-xl sm:text-2xl text-[#163A7A] font-medium">
               Measuring What Matters
             </p>
 
@@ -502,10 +502,10 @@ export default function ImpactPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#3026B3]/25 border-t-4 border-t-[#3026B3] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift"
-              style={{ backgroundColor: "color-mix(in srgb, #3026B3 9%, white)" }}
+              className="group rounded-2xl border border-[#163A7A]/25 border-t-4 border-t-[#163A7A] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift"
+              style={{ backgroundColor: "color-mix(in srgb, #163A7A 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#3026B3] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#163A7A] block transition-transform duration-300 group-hover:scale-105">
                 8+
               </span>
               <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
@@ -566,10 +566,10 @@ export default function ImpactPage() {
 
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#4B40D4]/25 border-t-4 border-t-[#4B40D4] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#4B40D4] hover:shadow-xl fx-lift"
-              style={{ backgroundColor: "color-mix(in srgb, #4B40D4 9%, white)" }}
+              className="group rounded-2xl border border-[#2B5299]/25 border-t-4 border-t-[#2B5299] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#2B5299] hover:shadow-xl fx-lift"
+              style={{ backgroundColor: "color-mix(in srgb, #2B5299 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#4B40D4] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#2B5299] block transition-transform duration-300 group-hover:scale-105">
                 18+
               </span>
               <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
@@ -610,13 +610,13 @@ export default function ImpactPage() {
       <SectionTransition className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>OUR COMMITMENT</span>
             </div>
 
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Building <span className="text-[#3026B3]">Responsibly</span>
+              Building <span className="text-[#163A7A]">Responsibly</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -630,7 +630,7 @@ export default function ImpactPage() {
               <StaggerItem key={item.title}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 sm:p-7 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift flex flex-col justify-between h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 sm:p-7 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift flex flex-col justify-between h-full"
                 >
                   <CardPhoto src={item.image} accent={item.accent} />
                   <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -688,7 +688,7 @@ export default function ImpactPage() {
 
             {/* Headline */}
             <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-[#111827]">
-              The Opportunity <span className="text-[#3026B3]">Ahead</span>
+              The Opportunity <span className="text-[#163A7A]">Ahead</span>
             </AnimatedHeading>
 
             {/* Copy */}

@@ -26,7 +26,7 @@ export function PartnershipsSection() {
     >
       {/* Soft brand light behind the grid */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-40 top-1/3 h-[480px] w-[480px] rounded-full bg-[#3026B3]/[0.07] blur-[110px]" />
+        <div className="absolute -left-40 top-1/3 h-[480px] w-[480px] rounded-full bg-[#163A7A]/[0.07] blur-[110px]" />
         <div className="absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-[#F54900]/[0.07] blur-[110px]" />
       </div>
 
@@ -44,7 +44,7 @@ export function PartnershipsSection() {
           {/* No divider line: 20px from heading to intro row, then 32px down to the cards */}
           <div className="mt-4 grid gap-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-12 lg:gap-y-5">
             <h2 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.08] tracking-tight text-[#111827] text-balance lg:self-end">
-              Working with <span className="text-[#3026B3]">India&apos;s institutions</span>.
+              Working with <span className="text-[#163A7A]">India&apos;s institutions</span>.
             </h2>
 
             <Link to="/partnerships" data-cursor="button" className="order-last justify-self-start lg:order-none lg:self-end lg:pb-1">

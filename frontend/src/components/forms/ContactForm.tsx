@@ -157,7 +157,7 @@ export function ContactForm({
             setForm(initial);
             setSubmitted(false);
           }}
-          className="fx-press mt-8 rounded-full border border-[#E3E5EF] bg-white px-6 py-3 text-[13.5px] font-semibold text-[#111827] transition-all duration-300 hover:border-[#3026B3] hover:text-[#3026B3] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3026B3]"
+          className="fx-press mt-8 rounded-full border border-[#E3E5EF] bg-white px-6 py-3 text-[13.5px] font-semibold text-[#111827] transition-all duration-300 hover:border-[#163A7A] hover:text-[#163A7A] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#163A7A]"
         >
           Submit another inquiry
         </button>
@@ -264,7 +264,7 @@ export function ContactForm({
       <div className="mt-8 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-4">
         <p className="max-w-xs text-[12px] leading-relaxed text-[#596579]">
           Your details are used only to respond to this inquiry. See our{" "}
-          <Link to="/privacy" className="text-[#3026B3] underline decoration-[#3026B3]/30 underline-offset-2 hover:text-[#211B72] font-medium">
+          <Link to="/privacy" className="text-[#163A7A] underline decoration-[#163A7A]/30 underline-offset-2 hover:text-[#0F2A5C] font-medium">
             privacy policy
           </Link>.
         </p>
@@ -272,7 +272,7 @@ export function ContactForm({
           type="submit"
           data-cursor="button"
           disabled={submitting}
-          className="group fx-press fx-shine inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#3026B3] px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#211B72] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+          className="group fx-press fx-shine inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#163A7A] px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#0F2A5C] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
         >
           {submitting ? (
             <>

@@ -6,32 +6,30 @@ import { SectionTransition } from "../motion/SectionTransition";
 import { Stagger, StaggerItem } from "../motion/Stagger";
 import { solidTextColours } from "../common/CardSurface";
 
+// Packaging & Materials is an operating business (BharatX Enterprises), so it is listed under Core Verticals, not here.
 const upcomingCards = [
-  {
-    title: "Packaging & Materials",
-    description: "Building efficient and sustainable packaging solutions for India's industries.",
-    // From BharatX Enterprises' site (srm.kynyx.com): its range of packaging materials
-    image: "/assets/backgrounds/packaging-materials.webp",
-    accent: "#D97706",
-  },
   {
     title: "Waste & Circular Economy",
     description: "Creating smarter approaches to waste management and resource recovery.",
-    image: "/assets/backgrounds/sustainability-story.jpg",
+    image: "/assets/backgrounds/next-circular-economy.webp",
+    // The greenhouses sit just below the middle of the photo
+    position: "50% 62%",
     accent: "#059669",
   },
   {
     title: "Emerging Businesses",
     description: "Exploring new opportunities across technology, manufacturing and the real economy.",
-    image: "/assets/backgrounds/industrial.jpg",
-    accent: "#3026B3",
+    image: "/assets/backgrounds/next-emerging-businesses.webp",
+    position: "50% 50%",
+    accent: "#163A7A",
   },
 ];
 
 export function WhatComesNextSection() {
   return (
     <SectionTransition id="what-comes-next" aria-label="Building What Comes Next">
-      <section className="relative overflow-hidden bg-white py-6 sm:py-9">
+      {/* Desktop: fills one screen. Top padding minus bottom padding ≈ the fixed navbar (84px), so the content is centred below it */}
+      <section className="relative overflow-hidden bg-white py-6 sm:py-9 lg:flex lg:min-h-[100svh] lg:flex-col lg:justify-center lg:pt-[7.5rem] lg:pb-8">
         <div className="container-x relative z-10">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
@@ -51,11 +49,11 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300"
+              className="mt-2 font-heading text-3xl sm:text-5xl lg:text-[3.4rem] font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300"
             >
               The Next Chapter Is{" "}
               <br />
-              <span className="text-[#3026B3]">Already Taking Shape.</span>
+              <span className="text-[#163A7A]">Already Taking Shape.</span>
             </motion.h2>
 
             <motion.p
@@ -69,8 +67,8 @@ export function WhatComesNextSection() {
             </motion.p>
           </div>
 
-          {/* Three image cards, each with its title and description underneath on the section background */}
-          <Stagger className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {/* Image cards, each with its title and description underneath on the section background */}
+          <Stagger className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             {upcomingCards.map((card) => {
               // The text takes the accent shade its card panel used to be filled with
               const text = solidTextColours(card.accent);
@@ -84,19 +82,23 @@ export function WhatComesNextSection() {
                     <div
                       data-cursor="card"
                       tabIndex={0}
-                      className="group relative h-48 sm:h-52 overflow-hidden rounded-2xl border border-[#E3E5EF] shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-[#3026B3] focus:outline-none"
+                      // Desktop: the image takes whatever height is left on screen after the heading, text and button
+                      className="group relative h-56 sm:h-64 lg:h-[clamp(13rem,calc(100svh-38rem),26rem)] overflow-hidden rounded-2xl border border-[#E3E5EF] shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
                     >
                       <img
                         src={card.image}
                         alt={card.title}
                         data-cursor="image"
-                        className="h-full w-full object-top object-center transition-transform duration-700 group-hover:scale-108"
+                        loading="lazy"
+                        // object-cover crops instead of stretching the photo to the card's shape
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108"
+                        style={{ objectPosition: card.position }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     </div>
 
                     {/* Text below the card, centred, with a short accent bar that widens while the item is hovered */}
-                    <div className="mt-6 text-center">
+                    <div className="mt-5 text-center">
                       <h3 className="font-heading text-2xl sm:text-[1.65rem] font-medium tracking-tight text-(--card-text)">
                         {card.title}
                       </h3>
@@ -115,12 +117,12 @@ export function WhatComesNextSection() {
           </Stagger>
 
           {/* Action Button: Explore Our Future Businesses → */}
-          <div className="mt-12 sm:mt-14 text-center">
+          <div className="mt-8 sm:mt-10 text-center">
             <Link
               to="/verticals"
               data-cursor="button"
               data-motion="true"
-              className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#3026B3] hover:bg-[#211B72] text-white px-8 py-4 font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md shadow-[#3026B3]/25 transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-[#F54900]"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] text-white px-8 py-4 font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md shadow-[#163A7A]/25 transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-[#F54900]"
             >
               <span>Explore Our Businesses</span>
               <Icon

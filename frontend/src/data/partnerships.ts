@@ -16,7 +16,7 @@ export interface Partnership {
 
 /** Partnership kinds in display order, with their plural label and brand accent. */
 export const partnershipTypes: Record<PartnershipType, { plural: string; accent: string }> = {
-  MoU: { plural: "MoUs", accent: "#3026B3" },
+  MoU: { plural: "MoUs", accent: "#163A7A" },
   Programme: { plural: "Programmes", accent: "#15966B" },
   Collaboration: { plural: "Collaborations", accent: "#00B8D9" },
 };

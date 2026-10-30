@@ -54,7 +54,7 @@ export function cardImage(name: string) {
 }
 
 export interface CardFillProps {
-  /** Brand accent hex, e.g. "#3026B3". */
+  /** Brand accent hex, e.g. "#163A7A". */
   accent: string;
   tone?: "solid" | "tint";
   /** Darker solid fill (used under photos). */

@@ -1,50 +1,44 @@
 import { motion } from "framer-motion";
+import { servicesData } from "../../data/servicesData";
 import { FeatureIcon } from "../common/FeatureIcon";
 import { SectionTransition } from "../motion/SectionTransition";
 import { Stagger, StaggerItem } from "../motion/Stagger";
-import { CardFill } from "../common/CardSurface";
 
-const pillars: {
-  title: string;
-  description: string;
-  icon: string;
-  accent: string;
-  borderHover: string;
-  glowClass: string;
-}[] = [
-    {
-      title: "Capital",
-      description: "Access to capital and financial resources.",
-      icon: "landmark",
-      accent: "#0F2A5C",
-      borderHover: "hover:border-[#0F2A5C]",
-      glowClass: "fx-lift-glow-navy",
-    },
-    {
-      title: "Technology",
-      description: "AI, automation and digital capabilities.",
-      icon: "cpu",
-      accent: "#00B8D9",
-      borderHover: "hover:border-[#00B8D9]",
-      glowClass: "fx-lift-glow-cyan",
-    },
-    {
-      title: "Execution",
-      description: "Real operating experience across industries.",
-      icon: "cog",
-      accent: "#D97706",
-      borderHover: "hover:border-[#D97706]",
-      glowClass: "fx-lift-glow-gold",
-    },
-    {
-      title: "Ecosystem",
-      description: "Cross-business capabilities, partnerships and market access.",
-      icon: "network",
-      accent: "#15966B",
-      borderHover: "hover:border-[#15966B]",
-      glowClass: "fx-lift-glow-cyan",
-    },
-  ];
+/** A figure from servicesData, so the proof points match what the rest of the site says. */
+function stat(serviceId: string, label: string) {
+  const found = servicesData.find((s) => s.id === serviceId)?.stats.find((s) => s.label === label);
+  if (!found) throw new Error(`Unknown stat: ${serviceId} / ${label}`);
+  return found;
+}
+
+// Technology leads: the group positions itself as AI-first, and the heading says "more than capital".
+const pillars: { title: string; description: string; icon: string; proof: { value: string; label: string } }[] = [
+  {
+    title: "Technology",
+    description: "AI and automation are built into every business from day one, by our own AI team, not added on later.",
+    icon: "cpu",
+    proof: stat("tech-ai", "AI Workflows Deployed"),
+  },
+  {
+    title: "Execution",
+    description: "Operators who have built roads, factories and supply chains, and who stay hands-on after launch.",
+    icon: "cog",
+    proof: stat("infrastructure", "Civil Projects Completed"),
+  },
+  {
+    title: "Ecosystem",
+    description: "Each business can draw on the others' customers, suppliers, partners and know-how.",
+    icon: "network",
+    // Same group figure as the stats strip under the hero
+    proof: { value: "6", label: "Operating Businesses" },
+  },
+  {
+    title: "Capital",
+    description: "Patient, long-term capital from people who stay involved in how it is used.",
+    icon: "landmark",
+    proof: stat("ventures", "Portfolio Enterprise Value"),
+  },
+];
 
 export function WhyBharatXSection() {
   return (
@@ -55,88 +49,81 @@ export function WhyBharatXSection() {
     >
       <div className="container-x relative z-10">
         {/* Header */}
-        <div className="max-w-3xl group/header">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs cursor-default">
-            <span className="h-2 w-2 rounded-full bg-[#3026B3] transition-transform duration-300 group-hover/header:scale-125" />
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs">
+            <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
             <span>WHY BHARATX</span>
           </div>
 
-          <h2 className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors">
-            More Than Capital.<br /> <span className="text-[#3026B3] transition-colors">More Than Strategy.</span>
+          <h2 className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827]">
+            More Than Capital.<br /> <span className="text-[#163A7A]">More Than Strategy.</span>
           </h2>
 
           <p className="mt-3 text-base text-[#596579] max-w-2xl leading-relaxed">
-            Four interconnected pillars that distinguish how BharatX originates, accelerates, and compounds enterprise value.
+            Four strengths every BharatX business shares, so each one starts further ahead than it could on its own.
           </p>
         </div>
 
-        {/* 4 Pillars High-Contrast Grid with Stagger & fx-icon-spin */}
+        {/* Pillars */}
         <Stagger className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-          {pillars.map((pillar, idx) => (
+          {pillars.map((pillar) => (
             <StaggerItem key={pillar.title}>
               <div
                 data-cursor="card"
-                className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#3026B3] ${pillar.borderHover} ${pillar.glowClass}`}
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E3E5EF] bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#163A7A]/40 hover:shadow-lg"
               >
-                <CardFill accent={pillar.accent} />
-
-                {/* Gold top-border that draws in on hover */}
+                {/* Top line that draws in on hover */}
                 <span
                   aria-hidden
-                  className="absolute inset-x-0 top-0 z-10 h-[3px] w-0 bg-[#FF8904] transition-all duration-400 ease-out group-hover:w-full"
+                  className="absolute inset-x-0 top-0 h-[3px] w-0 bg-[#F54900] transition-all duration-400 ease-out group-hover:w-full"
                 />
 
-                <div className="relative">
-                  <FeatureIcon
-                    name={pillar.icon}
-                    accent={pillar.accent}
-                    size={48}
-                    className="mb-3 transition-transform duration-500 group-hover:rotate-[360deg]"
-                  />
+                <FeatureIcon name={pillar.icon} accent="#163A7A" size={44} className="mb-4" />
 
-                  <h3 className="font-heading text-xl sm:text-2xl font-medium tracking-tight text-white transition-colors">
-                    {pillar.title}
-                  </h3>
+                <h3 className="font-heading text-xl sm:text-2xl font-medium tracking-tight text-[#111827]">
+                  {pillar.title}
+                </h3>
 
-                  <p className="mt-2.5 text-xs sm:text-[13px] leading-relaxed text-slate-200 font-normal">
-                    {pillar.description}
-                  </p>
-                </div>
+                <p className="mt-2 text-sm leading-relaxed text-[#596579]">{pillar.description}</p>
 
-                <div className="relative mt-2 pt-4 border-t border-white/20 flex items-center justify-between font-sans text-[10.5px] uppercase tracking-wider text-white/85">
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    Pillar 0{idx + 1}
-                  </span>
-                  <span className="h-2 w-2 rounded-full bg-[#FF8904] transition-transform duration-300 group-hover:scale-125" />
+                {/* Proof point, pinned to the bottom so the figures line up across cards */}
+                <div className="mt-auto pt-5">
+                  <div className="border-t border-[#E3E5EF] pt-4">
+                    <p className="font-heading text-3xl font-medium leading-none tracking-tight text-[#163A7A] tabular-nums">
+                      {pillar.proof.value}
+                    </p>
+                    <p className="mt-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-[#596579]">
+                      {pillar.proof.label}
+                    </p>
+                  </div>
                 </div>
               </div>
             </StaggerItem>
           ))}
         </Stagger>
 
-        {/* Strong Statement Callout Banner — Royal Indigo & Gold Institutional Centerpiece */}
+        {/* Statement banner */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="fx-shine group/banner mt-8 sm:mt-10 relative overflow-hidden rounded-3xl border border-[#163A7A]/30 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-8 sm:p-12 md:p-14 text-center text-white shadow-2xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(11,31,71,0.45)]"
+          className="mt-8 sm:mt-10 relative overflow-hidden rounded-3xl border border-[#163A7A]/30 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-8 sm:p-12 md:p-14 text-center text-white shadow-2xl"
         >
-          {/* Subtle gold line accent */}
-          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#F54900] to-transparent opacity-80 transition-all duration-300 group-hover/banner:opacity-100" />
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#F54900] to-transparent opacity-80" />
 
           <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold mb-3">
-            Operating Thesis
+            How We Work
           </p>
 
-          <blockquote className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-medium leading-tight tracking-tight text-white max-w-4xl mx-auto drop-shadow-sm transition-transform duration-300 group-hover/banner:scale-[1.01]">
+          <blockquote className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-medium leading-tight tracking-tight text-white max-w-4xl mx-auto">
             “We don’t just back businesses.{" "}
             <br />
             <span className="text-[#F54900]">We help build them.</span>”
           </blockquote>
 
           <p className="mt-4 text-xs sm:text-sm text-slate-200 max-w-xl mx-auto leading-relaxed">
-            From direct operating leadership and patient equity to institutional market access through the BharatX ecosystem.
+            Operating leadership, patient capital and the whole BharatX network, from the first idea to full scale.
           </p>
         </motion.div>
       </div>

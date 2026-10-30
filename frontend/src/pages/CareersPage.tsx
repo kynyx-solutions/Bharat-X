@@ -16,7 +16,7 @@ const whyPillars: { title: string; description: string; icon: string; accent: st
     title: "Ownership",
     description: "Take responsibility. Make decisions. Create outcomes.",
     icon: "shield-check",
-    accent: "#3026B3",
+    accent: "#163A7A",
     image: cardImage("careers-01-value-ownership"),
   },
   {
@@ -49,7 +49,7 @@ const careerDomains: { name: string; code: string; icon: string; roles: string; 
     code: "TEC",
     icon: "cpu",
     roles: "Software • AI • Product • Design • Data",
-    accent: "#4B40D4",
+    accent: "#2B5299",
     link: "/verticals#tech-ai",
   },
   {
@@ -73,7 +73,7 @@ const careerDomains: { name: string; code: string; icon: string; roles: string; 
     code: "VEN",
     icon: "landmark",
     roles: "Investment • Consulting • Strategy • Business Development",
-    accent: "#211B72",
+    accent: "#0F2A5C",
     link: "/verticals#ventures",
   },
   {
@@ -81,7 +81,7 @@ const careerDomains: { name: string; code: string; icon: string; roles: string; 
     code: "INF",
     icon: "hard-hat",
     roles: "Engineering • Project Management • Operations • Procurement",
-    accent: "#3026B3",
+    accent: "#163A7A",
     link: "/verticals#infrastructure",
   },
   {
@@ -123,7 +123,7 @@ const culturePrinciples: { title: string; description: string; icon: string; acc
     title: "Think Big",
     description: "Look beyond the immediate task and understand the larger opportunity.",
     icon: "target",
-    accent: "#3026B3",
+    accent: "#163A7A",
     image: cardImage("careers-13-norm-think-big"),
   },
   {
@@ -144,7 +144,7 @@ const culturePrinciples: { title: string; description: string; icon: string; acc
     title: "Build for the Long Term",
     description: "Create systems, products and businesses that last.",
     icon: "landmark",
-    accent: "#211B72",
+    accent: "#0F2A5C",
     image: cardImage("careers-16-norm-long-term"),
   },
 ];
@@ -288,8 +288,8 @@ export default function CareersPage() {
       <SectionTransition className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>WHY BHARATX</span>
             </div>
 
@@ -299,7 +299,7 @@ export default function CareersPage() {
               hover="color"
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
             >
-              More Than a Job. <span className="text-[#3026B3]">A Chance to Build.</span>
+              More Than a Job. <span className="text-[#163A7A]">A Chance to Build.</span>
             </AnimatedHeading>
 
             <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
@@ -317,7 +317,7 @@ export default function CareersPage() {
               <StaggerItem key={p.title}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-7 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift flex flex-col justify-between h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-7 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift flex flex-col justify-between h-full"
                 >
                   <CardPhoto src={p.image} accent={p.accent} />
                   <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -365,7 +365,7 @@ export default function CareersPage() {
               hover="gradient"
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
             >
-              Find Your Place in the <span className="text-[#3026B3]">Ecosystem</span>
+              Find Your Place in the <span className="text-[#163A7A]">Ecosystem</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
@@ -456,7 +456,7 @@ export default function CareersPage() {
               hover="color"
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
             >
-              Built for People Who <span className="text-[#3026B3]">Take Ownership</span>
+              Built for People Who <span className="text-[#163A7A]">Take Ownership</span>
             </AnimatedHeading>
 
             <p className="mt-3 text-base text-[#596579]">
@@ -470,7 +470,7 @@ export default function CareersPage() {
               <StaggerItem key={item.title}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-7 shadow-md transition-all duration-300 hover:border-[#3026B3] hover:shadow-xl fx-lift flex flex-col justify-between h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-7 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift flex flex-col justify-between h-full"
                 >
                   <CardPhoto src={item.image} accent={item.accent} />
                   <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -513,8 +513,8 @@ export default function CareersPage() {
       <SectionTransition className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
         <div id="open-opportunities" className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3026B3]/25 bg-[#3026B3]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#3026B3] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#3026B3]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
               <span>OPEN OPPORTUNITIES</span>
             </div>
 
@@ -524,10 +524,10 @@ export default function CareersPage() {
               hover="gradient"
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
             >
-              Find Your Next <span className="text-[#3026B3]">Opportunity</span>
+              Find Your Next <span className="text-[#163A7A]">Opportunity</span>
             </AnimatedHeading>
 
-            <p className="mt-2 font-heading text-xl text-[#3026B3] font-medium">
+            <p className="mt-2 font-heading text-xl text-[#163A7A] font-medium">
               We’re Growing
             </p>
 
@@ -540,15 +540,15 @@ export default function CareersPage() {
             {/* Opportunities Table / Clean Status Card */}
             <div
               data-cursor="card"
-              className="relative rounded-3xl border border-[#3026B3]/20 border-t-4 border-t-[#3026B3] overflow-hidden shadow-md mb-8 fx-lift transition-all duration-300"
-              style={{ backgroundColor: "color-mix(in srgb, #3026B3 6%, white)" }}
+              className="relative rounded-3xl border border-[#163A7A]/20 border-t-4 border-t-[#163A7A] overflow-hidden shadow-md mb-8 fx-lift transition-all duration-300"
+              style={{ backgroundColor: "color-mix(in srgb, #163A7A 6%, white)" }}
             >
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm border-collapse">
                   <thead>
                     <tr
-                      className="border-b border-[#3026B3]/15 font-sans text-xs uppercase tracking-wider text-[#211B72]"
-                      style={{ backgroundColor: "color-mix(in srgb, #3026B3 12%, white)" }}
+                      className="border-b border-[#163A7A]/15 font-sans text-xs uppercase tracking-wider text-[#0F2A5C]"
+                      style={{ backgroundColor: "color-mix(in srgb, #163A7A 12%, white)" }}
                     >
                       <th className="py-4 px-6">Role</th>
                       <th className="py-4 px-6">Business</th>
@@ -558,11 +558,11 @@ export default function CareersPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-[#3026B3]/15 hover:bg-white/70 transition-colors">
+                    <tr className="border-b border-[#163A7A]/15 hover:bg-white/70 transition-colors">
                       <td className="py-4 px-6 font-medium text-[#111827]">Civil Project Director</td>
                       <td className="py-4 px-6 text-[#374151]">BharatX Infratech</td>
                       <td className="py-4 px-6 text-[#374151]">New Delhi / On-site</td>
-                      <td className="py-4 px-6 text-xs font-sans text-[#3026B3]">Full-time</td>
+                      <td className="py-4 px-6 text-xs font-sans text-[#163A7A]">Full-time</td>
                       <td className="py-4 px-6 text-right">
                         <button
                           type="button"
@@ -572,17 +572,17 @@ export default function CareersPage() {
                             setVertical("Infrastructure (BharatX Infratech)");
                             setShowProfileForm(true);
                           }}
-                          className="font-sans text-xs font-bold uppercase tracking-wider text-[#3026B3] hover:underline"
+                          className="font-sans text-xs font-bold uppercase tracking-wider text-[#163A7A] hover:underline"
                         >
                           Apply →
                         </button>
                       </td>
                     </tr>
-                    <tr className="border-b border-[#3026B3]/15 hover:bg-white/70 transition-colors">
+                    <tr className="border-b border-[#163A7A]/15 hover:bg-white/70 transition-colors">
                       <td className="py-4 px-6 font-medium text-[#111827]">Lead Applied AI Engineer</td>
                       <td className="py-4 px-6 text-[#374151]">Aixperts Labs</td>
                       <td className="py-4 px-6 text-[#374151]">Bengaluru / Hybrid</td>
-                      <td className="py-4 px-6 text-xs font-sans text-[#3026B3]">Full-time</td>
+                      <td className="py-4 px-6 text-xs font-sans text-[#163A7A]">Full-time</td>
                       <td className="py-4 px-6 text-right">
                         <button
                           type="button"
@@ -592,17 +592,17 @@ export default function CareersPage() {
                             setVertical("Technology & AI (Aixperts Labs)");
                             setShowProfileForm(true);
                           }}
-                          className="font-sans text-xs font-bold uppercase tracking-wider text-[#3026B3] hover:underline"
+                          className="font-sans text-xs font-bold uppercase tracking-wider text-[#163A7A] hover:underline"
                         >
                           Apply →
                         </button>
                       </td>
                     </tr>
-                    <tr className="border-b border-[#3026B3]/15 hover:bg-white/70 transition-colors">
+                    <tr className="border-b border-[#163A7A]/15 hover:bg-white/70 transition-colors">
                       <td className="py-4 px-6 font-medium text-[#111827]">Industrial Quality &amp; Tooling Lead</td>
                       <td className="py-4 px-6 text-[#374151]">BharatX Engineering</td>
                       <td className="py-4 px-6 text-[#374151]">Industrial Corridor / Plant</td>
-                      <td className="py-4 px-6 text-xs font-sans text-[#3026B3]">Full-time</td>
+                      <td className="py-4 px-6 text-xs font-sans text-[#163A7A]">Full-time</td>
                       <td className="py-4 px-6 text-right">
                         <button
                           type="button"
@@ -612,7 +612,7 @@ export default function CareersPage() {
                             setVertical("Manufacturing (BharatX Engineering)");
                             setShowProfileForm(true);
                           }}
-                          className="font-sans text-xs font-bold uppercase tracking-wider text-[#3026B3] hover:underline"
+                          className="font-sans text-xs font-bold uppercase tracking-wider text-[#163A7A] hover:underline"
                         >
                           Apply →
                         </button>
@@ -624,8 +624,8 @@ export default function CareersPage() {
 
               {/* No suitable openings banner & CTA */}
               <div
-                className="p-8 border-t border-[#3026B3]/15 text-center"
-                style={{ backgroundColor: "color-mix(in srgb, #3026B3 12%, white)" }}
+                className="p-8 border-t border-[#163A7A]/15 text-center"
+                style={{ backgroundColor: "color-mix(in srgb, #163A7A 12%, white)" }}
               >
                 <p className="text-sm text-[#374151] max-w-lg mx-auto">
                   Don't see your specific role listed? We are always interested in meeting talented people who want to build with us.
@@ -634,7 +634,7 @@ export default function CareersPage() {
                   type="button"
                   data-cursor="button"
                   onClick={() => setShowProfileForm((prev) => !prev)}
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#3026B3] hover:bg-[#211B72] text-white px-7 py-3 text-xs font-sans font-bold uppercase tracking-wider shadow-md transition-all fx-shine"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] text-white px-7 py-3 text-xs font-sans font-bold uppercase tracking-wider shadow-md transition-all fx-shine"
                 >
                   <span>{showProfileForm ? "Hide Application Form" : "Send Your Profile →"}</span>
                 </button>
@@ -652,11 +652,11 @@ export default function CareersPage() {
                   className="overflow-hidden"
                 >
                   <div
-                    className="relative rounded-3xl border border-[#3026B3]/20 border-t-4 border-t-[#3026B3] p-7 sm:p-12 shadow-xl mb-12 fx-lift"
-                    style={{ backgroundColor: "color-mix(in srgb, #3026B3 9%, white)" }}
+                    className="relative rounded-3xl border border-[#163A7A]/20 border-t-4 border-t-[#163A7A] p-7 sm:p-12 shadow-xl mb-12 fx-lift"
+                    style={{ backgroundColor: "color-mix(in srgb, #163A7A 9%, white)" }}
                   >
                     <div className="text-center mb-8">
-                      <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#3026B3] font-bold block">
+                      <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#163A7A] font-bold block">
                         TALENT BUREAU
                       </span>
                       <AnimatedHeading as="h3" effect="mask" hover="color" className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mt-1">
@@ -698,7 +698,7 @@ export default function CareersPage() {
                               value={name}
                               onChange={(e) => setName(e.target.value)}
                               placeholder="Your full name"
-                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50"
+                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50"
                             />
                           </div>
 
@@ -712,7 +712,7 @@ export default function CareersPage() {
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
                               placeholder="name@email.com"
-                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50"
+                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50"
                             />
                           </div>
                         </div>
@@ -727,7 +727,7 @@ export default function CareersPage() {
                               value={phone}
                               onChange={(e) => setPhone(e.target.value)}
                               placeholder="+91 XXXXX XXXXX"
-                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50"
+                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50"
                             />
                           </div>
 
@@ -740,7 +740,7 @@ export default function CareersPage() {
                               value={position}
                               onChange={(e) => setPosition(e.target.value)}
                               placeholder="e.g. Mechanical Engineer, AI Specialist"
-                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50"
+                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50"
                             />
                           </div>
                         </div>
@@ -753,7 +753,7 @@ export default function CareersPage() {
                             <select
                               value={vertical}
                               onChange={(e) => setVertical(e.target.value)}
-                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50"
+                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50"
                             >
                               {verticalsList.map((v) => (
                                 <option key={v} value={v}>
@@ -772,7 +772,7 @@ export default function CareersPage() {
                               value={location}
                               onChange={(e) => setLocation(e.target.value)}
                               placeholder="e.g. New Delhi, Bengaluru, Plant Site"
-                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50"
+                              className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50"
                             />
                           </div>
                         </div>
@@ -786,7 +786,7 @@ export default function CareersPage() {
                             value={linkedin}
                             onChange={(e) => setLinkedin(e.target.value)}
                             placeholder="https://linkedin.com/in/yourprofile"
-                            className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50"
+                            className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50"
                           />
                         </div>
 
@@ -799,7 +799,7 @@ export default function CareersPage() {
                             value={intro}
                             onChange={(e) => setIntro(e.target.value)}
                             placeholder="Tell us about the problems you've solved and what capabilities you bring."
-                            className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#3026B3] focus:outline-none focus:ring-2 focus:ring-[#3026B3]/30 hover:border-[#3026B3]/50 resize-y"
+                            className="w-full rounded-xl border border-[#C9CBE3] bg-white px-4 py-3 text-sm text-[#111827] transition-all duration-200 focus:border-[#163A7A] focus:outline-none focus:ring-2 focus:ring-[#163A7A]/30 hover:border-[#163A7A]/50 resize-y"
                           />
                         </div>
 
@@ -808,7 +808,7 @@ export default function CareersPage() {
                             type="submit"
                             data-cursor="button"
                             disabled={submitting}
-                            className="inline-flex items-center gap-2 rounded-full bg-[#3026B3] hover:bg-[#211B72] text-white px-8 py-3.5 text-xs font-sans font-bold uppercase tracking-wider shadow-md transition-all disabled:opacity-60 fx-shine"
+                            className="inline-flex items-center gap-2 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] text-white px-8 py-3.5 text-xs font-sans font-bold uppercase tracking-wider shadow-md transition-all disabled:opacity-60 fx-shine"
                           >
                             <span>{submitting ? "Submitting..." : "Submit Profile →"}</span>
                           </button>

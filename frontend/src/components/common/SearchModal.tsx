@@ -87,7 +87,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
           >
             {/* Input Bar */}
             <div className="flex items-center gap-3 border-b border-[#E3E5EF] px-4 py-3.5 dark:border-white/10">
-              <Icon name="search" width={18} height={18} className="text-[#3026B3] dark:text-gold-400 shrink-0" />
+              <Icon name="search" width={18} height={18} className="text-[#163A7A] dark:text-gold-400 shrink-0" />
               <input
                 type="text"
                 autoFocus
@@ -127,11 +127,11 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                         onClick={() => handleSelect(`/verticals#${s.id}`)}
                         className="group relative flex items-center gap-3 rounded-xl p-2.5 text-left transition-all duration-200 hover:bg-[#FAF9F6] hover:translate-x-1 dark:hover:bg-white/[0.05]"
                       >
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FAF9F6] border border-[#E3E5EF] font-sans text-[11px] font-bold text-[#3026B3] transition-transform duration-200 group-hover:scale-110">
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FAF9F6] border border-[#E3E5EF] font-sans text-[11px] font-bold text-[#163A7A] transition-transform duration-200 group-hover:scale-110">
                           0{i + 1}
                         </span>
                         <div className="min-w-0 flex-1">
-                          <div className="font-sans text-[13.5px] font-semibold text-[#111827] group-hover:text-[#3026B3] dark:text-white dark:group-hover:text-gold-400 truncate transition-colors">
+                          <div className="font-sans text-[13.5px] font-semibold text-[#111827] group-hover:text-[#163A7A] dark:text-white dark:group-hover:text-gold-400 truncate transition-colors">
                             {s.name}
                           </div>
                           <div className="text-[11px] text-[#596579] truncate">
@@ -142,7 +142,7 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                           name="arrow-up-right"
                           width={14}
                           height={14}
-                          className="shrink-0 text-[#3026B3] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                          className="shrink-0 text-[#163A7A] opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                         />
                       </button>
                     ))}
@@ -165,10 +165,10 @@ export function SearchModal({ open, onClose }: SearchModalProps) {
                         onClick={() => handleSelect(p.to)}
                         className="group relative flex items-center gap-3 rounded-xl p-2.5 text-left transition-all duration-200 hover:bg-[#FAF9F6] hover:translate-x-1 dark:hover:bg-white/[0.05]"
                       >
-                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FAF9F6] border border-[#E3E5EF] text-[#3026B3] transition-transform duration-200 group-hover:scale-110 dark:bg-white/[0.06] dark:text-ink-400">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FAF9F6] border border-[#E3E5EF] text-[#163A7A] transition-transform duration-200 group-hover:scale-110 dark:bg-white/[0.06] dark:text-ink-400">
                           <Icon name={p.icon} width={15} height={15} />
                         </span>
-                        <div className="font-sans text-[13.5px] font-medium text-[#111827] group-hover:text-[#3026B3] dark:text-white truncate transition-colors">
+                        <div className="font-sans text-[13.5px] font-medium text-[#111827] group-hover:text-[#163A7A] dark:text-white truncate transition-colors">
                           {p.label}
                         </div>
                       </button>

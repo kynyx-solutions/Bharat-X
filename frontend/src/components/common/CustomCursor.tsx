@@ -3,12 +3,12 @@ import { useEffect, useRef, useState, useCallback } from "react";
 type CursorState = "default" | "text" | "button" | "card" | "link" | "image";
 
 const CURSOR_COLORS: Record<CursorState, string> = {
-  default: "#3026B3",
+  default: "#163A7A",
   text:    "#F54900",
   button:  "#15966B",
   card:    "#00B8D9",
   link:    "#F54900",
-  image:   "#211B72",
+  image:   "#0F2A5C",
 };
 
 export function CustomCursor() {
