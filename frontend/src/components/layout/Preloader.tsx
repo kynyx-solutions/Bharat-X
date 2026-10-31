@@ -132,7 +132,7 @@ export function Preloader() {
           <div className="relative z-10 flex flex-col items-center px-6">
             {/* BharatX Group Logo — fade + scale in */}
             <motion.img
-              src="/bharatxgroup-588.webp"
+              src="/bharatxgroup.webp"
               alt="BharatX Group"
               className="h-24 sm:h-28 w-auto object-contain"
               initial={{ opacity: 0, scale: 0.82, y: 12 }}

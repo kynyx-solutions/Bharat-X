@@ -72,7 +72,7 @@ export function Footer() {
               className="flex flex-col items-center group"
             >
               <img
-                src="/bharatxgroup-588.webp"
+                src="/bharatxgroup.webp"
                 alt="BharatX Group"
                 className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
@@ -258,7 +258,7 @@ export function Footer() {
             ))}
             <span className="inline-flex items-center gap-2 ml-1">
               <img
-                src="/Make-in-India_Logo-96.webp"
+                src="/Make-in-India_Logo.webp"
                 alt="Make in India"
                 className="h-4 w-auto object-contain mix-blend-multiply shrink-0"
               />

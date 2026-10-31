@@ -19,7 +19,7 @@ export const heroSlides: HeroSlide[] = [
     name: "AI-First Group",
     shortLabel: "AI-FIRST GROUP",
     image: "/assets/slides/hero-ai-first.webp",
-    companyLogo: "/bharatxgroup-588.webp",
+    companyLogo: "/bharatxgroup.webp",
     heroTagline: "AI-First. Built For Bharat.",
   },
   {
@@ -99,7 +99,7 @@ export const heroSlides: HeroSlide[] = [
     name: "Connected Conglomerate Operations",
     shortLabel: "BHARATX GROUP",
     image: "/assets/hero9.webp",
-    companyLogo: "/bharatxgroup-588.webp",
+    companyLogo: "/bharatxgroup.webp",
     heroTagline: "Building Businesses. Enabling Bharat.",
   },
 ];
@@ -110,28 +110,12 @@ export function HomeHeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  /*
-   * Preload the other slides one at a time, starting once slide 1 has loaded. Requesting all of them at once made
-   * slide 1 (the page's LCP image, also preloaded from index.html) share bandwidth with ~2MB of later slides, so on
-   * mobile it painted after the slideshow had already moved on. Each slide is still fetched well before its turn.
-   */
+  // Preload all hero images immediately on mount
   useEffect(() => {
-    let cancelled = false;
-    const load = (src: string) =>
-      new Promise<void>((resolve) => {
-        const img = new Image();
-        img.onload = img.onerror = () => resolve();
-        img.src = src;
-      });
-    void (async () => {
-      for (const s of heroSlides) {
-        if (cancelled) return;
-        await load(s.image); // slide 1 is already downloading, so the first await just waits for it
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
+    heroSlides.forEach((s) => {
+      const img = new Image();
+      img.src = s.image;
+    });
   }, []);
 
   const handleNext = useCallback(() => {
@@ -167,26 +151,10 @@ export function HomeHeroSection() {
     >
       {/* ── BACKGROUND FULL-BLEED IMAGERY CROSSFADE ─────────────────── */}
       <div className="absolute inset-0 z-0">
-        {/*
-          Slide 1 always stays painted underneath (fully covered by the images below). Swapping the visible image would
-          otherwise make the browser record each new slide as a fresh "largest paint", so lab tools (PageSpeed /
-          Lighthouse) reported a later slide as the LCP; with this, slide 1, the image visitors actually see first, stays it.
-        */}
-        <img
-          src={heroSlides[0].image}
-          alt=""
-          aria-hidden
-          fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover object-top object-center filter brightness-[0.98] contrast-[1.04]"
-        />
-        {/* Covers it with the section's black, so what shows while a slide loads is exactly as before */}
-        <div aria-hidden className="absolute inset-0 bg-black" />
-
-        {/* Persistent base image to prevent any blank screen flashes (slide 1 is the LCP image: high priority) */}
+        {/* Persistent base image to prevent any blank screen flashes */}
         <img
           src={current.image}
           alt=""
-          fetchPriority={currentIndex === 0 ? "high" : "auto"}
           className="absolute inset-0 h-full w-full object-cover object-top object-center filter brightness-[0.98] contrast-[1.04]"
         />
 
