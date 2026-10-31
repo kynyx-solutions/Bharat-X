@@ -39,6 +39,21 @@
       })();
     </script>
 
+    <!--
+      Home only: start downloading the first hero slide (the LCP image) with the HTML instead of after the app's
+      JavaScript has loaded. Keep this path in sync with the first slide in src/components/home/HomeHeroSection.tsx.
+    -->
+    <script>
+      if (location.pathname === "/") {
+        var heroPreload = document.createElement("link");
+        heroPreload.rel = "preload";
+        heroPreload.as = "image";
+        heroPreload.href = "/assets/slides/hero-ai-first.webp";
+        heroPreload.setAttribute("fetchpriority", "high");
+        document.head.appendChild(heroPreload);
+      }
+    </script>
+
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="BharatX Group" />
