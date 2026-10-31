@@ -2,6 +2,7 @@ import { lazy, useEffect, type ComponentType } from "react";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { Layout } from "../components/layout/Layout";
 import HomePage from "../pages/HomePage";
+import { afterFirstSlidePaint } from "../utils/homeLoadOrder";
 
 /*
  * Pages load on demand: Home ships in the main bundle (most visitors land there); every other page is its own chunk.
@@ -85,14 +86,19 @@ export function preloadFirstPage(): Promise<unknown> {
   return pages[key].load();
 }
 
-/** Once the site has loaded, fetch the remaining pages in the background. */
+/**
+ * Once the site has loaded, fetch the remaining pages in the background (on a visit that starts at Home, after the
+ * first hero slide has painted: utils/homeLoadOrder.ts).
+ */
 function usePrefetchPages() {
   useEffect(() => {
     const prefetch = () => Object.values(pages).forEach((page) => void page.load());
     // Safari has no requestIdleCallback
     const whenIdle = () => (typeof window.requestIdleCallback === "function" ? window.requestIdleCallback(prefetch) : window.setTimeout(prefetch, 1));
-    if (document.readyState === "complete") whenIdle();
-    else window.addEventListener("load", whenIdle, { once: true });
+    void afterFirstSlidePaint().then(() => {
+      if (document.readyState === "complete") whenIdle();
+      else window.addEventListener("load", whenIdle, { once: true });
+    });
   }, []);
 }
 

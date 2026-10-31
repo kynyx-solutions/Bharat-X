@@ -55,8 +55,8 @@ export function WhyBharatXSection() {
             <span>WHY BHARATX</span>
           </div>
 
-          <h2 className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-bx-ink">
-            More Than Capital.<br /> <span className="text-bx-navy-700">More Than Strategy.</span>
+          <h2 className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-bx-navy-700">
+            More Than Capital.<br /> <span className="text-bx-orange">More Than Strategy.</span>
           </h2>
 
           <p className="mt-3 text-base text-bx-slate max-w-2xl leading-relaxed">

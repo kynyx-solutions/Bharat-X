@@ -239,7 +239,7 @@ export default function CareersPage() {
               hover="color"
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
-              Build What <span className="text-bx-orange">Matters.</span>
+              Build What <span>Matters.</span>
             </AnimatedHeading>
 
             {/* CTA */}
@@ -297,9 +297,9 @@ export default function CareersPage() {
               as="h2"
               effect="mask"
               hover="color"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight"
             >
-              More Than a Job. <span className="text-bx-navy-700">A Chance to Build.</span>
+              More Than a Job. <span className="text-bx-orange">A Chance to Build.</span>
             </AnimatedHeading>
 
             <p className="mt-6 text-base sm:text-lg text-bx-slate leading-relaxed font-normal">
@@ -363,9 +363,9 @@ export default function CareersPage() {
               as="h2"
               effect="words"
               hover="gradient"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight"
             >
-              Find Your Place in the <span className="text-bx-navy-700">Ecosystem</span>
+              Find Your Place in the <span className="text-bx-orange">Ecosystem</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
@@ -454,9 +454,9 @@ export default function CareersPage() {
               as="h2"
               effect="mask"
               hover="color"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight"
             >
-              Built for People Who <span className="text-bx-navy-700">Take Ownership</span>
+              Built for People Who <span className="text-bx-orange">Take Ownership</span>
             </AnimatedHeading>
 
             <p className="mt-3 text-base text-bx-slate">
@@ -522,9 +522,9 @@ export default function CareersPage() {
               as="h2"
               effect="words"
               hover="gradient"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight"
             >
-              Find Your Next <span className="text-bx-navy-700">Opportunity</span>
+              Find Your Next <span className="text-bx-orange">Opportunity</span>
             </AnimatedHeading>
 
             <p className="mt-2 font-heading text-xl text-bx-navy-700 font-medium">

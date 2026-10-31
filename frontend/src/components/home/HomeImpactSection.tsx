@@ -72,7 +72,7 @@ export function HomeImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-bx-ink transition-colors"
+            className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-bx-orange transition-colors"
           >
             Building Economic Value.<br />
             <span className="text-bx-green">Creating Wider Impact.</span>

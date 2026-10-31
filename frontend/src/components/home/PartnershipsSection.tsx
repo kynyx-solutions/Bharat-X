@@ -43,8 +43,8 @@ export function PartnershipsSection() {
 
           {/* No divider line: 20px from heading to intro row, then 32px down to the cards */}
           <div className="mt-4 grid gap-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-12 lg:gap-y-5">
-            <h2 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.08] tracking-tight text-bx-ink text-balance lg:self-end">
-              Working with <span className="text-bx-navy-700">India&apos;s institutions</span>.
+            <h2 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.08] tracking-tight text-bx-navy-700 text-balance lg:self-end">
+              Working with <span className="text-bx-orange">India&apos;s institutions</span>.
             </h2>
 
             <Link to="/partnerships" data-cursor="button" className="order-last justify-self-start lg:order-none lg:self-end lg:pb-1">

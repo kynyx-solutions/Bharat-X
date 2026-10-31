@@ -148,8 +148,8 @@ export default function PartnershipsPage() {
                 <span className="h-2 w-2 rounded-full bg-bx-navy-700 transition-transform duration-300 group-hover/header:scale-125" />
                 <span>OUR PARTNERS</span>
               </div>
-              <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-ink">
-                Institutions we <span className="text-bx-navy-700">work with</span>
+              <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-navy-700">
+                Institutions we <span className="text-bx-orange">work with</span>
               </h2>
               <p className="mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-bx-slate">
                 Government programmes, premier universities and public-sector companies, partnering with us on AI
@@ -210,8 +210,8 @@ export default function PartnershipsPage() {
               <span className="h-2 w-2 rounded-full bg-bx-green transition-transform duration-300 group-hover/header:scale-125" />
               <span>FOCUS AREAS</span>
             </div>
-            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-ink">
-              What we work on <span className="text-bx-navy-700">together</span>
+            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-navy-700">
+              What we work on <span className="text-bx-orange">together</span>
             </h2>
           </div>
 

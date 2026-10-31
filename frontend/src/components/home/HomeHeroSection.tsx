@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Icon } from "../../utils/icons";
+import { afterFirstSlidePaint } from "../../utils/homeLoadOrder";
 import { Button } from "../common/Button";
 
 export interface HeroSlide {
@@ -19,7 +20,7 @@ export const heroSlides: HeroSlide[] = [
     name: "AI-First Group",
     shortLabel: "AI-FIRST GROUP",
     image: "/assets/slides/hero-ai-first.webp",
-    companyLogo: "/bharatxgroup.webp",
+    companyLogo: "/bharatxgroup-588.webp",
     heroTagline: "AI-First. Built For Bharat.",
   },
   {
@@ -99,7 +100,7 @@ export const heroSlides: HeroSlide[] = [
     name: "Connected Conglomerate Operations",
     shortLabel: "BHARATX GROUP",
     image: "/assets/hero9.webp",
-    companyLogo: "/bharatxgroup.webp",
+    companyLogo: "/bharatxgroup-588.webp",
     heroTagline: "Building Businesses. Enabling Bharat.",
   },
 ];
@@ -110,12 +111,28 @@ export function HomeHeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Preload all hero images immediately on mount
+  /*
+   * Preload the other slides one at a time, starting once slide 1 has been painted (utils/homeLoadOrder.ts).
+   * Requesting all of them on mount made slide 1 (the page's LCP image, also preloaded from index.html) share the
+   * connection with ~2MB of later slides. Each slide is still downloaded well before its turn.
+   */
   useEffect(() => {
-    heroSlides.forEach((s) => {
-      const img = new Image();
-      img.src = s.image;
+    let cancelled = false;
+    const load = (src: string) =>
+      new Promise<void>((resolve) => {
+        const img = new Image();
+        img.onload = img.onerror = () => resolve();
+        img.src = src;
+      });
+    void afterFirstSlidePaint().then(async () => {
+      for (const s of heroSlides) {
+        if (cancelled) return;
+        await load(s.image); // slide 1 is already loaded, so this moves straight on to slide 2
+      }
     });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const handleNext = useCallback(() => {
@@ -151,10 +168,26 @@ export function HomeHeroSection() {
     >
       {/* ── BACKGROUND FULL-BLEED IMAGERY CROSSFADE ─────────────────── */}
       <div className="absolute inset-0 z-0">
-        {/* Persistent base image to prevent any blank screen flashes */}
+        {/*
+          Slide 1 always stays painted underneath (fully covered by the images below). The browser then keeps it as
+          the page's largest paint instead of re-measuring every later slide of the same size, which made page-speed
+          tools report the LCP at whatever slide was showing when they stopped.
+        */}
+        <img
+          src={heroSlides[0].image}
+          alt=""
+          aria-hidden
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-top object-center filter brightness-[0.98] contrast-[1.04]"
+        />
+        {/* Covers it with the section's black, so what shows while a slide loads is exactly as before */}
+        <div aria-hidden className="absolute inset-0 bg-black" />
+
+        {/* Persistent base image to prevent any blank screen flashes (slide 1 is the LCP image: high priority) */}
         <img
           src={current.image}
           alt=""
+          fetchPriority={currentIndex === 0 ? "high" : "auto"}
           className="absolute inset-0 h-full w-full object-cover object-top object-center filter brightness-[0.98] contrast-[1.04]"
         />
 

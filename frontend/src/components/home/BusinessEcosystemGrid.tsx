@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { companies } from "../../data/companies";
@@ -105,7 +105,6 @@ const verticals: Vertical[] = [
 // Long enough to read a panel (~70 words); autoplay stops for good once the visitor picks a vertical.
 const AUTOPLAY_MS = 10000;
 const KEY_STEP: Record<string, number> = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
-const pad = (n: number) => String(n).padStart(2, "0");
 
 /** One block of a panel; blocks fade up in sequence when their panel becomes active. */
 function PanelStep({ show, order, className, children }: { show: boolean; order: number; className?: string; children: ReactNode }) {
@@ -126,7 +125,6 @@ function PanelStep({ show, order, className, children }: { show: boolean; order:
 export function BusinessEcosystemGrid() {
   const reduced = useReducedMotion();
   const [active, setActive] = useState(0);
-  const [hovering, setHovering] = useState(false);
   const [keyboardFocus, setKeyboardFocus] = useState(false);
   const [userPicked, setUserPicked] = useState(false);
   const [inView, setInView] = useState(false);
@@ -134,9 +132,9 @@ export function BusinessEcosystemGrid() {
   const listRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  // No autoplay for reduced-motion users or after a tap/click/arrow key (phones have no hover to pause it);
-  // hover and keyboard focus pause it for everyone else.
-  const playing = !reduced && !userPicked && !hovering && !keyboardFocus && inView;
+  // No autoplay for reduced-motion users or after a tap/click/arrow key; keyboard focus pauses it. A mouse over the
+  // list or text doesn't pause it (hovering a vertical just jumps to it and the countdown carries on from there).
+  const playing = !reduced && !userPicked && !keyboardFocus && inView;
   const count = verticals.length;
 
   // Advance to the next vertical, looping back to the first. Any change of `active` restarts the clock.
@@ -180,19 +178,14 @@ export function BusinessEcosystemGrid() {
     select(active + step, true);
   };
 
-  // Pause while a mouse is over the list or the text (touch taps don't count as hovering).
-  const hoverHandlers = {
-    onPointerEnter: (e: PointerEvent) => e.pointerType === "mouse" && setHovering(true),
-    onPointerLeave: (e: PointerEvent) => e.pointerType === "mouse" && setHovering(false),
-  };
-
   return (
     <SectionTransition
       id="businesses"
       aria-label="Our Business Ecosystem"
-      // Fills one screen (svh = the visible height on phones). Top padding minus bottom padding equals the
-      // fixed navbar's height (72px, 84px from sm), so the content is centred in the area below it.
-      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-bx-night-black pt-28 pb-10 sm:pt-32 sm:pb-11 short:pt-[6.25rem] short:pb-4 text-white"
+      // Fills one screen (svh = the visible height on phones); on desktop, exactly the screen below the 84px navbar,
+      // so the whole section shows in one frame. The content starts near the top edge, with only a small gap
+      // above the "Core Verticals" title.
+      className="relative flex min-h-[100svh] lg:min-h-[calc(100svh-88px)] flex-col justify-start overflow-hidden bg-bx-night-black pt-14 pb-10 sm:pt-16 sm:pb-11 short:pt-14 short:pb-4 text-white"
       onFocus={(e) => (e.target as HTMLElement).matches(":focus-visible") && setKeyboardFocus(true)}
       onBlur={(e) => !e.currentTarget.contains(e.relatedTarget as Node | null) && setKeyboardFocus(false)}
       backdrop={
@@ -213,12 +206,12 @@ export function BusinessEcosystemGrid() {
           ))}
           {/* Phones: the copy spans the whole image, so tint it evenly */}
           <div className="absolute inset-0 bg-bx-night-black/55 lg:hidden" />
-          {/* Desktop: darken under the copy (left) and the list (right), leave the subject band clear */}
+          {/* Desktop: darken under the list (left) and the copy (right), leave the subject band clear */}
           <div
             className="absolute inset-0 hidden lg:block"
             style={{
               background:
-                "linear-gradient(90deg, rgba(7,10,31,0.85) 0%, rgba(7,10,31,0.6) 35%, rgba(7,10,31,0) 55%, rgba(7,10,31,0) 68%, rgba(7,10,31,0.7) 100%)",
+                "linear-gradient(270deg,rgba(7,10,31,0.85) 0%, rgba(7,10,31,0.6) 35%, rgba(7,10,31,0) 55%, rgba(7,10,31,0) 68%, rgba(7,10,31,0.7) 100%)",
             }}
           />
         </div>
@@ -227,22 +220,19 @@ export function BusinessEcosystemGrid() {
       {/* The gradient above keeps the copy legible on any photo; the text shadow adds a little extra lift */}
       {/* Full width like the hero (max-w-none!), so text and list sit near the screen edges on wide screens */}
       <div ref={rootRef} className="container-x max-w-none! relative z-10 [text-shadow:0_1px_2px_rgba(0,0,0,0.9),0_2px_10px_rgba(0,0,0,0.75),0_0_28px_rgba(0,0,0,0.55)]">
-        {/* Header: title + counter */}
-        <div className="flex items-center justify-between gap-4">
-          <h2 className="flex items-center gap-3 whitespace-nowrap font-heading text-lg sm:text-xl font-semibold uppercase tracking-[0.06em]">
-            <svg viewBox="0 0 24 24" width="16" height="22" aria-hidden className="shrink-0 text-bx-orange">
+        {/* Header: title */}
+        {/* Nudged up a little (relative offset, so nothing below moves) */}
+        <div className="relative -top-6 sm:-top-8 flex items-center justify-between gap-4">
+          <h2 className="flex items-center gap-3 whitespace-nowrap font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-[0.06em] text-bx-orange">
+            {/* <svg viewBox="0 0 24 24" width="20" height="28" aria-hidden className="shrink-0 text-bx-orange">
               <path fill="currentColor" d="M12 1C12 1 4 10.5 4 15.5a8 8 0 0 0 16 0C20 10.5 12 1 12 1z" />
-            </svg>
+            </svg> */}
             Core Verticals
           </h2>
-
-          <span aria-hidden className="whitespace-nowrap font-sans text-sm tabular-nums text-white/85 lg:-mr-4 xl:-mr-8">
-            <span className="font-semibold text-white">{pad(active + 1)}</span> / {pad(count)}
-          </span>
         </div>
 
-        {/* The list column is narrow and pulled into the container's right padding, so it sits near the edge */}
-        <div className="mt-6 sm:mt-8 short:mt-4 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)] lg:gap-16 xl:gap-28">
+        {/* Desktop: the narrow list column on the left, the description on the right */}
+        <div className="mt-6 sm:mt-8 short:mt-4 grid gap-8 lg:grid-cols-[minmax(280px,340px)_minmax(0,1fr)] lg:gap-16 xl:gap-28">
           {/* Vertical list — tab strip on mobile, stacked list on desktop */}
           <div
             ref={listRef}
@@ -250,8 +240,7 @@ export function BusinessEcosystemGrid() {
             aria-label="Core verticals"
             aria-orientation="vertical"
             onKeyDown={onKeyDown}
-            {...hoverHandlers}
-            className="relative -mx-5 flex gap-6 overflow-x-auto border-b border-white/20 px-5 [scrollbar-width:none] sm:-mx-8 sm:px-8 lg:col-start-2 lg:row-start-1 lg:ml-0 lg:-mr-4 xl:-mr-8 lg:flex-col lg:gap-0 lg:self-center lg:overflow-visible lg:border-b-0 lg:px-0"
+            className="relative -mx-5 flex gap-6 overflow-x-auto border-b border-white/20 px-5 [scrollbar-width:none] sm:-mx-8 sm:px-8 lg:col-start-1 lg:row-start-1 lg:mx-0 lg:flex-col lg:gap-0 lg:self-center lg:overflow-visible lg:border-b-0 lg:px-0"
           >
             {verticals.map((v, i) => {
               const isActive = i === active;
@@ -297,8 +286,8 @@ export function BusinessEcosystemGrid() {
           {/* Panels share one grid cell so the section keeps the tallest panel's height */}
           <div
             aria-live={playing ? "off" : "polite"}
-            {...hoverHandlers}
-            className="grid lg:col-start-1 lg:row-start-1 lg:max-w-2xl lg:self-center"
+            // Pulled into the container's right padding, leaving only a small gap at the screen edge
+            className="grid lg:col-start-2 lg:row-start-1 lg:max-w-2xl lg:self-center lg:justify-self-end lg:-mr-4 xl:-mr-8"
           >
             {verticals.map((v, i) => {
               const show = i === active;
@@ -313,19 +302,21 @@ export function BusinessEcosystemGrid() {
                   id={`vertical-panel-${v.id}`}
                   aria-labelledby={`vertical-tab-${v.id}`}
                   className={cn(
-                    // self-center: shorter panels sit mid-way in the shared cell rather than at its top
-                    "col-start-1 row-start-1 self-center transition-[visibility] duration-700",
+                    // self-center: shorter panels sit mid-way in the shared cell rather than at its top.
+                    // Desktop: every panel has the same width and sits against the right edge; longer names wrap
+                    // onto two lines and the copy below fills the same width.
+                    "col-start-1 row-start-1 self-center transition-[visibility] duration-700 lg:w-[28rem] xl:w-[31rem] lg:justify-self-end",
                     show ? "visible" : "invisible",
                   )}
                 >
                   <PanelStep show={show} order={0}>
-                    <h3 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.05] tracking-tight">
+                    <h3 className="font-heading text-3xl sm:text-4xl xl:text-5xl font-medium leading-[1.05] tracking-tight">
                       {v.label}
                     </h3>
                   </PanelStep>
 
                   {/* Narrow, evenly set copy, like the businesses block */}
-                  <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] space-y-5 text-base sm:text-[17px] lg:text-lg short:mt-4 short:space-y-3 short:text-base leading-relaxed text-white/95 text-justify hyphens-auto">
+                  <PanelStep show={show} order={1} className="mt-6 max-w-[27rem] lg:max-w-none space-y-5 text-base sm:text-[17px] lg:text-lg short:mt-4 short:space-y-3 short:text-base leading-relaxed text-white/95 text-justify hyphens-auto">
                     <p>{v.lead}</p>
                     <p>{v.detail}</p>
                   </PanelStep>

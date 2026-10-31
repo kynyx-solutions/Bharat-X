@@ -49,11 +49,11 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-2 font-heading text-3xl sm:text-5xl lg:text-[3.4rem] font-medium leading-tight tracking-tight text-bx-ink transition-colors duration-300"
+              className="mt-2 font-heading text-3xl sm:text-5xl lg:text-[3.4rem] font-medium leading-tight tracking-tight text-bx-navy-700 transition-colors duration-300"
             >
               The Next Chapter Is{" "}
               <br />
-              <span className="text-bx-navy-700">Already Taking Shape.</span>
+              <span className="text-bx-orange">Already Taking Shape.</span>
             </motion.h2>
 
             <motion.p

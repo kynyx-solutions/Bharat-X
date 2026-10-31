@@ -15,8 +15,8 @@ export function InsideBharatXSection() {
               <span>INSIDE BHARATX</span>
             </div>
 
-            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-ink transition-colors duration-300">
-              Inside <span className="text-bx-navy-700 transition-colors">BharatX</span>
+            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-navy-700 transition-colors duration-300">
+              Inside <span className="text-bx-orange transition-colors">BharatX</span>
             </h2>
 
             <p className="mt-3 text-base text-bx-slate max-w-2xl leading-relaxed">

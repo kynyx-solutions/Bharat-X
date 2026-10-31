@@ -83,8 +83,8 @@ export default function LeadershipPage() {
                 <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-bx-navy-700 font-semibold">
                   NATIONAL ECONOMIC VISION
                 </span>
-                <AnimatedHeading as="h2" effect="words" hover="color" className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight">
-                  Architecting <span className="text-bx-navy-700">Sovereign Industrial Depth</span> for Bharat.
+                <AnimatedHeading as="h2" effect="words" hover="color" className="mt-3 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight">
+                  Architecting <span className="text-bx-orange">Sovereign Industrial Depth</span> for Bharat.
                 </AnimatedHeading>
 
                 <div className="mt-6 rounded-2xl border-l-4 border-bx-orange bg-bx-navy-900 p-6 shadow-md fx-lift">

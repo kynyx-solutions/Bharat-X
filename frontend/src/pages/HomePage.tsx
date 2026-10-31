@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { afterFirstSlidePaint, isHomeLoadReleased } from "../utils/homeLoadOrder";
 import { HomeHeroSection } from "../components/home/HomeHeroSection";
 import { PartnershipsSection } from "../components/home/PartnershipsSection";
 import { StatsMarquee } from "../components/home/StatsMarquee";
@@ -19,6 +21,13 @@ export default function HomePage() {
     path: "/",
   });
 
+  // The sections below the first screen render once the hero's first slide has painted (utils/homeLoadOrder.ts), so
+  // their images don't slow it down. They sit below the fold, so nothing visible changes.
+  const [showBelowFold, setShowBelowFold] = useState(isHomeLoadReleased);
+  useEffect(() => {
+    if (!showBelowFold) void afterFirstSlidePaint().then(() => setShowBelowFold(true));
+  }, [showBelowFold]);
+
   return (
     <main className="w-full bg-bx-cream text-bx-ink min-h-screen">
       {/* Hero + stats strip fill exactly one screen together (svh = the visible height on phones) */}
@@ -30,32 +39,36 @@ export default function HomePage() {
         <StatsMarquee />
       </div>
 
-      {/* ── PARTNERSHIPS & PROGRAMMES (Institutions, MoUs) ─────────── */}
-      {/* <PartnershipsSection /> */}
+      {showBelowFold && (
+        <>
+          {/* ── PARTNERSHIPS & PROGRAMMES (Institutions, MoUs) ─────────── */}
+          {/* <PartnershipsSection /> */}
 
-      {/* ── 02. ABOUT BHARATX — WHO WE ARE ──────────────────────── */}
-      {/* <AboutBharatXSection />*/}
+          {/* ── 02. ABOUT BHARATX — WHO WE ARE ──────────────────────── */}
+          {/* <AboutBharatXSection />*/}
 
-      {/* ── 03. OUR BUSINESSES — CORE VERTICALS ─ */}
-      <BusinessEcosystemGrid />
+          {/* ── 03. OUR BUSINESSES — CORE VERTICALS ─ */}
+          <BusinessEcosystemGrid />
 
-      {/* ── 04. OUR APPROACH (Opportunity to Enterprise Flow) ───── */}
-      <OurApproachSection />
+          {/* ── 04. OUR APPROACH (Opportunity to Enterprise Flow) ───── */}
+          <OurApproachSection />
 
-      {/* ── 05. WHY BHARATX (4 Pillars + Operating Statement) ───── */}
-      <WhyBharatXSection />
+          {/* ── 05. WHY BHARATX (4 Pillars + Operating Statement) ───── */}
+          <WhyBharatXSection />
 
-      {/* ── 06. IMPACT (Economic Value & Wider Impact) ───────────── */}
-      <HomeImpactSection />
+          {/* ── 06. IMPACT (Economic Value & Wider Impact) ───────────── */}
+          <HomeImpactSection />
 
-      {/* ── 07. BUILDING WHAT COMES NEXT (Upcoming Businesses) ───── */}
-      <WhatComesNextSection />
+          {/* ── 07. BUILDING WHAT COMES NEXT (Upcoming Businesses) ───── */}
+          <WhatComesNextSection />
 
-      {/* ── 08. INSIGHTS + CAREERS (Inside BharatX Combined) ─────── */}
-      <InsideBharatXSection />
+          {/* ── 08. INSIGHTS + CAREERS (Inside BharatX Combined) ─────── */}
+          <InsideBharatXSection />
 
-      {/* ── 09. FINAL CTA (Let's Build What Comes Next) ──────────── */}
-      <HomeFinalCTA />
+          {/* ── 09. FINAL CTA (Let's Build What Comes Next) ──────────── */}
+          <HomeFinalCTA />
+        </>
+      )}
     </main>
   );
 }

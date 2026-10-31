@@ -151,7 +151,7 @@ export function Navbar() {
             className="group relative z-10 flex items-center shrink-0 rounded-xl transition-all duration-300 hover:scale-[1.02] lg:justify-self-start"
           >
             <img
-              src="/bharatxgroup.webp"
+              src="/bharatxgroup-588.webp"
               alt="BharatX Group"
               className="h-12 sm:h-14 md:h-[60px] max-h-[60px] w-auto object-contain shrink-0"
             />

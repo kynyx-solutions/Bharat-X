@@ -206,8 +206,8 @@ export default function HowWeBuildPage() {
                 <span>OUR PHILOSOPHY</span>
               </div>
 
-              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-                We Are Builders, <span className="text-bx-navy-700">Not Just Investors.</span>
+              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+                We Are Builders, <span className="text-bx-orange">Not Just Investors.</span>
               </AnimatedHeading>
 
               <p className="mt-6 text-base sm:text-lg text-bx-slate leading-relaxed font-normal">
@@ -304,8 +304,8 @@ export default function HowWeBuildPage() {
               <span>THE BHARATX BUILD CYCLE</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              Our Five-Step <span className="text-bx-navy-700">Approach</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              Our Five-Step <span className="text-bx-orange">Approach</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
@@ -378,8 +378,8 @@ export default function HowWeBuildPage() {
               <span>WHAT WE BRING</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              The BharatX <span className="text-bx-navy-700">Advantage</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              The BharatX <span className="text-bx-orange">Advantage</span>
             </AnimatedHeading>
 
             <p className="mt-3 text-base text-bx-slate">
@@ -439,8 +439,8 @@ export default function HowWeBuildPage() {
               <span>OPERATING FOOTPRINT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              Building Across the <span className="text-bx-navy-700">Real and Digital Economy</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              Building Across the <span className="text-bx-orange">Real and Digital Economy</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">

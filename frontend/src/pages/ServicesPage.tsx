@@ -65,7 +65,7 @@ export default function ServicesPage() {
               data-cursor="text"
             >
               Building Across India’s{" "}
-              <span className="text-bx-orange transition-colors duration-300">Growth Economy.</span>
+              <span>Growth Economy.</span>
             </motion.h1>
 
             {/* CTA */}
@@ -105,8 +105,8 @@ export default function ServicesPage() {
               <span>BUSINESS PORTFOLIO</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              Our Business <span className="text-bx-navy-700">Ecosystem</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              Our Business <span className="text-bx-orange">Ecosystem</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed">
@@ -190,8 +190,8 @@ export default function ServicesPage() {
               <span>HOW THEY CONNECT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              Different Businesses. <span className="text-bx-navy-700">One Ecosystem.</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              Different Businesses. <span className="text-bx-orange">One Ecosystem.</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
@@ -339,8 +339,8 @@ export default function ServicesPage() {
               <span>WHAT’S NEXT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              The Portfolio Is <span className="text-bx-navy-700">Growing</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              The Portfolio Is <span className="text-bx-orange">Growing</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">

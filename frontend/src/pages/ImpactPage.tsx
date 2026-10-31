@@ -221,7 +221,7 @@ export default function ImpactPage() {
               data-cursor="text"
             >
               From Opportunity to{" "}
-              <span className="text-bx-orange transition-colors duration-300">Impact.</span>
+              <span>Impact.</span>
             </motion.h1>
 
             {/* CTA */}
@@ -274,8 +274,8 @@ export default function ImpactPage() {
                 <span>OUR IMPACT PHILOSOPHY</span>
               </div>
 
-              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-                Growth Should Create <span className="text-bx-navy-700">More Than Profit.</span>
+              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+                Growth Should Create <span className="text-bx-orange">More Than Profit.</span>
               </AnimatedHeading>
 
               <p className="mt-6 text-base sm:text-lg text-bx-slate leading-relaxed font-normal">
@@ -392,8 +392,8 @@ export default function ImpactPage() {
               <span>WHERE WE CREATE IMPACT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              Impact Across the <span className="text-bx-navy-700">Economy</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              Impact Across the <span className="text-bx-orange">Economy</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed">
@@ -485,8 +485,8 @@ export default function ImpactPage() {
               <span>IMPACT IN NUMBERS</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              Our Growing <span className="text-bx-navy-700">Footprint</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              Our Growing <span className="text-bx-orange">Footprint</span>
             </AnimatedHeading>
 
             <p className="mt-2 font-heading text-xl sm:text-2xl text-bx-navy-700 font-medium">
@@ -615,8 +615,8 @@ export default function ImpactPage() {
               <span>OUR COMMITMENT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
-              Building <span className="text-bx-navy-700">Responsibly</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight">
+              Building <span className="text-bx-orange">Responsibly</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
@@ -687,8 +687,8 @@ export default function ImpactPage() {
             </div>
 
             {/* Headline */}
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-bx-ink">
-              The Opportunity <span className="text-bx-navy-700">Ahead</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-bx-navy-700">
+              The Opportunity <span className="text-bx-orange">Ahead</span>
             </AnimatedHeading>
 
             {/* Copy */}

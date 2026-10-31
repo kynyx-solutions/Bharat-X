@@ -313,7 +313,7 @@ export default function ContactPage() {
               hover="color"
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
-              Let’s Build What <span className="text-bx-orange">Comes Next.</span>
+              Let’s Build What <span>Comes Next.</span>
             </AnimatedHeading>
 
             {/* CTA */}
@@ -370,9 +370,9 @@ export default function ContactPage() {
               as="h2"
               effect="mask"
               hover="color"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight"
             >
-              Choose Your <span className="text-bx-navy-700">Pathway</span>
+              Choose Your <span className="text-bx-orange">Pathway</span>
             </AnimatedHeading>
 
             <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
@@ -453,9 +453,9 @@ export default function ContactPage() {
                 as="h2"
                 effect="words"
                 hover="gradient"
-                className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
+                className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight"
               >
-                Start a <span className="text-bx-navy-700">Conversation</span>
+                Start a <span className="text-bx-orange">Conversation</span>
               </AnimatedHeading>
 
               <p className="mt-3 text-base sm:text-lg text-bx-slate">
@@ -959,9 +959,9 @@ export default function ContactPage() {
               as="h2"
               effect="mask"
               hover="color"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-navy-700 leading-tight tracking-tight"
             >
-              BharatX Group <span className="text-bx-navy-700">Offices</span>
+              BharatX Group <span className="text-bx-orange">Offices</span>
             </AnimatedHeading>
 
             <p className="mt-3 text-base text-bx-slate">

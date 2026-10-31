@@ -117,9 +117,9 @@ export function OurApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-bx-ink transition-colors"
+            className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-bx-navy-700 transition-colors"
           >
-            From Opportunity to <br /> <span className="text-bx-navy-700">Enterprise</span>
+            From Opportunity to <br /> <span className="text-bx-orange">Enterprise</span>
           </motion.h2>
 
           <motion.p
