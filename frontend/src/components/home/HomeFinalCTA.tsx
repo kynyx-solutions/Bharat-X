@@ -36,7 +36,7 @@ export function HomeFinalCTA() {
               className="mt-2 font-heading text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-sm"
             >
               Let’s Build{" "}
-              <span className="text-bx-cyan">What Comes Next.</span>
+              <span className="text-bx-orange">What Comes Next.</span>
             </motion.h2>
 
             {/* Copy */}

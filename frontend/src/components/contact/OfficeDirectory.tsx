@@ -50,8 +50,8 @@ export function OfficeDirectory() {
             <div className="space-y-3 font-sans text-xs sm:text-[13px] text-bx-ink">
               <div className="flex items-center gap-3">
                 <span className="text-bx-ink-soft uppercase tracking-wider w-24">Email</span>
-                <a href="mailto:contact@bharatx.group" data-cursor="link" className="font-bold text-bx-navy-700 hover:underline">
-                  contact@bharatx.group
+                <a href="mailto:contact@bharatxgroup.com" data-cursor="link" className="font-bold text-bx-navy-700 hover:underline">
+                  contact@bharatxgroup.com
                 </a>
               </div>
 

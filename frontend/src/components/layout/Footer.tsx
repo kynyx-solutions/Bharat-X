@@ -221,12 +221,35 @@ export function Footer() {
             © {new Date().getFullYear()} BharatX Group. All rights reserved.
           </p>
 
-          <div className="flex items-center justify-center shrink-0">
+          <div className="flex items-center justify-center shrink-0 font-sans text-[11px] tracking-[0.14em] text-bx-slate">
+            <span className="inline-flex items-center gap-2">
+              <img
+                src="/Make-in-India_Logo-96.webp"
+                alt="Make in India"
+                className="h-4 w-auto object-contain mix-blend-multiply shrink-0"
+              />
+              <span className="uppercase tracking-[0.16em]">Make in India</span>
+              {/* <span aria-hidden className="text-xs leading-none">🇮🇳</span> */}
+            </span>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-2.5 gap-y-1 font-sans text-[11px] tracking-[0.14em] text-bx-slate">
+            {footerSections.legal.map((item) => (
+              <span key={item.label} className="inline-flex items-center gap-2">
+                <span className="text-bx-slate-400">•</span>
+                <Link
+                  to={item.to}
+                  className="transition-colors hover:text-bx-navy-700"
+                >
+                  {item.label}
+                </Link>
+              </span>
+            ))}
             <a
               href="https://kynyx.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-[0.16em] text-bx-slate transition-colors hover:text-bx-navy-700"
+              className="group ml-1 inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-[0.16em] text-bx-slate transition-colors hover:text-bx-navy-700"
             >
               <span>Made with</span>
               <Icon
@@ -242,29 +265,6 @@ export function Footer() {
                 </span>
               </span>
             </a>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-2.5 gap-y-1 font-sans text-[11px] tracking-[0.14em] text-bx-slate">
-            {footerSections.legal.map((item) => (
-              <span key={item.label} className="inline-flex items-center gap-2">
-                <span className="text-bx-slate-400">•</span>
-                <Link
-                  to={item.to}
-                  className="transition-colors hover:text-bx-navy-700"
-                >
-                  {item.label}
-                </Link>
-              </span>
-            ))}
-            <span className="inline-flex items-center gap-2 ml-1">
-              <img
-                src="/Make-in-India_Logo-96.webp"
-                alt="Make in India"
-                className="h-4 w-auto object-contain mix-blend-multiply shrink-0"
-              />
-              <span className="uppercase tracking-[0.16em]">Make in India</span>
-              <span aria-hidden className="text-xs leading-none">🇮🇳</span>
-            </span>
           </div>
         </div>
       </div>
