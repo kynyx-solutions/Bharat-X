@@ -24,7 +24,7 @@ export const servicesData: ServiceItem[] = [
     descriptor: "Pioneering decarbonisation, sovereign environmental telemetry, and circular materials.",
     fullNarrative:
       "Architected by BharatX Labs, our climate and sustainability division pioneers deep-tech environmental solutions, circular material formulations, and sovereign carbon telemetry. We research and deploy low-carbon industrial compounds, zero-effluent water cycles, and AI-driven energy optimization grids to achieve net-zero industrial compounding.",
-    image: "/assets/backgrounds/sustainability-story.jpg",
+    image: "/assets/backgrounds/sustainability-story.webp",
     companyName: "BharatX Labs",
     companyLogo: "/Bharatxlabs_logo.svg",
     companySlug: "bharatx-labs",
@@ -50,9 +50,9 @@ export const servicesData: ServiceItem[] = [
     descriptor: "Strategic capital structuring, balance sheet advisory, and founder-aligned enterprise scaling.",
     fullNarrative:
       "Driven by BharatX Ventures, our finance and strategic capital division designs, capitalizes, and scales enduring enterprises across key sectors. We provide patient balance-sheet capital, financial architecture, governance models, and institutional advisory for generational compounding.",
-    image: "/assets/backgrounds/strategic-story-panorama.jpg",
+    image: "/assets/backgrounds/strategic-story-panorama.webp",
     companyName: "BharatX Ventures",
-    companyLogo: "/Ventures_logo.png",
+    companyLogo: "/Ventures_logo.webp",
     companySlug: "bharatx-ventures",
     website: "https://bharatx.vc/",
     stats: [
@@ -76,7 +76,7 @@ export const servicesData: ServiceItem[] = [
     descriptor: "Origin sourcing, certified processing, and high-integrity agricultural supply chains.",
     fullNarrative:
       "Spearheaded by BharatX Agro, we connect Indian farm cooperatives directly with domestic and international buyers through certified processing facilities, phytosanitary compliance, and transparent farm-gate origin traceability.",
-    image: "/assets/backgrounds/agri-dusk.jpg",
+    image: "/assets/backgrounds/agri-dusk.webp",
     companyName: "BharatX Agro",
     companyLogo: "/Bharatxagro_logo.png",
     companySlug: "bharatx-agro",
@@ -102,7 +102,7 @@ export const servicesData: ServiceItem[] = [
     descriptor: "Connecting economic corridors through heavy civil engineering and arterial utilities.",
     fullNarrative:
       "Executed by BharatX Infratech, our civil engineering division builds the physical systems a growing country depends on: arterial transport surfaces, utility corridors, industrial estates, and urban facilities engineered for decades of heavy service.",
-    image: "/companies/bharatx-infratech/hero.jpg",
+    image: "/companies/bharatx-infratech/hero.webp",
     companyName: "BharatX Infratech",
     companyLogo: "/Infra_logo1.png",
     companySlug: "bharatx-infratech",
@@ -128,9 +128,9 @@ export const servicesData: ServiceItem[] = [
     descriptor: "Sovereign compute, enterprise AI platforms, and automated intelligence engineering.",
     fullNarrative:
       "Engineered by Aixperts Labs, our mission is to establish sovereign technological capability across enterprise workflows. We architect localized deep-learning models, document triage engines, and automated decision workflows that modernize core industries while preserving data independence.",
-    image: "/assets/backgrounds/innovation-story.jpg",
+    image: "/assets/backgrounds/innovation-story.webp",
     companyName: "Aixperts Labs",
-    companyLogo: "/Ai-Experts_logo.png",
+    companyLogo: "/Ai-Experts_logo.webp",
     companySlug: "aixperts-labs",
     website: "https://aixpertslabs.com/",
     stats: [

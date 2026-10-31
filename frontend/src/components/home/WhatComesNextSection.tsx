@@ -38,9 +38,9 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#9f2d00] font-bold shadow-xs hover:border-[#F54900] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-orange-deep font-bold shadow-xs hover:border-bx-orange transition-colors"
             >
-              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900] animate-pulse" />
               <span>BUILDING WHAT COMES NEXT</span>
             </motion.div>
 
@@ -49,11 +49,11 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-2 font-heading text-3xl sm:text-5xl lg:text-[3.4rem] font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300"
+              className="mt-2 font-heading text-3xl sm:text-5xl lg:text-[3.4rem] font-medium leading-tight tracking-tight text-bx-ink transition-colors duration-300"
             >
               The Next Chapter Is{" "}
               <br />
-              <span className="text-[#163A7A]">Already Taking Shape.</span>
+              <span className="text-bx-navy-700">Already Taking Shape.</span>
             </motion.h2>
 
             <motion.p
@@ -61,7 +61,7 @@ export function WhatComesNextSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-3 text-base sm:text-lg leading-relaxed text-[#596579] font-normal max-w-2xl mx-auto"
+              className="mt-3 text-base sm:text-lg leading-relaxed text-bx-slate font-normal max-w-2xl mx-auto"
             >
               BharatX continues to explore new opportunities across emerging industries and critical sectors of the Indian economy.
             </motion.p>
@@ -83,7 +83,7 @@ export function WhatComesNextSection() {
                       data-cursor="card"
                       tabIndex={0}
                       // Desktop: the image takes whatever height is left on screen after the heading, text and button
-                      className="group relative h-56 sm:h-64 lg:h-[clamp(13rem,calc(100svh-38rem),26rem)] overflow-hidden rounded-2xl border border-[#E3E5EF] shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
+                      className="group relative h-56 sm:h-64 lg:h-[clamp(13rem,calc(100svh-38rem),26rem)] overflow-hidden rounded-2xl border border-bx-line shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 fx-shine fx-rotate-card focus-visible:ring-2 focus-visible:ring-bx-navy-700 focus:outline-none"
                     >
                       <img
                         src={card.image}
@@ -122,14 +122,14 @@ export function WhatComesNextSection() {
               to="/verticals"
               data-cursor="button"
               data-motion="true"
-              className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] text-white px-8 py-4 font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md shadow-[#163A7A]/25 transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-[#F54900]"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-bx-navy-700 hover:bg-bx-navy-800 text-white px-8 py-4 font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md shadow-bx-navy-700/25 transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-bx-orange"
             >
               <span>Explore Our Businesses</span>
               <Icon
                 name="arrow-right"
                 width={14}
                 height={14}
-                className="transition-transform duration-300 group-hover:translate-x-1 text-[#F54900]"
+                className="transition-transform duration-300 group-hover:translate-x-1 text-bx-orange"
               />
             </Link>
           </div>

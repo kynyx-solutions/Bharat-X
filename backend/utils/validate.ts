@@ -6,6 +6,23 @@ function clean(v: unknown, max: number): string {
   return v.replace(/</g, "‹").replace(/>/g, "›").trim().slice(0, max);
 }
 
+/**
+ * Single-line fields (name, email, phone…) also lose line breaks and other control characters, so nothing can be
+ * smuggled into the notification email's headers (the subject includes the name).
+ */
+function cleanLine(v: unknown, max: number): string {
+  return clean(typeof v === "string" ? v.replace(/[\u0000-\u001F\u007F]+/g, " ") : v, max);
+}
+
+/** The message keeps its line breaks; other control characters are removed. */
+function cleanText(v: unknown, max: number): string {
+  return clean(typeof v === "string" ? v.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "") : v, max);
+}
+
+/** Messages stuffed with links are almost always spam; real inquiries rarely need more than a few. */
+const MAX_LINKS_IN_MESSAGE = 5;
+const LINK_RE = /(https?:\/\/|www\.)\S+/gi;
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^[+\d][\d\s\-()]{6,19}$/;
 const URL_RE = /^(https?:\/\/)?[^\s.]+\.[^\s]{2,}([^\s]*)$/i;
@@ -41,14 +58,14 @@ export function validateContact(body: Record<string, unknown>): {
 } {
   const issues: ValidationIssue[] = [];
   const payload: ContactPayload = {
-    name: clean(body.name, 80),
-    email: clean(body.email, 120).toLowerCase(),
-    phone: clean(body.phone, 24),
-    organization: clean(body.organization, 120),
-    website: clean(body.website, 300),
-    inquiryType: clean(body.inquiryType, 80),
-    company: clean(body.company, 80),
-    message: clean(body.message, 2000),
+    name: cleanLine(body.name, 80),
+    email: cleanLine(body.email, 120).toLowerCase(),
+    phone: cleanLine(body.phone, 24),
+    organization: cleanLine(body.organization, 120),
+    website: cleanLine(body.website, 300),
+    inquiryType: cleanLine(body.inquiryType, 80),
+    company: cleanLine(body.company, 80),
+    message: cleanText(body.message, 2000),
   };
 
   if (payload.name.length < 2) issues.push({ field: "name", message: "Please enter your full name." });
@@ -61,6 +78,8 @@ export function validateContact(body: Record<string, unknown>): {
     issues.push({ field: "inquiryType", message: "Select a valid inquiry type." });
   if (payload.message.length < 5)
     issues.push({ field: "message", message: "Message is too short." });
+  if ((payload.message.match(LINK_RE) ?? []).length > MAX_LINKS_IN_MESSAGE)
+    issues.push({ field: "message", message: "Please include fewer links in your message." });
 
   return { payload, issues };
 }

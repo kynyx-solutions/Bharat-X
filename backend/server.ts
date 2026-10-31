@@ -22,11 +22,17 @@ app.use(
 );
 app.use(
   cors({
-    origin: (process.env.CORS_ORIGIN ?? "http://localhost:5173").split(","),
-    credentials: true,
+    origin: (process.env.CORS_ORIGIN ?? "http://localhost:5173")
+      .split(",")
+      .map((o) => o.trim())
+      .filter(Boolean),
+    // The site's requests carry no cookies, so cross-origin credentials stay off
+    credentials: false,
+    methods: ["GET", "POST"],
   }),
 );
-app.use(express.json({ limit: "100kb" }));
+// A contact inquiry is a few KB at most
+app.use(express.json({ limit: "20kb" }));
 app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 
 // Routes

@@ -20,7 +20,7 @@ export default function HomePage() {
   });
 
   return (
-    <main className="w-full bg-[#FAF9F6] text-[#111827] min-h-screen">
+    <main className="w-full bg-bx-cream text-bx-ink min-h-screen">
       {/* Hero + stats strip fill exactly one screen together (svh = the visible height on phones) */}
       <div className="flex min-h-[100svh] flex-col">
         {/* ── 01. HERO (Brand First - Retained intact as requested) ── */}

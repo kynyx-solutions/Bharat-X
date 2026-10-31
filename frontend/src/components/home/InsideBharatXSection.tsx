@@ -6,20 +6,20 @@ import { SectionTransition } from "../motion/SectionTransition";
 export function InsideBharatXSection() {
   return (
     <SectionTransition id="inside-bharatx" aria-label="Inside BharatX - Insights and Careers">
-      <section className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+      <section className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
         <div className="container-x relative z-10">
           {/* Header */}
           <div className="max-w-3xl mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs hover:bg-[#163A7A]/15 transition-colors">
-              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs hover:bg-bx-navy-700/15 transition-colors">
+              <span className="h-2 w-2 rounded-full bg-bx-navy-700 animate-pulse" />
               <span>INSIDE BHARATX</span>
             </div>
 
-            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300">
-              Inside <span className="text-[#163A7A] transition-colors">BharatX</span>
+            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-ink transition-colors duration-300">
+              Inside <span className="text-bx-navy-700 transition-colors">BharatX</span>
             </h2>
 
-            <p className="mt-3 text-base text-[#596579] max-w-2xl leading-relaxed">
+            <p className="mt-3 text-base text-bx-slate max-w-2xl leading-relaxed">
               Exploring the ideas shaping national industries and the exceptional teams building them.
             </p>
           </div>
@@ -34,11 +34,11 @@ export function InsideBharatXSection() {
               transition={{ duration: 0.5 }}
               data-cursor="card"
               tabIndex={0}
-              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-end overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#F54900] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#F54900] focus:outline-none"
+              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-end overflow-hidden rounded-3xl border border-bx-line p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-bx-orange hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-bx-orange focus:outline-none"
             >
               {/* Background image & gradient overlay */}
               <img
-                src="/assets/backgrounds/innovation-story.jpg"
+                src="/assets/backgrounds/innovation-story.webp"
                 alt="BharatX Insights"
                 data-cursor="image"
                 className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108"
@@ -59,7 +59,7 @@ export function InsideBharatXSection() {
                   <Link
                     to="/insights"
                     data-cursor="link"
-                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#F54900] transition-all hover:text-white"
+                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-bold text-bx-orange transition-all hover:text-white"
                   >
                     <span>Explore Insights</span>
                     <Icon
@@ -81,11 +81,11 @@ export function InsideBharatXSection() {
               transition={{ duration: 0.5, delay: 0.15 }}
               data-cursor="card"
               tabIndex={0}
-              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-end overflow-hidden rounded-3xl border border-[#E3E5EF] p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-[#00B8D9] hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-[#00B8D9] focus:outline-none"
+              className="group relative flex min-h-[380px] sm:min-h-[420px] flex-col justify-end overflow-hidden rounded-3xl border border-bx-line p-8 sm:p-10 shadow-md transition-all duration-500 hover:border-bx-cyan hover:shadow-2xl hover:-translate-y-1 fx-lift fx-shine focus-visible:ring-2 focus-visible:ring-bx-cyan focus:outline-none"
             >
               {/* Background image & gradient overlay */}
               <img
-                src="/assets/backgrounds/strategic-story-panorama.jpg"
+                src="/assets/backgrounds/strategic-story-panorama.webp"
                 alt="BharatX Careers"
                 data-cursor="image"
                 className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108"
@@ -106,7 +106,7 @@ export function InsideBharatXSection() {
                   <Link
                     to="/careers"
                     data-cursor="link"
-                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#00B8D9] transition-all hover:text-white"
+                    className="group/btn inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-bold text-bx-cyan transition-all hover:text-white"
                   >
                     <span>Build With Us</span>
                     <Icon

@@ -33,7 +33,7 @@ const impactAreas: ImpactArea[] = [
       "Through BharatX Labs, we back research, experimentation and entrepreneurship that can grow into the next generation of Indian businesses.",
     entityName: "BharatX Labs",
     logo: "/Bharatxlabs_logo.svg",
-    image: "/assets/backgrounds/innovation-story.jpg",
+    image: "/assets/backgrounds/innovation-story.webp",
     accent: "#0D9488",
     link: "/verticals#labs",
   },
@@ -46,7 +46,7 @@ const impactAreas: ImpactArea[] = [
       "Through processing, value addition and global trade, BharatX Agro aims to strengthen agricultural value chains and connect Indian products with wider markets.",
     entityName: "BharatX Agro",
     logo: "/Bharatxagro_logo.png",
-    image: "/assets/backgrounds/agri-dusk.jpg",
+    image: "/assets/backgrounds/agri-dusk.webp",
     accent: "#15966B",
     link: "/verticals#agriculture",
   },
@@ -59,7 +59,7 @@ const impactAreas: ImpactArea[] = [
       "Through infrastructure and engineering, BharatX contributes to the physical assets that enable communities, businesses and economies to grow.",
     entityName: "BharatX Infratech",
     logo: "/Infra_logo1.png",
-    image: "/companies/bharatx-infratech/hero.jpg",
+    image: "/companies/bharatx-infratech/hero.webp",
     accent: "#163A7A",
     link: "/verticals#infrastructure",
   },
@@ -71,7 +71,7 @@ const impactAreas: ImpactArea[] = [
     description:
       "Through BharatX Foundation and the wider Group ecosystem, we aim to support education, skills and opportunity.",
     entityName: "BharatX Foundation",
-    image: "/assets/backgrounds/impact-story.jpg",
+    image: "/assets/backgrounds/impact-story.webp",
     accent: "#F54900",
     link: "/verticals#foundation",
   },
@@ -83,8 +83,8 @@ const impactAreas: ImpactArea[] = [
     description:
       "AI, automation and digital technologies can improve productivity, decision-making and access to new capabilities.",
     entityName: "Aixperts Labs",
-    logo: "/Ai-Experts_logo.png",
-    image: "/companies/aixperts-labs/hero.jpg",
+    logo: "/Ai-Experts_logo.webp",
+    image: "/companies/aixperts-labs/hero.webp",
     accent: "#2B5299",
     link: "/verticals#tech-ai",
   },
@@ -96,7 +96,7 @@ const impactAreas: ImpactArea[] = [
     description:
       "Our sustainability initiatives focus on better waste management, resource recovery, recycling and the development of circular business models.",
     entityName: "BharatX Sustainability",
-    image: "/assets/backgrounds/sustainability-story.jpg",
+    image: "/assets/backgrounds/sustainability-story.webp",
     accent: "#059669",
     link: "/verticals#sustainability",
   },
@@ -197,13 +197,13 @@ export default function ImpactPage() {
   });
 
   return (
-    <main className="w-full min-h-screen bg-[#FAF9F6] text-[#111827]">
+    <main className="w-full min-h-screen bg-bx-cream text-bx-ink">
       {/* ── 01. HERO (Building Businesses. Creating Wider Value.) ─────────── */}
       <section className="relative overflow-hidden min-h-[92vh] lg:min-h-screen w-full flex items-end justify-start pt-32 sm:pt-36 md:pt-40 pb-16 sm:pb-20 lg:pb-24">
         {/* Full-bleed authentic hero background image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
-            src="/assets/backgrounds/impact_hero.png"
+            src="/assets/backgrounds/impact_hero.webp"
             alt="BharatX Infrastructure, Agriculture, Industry and People"
             className="h-full w-full object-cover object-center filter brightness-[0.88] contrast-[1.10] animate-hero-zoom"
             data-cursor="image"
@@ -221,7 +221,7 @@ export default function ImpactPage() {
               data-cursor="text"
             >
               From Opportunity to{" "}
-              <span className="text-[#F54900] transition-colors duration-300">Impact.</span>
+              <span className="text-bx-orange transition-colors duration-300">Impact.</span>
             </motion.h1>
 
             {/* CTA */}
@@ -240,7 +240,7 @@ export default function ImpactPage() {
                   }}
                   data-cursor="button"
                   data-motion="true"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
                 >
                   <span>Explore Impact Areas</span>
                   <Icon
@@ -269,36 +269,36 @@ export default function ImpactPage() {
         <div className="container-x relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#15966B]/30 bg-[#15966B]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#15966B] font-bold shadow-xs mb-4 hover:border-[#15966B] transition-colors">
-                <span className="h-2 w-2 rounded-full bg-[#15966B]" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-green/30 bg-bx-green/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-green font-bold shadow-xs mb-4 hover:border-bx-green transition-colors">
+                <span className="h-2 w-2 rounded-full bg-bx-green" />
                 <span>OUR IMPACT PHILOSOPHY</span>
               </div>
 
-              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-                Growth Should Create <span className="text-[#163A7A]">More Than Profit.</span>
+              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+                Growth Should Create <span className="text-bx-navy-700">More Than Profit.</span>
               </AnimatedHeading>
 
-              <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
+              <p className="mt-6 text-base sm:text-lg text-bx-slate leading-relaxed font-normal">
                 We believe successful businesses should strengthen the ecosystems around them.
               </p>
 
-              <p className="mt-4 text-sm sm:text-base text-[#111827] font-medium leading-relaxed">
+              <p className="mt-4 text-sm sm:text-base text-bx-ink font-medium leading-relaxed">
                 Our businesses contribute to economic development through infrastructure, employment, manufacturing, agricultural value chains, technology adoption and more responsible use of resources.
               </p>
             </div>
 
             {/* Visual Formula: BUSINESS GROWTH -> ECONOMY | PEOPLE | ENVIRONMENT */}
             <div className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-[#FAF9F6] p-7 sm:p-9 shadow-lg fx-lift">
+              <div className="relative overflow-hidden rounded-3xl border border-bx-line bg-bx-cream p-7 sm:p-9 shadow-lg fx-lift">
                 <CardFill accent="#163A7A" tone="tint" />
                 <div className="relative">
                   {/* Root: BUSINESS GROWTH */}
                   <div className="text-center">
                     <div
                       data-cursor="card"
-                      className="inline-flex flex-col items-center rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] px-8 py-3.5 text-white shadow-lg transition-transform hover:scale-105 fx-glow-indigo"
+                      className="inline-flex flex-col items-center rounded-2xl border border-bx-navy-700/40 bg-gradient-to-r from-bx-navy-900 via-bx-navy-700 to-bx-navy-900 px-8 py-3.5 text-white shadow-lg transition-transform hover:scale-105 fx-glow-indigo"
                     >
-                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold">
+                      <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-bx-orange font-bold">
                         FOUNDATIONAL CATALYST
                       </span>
                       <span className="font-heading text-xl sm:text-2xl font-medium tracking-tight mt-0.5">
@@ -309,7 +309,7 @@ export default function ImpactPage() {
 
                   {/* Downward Connector */}
                   <div className="my-5 flex items-center justify-center">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#163A7A] text-white shadow-md animate-bounce">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-bx-navy-700 text-white shadow-md animate-bounce">
                       <Icon name="arrow-right" width={14} height={14} className="rotate-90" strokeWidth={2.5} />
                     </div>
                   </div>
@@ -318,60 +318,60 @@ export default function ImpactPage() {
                   <Stagger staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
                     {/* Economy */}
                     <StaggerItem>
-                      <div data-cursor="card" className="group rounded-2xl border border-[#163A7A]/25 border-t-4 border-t-[#163A7A] p-4 text-center shadow-xs transition-all duration-300 hover:border-[#163A7A] fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #163A7A 9%, white)" }}>
+                      <div data-cursor="card" className="group rounded-2xl border border-bx-navy-700/25 border-t-4 border-t-bx-navy-700 p-4 text-center shadow-xs transition-all duration-300 hover:border-bx-navy-700 fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #163A7A 9%, white)" }}>
                         <FeatureIcon
                           name="landmark"
                           accent="#163A7A"
                           size={32}
                           className="mx-auto mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                         />
-                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#163A7A] block">
+                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-bx-navy-700 block">
                           ECONOMY
                         </span>
-                        <ul className="mt-3 space-y-1.5 text-xs sm:text-[13px] text-[#374151]">
-                          <li className="font-medium text-[#111827]">Jobs</li>
-                          <li className="font-medium text-[#111827]">Enterprises</li>
-                          <li className="font-medium text-[#111827]">Infrastructure</li>
+                        <ul className="mt-3 space-y-1.5 text-xs sm:text-[13px] text-bx-ink-soft">
+                          <li className="font-medium text-bx-ink">Jobs</li>
+                          <li className="font-medium text-bx-ink">Enterprises</li>
+                          <li className="font-medium text-bx-ink">Infrastructure</li>
                         </ul>
                       </div>
                     </StaggerItem>
 
                     {/* People */}
                     <StaggerItem>
-                      <div data-cursor="card" className="group rounded-2xl border border-[#15966B]/25 border-t-4 border-t-[#15966B] p-4 text-center shadow-xs transition-all duration-300 hover:border-[#15966B] fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #15966B 9%, white)" }}>
+                      <div data-cursor="card" className="group rounded-2xl border border-bx-green/25 border-t-4 border-t-bx-green p-4 text-center shadow-xs transition-all duration-300 hover:border-bx-green fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #15966B 9%, white)" }}>
                         <FeatureIcon
                           name="users"
                           accent="#15966B"
                           size={32}
                           className="mx-auto mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                         />
-                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#15966B] block">
+                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-bx-green block">
                           PEOPLE
                         </span>
-                        <ul className="mt-3 space-y-1.5 text-xs sm:text-[13px] text-[#374151]">
-                          <li className="font-medium text-[#111827]">Skills</li>
-                          <li className="font-medium text-[#111827]">Opportunity</li>
-                          <li className="font-medium text-[#111827]">Inclusion</li>
+                        <ul className="mt-3 space-y-1.5 text-xs sm:text-[13px] text-bx-ink-soft">
+                          <li className="font-medium text-bx-ink">Skills</li>
+                          <li className="font-medium text-bx-ink">Opportunity</li>
+                          <li className="font-medium text-bx-ink">Inclusion</li>
                         </ul>
                       </div>
                     </StaggerItem>
 
                     {/* Environment */}
                     <StaggerItem>
-                      <div data-cursor="card" className="group rounded-2xl border border-[#00B8D9]/25 border-t-4 border-t-[#00B8D9] p-4 text-center shadow-xs transition-all duration-300 hover:border-[#00B8D9] fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #00B8D9 9%, white)" }}>
+                      <div data-cursor="card" className="group rounded-2xl border border-bx-cyan/25 border-t-4 border-t-bx-cyan p-4 text-center shadow-xs transition-all duration-300 hover:border-bx-cyan fx-lift h-full" style={{ backgroundColor: "color-mix(in srgb, #00B8D9 9%, white)" }}>
                         <FeatureIcon
                           name="recycle"
                           accent="#00B8D9"
                           size={32}
                           className="mx-auto mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                         />
-                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#008299] block">
+                        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-bx-cyan-dark block">
                           ENVIRONMENT
                         </span>
-                        <ul className="mt-3 space-y-1.5 text-xs sm:text-[13px] text-[#374151]">
-                          <li className="font-medium text-[#111827]">Resource Efficiency</li>
-                          <li className="font-medium text-[#111827]">Circularity</li>
-                          <li className="font-medium text-[#111827]">Low-Carbon Systems</li>
+                        <ul className="mt-3 space-y-1.5 text-xs sm:text-[13px] text-bx-ink-soft">
+                          <li className="font-medium text-bx-ink">Resource Efficiency</li>
+                          <li className="font-medium text-bx-ink">Circularity</li>
+                          <li className="font-medium text-bx-ink">Low-Carbon Systems</li>
                         </ul>
                       </div>
                     </StaggerItem>
@@ -384,19 +384,19 @@ export default function ImpactPage() {
       </SectionTransition>
 
       {/* ── 03. WHERE WE CREATE IMPACT (Impact Across the Economy — 6 Large Cards) ── */}
-      <SectionTransition id="impact-areas" className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+      <SectionTransition id="impact-areas" className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-navy-700" />
               <span>WHERE WE CREATE IMPACT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Impact Across the <span className="text-[#163A7A]">Economy</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+              Impact Across the <span className="text-bx-navy-700">Economy</span>
             </AnimatedHeading>
 
-            <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed">
               Key foundational domains where BharatX businesses drive economic capabilities, industrial sovereignty, and societal uplift.
             </p>
           </div>
@@ -420,7 +420,7 @@ export default function ImpactPage() {
                     data-cursor="card"
                     aria-label={`${area.title}: explore ${area.entityName}`}
                     className={cn(
-                      "group relative flex h-full min-h-[320px] flex-col justify-between overflow-hidden rounded-3xl bg-[#0B1F47] p-3 shadow-sm transition-[translate,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_28px_55px_-26px_rgba(11,31,71,0.6)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#F54900] focus-visible:ring-offset-2",
+                      "group relative flex h-full min-h-[320px] flex-col justify-between overflow-hidden rounded-3xl bg-bx-navy-900 p-3 shadow-sm transition-[translate,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_28px_55px_-26px_rgba(11,31,71,0.6)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-orange focus-visible:ring-offset-2",
                       i < 3 ? "lg:min-h-[400px]" : "lg:min-h-[340px]",
                     )}
                   >
@@ -444,7 +444,7 @@ export default function ImpactPage() {
                           // h-7 w-auto: the Labs SVG has no built-in size, so it needs a set height to get a width
                           <img src={area.logo} alt={`${area.entityName} logo`} className="h-7 w-auto max-w-[88px] object-contain" />
                         ) : (
-                          <span className="whitespace-nowrap text-[11px] font-semibold text-[#0B1F47]">{area.entityName}</span>
+                          <span className="whitespace-nowrap text-[11px] font-semibold text-bx-navy-900">{area.entityName}</span>
                         )}
                       </span>
                     </div>
@@ -460,11 +460,11 @@ export default function ImpactPage() {
                         <span className="block font-sans text-[10.5px] font-bold uppercase tracking-[0.18em]" style={{ color: accentText }}>
                           {area.sector}
                         </span>
-                        <h3 className={cn("mt-1 font-heading font-medium leading-snug tracking-tight text-[#0B1F47]", isFeature ? "text-xl sm:text-2xl" : "text-lg")}>
+                        <h3 className={cn("mt-1 font-heading font-medium leading-snug tracking-tight text-bx-navy-900", isFeature ? "text-xl sm:text-2xl" : "text-lg")}>
                           {area.title}
                         </h3>
                       </div>
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#0B1F47]/15 text-[#0B1F47] transition-all duration-300 group-hover:border-[#0B1F47] group-hover:bg-[#0B1F47] group-hover:text-white">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-bx-navy-900/15 text-bx-navy-900 transition-all duration-300 group-hover:border-bx-navy-900 group-hover:bg-bx-navy-900 group-hover:text-white">
                         <Icon name="arrow-up-right" width={15} height={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </span>
                     </div>
@@ -480,20 +480,20 @@ export default function ImpactPage() {
       <SectionTransition className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#00B8D9]/30 bg-[#00B8D9]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#008299] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#00B8D9]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-cyan/30 bg-bx-cyan/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-cyan-dark font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-cyan" />
               <span>IMPACT IN NUMBERS</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Our Growing <span className="text-[#163A7A]">Footprint</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+              Our Growing <span className="text-bx-navy-700">Footprint</span>
             </AnimatedHeading>
 
-            <p className="mt-2 font-heading text-xl sm:text-2xl text-[#163A7A] font-medium">
+            <p className="mt-2 font-heading text-xl sm:text-2xl text-bx-navy-700 font-medium">
               Measuring What Matters
             </p>
 
-            <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
               As the BharatX ecosystem grows, we are building a transparent framework to measure our economic, social and environmental contribution.
             </p>
           </div>
@@ -502,103 +502,103 @@ export default function ImpactPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#163A7A]/25 border-t-4 border-t-[#163A7A] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift"
+              className="group rounded-2xl border border-bx-navy-700/25 border-t-4 border-t-bx-navy-700 p-6 sm:p-7 text-center transition-all duration-300 hover:border-bx-navy-700 hover:shadow-xl fx-lift"
               style={{ backgroundColor: "color-mix(in srgb, #163A7A 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#163A7A] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-bx-navy-700 block transition-transform duration-300 group-hover:scale-105">
                 8+
               </span>
-              <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
+              <span className="font-sans text-xs uppercase tracking-wider text-bx-ink font-semibold mt-1 block">
                 Businesses
               </span>
-              <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+              <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                 Operating verticals &amp; incubating platforms
               </span>
             </div>
 
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#15966B]/25 border-t-4 border-t-[#15966B] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#15966B] hover:shadow-xl fx-lift"
+              className="group rounded-2xl border border-bx-green/25 border-t-4 border-t-bx-green p-6 sm:p-7 text-center transition-all duration-300 hover:border-bx-green hover:shadow-xl fx-lift"
               style={{ backgroundColor: "color-mix(in srgb, #15966B 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#15966B] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-bx-green block transition-transform duration-300 group-hover:scale-105">
                 1,500+
               </span>
-              <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
+              <span className="font-sans text-xs uppercase tracking-wider text-bx-ink font-semibold mt-1 block">
                 Jobs
               </span>
-              <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+              <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                 Engineers, operators, agronomists &amp; crew
               </span>
             </div>
 
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#00B8D9]/25 border-t-4 border-t-[#00B8D9] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#00B8D9] hover:shadow-xl fx-lift"
+              className="group rounded-2xl border border-bx-cyan/25 border-t-4 border-t-bx-cyan p-6 sm:p-7 text-center transition-all duration-300 hover:border-bx-cyan hover:shadow-xl fx-lift"
               style={{ backgroundColor: "color-mix(in srgb, #00B8D9 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#008299] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-bx-cyan-dark block transition-transform duration-300 group-hover:scale-105">
                 50+
               </span>
-              <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
+              <span className="font-sans text-xs uppercase tracking-wider text-bx-ink font-semibold mt-1 block">
                 Projects
               </span>
-              <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+              <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                 Civil works, industrial runs &amp; AI pipelines
               </span>
             </div>
 
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#F54900]/25 border-t-4 border-t-[#F54900] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#F54900] hover:shadow-xl fx-lift"
+              className="group rounded-2xl border border-bx-orange/25 border-t-4 border-t-bx-orange p-6 sm:p-7 text-center transition-all duration-300 hover:border-bx-orange hover:shadow-xl fx-lift"
               style={{ backgroundColor: "color-mix(in srgb, #F54900 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#CA3500] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-bx-orange-dark block transition-transform duration-300 group-hover:scale-105">
                 14+
               </span>
-              <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
+              <span className="font-sans text-xs uppercase tracking-wider text-bx-ink font-semibold mt-1 block">
                 Locations
               </span>
-              <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+              <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                 Tier-1 and Tier-2 growth corridors across India
               </span>
             </div>
 
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#2B5299]/25 border-t-4 border-t-[#2B5299] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#2B5299] hover:shadow-xl fx-lift"
+              className="group rounded-2xl border border-bx-navy-500/25 border-t-4 border-t-bx-navy-500 p-6 sm:p-7 text-center transition-all duration-300 hover:border-bx-navy-500 hover:shadow-xl fx-lift"
               style={{ backgroundColor: "color-mix(in srgb, #2B5299 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#2B5299] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-bx-navy-500 block transition-transform duration-300 group-hover:scale-105">
                 18+
               </span>
-              <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
+              <span className="font-sans text-xs uppercase tracking-wider text-bx-ink font-semibold mt-1 block">
                 Markets
               </span>
-              <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+              <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                 Domestic industrial networks &amp; export ports
               </span>
             </div>
 
             <div
               data-cursor="card"
-              className="group rounded-2xl border border-[#15966B]/25 border-t-4 border-t-[#15966B] p-6 sm:p-7 text-center transition-all duration-300 hover:border-[#15966B] hover:shadow-xl fx-lift"
+              className="group rounded-2xl border border-bx-green/25 border-t-4 border-t-bx-green p-6 sm:p-7 text-center transition-all duration-300 hover:border-bx-green hover:shadow-xl fx-lift"
               style={{ backgroundColor: "color-mix(in srgb, #15966B 9%, white)" }}
             >
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#15966B] block transition-transform duration-300 group-hover:scale-105">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-bx-green block transition-transform duration-300 group-hover:scale-105">
                 10,000+
               </span>
-              <span className="font-sans text-xs uppercase tracking-wider text-[#111827] font-semibold mt-1 block">
+              <span className="font-sans text-xs uppercase tracking-wider text-bx-ink font-semibold mt-1 block">
                 People Reached
               </span>
-              <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+              <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                 Agrarian growers, technicians &amp; families
               </span>
             </div>
           </div>
 
           <div className="mt-10 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs text-[#596579] font-sans shadow-xs fx-lift">
+            <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs text-bx-slate font-sans shadow-xs fx-lift">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Transparent telemetry &amp; validated ESG framework</span>
             </span>
@@ -607,19 +607,19 @@ export default function ImpactPage() {
       </SectionTransition>
 
       {/* ── 05. OUR COMMITMENT (Building Responsibly — Four Principles) ─────── */}
-      <SectionTransition className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+      <SectionTransition className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-navy-700" />
               <span>OUR COMMITMENT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Building <span className="text-[#163A7A]">Responsibly</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+              Building <span className="text-bx-navy-700">Responsibly</span>
             </AnimatedHeading>
 
-            <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
               Our ambition is to grow responsibly while building enterprises that remain valuable for the long term.
             </p>
           </div>
@@ -630,7 +630,7 @@ export default function ImpactPage() {
               <StaggerItem key={item.title}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 sm:p-7 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift flex flex-col justify-between h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-bx-night p-6 sm:p-7 shadow-md transition-all duration-300 hover:border-bx-navy-700 hover:shadow-xl fx-lift flex flex-col justify-between h-full"
                 >
                   <CardPhoto src={item.image} accent={item.accent} />
                   <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -672,27 +672,27 @@ export default function ImpactPage() {
               decoding="async"
               className="absolute inset-x-0 bottom-0 h-[75%] w-full object-cover object-bottom opacity-30 [mask-image:linear-gradient(to_top,black_25%,transparent)]"
             />
-            <div className="absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-[#F54900]/10 blur-[120px]" />
-            <div className="absolute -bottom-24 left-[8%] h-72 w-72 rounded-full bg-[#163A7A]/10 blur-[110px]" />
+            <div className="absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-bx-orange/10 blur-[120px]" />
+            <div className="absolute -bottom-24 left-[8%] h-72 w-72 rounded-full bg-bx-navy-700/10 blur-[110px]" />
           </div>
         }
-        className="relative overflow-hidden bg-[#FAF9F6] text-[#111827] py-6 sm:py-9"
+        className="relative overflow-hidden bg-bx-cream text-bx-ink py-6 sm:py-9"
       >
         <div className="container-x relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#9f2d00] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-bx-orange-deep font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900]" />
               <span>THE FUTURE OF IMPACT</span>
             </div>
 
             {/* Headline */}
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-[#111827]">
-              The Opportunity <span className="text-[#163A7A]">Ahead</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-[1.1] tracking-tight text-bx-ink">
+              The Opportunity <span className="text-bx-navy-700">Ahead</span>
             </AnimatedHeading>
 
             {/* Copy */}
-            <p className="mt-4 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-[#596579] max-w-3xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-bx-slate max-w-3xl mx-auto">
               As BharatX expands into packaging, waste management, sustainability and new industrial businesses, our opportunity to create measurable impact grows with it.
             </p>
 
@@ -715,7 +715,7 @@ export default function ImpactPage() {
                         "--ring": `color-mix(in srgb, ${area.accent} 30%, white)`,
                       } as React.CSSProperties
                     }
-                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E7E9F2] bg-white p-6 shadow-[0_1px_2px_rgba(11,31,71,0.04),0_14px_34px_-22px_rgba(11,31,71,0.3)] hover:border-(--ring)!"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-bx-line-soft bg-white p-6 shadow-[0_1px_2px_rgba(11,31,71,0.04),0_14px_34px_-22px_rgba(11,31,71,0.3)] hover:border-(--ring)!"
                   >
                     <span className="flex h-11 w-11 items-center justify-center rounded-full border border-(--ring) text-(--ink) transition-colors duration-300 group-hover:border-(--accent) group-hover:bg-(--accent) group-hover:text-white">
                       <DuotoneIcon name={area.icon} size={20} />
@@ -725,7 +725,7 @@ export default function ImpactPage() {
                       {area.step}
                     </span>
 
-                    <h3 className="mt-1.5 font-heading text-lg font-medium leading-snug tracking-tight text-[#0B1F47]">
+                    <h3 className="mt-1.5 font-heading text-lg font-medium leading-snug tracking-tight text-bx-navy-900">
                       {area.headline}
                     </h3>
 
@@ -737,8 +737,8 @@ export default function ImpactPage() {
             </Stagger>
 
             {/* Final CTA Action */}
-            <div className="mt-8 pt-8 border-t border-[#E3E5EF] max-w-2xl mx-auto">
-              <h3 className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mb-4 transition-colors duration-300">
+            <div className="mt-8 pt-8 border-t border-bx-line max-w-2xl mx-auto">
+              <h3 className="font-heading text-2xl sm:text-3xl font-medium text-bx-ink mb-4 transition-colors duration-300">
                 Build a Better Bharat With Us.
               </h3>
 
@@ -748,7 +748,7 @@ export default function ImpactPage() {
                     to="/contact?inquiry=partner"
                     data-cursor="button"
                     data-motion="true"
-                    className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                    className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
                   >
                     <span>Partner With BharatX</span>
                     <Icon
@@ -763,7 +763,7 @@ export default function ImpactPage() {
                 <Link
                   to="/verticals"
                   data-cursor="button"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full border border-[#0B1F47]/20 bg-white px-8 py-4 text-[15px] font-semibold text-[#0B1F47] transition-all duration-300 hover:border-[#0B1F47] shadow-xs fx-lift"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full border border-bx-navy-900/20 bg-white px-8 py-4 text-[15px] font-semibold text-bx-navy-900 transition-all duration-300 hover:border-bx-navy-900 shadow-xs fx-lift"
                 >
                   <span>Explore Our Businesses</span>
                   <Icon
@@ -776,7 +776,7 @@ export default function ImpactPage() {
               </div>
 
               <div className="mt-8">
-                <p className="font-sans text-xs uppercase tracking-[0.24em] text-[#CA3500] font-bold">
+                <p className="font-sans text-xs uppercase tracking-[0.24em] text-bx-orange-dark font-bold">
                   Building Businesses. Enabling Bharat.
                 </p>
               </div>

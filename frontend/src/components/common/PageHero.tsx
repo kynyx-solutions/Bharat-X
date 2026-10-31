@@ -45,7 +45,7 @@ export function PageHero({
           <span aria-hidden className="h-px w-12 bg-gold-400/50 transition-all duration-300 group-hover/eyebrow:w-20 group-hover/eyebrow:bg-gold-400" />
         </div>
       </Reveal>
-      <h1 className="max-w-4xl font-heading text-3xl sm:text-5xl font-semibold leading-[1.1] tracking-tight text-ink-900 dark:text-ink-50 md:text-6xl lg:text-7xl transition-colors hover:text-[#F54900]">
+      <h1 className="max-w-4xl font-heading text-3xl sm:text-5xl font-semibold leading-[1.1] tracking-tight text-ink-900 dark:text-ink-50 md:text-6xl lg:text-7xl transition-colors hover:text-bx-orange">
         {lines.map((line, i) => (
           <MaskReveal immediate key={i} delay={0.05 * i}>
             {line}

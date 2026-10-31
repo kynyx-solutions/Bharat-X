@@ -58,7 +58,7 @@ export default function PartnershipsPage() {
   const shown = filter === "All" ? partnerships : partnerships.filter((p) => p.type === filter);
 
   return (
-    <main className="w-full min-h-screen bg-[#FAF9F6] text-[#111827]">
+    <main className="w-full min-h-screen bg-bx-cream text-bx-ink">
       {/* ── 01. HERO ─────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden min-h-[92vh] lg:min-h-screen w-full flex items-end justify-start pt-32 sm:pt-36 md:pt-40 pb-16 sm:pb-20 lg:pb-24">
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -77,9 +77,9 @@ export default function PartnershipsPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#FF8904] font-bold backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-bx-orange-light font-bold backdrop-blur-sm"
           >
-            <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
+            <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900]" />
             <span>PARTNERSHIPS &amp; PROGRAMMES</span>
           </motion.div>
 
@@ -90,7 +90,7 @@ export default function PartnershipsPage() {
             className="mt-5 max-w-4xl font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,4.4vw,4rem)] font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
           >
             Working with{" "}
-            <span className="text-[#F54900] transition-colors duration-300">India&apos;s institutions.</span>
+            <span className="text-bx-orange transition-colors duration-300">India&apos;s institutions.</span>
           </motion.h1>
 
           <motion.p
@@ -117,7 +117,7 @@ export default function PartnershipsPage() {
                   document.getElementById("partners-list")?.scrollIntoView({ behavior: "smooth" });
                 }}
                 data-cursor="button"
-                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#CA3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
               >
                 <span>Explore partnerships</span>
                 <Icon name="arrow-right" width={16} height={16} className="rotate-90 transition-transform duration-300 group-hover:translate-y-0.5" />
@@ -139,19 +139,19 @@ export default function PartnershipsPage() {
       <SectionTransition
         id="partners-list"
         aria-label="Our partners"
-        className="relative scroll-mt-24 overflow-hidden bg-[#FAF9F6] py-6 sm:py-9"
+        className="relative scroll-mt-24 overflow-hidden bg-bx-cream py-6 sm:py-9"
       >
         <div className="container-x relative z-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl group/header">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs cursor-default">
-                <span className="h-2 w-2 rounded-full bg-[#163A7A] transition-transform duration-300 group-hover/header:scale-125" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs cursor-default">
+                <span className="h-2 w-2 rounded-full bg-bx-navy-700 transition-transform duration-300 group-hover/header:scale-125" />
                 <span>OUR PARTNERS</span>
               </div>
-              <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827]">
-                Institutions we <span className="text-[#163A7A]">work with</span>
+              <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-ink">
+                Institutions we <span className="text-bx-navy-700">work with</span>
               </h2>
-              <p className="mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-[#596579]">
+              <p className="mt-3 max-w-2xl text-base sm:text-lg leading-relaxed text-bx-slate">
                 Government programmes, premier universities and public-sector companies, partnering with us on AI
                 adoption and skills.
               </p>
@@ -169,10 +169,10 @@ export default function PartnershipsPage() {
                     data-cursor="button"
                     onClick={() => setFilter(f.key)}
                     className={cn(
-                      "inline-flex items-center gap-2 rounded-full border px-4 py-2 font-sans text-sm font-semibold transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A] focus-visible:ring-offset-2",
+                      "inline-flex items-center gap-2 rounded-full border px-4 py-2 font-sans text-sm font-semibold transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-navy-700 focus-visible:ring-offset-2",
                       active
-                        ? "border-[#0B1F47] bg-[#0B1F47] text-white shadow-md shadow-[#0B1F47]/20"
-                        : "border-[#E3E5EF] bg-white text-[#374151] hover:border-[#163A7A] hover:text-[#163A7A]",
+                        ? "border-bx-navy-900 bg-bx-navy-900 text-white shadow-md shadow-bx-navy-900/20"
+                        : "border-bx-line bg-white text-bx-ink-soft hover:border-bx-navy-700 hover:text-bx-navy-700",
                     )}
                   >
                     {f.accent && <span aria-hidden className="h-2 w-2 rounded-full" style={{ background: f.accent }} />}
@@ -180,7 +180,7 @@ export default function PartnershipsPage() {
                     <span
                       className={cn(
                         "rounded-full px-1.5 text-xs tabular-nums",
-                        active ? "bg-white/20 text-white" : "bg-[#F1F2F8] text-[#596579]",
+                        active ? "bg-white/20 text-white" : "bg-bx-surface-grey text-bx-slate",
                       )}
                     >
                       {f.count}
@@ -206,12 +206,12 @@ export default function PartnershipsPage() {
       <SectionTransition aria-label="What we work on together" className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="mx-auto max-w-3xl text-center group/header">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#15966B]/30 bg-[#15966B]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#0F7A56] font-bold shadow-xs cursor-default">
-              <span className="h-2 w-2 rounded-full bg-[#15966B] transition-transform duration-300 group-hover/header:scale-125" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-green/30 bg-bx-green/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-green-dark font-bold shadow-xs cursor-default">
+              <span className="h-2 w-2 rounded-full bg-bx-green transition-transform duration-300 group-hover/header:scale-125" />
               <span>FOCUS AREAS</span>
             </div>
-            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-[#111827]">
-              What we work on <span className="text-[#163A7A]">together</span>
+            <h2 className="mt-4 font-heading text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-tight text-bx-ink">
+              What we work on <span className="text-bx-navy-700">together</span>
             </h2>
           </div>
 
@@ -220,7 +220,7 @@ export default function PartnershipsPage() {
               <StaggerItem key={area.title} className="h-full">
                 <div
                   data-cursor="card"
-                  className="group h-full rounded-2xl border border-[#E3E5EF] bg-[#FAF9F6] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#163A7A]/30 hover:bg-white hover:shadow-[0_18px_40px_-18px_rgba(22, 58, 122,0.28)]"
+                  className="group h-full rounded-2xl border border-bx-line bg-bx-cream p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-bx-navy-700/30 hover:bg-white hover:shadow-[0_18px_40px_-18px_rgba(22, 58, 122,0.28)]"
                 >
                   <FeatureIcon
                     name={area.icon}
@@ -228,10 +228,10 @@ export default function PartnershipsPage() {
                     size={48}
                     className="transition-transform duration-300 group-hover:scale-110 fx-icon-pop"
                   />
-                  <h3 className="mt-5 font-heading text-2xl font-medium tracking-tight text-[#111827] transition-colors">
+                  <h3 className="mt-5 font-heading text-2xl font-medium tracking-tight text-bx-ink transition-colors">
                     {area.title}
                   </h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-[#596579]">{area.description}</p>
+                  <p className="mt-2 text-[15px] leading-relaxed text-bx-slate">{area.description}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -242,13 +242,13 @@ export default function PartnershipsPage() {
       {/* ── 04. CTA ───────────────────────────────────────────────────── */}
       <SectionTransition
         aria-label="Partner with BharatX"
-        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] py-6 sm:py-9 text-white"
+        className="relative overflow-hidden bg-gradient-to-br from-bx-navy-800 via-bx-navy-900 to-bx-navy-950 py-6 sm:py-9 text-white"
       >
-        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[420px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] sm:w-[700px]" />
+        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[420px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-bx-navy-600/35 via-bx-orange/20 to-transparent blur-[140px] sm:w-[700px]" />
         <div className="container-x relative z-10">
           <div className="mx-auto max-w-3xl py-6 text-center sm:py-8">
             <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.1] tracking-tight">
-              Build a Better Bharat <span className="text-[#FF8904]">With Us.</span>
+              Build a Better Bharat <span className="text-bx-orange-light">With Us.</span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-white/80">
               Ministries, institutions and public-sector companies can partner with us on AI adoption, skills and
@@ -259,7 +259,7 @@ export default function PartnershipsPage() {
                 <Link
                   to="/contact?inquiry=partner"
                   data-cursor="button"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#CA3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
                 >
                   <span>Partner With BharatX</span>
                   <Icon name="arrow-right" width={16} height={16} className="transition-transform duration-300 group-hover:translate-x-1" />

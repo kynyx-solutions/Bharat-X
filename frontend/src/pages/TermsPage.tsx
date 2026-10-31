@@ -63,12 +63,12 @@ export default function TermsPage() {
         breadcrumbs={[{ label: "Home", to: "/" }, { label: "Terms & Conditions" }]}
         visual={<SecurityShield />}
         visualPlacement="right"
-        backgroundImage="/assets/backgrounds/sovereign-conglomerate.jpg"
+        backgroundImage="/assets/backgrounds/sovereign-conglomerate.webp"
       />
       <SectionTransition className="py-6 sm:py-9">
         <div className="container-x max-w-3xl">
           <Reveal>
-            <p className="mb-10 rounded-xl border border-[#F54900]/40 border-l-4 border-l-[#F54900] bg-[color-mix(in_srgb,#FE7701_14%,white)] p-5 text-[13.5px] leading-relaxed text-[#374151] fx-lift transition-all">
+            <p className="mb-10 rounded-xl border border-bx-orange/40 border-l-4 border-l-bx-orange bg-[color-mix(in_srgb,#FE7701_14%,white)] p-5 text-[13.5px] leading-relaxed text-bx-ink-soft fx-lift transition-all">
               Last updated: 25 September 2026. By using this website you agree
               to these terms. If you are acting on behalf of an organisation,
               you confirm you have authority to bind it.
@@ -80,19 +80,19 @@ export default function TermsPage() {
                 {/* Legal copy: opaque soft tint + accent rule; the `!` hovers beat the global card/heading hover overrides */}
                 <div
                   data-cursor="card"
-                  className="p-5 sm:p-6 rounded-xl border border-[#163A7A]/15 border-l-4 border-l-[#163A7A] bg-[color-mix(in_srgb,#163A7A_7%,white)] transition-all duration-200 hover:bg-[color-mix(in_srgb,#163A7A_11%,white)] hover:border-l-[#163A7A]!"
+                  className="p-5 sm:p-6 rounded-xl border border-bx-navy-700/15 border-l-4 border-l-bx-navy-700 bg-[color-mix(in_srgb,#163A7A_7%,white)] transition-all duration-200 hover:bg-[color-mix(in_srgb,#163A7A_11%,white)] hover:border-l-bx-navy-700!"
                 >
-                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-[#0F2A5C]">
+                  <AnimatedHeading as="h2" effect="blur" hover="shift" className="font-heading text-xl font-semibold text-bx-navy-800">
                     {s.t}
                   </AnimatedHeading>
-                  <p className="mt-3 text-[14.5px] leading-relaxed text-[#374151]">{s.d}</p>
+                  <p className="mt-3 text-[14.5px] leading-relaxed text-bx-ink-soft">{s.d}</p>
                 </div>
               </Reveal>
             ))}
 
             <Reveal delay={0.2}>
-              <div data-cursor="card" className="mt-8 rounded-xl border border-[#0B1F47] border-t-4 border-t-[#F54900] bg-[#0B1F47] p-5 font-sans text-xs sm:text-[13px] text-slate-200 shadow-md fx-lift transition-all hover:border-t-[#F54900]!">
-                <span className="font-semibold text-[#FF8904] uppercase tracking-wider block mb-1">
+              <div data-cursor="card" className="mt-8 rounded-xl border border-bx-navy-900 border-t-4 border-t-bx-orange bg-bx-navy-900 p-5 font-sans text-xs sm:text-[13px] text-slate-200 shadow-md fx-lift transition-all hover:border-t-bx-orange!">
+                <span className="font-semibold text-bx-orange-light uppercase tracking-wider block mb-1">
                   Registered Headquarters:
                 </span>
                 <p>BharatX Group · Building no. 511 First Floor, Motilal Nehru Complex, New Delhi 110017, India</p>

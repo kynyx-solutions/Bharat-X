@@ -192,7 +192,7 @@ export function BusinessEcosystemGrid() {
       aria-label="Our Business Ecosystem"
       // Fills one screen (svh = the visible height on phones). Top padding minus bottom padding equals the
       // fixed navbar's height (72px, 84px from sm), so the content is centred in the area below it.
-      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-[#070A1F] pt-28 pb-10 sm:pt-32 sm:pb-11 short:pt-[6.25rem] short:pb-4 text-white"
+      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-bx-night-black pt-28 pb-10 sm:pt-32 sm:pb-11 short:pt-[6.25rem] short:pb-4 text-white"
       onFocus={(e) => (e.target as HTMLElement).matches(":focus-visible") && setKeyboardFocus(true)}
       onBlur={(e) => !e.currentTarget.contains(e.relatedTarget as Node | null) && setKeyboardFocus(false)}
       backdrop={
@@ -212,7 +212,7 @@ export function BusinessEcosystemGrid() {
             />
           ))}
           {/* Phones: the copy spans the whole image, so tint it evenly */}
-          <div className="absolute inset-0 bg-[#070A1F]/55 lg:hidden" />
+          <div className="absolute inset-0 bg-bx-night-black/55 lg:hidden" />
           {/* Desktop: darken under the copy (left) and the list (right), leave the subject band clear */}
           <div
             className="absolute inset-0 hidden lg:block"
@@ -230,7 +230,7 @@ export function BusinessEcosystemGrid() {
         {/* Header: title + counter */}
         <div className="flex items-center justify-between gap-4">
           <h2 className="flex items-center gap-3 whitespace-nowrap font-heading text-lg sm:text-xl font-semibold uppercase tracking-[0.06em]">
-            <svg viewBox="0 0 24 24" width="16" height="22" aria-hidden className="shrink-0 text-[#F54900]">
+            <svg viewBox="0 0 24 24" width="16" height="22" aria-hidden className="shrink-0 text-bx-orange">
               <path fill="currentColor" d="M12 1C12 1 4 10.5 4 15.5a8 8 0 0 0 16 0C20 10.5 12 1 12 1z" />
             </svg>
             Core Verticals
@@ -282,7 +282,7 @@ export function BusinessEcosystemGrid() {
                     <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] overflow-hidden rounded-full lg:-bottom-0.5">
                       <motion.span
                         key={playing ? `run-${active}` : `hold-${active}`}
-                        className="block h-full origin-left bg-[#F54900]"
+                        className="block h-full origin-left bg-bx-orange"
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={playing ? { duration: AUTOPLAY_MS / 1000, ease: "linear" } : { duration: 0.45, ease: "easeOut" }}
@@ -304,7 +304,7 @@ export function BusinessEcosystemGrid() {
               const show = i === active;
               const isExternal = v.href.startsWith("http");
               const ctaClass =
-                "inline-flex items-center gap-2 rounded-full border border-white/80 px-6 py-2.5 text-[15px] font-medium text-white transition-colors duration-300 hover:border-[#F54900] hover:bg-[#F54900] hover:text-[#111827]";
+                "inline-flex items-center gap-2 rounded-full border border-white/80 px-6 py-2.5 text-[15px] font-medium text-white transition-colors duration-300 hover:border-bx-orange hover:bg-bx-orange hover:text-bx-ink";
 
               return (
                 <div

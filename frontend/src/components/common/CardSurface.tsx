@@ -103,7 +103,7 @@ export function CardPhoto({ src, accent, position = "center", className }: CardP
             className="h-full w-full object-cover"
             style={{ objectPosition: position }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D1026]/75 via-[#0D1026]/45 to-[#0D1026]/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bx-night/75 via-bx-night/45 to-bx-night/80" />
           <div className="card-photo-tint absolute inset-0" />
         </>
       )}

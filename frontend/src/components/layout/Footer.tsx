@@ -60,7 +60,7 @@ return null;
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-[#E3E5EF] bg-[#FAF9F6] text-[#111827]">
+    <footer className="relative overflow-hidden border-t border-bx-line bg-bx-cream text-bx-ink">
       <div aria-hidden className="grid-bg grid-bg-fade absolute inset-0 opacity-20" />
       <div className="container-x relative z-10 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] pt-8 md:pt-10">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
@@ -72,21 +72,21 @@ export function Footer() {
               className="flex flex-col items-center group"
             >
               <img
-                src="/bharatxgroup.png"
+                src="/bharatxgroup.webp"
                 alt="BharatX Group"
                 className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="mt-2 font-heading text-2xl sm:text-[1.7rem] font-medium text-[#111827] tracking-tight text-center">
+              <span className="mt-2 font-heading text-2xl sm:text-[1.7rem] font-medium text-bx-ink tracking-tight text-center">
                 BharatX Group
               </span>
             </Link>
 
-            <p className="mt-2.5 font-sans text-xs sm:text-[13px] uppercase tracking-[0.01em] text-[#F54900] font-semibold">
+            <p className="mt-2.5 font-sans text-xs sm:text-[13px] uppercase tracking-[0.01em] text-bx-orange font-semibold">
               Building Businesses. Enabling Bharat.
             </p>
 
             {/* Justified, with the last line centred so the block sits symmetrically under the logo */}
-            <p className="mt-3.5 text-sm leading-relaxed text-[#596579] max-w-[300px] text-justify [text-align-last:center] hyphens-auto">
+            <p className="mt-3.5 text-sm leading-relaxed text-bx-slate max-w-[300px] text-justify [text-align-last:center] hyphens-auto">
               A diversified Indian business group bringing together businesses, capital, technology and talent to create enduring enterprises across key growth sectors.
             </p>
           </div>
@@ -95,8 +95,8 @@ export function Footer() {
           <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
             {/* 1. Businesses */}
             <nav aria-label="Businesses">
-              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="layers" size={14} className="text-[#163A7A]" />
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-bx-ink font-bold">
+                <DuotoneIcon name="layers" size={14} className="text-bx-navy-700" />
                 Businesses
               </div>
               <ul className="flex flex-col gap-1.5">
@@ -105,11 +105,11 @@ export function Footer() {
                     <Link
                       to={item.to}
                       data-cursor="link"
-                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#163A7A] hover:translate-x-1"
+                      className="group inline-flex items-center gap-1.5 text-[13px] text-bx-slate transition-all duration-200 hover:text-bx-navy-700 hover:translate-x-1"
                     >
                       <span
                         aria-hidden
-                        className="h-px w-0 bg-[#163A7A] transition-all duration-300 group-hover:w-2.5"
+                        className="h-px w-0 bg-bx-navy-700 transition-all duration-300 group-hover:w-2.5"
                       />
                       <span className="fx-underline">{item.label}</span>
                     </Link>
@@ -120,8 +120,8 @@ export function Footer() {
 
             {/* 2. Group */}
             <nav aria-label="Group">
-              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="building-2" size={14} className="text-[#163A7A] fx-icon-pop" />
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-bx-ink font-bold">
+                <DuotoneIcon name="building-2" size={14} className="text-bx-navy-700 fx-icon-pop" />
                 Group
               </div>
               <ul className="flex flex-col gap-1.5">
@@ -130,11 +130,11 @@ export function Footer() {
                     <Link
                       to={item.to}
                       data-cursor="link"
-                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#163A7A] hover:translate-x-1"
+                      className="group inline-flex items-center gap-1.5 text-[13px] text-bx-slate transition-all duration-200 hover:text-bx-navy-700 hover:translate-x-1"
                     >
                       <span
                         aria-hidden
-                        className="h-px w-0 bg-[#163A7A] transition-all duration-300 group-hover:w-2.5"
+                        className="h-px w-0 bg-bx-navy-700 transition-all duration-300 group-hover:w-2.5"
                       />
                       <span className="fx-underline">{item.label}</span>
                     </Link>
@@ -145,8 +145,8 @@ export function Footer() {
 
             {/* 3. Connect */}
             <nav aria-label="Connect">
-              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="share-2" size={14} className="text-[#163A7A] fx-icon-pop" />
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-bx-ink font-bold">
+                <DuotoneIcon name="share-2" size={14} className="text-bx-navy-700 fx-icon-pop" />
                 Connect
               </div>
               <ul className="flex flex-col gap-1.5">
@@ -157,11 +157,11 @@ export function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       data-cursor="link"
-                      className="group inline-flex items-center gap-1.5 text-[13px] text-[#596579] transition-all duration-200 hover:text-[#163A7A] hover:translate-x-1"
+                      className="group inline-flex items-center gap-1.5 text-[13px] text-bx-slate transition-all duration-200 hover:text-bx-navy-700 hover:translate-x-1"
                     >
                       <span
                         aria-hidden
-                        className="h-px w-0 bg-[#163A7A] transition-all duration-300 group-hover:w-2.5"
+                        className="h-px w-0 bg-bx-navy-700 transition-all duration-300 group-hover:w-2.5"
                       />
                       <span className="fx-underline">{item.label}</span>
                       <Icon
@@ -178,11 +178,11 @@ export function Footer() {
 
             {/* 4. Address */}
             <div aria-label="Address">
-              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-[#111827] font-bold">
-                <DuotoneIcon name="map-pin" size={14} className="text-[#163A7A]" />
+              <div className="mb-2.5 flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.24em] text-bx-ink font-bold">
+                <DuotoneIcon name="map-pin" size={14} className="text-bx-navy-700" />
                 Address
               </div>
-              <address className="not-italic text-[13px] leading-snug text-[#596579] space-y-2">
+              <address className="not-italic text-[13px] leading-snug text-bx-slate space-y-2">
                 <p>
                   {brandConfig.address.line1},
                   <br />
@@ -190,22 +190,22 @@ export function Footer() {
                   <br />
                   {brandConfig.address.city} – {brandConfig.address.pincode}
                 </p>
-                <div className="space-y-1.5 border-t border-[#E3E5EF] pt-2.5 font-sans text-[11.5px]">
+                <div className="space-y-1.5 border-t border-bx-line pt-2.5 font-sans text-[11.5px]">
                   <div>
                     <a
                       href={`tel:${brandConfig.contact.phoneTel}`}
-                      className="inline-flex items-center gap-2 text-[#596579] hover:text-[#163A7A] transition-colors"
+                      className="inline-flex items-center gap-2 text-bx-slate hover:text-bx-navy-700 transition-colors"
                     >
-                      <DuotoneIcon name="phone" size={14} className="shrink-0 text-[#00B8D9]" />
+                      <DuotoneIcon name="phone" size={14} className="shrink-0 text-bx-cyan" />
                       <span>{brandConfig.contact.phoneFormatted}</span>
                     </a>
                   </div>
                   <div>
                     <a
                       href={`mailto:${brandConfig.contact.email}`}
-                      className="inline-flex items-center gap-2 text-[#596579] hover:text-[#163A7A] transition-colors"
+                      className="inline-flex items-center gap-2 text-bx-slate hover:text-bx-navy-700 transition-colors"
                     >
-                      <DuotoneIcon name="mail" size={14} className="shrink-0 text-[#F54900]" />
+                      <DuotoneIcon name="mail" size={14} className="shrink-0 text-bx-orange" />
                       <span>{brandConfig.contact.email}</span>
                     </a>
                   </div>
@@ -216,8 +216,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Credits & Legal */}
-        <div className="mt-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-[#E3E5EF] pt-5 text-center">
-          <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-[#596579] md:text-left shrink-0">
+        <div className="mt-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-bx-line pt-5 text-center">
+          <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-bx-slate md:text-left shrink-0">
             © {new Date().getFullYear()} BharatX Group. All rights reserved.
           </p>
 
@@ -226,7 +226,7 @@ export function Footer() {
               href="https://kynyx.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-[0.16em] text-[#596579] transition-colors hover:text-[#163A7A]"
+              className="group inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-[0.16em] text-bx-slate transition-colors hover:text-bx-navy-700"
             >
               <span>Made with</span>
               <Icon
@@ -237,20 +237,20 @@ export function Footer() {
               />
               <span>
                 by{" "}
-                <span className="font-bold text-[#111827] group-hover:text-[#163A7A] transition-colors">
+                <span className="font-bold text-bx-ink group-hover:text-bx-navy-700 transition-colors">
                   KYNYX
                 </span>
               </span>
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-2.5 gap-y-1 font-sans text-[11px] tracking-[0.14em] text-[#596579]">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-2.5 gap-y-1 font-sans text-[11px] tracking-[0.14em] text-bx-slate">
             {footerSections.legal.map((item) => (
               <span key={item.label} className="inline-flex items-center gap-2">
-                <span className="text-[#94A3B8]">•</span>
+                <span className="text-bx-slate-400">•</span>
                 <Link
                   to={item.to}
-                  className="transition-colors hover:text-[#163A7A]"
+                  className="transition-colors hover:text-bx-navy-700"
                 >
                   {item.label}
                 </Link>

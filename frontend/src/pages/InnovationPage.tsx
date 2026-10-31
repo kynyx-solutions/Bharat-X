@@ -89,7 +89,7 @@ export default function InnovationPage() {
   });
 
   return (
-    <main className="min-h-screen bg-[#FAF9F6] text-[#111827] pt-24 pb-8">
+    <main className="min-h-screen bg-bx-cream text-bx-ink pt-24 pb-8">
       {/* ── 1. INNOVATION HERO ────────────────────────────────── */}
       <section className="relative overflow-hidden py-12 sm:py-16">
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -104,14 +104,14 @@ export default function InnovationPage() {
 
         <div className="container-x relative z-10">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] mb-4">
+            <div className="flex items-center gap-2.5 font-sans text-[11px] uppercase tracking-[0.28em] text-bx-orange mb-4">
               <span className="animate-pulse">◆</span>
               <span className="text-white">INNOVATION AGENDA</span>
             </div>
             <AnimatedHeading as="h1" effect="words" hover="color" className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] text-white">
               Innovation is a Way of Life.
               <br />
-              <span className="italic text-[#F54900]">Engineered for Sovereignty.</span>
+              <span className="italic text-bx-orange">Engineered for Sovereignty.</span>
             </AnimatedHeading>
             <p className="mt-6 text-base sm:text-lg text-slate-200 leading-relaxed font-sans">
               Our growth is propelled by bold research and development. We build foundational AI, precision robotics, and agrarian sciences engineered to operate without external dependency.
@@ -121,28 +121,28 @@ export default function InnovationPage() {
       </section>
 
       {/* ── 2. METRICS BANNER ───────────────────────────────────────────── */}
-      <SectionTransition className="py-6 bg-[#FAF9F6]">
+      <SectionTransition className="py-6 bg-bx-cream">
         <div className="container-x">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            <div data-cursor="card" className="p-4 rounded-2xl bg-[#163A7A] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
+            <div data-cursor="card" className="p-4 rounded-2xl bg-bx-navy-700 shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
               <span className="font-heading text-3xl sm:text-4xl font-semibold text-white block transition-transform hover:scale-105">22+</span>
               <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90 mt-1 block">
                 Regional Indian Dialects Supported
               </span>
             </div>
-            <div data-cursor="card" className="p-4 rounded-2xl bg-[#0B1F47] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
-              <span className="font-heading text-3xl sm:text-4xl font-semibold text-[#FF8904] block transition-transform hover:scale-105">Sub-Micron</span>
+            <div data-cursor="card" className="p-4 rounded-2xl bg-bx-navy-900 shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
+              <span className="font-heading text-3xl sm:text-4xl font-semibold text-bx-orange-light block transition-transform hover:scale-105">Sub-Micron</span>
               <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90 mt-1 block">
                 Precision Tolerance Standards
               </span>
             </div>
-            <div data-cursor="card" className="p-4 rounded-2xl bg-[#008299] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
+            <div data-cursor="card" className="p-4 rounded-2xl bg-bx-cyan-dark shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
               <span className="font-heading text-3xl sm:text-4xl font-semibold text-white block transition-transform hover:scale-105">100%</span>
               <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90 mt-1 block">
                 Domestic Data Residency
               </span>
             </div>
-            <div data-cursor="card" className="p-4 rounded-2xl bg-[#15966B] shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
+            <div data-cursor="card" className="p-4 rounded-2xl bg-bx-green shadow-md transition-all duration-300 fx-lift hover:shadow-lg">
               <span className="font-heading text-3xl sm:text-4xl font-semibold text-white block transition-transform hover:scale-105">&lt; 28ms</span>
               <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider text-white/90 mt-1 block">
                 Edge Model Inference Latency
@@ -156,13 +156,13 @@ export default function InnovationPage() {
       <SectionTransition className="py-6 sm:py-9">
         <div className="container-x">
           <div className="max-w-2xl mb-6 sm:mb-8">
-            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#163A7A] font-semibold">
+            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-bx-navy-700 font-semibold">
               CORE DISCIPLINES
             </span>
-            <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827]">
+            <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink">
               Strategic Frontiers of Technology
             </AnimatedHeading>
-            <p className="mt-3 text-[#596579] text-sm sm:text-base font-sans">
+            <p className="mt-3 text-bx-slate text-sm sm:text-base font-sans">
               How we translate frontier engineering into real-world production capability.
             </p>
           </div>
@@ -175,7 +175,7 @@ export default function InnovationPage() {
                 <StaggerItem key={p.title}>
                   <div
                     data-cursor="card"
-                    className="group relative overflow-hidden flex flex-col justify-between h-full rounded-2xl border border-white/10 bg-[#0D1026] p-7 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-2xl fx-lift"
+                    className="group relative overflow-hidden flex flex-col justify-between h-full rounded-2xl border border-white/10 bg-bx-night p-7 shadow-md transition-all duration-300 hover:border-bx-navy-700 hover:shadow-2xl fx-lift"
                   >
                     <CardPhoto src={p.image} accent={pillarColor} />
                     <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -210,10 +210,10 @@ export default function InnovationPage() {
       <SectionTransition className="relative overflow-hidden py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-2xl mb-10">
-            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-[#163A7A] font-semibold">
+            <span className="font-sans text-[10.5px] uppercase tracking-[0.24em] text-bx-navy-700 font-semibold">
               DEVELOPMENT HORIZON
             </span>
-            <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827]">
+            <AnimatedHeading as="h2" effect="words" hover="color" className="mt-2 font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink">
               The Path to Deep-Tech Autonomy
             </AnimatedHeading>
           </div>
@@ -226,7 +226,7 @@ export default function InnovationPage() {
                 <StaggerItem key={phase.number}>
                   <div
                     data-cursor="card"
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 flex flex-col justify-between shadow-md cursor-card hover:border-[#163A7A] transition-all duration-300 fx-lift hover:shadow-xl h-full"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-bx-night p-6 flex flex-col justify-between shadow-md cursor-card hover:border-bx-navy-700 transition-all duration-300 fx-lift hover:shadow-xl h-full"
                   >
                     <CardFill accent={pColor} />
                     <div className="relative">
@@ -253,7 +253,7 @@ export default function InnovationPage() {
                 to="/contact"
                 data-cursor="button"
                 data-motion="true"
-                className="inline-flex items-center gap-3 rounded-full bg-[#163A7A] text-white hover:bg-[#0F2A5C] px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
+                className="inline-flex items-center gap-3 rounded-full bg-bx-navy-700 text-white hover:bg-bx-navy-800 px-8 py-3.5 text-sm font-semibold transition-all shadow-md fx-shine active:scale-95"
               >
                 <span>Inquire on Technology Licensing &amp; R&amp;D</span>
                 <Icon name="arrow-right" width={15} height={15} />

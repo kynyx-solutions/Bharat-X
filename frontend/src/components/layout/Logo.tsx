@@ -14,7 +14,7 @@ export function LogoMark({
 }) {
   return (
     <img
-      src="/bharatxgroup.png"
+      src="/bharatxgroup.webp"
       alt="BharatX Group"
       width={size}
       height={size}
@@ -44,7 +44,7 @@ export function Logo({
   return (
     <span className={cn("inline-flex items-center group/logo transition-transform duration-300 hover:scale-[1.03] select-none", className)}>
       <img
-        src="/bharatxgroup.png"
+        src="/bharatxgroup.webp"
         alt="BharatX Group"
         className="object-contain w-auto transition-all duration-300 group-hover/logo:brightness-105"
         style={{ height }}

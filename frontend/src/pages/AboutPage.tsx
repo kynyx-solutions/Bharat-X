@@ -47,7 +47,7 @@ const visionMission: {
       statement: (
         <>
           To build world-class Indian businesses that help make India a developed nation by{" "}
-          <span className="text-[#F54900]">2047</span>.
+          <span className="text-bx-orange">2047</span>.
         </>
       ),
       detail:
@@ -60,13 +60,13 @@ const visionMission: {
         { label: "Technology", icon: "cpu" },
       ],
       icon: "eye",
-      accentText: "text-[#163A7A]",
-      chip: "border-[#00B8D9]/30",
-      ring: "from-[#00B8D9] to-[#163A7A]",
-      border: "from-[#00B8D9]/70 via-[#163A7A]/15 to-white",
-      bracket: "border-[#00B8D9]",
-      hairline: "via-[#00B8D9]",
-      sweep: "via-[#00B8D9]/12",
+      accentText: "text-bx-navy-700",
+      chip: "border-bx-cyan/30",
+      ring: "from-bx-cyan to-bx-navy-700",
+      border: "from-bx-cyan/70 via-bx-navy-700/15 to-white",
+      bracket: "border-bx-cyan",
+      hairline: "via-bx-cyan",
+      sweep: "via-bx-cyan/12",
       glow: "rgba(0, 184, 217, 0.35)",
     },
     {
@@ -84,13 +84,13 @@ const visionMission: {
         { label: "Technology", icon: "cpu" },
       ],
       icon: "target",
-      accentText: "text-[#CA3500]",
-      chip: "border-[#F54900]/25",
-      ring: "from-[#FFB86A] to-[#F54900]",
-      border: "from-[#F54900]/70 via-[#F54900]/15 to-white",
-      bracket: "border-[#F54900]",
-      hairline: "via-[#F54900]",
-      sweep: "via-[#F54900]/10",
+      accentText: "text-bx-orange-dark",
+      chip: "border-bx-orange/25",
+      ring: "from-bx-orange-pale to-bx-orange",
+      border: "from-bx-orange/70 via-bx-orange/15 to-white",
+      bracket: "border-bx-orange",
+      hairline: "via-bx-orange",
+      sweep: "via-bx-orange/10",
       glow: "rgba(245, 73, 0, 0.3)",
     },
   ];
@@ -132,7 +132,7 @@ const purposePillars = [
     icon: "hard-hat" as const,
     image: cardImage("about-03-purpose-build"),
     accent: "#163A7A",
-    borderHover: "hover:border-[#163A7A]",
+    borderHover: "hover:border-bx-navy-700",
   },
   {
     step: "02",
@@ -143,7 +143,7 @@ const purposePillars = [
     icon: "landmark" as const,
     image: cardImage("about-06-purpose-invest"),
     accent: "#00B8D9",
-    borderHover: "hover:border-[#00B8D9]",
+    borderHover: "hover:border-bx-cyan",
   },
   {
     step: "03",
@@ -154,7 +154,7 @@ const purposePillars = [
     icon: "trending-up" as const,
     image: cardImage("about-04-purpose-scale"),
     accent: "#F54900",
-    borderHover: "hover:border-[#F54900]",
+    borderHover: "hover:border-bx-orange",
   },
   {
     step: "04",
@@ -165,7 +165,7 @@ const purposePillars = [
     icon: "sparkles" as const,
     image: cardImage("about-05-purpose-impact"),
     accent: "#15966B",
-    borderHover: "hover:border-[#15966B]",
+    borderHover: "hover:border-bx-green",
   },
 ];
 
@@ -175,7 +175,7 @@ const leadershipTeam = [
     name: "Nitin Arora",
     role: "Executive Vice President — Product, Technology & AI",
     bio: "Technologist with 15+ years across product, AI and entrepreneurship at Google, Amazon, GE and Deloitte, and founder of his own startup. B.Tech and PhD in Computer Science, IIT Delhi; master’s, NYU.",
-    photo: "/leadership/nitin-arora.png",
+    photo: "/leadership/nitin-arora.webp",
     // 4:3 head-and-shoulders crop for the desktop card frame
     cardPhoto: "/leadership/nitin-arora-card.webp",
     linkedin: "https://www.linkedin.com/in/aronitin",
@@ -217,21 +217,21 @@ const leadershipMandates = [
   {
     icon: "compass",
     accent: "#F54900",
-    borderHover: "hover:border-[#F54900]/40",
+    borderHover: "hover:border-bx-orange/40",
     title: "Sovereign Industrial Capacity",
     desc: "Engineering domestic manufacturing, resilient infrastructure, and high-duty cycle systems designed for decades of compounding value.",
   },
   {
     icon: "cpu",
     accent: "#163A7A",
-    borderHover: "hover:border-[#163A7A]/30",
+    borderHover: "hover:border-bx-navy-700/30",
     title: "Indigenous Technology & Silicon",
     desc: "Fostering frontier AI foundational models, robotics, and deeptech skunkworks to eliminate reliance on foreign black-box dependencies.",
   },
   {
     icon: "orbit",
     accent: "#15966B",
-    borderHover: "hover:border-[#15966B]/40",
+    borderHover: "hover:border-bx-green/40",
     title: "Interconnected Economic Engine",
     desc: "Unifying cross-sector operating businesses under one institutional standard of quality, capital discipline, and governance.",
   },
@@ -259,7 +259,7 @@ const tier1EcosystemNodes: EcosystemNode[] = [
   {
     sector: "Venture Building",
     company: "BharatX Ventures",
-    logo: "/Ventures_logo.png",
+    logo: "/Ventures_logo.webp",
     link: "/verticals#ventures",
     accent: "#0F2A5C",
     badge: "Active",
@@ -293,7 +293,7 @@ const tier2EcosystemNodes: EcosystemNode[] = [
   {
     sector: "Technology",
     company: "Aixperts Labs",
-    logo: "/Ai-Experts_logo.png",
+    logo: "/Ai-Experts_logo.webp",
     link: "/verticals#tech-ai",
     accent: "#2B5299",
     badge: "Active",
@@ -333,7 +333,7 @@ const principles = [
     description: "We think like builders and act with ownership.",
     icon: "rocket" as const,
     color: "#163A7A",
-    borderHover: "hover:border-[#163A7A]",
+    borderHover: "hover:border-bx-navy-700",
   },
   {
     title: "Execution-Driven",
@@ -341,7 +341,7 @@ const principles = [
     description: "Ideas matter only when they translate into results.",
     icon: "check" as const,
     color: "#00B8D9",
-    borderHover: "hover:border-[#00B8D9]",
+    borderHover: "hover:border-bx-cyan",
   },
   {
     title: "Long-Term",
@@ -349,7 +349,7 @@ const principles = [
     description: "We build businesses for enduring value, not short-term visibility.",
     icon: "trending-up" as const,
     color: "#15966B",
-    borderHover: "hover:border-[#15966B]",
+    borderHover: "hover:border-bx-green",
   },
   {
     title: "Technology-Enabled",
@@ -357,7 +357,7 @@ const principles = [
     description: "We use technology to improve how businesses operate and scale.",
     icon: "cpu" as const,
     color: "#2B5299",
-    borderHover: "hover:border-[#2B5299]",
+    borderHover: "hover:border-bx-navy-500",
   },
   {
     title: "Responsible",
@@ -365,7 +365,7 @@ const principles = [
     description: "Growth must create value for businesses, people and the wider ecosystem.",
     icon: "shield-check" as const,
     color: "#D97706",
-    borderHover: "hover:border-[#F54900]",
+    borderHover: "hover:border-bx-orange",
   },
   {
     title: "Nation-First",
@@ -373,7 +373,7 @@ const principles = [
     description: "We build sovereign enterprise capabilities that strengthen India's economic foundation.",
     icon: "badge-check" as const,
     color: "#0F2A5C",
-    borderHover: "hover:border-[#2B5299]",
+    borderHover: "hover:border-bx-navy-500",
   },
 ];
 
@@ -381,7 +381,7 @@ const principles = [
 function EcosystemNodeCard({ node }: { node: EcosystemNode }) {
   const isExternal = node.link.startsWith("http");
   const nodeClasses =
-    "group relative overflow-hidden flex flex-col justify-between rounded-xl border border-white/10 bg-[#0D1026] p-4 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none";
+    "group relative overflow-hidden flex flex-col justify-between rounded-xl border border-white/10 bg-bx-night p-4 shadow-md transition-all duration-300 hover:border-bx-navy-700 hover:shadow-xl hover:-translate-y-1 fx-lift focus-visible:ring-2 focus-visible:ring-bx-navy-700 focus:outline-none";
 
   const nodeContent = (
     <>
@@ -408,7 +408,7 @@ function EcosystemNodeCard({ node }: { node: EcosystemNode }) {
         ) : (
           <span className="text-[10px] font-sans text-white/90">Horizon</span>
         )}
-        <Icon name="arrow-up-right" width={12} height={12} className="text-white/90 group-hover:text-[#FF8904] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <Icon name="arrow-up-right" width={12} height={12} className="text-white/90 group-hover:text-bx-orange-light transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </div>
     </>
   );
@@ -433,13 +433,13 @@ export default function AboutPage() {
   });
 
   return (
-    <main className="w-full min-h-screen bg-[#FAF9F6] text-[#111827]">
+    <main className="w-full min-h-screen bg-bx-cream text-bx-ink">
       {/* ── 01. HERO (Building Enterprises for a Growing Bharat) ─────── */}
       <section className="relative overflow-hidden min-h-[92vh] lg:min-h-screen w-full flex items-end justify-start pt-32 sm:pt-36 md:pt-40 pb-16 sm:pb-20 lg:pb-24">
         {/* Wide-format cinematic transformation image filling the entire frame */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/backgrounds/about_hero.png"
+            src="/assets/backgrounds/about_hero.webp"
             alt="India's Physical and Economic Transformation"
             data-cursor="image"
             className="h-full w-full object-cover object-center filter brightness-[0.88] contrast-[1.12] animate-hero-zoom"
@@ -456,7 +456,7 @@ export default function AboutPage() {
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] hover:text-white"
             >
               Building Enterprises for a{" "}
-              <span className="text-[#F54900] transition-colors duration-300">Growing Bharat.</span>
+              <span className="text-bx-orange transition-colors duration-300">Growing Bharat.</span>
             </motion.h1>
           </div>
         </div>
@@ -468,24 +468,24 @@ export default function AboutPage() {
           <div className="container-x relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
-                  <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
+                <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4">
+                  <span className="h-2 w-2 rounded-full bg-bx-navy-700 animate-pulse" />
                   <span>WHO WE ARE</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                  More Than a <span className="text-[#163A7A] transition-colors duration-300">Group of Companies</span>
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight transition-colors duration-300">
+                  More Than a <span className="text-bx-navy-700 transition-colors duration-300">Group of Companies</span>
                 </h2>
 
-                <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
+                <p className="mt-6 text-base sm:text-lg text-bx-slate leading-relaxed font-normal">
                   BharatX Group brings together businesses operating across some of India’s most important growth sectors.
                 </p>
 
-                <p className="mt-4 text-sm sm:text-base text-[#596579] leading-relaxed font-normal">
+                <p className="mt-4 text-sm sm:text-base text-bx-slate leading-relaxed font-normal">
                   We combine entrepreneurial thinking, operational capability, technology and capital to build businesses that solve real-world problems and create long-term value.
                 </p>
 
-                <p className="mt-4 text-sm sm:text-base text-[#596579] leading-relaxed font-normal">
+                <p className="mt-4 text-sm sm:text-base text-bx-slate leading-relaxed font-normal">
                   Our portfolio spans infrastructure and engineering, agriculture and food, industrial manufacturing, AI and technology, packaging, sustainability, venture building and social impact.
                 </p>
               </div>
@@ -495,14 +495,14 @@ export default function AboutPage() {
                 <div
                   data-cursor="card"
                   tabIndex={0}
-                  className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white p-7 sm:p-9 shadow-lg transition-all duration-300 hover:shadow-2xl fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none"
+                  className="relative overflow-hidden rounded-3xl border border-bx-line bg-white p-7 sm:p-9 shadow-lg transition-all duration-300 hover:shadow-2xl fx-lift focus-visible:ring-2 focus-visible:ring-bx-navy-700 focus:outline-none"
                 >
                   <CardFill accent="#163A7A" tone="tint" />
                   <div className="relative text-center mb-6">
-                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-[#163A7A] font-bold block">
+                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-bx-navy-700 font-bold block">
                       The Value Creation Formula
                     </span>
-                    <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+                    <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                       How core capabilities compound across the ecosystem
                     </span>
                   </div>
@@ -526,15 +526,15 @@ export default function AboutPage() {
                           size={32}
                           className="transition-transform duration-300 hover:scale-110"
                         />
-                        <span className="font-sans text-sm font-medium text-[#111827]">
+                        <span className="font-sans text-sm font-medium text-bx-ink">
                           {item.label}
                         </span>
                       </div>
                     ))}
 
                     {/* Sixth slot: compounding operator icon */}
-                    <div className="flex items-center justify-center rounded-xl border border-dashed border-[#163A7A]/35 bg-[color-mix(in_srgb,#163A7A_6%,white)] p-3">
-                      <span className="font-sans text-xs text-[#0F2A5C] font-bold tracking-wider">
+                    <div className="flex items-center justify-center rounded-xl border border-dashed border-bx-navy-700/35 bg-[color-mix(in_srgb,#163A7A_6%,white)] p-3">
+                      <span className="font-sans text-xs text-bx-navy-800 font-bold tracking-wider">
                         + SYNERGY
                       </span>
                     </div>
@@ -542,14 +542,14 @@ export default function AboutPage() {
 
                   {/* Downward Arrow Connector */}
                   <div className="relative my-5 flex items-center justify-center">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#163A7A] text-white shadow-md transition-transform duration-300 hover:scale-110">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-bx-navy-700 text-white shadow-md transition-transform duration-300 hover:scale-110">
                       <Icon name="arrow-right" width={16} height={16} className="rotate-90" strokeWidth={2.5} />
                     </div>
                   </div>
 
                   {/* Result Node: Enduring Enterprises */}
-                  <div className="rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-5 sm:p-6 text-center text-white shadow-xl fx-shine">
-                    <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold block mb-1">
+                  <div className="rounded-2xl border border-bx-navy-700/40 bg-gradient-to-r from-bx-navy-900 via-bx-navy-700 to-bx-navy-900 p-5 sm:p-6 text-center text-white shadow-xl fx-shine">
+                    <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-bx-orange font-bold block mb-1">
                       End State
                     </span>
                     <h3 className="font-heading text-2xl sm:text-3xl font-medium tracking-tight text-white transition-colors duration-300">
@@ -568,7 +568,7 @@ export default function AboutPage() {
 
       {/* ── VISION & MISSION (Where We're Headed and How We Get There) ──── */}
       <SectionTransition id="vision-mission" aria-label="Our Vision and Mission">
-        <section className="relative overflow-hidden bg-[#F6F6FD] py-6 sm:py-9">
+        <section className="relative overflow-hidden bg-bx-surface-lavender py-6 sm:py-9">
           {/* Light futuristic scene: holographic wash, perspective grid floor, orbit rings and wireframe cubes */}
           <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
             <div className="absolute inset-0" style={{ background: visionMissionAurora }} />
@@ -587,15 +587,15 @@ export default function AboutPage() {
                 }}
               />
             </div>
-            <div className="absolute left-1/2 top-[44%] h-40 w-[75%] -translate-x-1/2 rounded-[100%] bg-[#00B8D9]/10 blur-3xl" />
+            <div className="absolute left-1/2 top-[44%] h-40 w-[75%] -translate-x-1/2 rounded-[100%] bg-bx-cyan/10 blur-3xl" />
 
             {/* Tilted orbit rings with travelling light nodes */}
             <div className="absolute left-1/2 top-[30%] [perspective:1200px]">
               <div className="[transform-style:preserve-3d]" style={{ transform: "rotateX(72deg)" }}>
                 {[
-                  { size: 640, dur: "38s", dot: "bg-[#00B8D9] shadow-[0_0_14px_#00B8D9]", ring: "border-[#163A7A]/20" },
-                  { size: 900, dur: "56s", dot: "bg-[#F54900] shadow-[0_0_14px_#F54900]", ring: "border-[#00B8D9]/20" },
-                  { size: 1180, dur: "80s", dot: "bg-[#163A7A] shadow-[0_0_14px_#163A7A]", ring: "border-[#163A7A]/10" },
+                  { size: 640, dur: "38s", dot: "bg-bx-cyan shadow-[0_0_14px_#00B8D9]", ring: "border-bx-navy-700/20" },
+                  { size: 900, dur: "56s", dot: "bg-bx-orange shadow-[0_0_14px_#F54900]", ring: "border-bx-cyan/20" },
+                  { size: 1180, dur: "80s", dot: "bg-bx-navy-700 shadow-[0_0_14px_#163A7A]", ring: "border-bx-navy-700/10" },
                 ].map((o) => (
                   <div
                     key={o.size}
@@ -609,26 +609,26 @@ export default function AboutPage() {
             </div>
 
             {/* Floating wireframe cubes */}
-            <WireCube className="animate-float absolute left-[6%] top-[12%] hidden h-20 w-20 text-[#163A7A]/25 lg:block" />
-            <WireCube className="animate-float absolute right-[7%] top-[22%] hidden h-12 w-12 text-[#00B8D9]/40 md:block" style={{ animationDelay: "-2s" }} />
-            <WireCube className="animate-float absolute bottom-[8%] right-[4%] hidden h-24 w-24 text-[#F54900]/25 lg:block" style={{ animationDelay: "-3.5s" }} />
+            <WireCube className="animate-float absolute left-[6%] top-[12%] hidden h-20 w-20 text-bx-navy-700/25 lg:block" />
+            <WireCube className="animate-float absolute right-[7%] top-[22%] hidden h-12 w-12 text-bx-cyan/40 md:block" style={{ animationDelay: "-2s" }} />
+            <WireCube className="animate-float absolute bottom-[8%] right-[4%] hidden h-24 w-24 text-bx-orange/25 lg:block" style={{ animationDelay: "-3.5s" }} />
           </div>
 
           <div className="container-x relative z-10">
             <div className="max-w-3xl text-center mx-auto mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-white/80 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#163A7A] font-bold shadow-xs backdrop-blur-sm mb-5">
-                <span className="h-2 w-2 rounded-full bg-[#00B8D9] shadow-[0_0_8px_#00B8D9] animate-pulse" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-white/80 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-bx-navy-700 font-bold shadow-xs backdrop-blur-sm mb-5">
+                <span className="h-2 w-2 rounded-full bg-bx-cyan shadow-[0_0_8px_#00B8D9] animate-pulse" />
                 <span>WHAT DRIVES US</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
                 Our{" "}
-                <span className="bg-gradient-to-r from-[#163A7A] to-[#00B8D9] bg-clip-text text-transparent">Vision</span>{" "}
-                <span className="font-light italic text-[#F54900]">&amp;</span>{" "}
-                <span className="bg-gradient-to-r from-[#163A7A] to-[#00B8D9] bg-clip-text text-transparent">Mission</span>
+                <span className="bg-gradient-to-r from-bx-navy-700 to-bx-cyan bg-clip-text text-transparent">Vision</span>{" "}
+                <span className="font-light italic text-bx-orange">&amp;</span>{" "}
+                <span className="bg-gradient-to-r from-bx-navy-700 to-bx-cyan bg-clip-text text-transparent">Mission</span>
               </h2>
 
-              <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
+              <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
                 Our vision sets the long-term ambition for the Group. Our mission is the work we do every day to get there.
               </p>
             </div>
@@ -640,7 +640,7 @@ export default function AboutPage() {
                   <div
                     data-cursor="card"
                     tabIndex={0}
-                    className={`group relative h-full rounded-[26px] bg-gradient-to-br ${item.border} p-px shadow-[0_24px_60px_-30px_rgba(22, 58, 122,0.35)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_-26px_var(--panel-glow)] focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none`}
+                    className={`group relative h-full rounded-[26px] bg-gradient-to-br ${item.border} p-px shadow-[0_24px_60px_-30px_rgba(22, 58, 122,0.35)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_-26px_var(--panel-glow)] focus-visible:ring-2 focus-visible:ring-bx-navy-700 focus:outline-none`}
                     style={{ "--panel-glow": item.glow } as CSSProperties}
                   >
                     <div className="relative flex h-full flex-col overflow-hidden rounded-[25px] bg-white/75 p-7 sm:p-10 backdrop-blur-xl">
@@ -671,17 +671,17 @@ export default function AboutPage() {
                           <span className={`block font-sans text-[11px] font-bold uppercase tracking-[0.3em] ${item.accentText}`}>
                             {item.label}
                           </span>
-                          <span className="mt-1 block text-sm text-[#596579]">{item.kicker}</span>
+                          <span className="mt-1 block text-sm text-bx-slate">{item.kicker}</span>
                         </div>
                       </div>
 
                       {/* Same three parts in both cards: statement, supporting paragraph, chip row */}
                       <span aria-hidden className={`relative mt-8 block h-1 w-12 rounded-full bg-gradient-to-r ${item.ring}`} />
-                      <h3 className="relative mt-5 font-heading text-[1.65rem] sm:text-3xl lg:text-[2.15rem] font-medium leading-[1.3] tracking-tight text-[#0B1F47] text-balance">
+                      <h3 className="relative mt-5 font-heading text-[1.65rem] sm:text-3xl lg:text-[2.15rem] font-medium leading-[1.3] tracking-tight text-bx-navy-900 text-balance">
                         {item.statement}
                       </h3>
 
-                      <p className="relative mt-5 text-[15px] sm:text-base leading-relaxed text-[#596579]">
+                      <p className="relative mt-5 text-[15px] sm:text-base leading-relaxed text-bx-slate">
                         {item.detail}
                       </p>
 
@@ -694,7 +694,7 @@ export default function AboutPage() {
                           {item.focus.map((f) => (
                             <li
                               key={f.label}
-                              className={`inline-flex items-center gap-1.5 rounded-full border ${item.chip} bg-white/80 px-3 py-1.5 text-[13px] font-medium text-[#111827] backdrop-blur-sm`}
+                              className={`inline-flex items-center gap-1.5 rounded-full border ${item.chip} bg-white/80 px-3 py-1.5 text-[13px] font-medium text-bx-ink backdrop-blur-sm`}
                             >
                               <Icon name={f.icon} width={14} height={14} strokeWidth={2} className={item.accentText} />
                               {f.label}
@@ -718,20 +718,20 @@ export default function AboutPage() {
             {/* Two balanced columns: the story (context, then purpose) beside a navy thesis panel of the same height */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch mb-12 sm:mb-16">
               <div className="lg:col-span-7">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#9f2d00] font-bold shadow-xs mb-4">
-                  <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900] animate-pulse" />
+                <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-orange-deep font-bold shadow-xs mb-4">
+                  <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900] animate-pulse" />
                   <span>OUR PURPOSE</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                  Built Around India’s <span className="text-[#163A7A] transition-colors duration-300">Opportunity</span>
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight transition-colors duration-300">
+                  Built Around India’s <span className="text-bx-navy-700 transition-colors duration-300">Opportunity</span>
                 </h2>
 
-                <p className="mt-4 text-sm sm:text-base text-[#596579] leading-relaxed font-normal max-w-2xl">
+                <p className="mt-4 text-sm sm:text-base text-bx-slate leading-relaxed font-normal max-w-2xl">
                   India is entering a period of extraordinary economic transformation. Infrastructure is expanding, industries are modernising, technology is reshaping businesses, agricultural value chains are evolving and sustainability is becoming a business imperative.
                 </p>
 
-                <p className="mt-4 border-l-[3px] border-[#F54900] pl-5 text-base sm:text-lg text-[#111827] font-medium leading-relaxed max-w-2xl">
+                <p className="mt-4 border-l-[3px] border-bx-orange pl-5 text-base sm:text-lg text-bx-ink font-medium leading-relaxed max-w-2xl">
                   BharatX exists to participate in this transformation—not simply by investing in opportunities, but by building the businesses capable of capturing them.
                 </p>
               </div>
@@ -740,15 +740,15 @@ export default function AboutPage() {
               <div
                 data-cursor="card"
                 tabIndex={0}
-                className="lg:col-span-5 relative flex flex-col justify-between gap-8 overflow-hidden rounded-2xl border border-[#163A7A]/40 bg-gradient-to-br from-[#0B1F47] via-[#0F2A5C] to-[#163A7A] p-4 sm:p-8 shadow-[0_18px_40px_-16px_rgba(11,31,71,0.55)] transition-all duration-300 hover:shadow-[0_24px_50px_-16px_rgba(11,31,71,0.7)] fx-lift focus-visible:ring-2 focus-visible:ring-[#F54900] focus:outline-none"
+                className="lg:col-span-5 relative flex flex-col justify-between gap-8 overflow-hidden rounded-2xl border border-bx-navy-700/40 bg-gradient-to-br from-bx-navy-900 via-bx-navy-800 to-bx-navy-700 p-4 sm:p-8 shadow-[0_18px_40px_-16px_rgba(11,31,71,0.55)] transition-all duration-300 hover:shadow-[0_24px_50px_-16px_rgba(11,31,71,0.7)] fx-lift focus-visible:ring-2 focus-visible:ring-bx-orange focus:outline-none"
               >
-                <span aria-hidden className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-[#1E4A9E]/45 blur-3xl" />
-                <span aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-48 w-48 rounded-full bg-[#F54900]/10 blur-3xl" />
+                <span aria-hidden className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-bx-navy-600/45 blur-3xl" />
+                <span aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-48 w-48 rounded-full bg-bx-orange/10 blur-3xl" />
 
                 <div className="relative">
                   <div className="flex items-center gap-3">
                     <FeatureIcon name="landmark" accent="#F54900" size={44} className="shrink-0" />
-                    <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-[#FF8904] font-bold">
+                    <span className="font-sans text-[11px] uppercase tracking-[0.24em] text-bx-orange-light font-bold">
                       SOVEREIGN THESIS
                     </span>
                   </div>
@@ -762,7 +762,7 @@ export default function AboutPage() {
                     <span key={pillar.title} className="inline-flex items-center gap-2 sm:gap-2.5">
                       {pillar.title}
                       {i < purposePillars.length - 1 && (
-                        <Icon name="arrow-right" width={12} height={12} className="text-[#FF8904]" />
+                        <Icon name="arrow-right" width={12} height={12} className="text-bx-orange-light" />
                       )}
                     </span>
                   ))}
@@ -777,7 +777,7 @@ export default function AboutPage() {
                   <div
                     data-cursor="card"
                     tabIndex={0}
-                    className={`group relative overflow-hidden flex flex-col h-full rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none ${pillar.borderHover}`}
+                    className={`group relative overflow-hidden flex flex-col h-full rounded-2xl border border-white/10 bg-bx-night p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 fx-lift focus-visible:ring-2 focus-visible:ring-bx-navy-700 focus:outline-none ${pillar.borderHover}`}
                   >
                     <CardPhoto src={pillar.image} accent={pillar.accent} />
                     <div className="relative flex h-full flex-col [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -824,44 +824,44 @@ export default function AboutPage() {
 
       {/* ── GROUP LEADERSHIP (The Visionary Behind the Standard) ─────────── */}
       <SectionTransition>
-        <section className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+        <section className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
           <div className="container-x relative z-10">
             <div className="max-w-3xl mb-9 sm:mb-11">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4">
                 <DuotoneIcon name="user-round" size={14} />
                 <span>GROUP LEADERSHIP</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                The Visionary Behind the <span className="text-[#163A7A] transition-colors duration-300">Standard.</span>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight transition-colors duration-300">
+                The Visionary Behind the <span className="text-bx-navy-700 transition-colors duration-300">Standard.</span>
               </h2>
 
-              <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
+              <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed font-normal">
                 BharatX Group is founded on institutional rigor, sovereign engineering, and long-term national economic leadership.
               </p>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-white p-4 sm:p-6 lg:p-8 shadow-xl">
+            <div className="relative overflow-hidden rounded-3xl border border-bx-line bg-white p-4 sm:p-6 lg:p-8 shadow-xl">
               <CardFill accent="#163A7A" tone="tint" />
 
               <div className="relative z-10 grid items-stretch gap-8 lg:grid-cols-[0.85fr_1.15fr]">
                 {/* Portrait Column */}
                 <div
                   data-cursor="image"
-                  className="relative flex flex-col justify-end overflow-hidden min-h-[460px] sm:min-h-[520px] lg:min-h-[580px] rounded-2xl border border-[#E3E5EF] bg-[#0F172A] shadow-lg group fx-lift"
+                  className="relative flex flex-col justify-end overflow-hidden min-h-[460px] sm:min-h-[520px] lg:min-h-[580px] rounded-2xl border border-bx-line bg-bx-night-slate shadow-lg group fx-lift"
                 >
                   <img
                     src="/pradeep-kumar.png"
                     alt="Pradeep Kumar — Founder & Leader, BharatX Group"
                     className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-108"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-[#0B0F19]/25 to-transparent opacity-95" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bx-night-ink via-bx-night-ink/25 to-transparent opacity-95" />
 
                   {/* Floating Identity Card on Image */}
-                  <div className="relative z-10 p-6 sm:p-8 backdrop-blur-md bg-[#0B0F19]/85 border-t border-white/10 rounded-b-2xl">
+                  <div className="relative z-10 p-6 sm:p-8 backdrop-blur-md bg-bx-night-ink/85 border-t border-white/10 rounded-b-2xl">
                     <div className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900] animate-pulse" />
-                      <span className="font-sans text-[10.5px] uppercase tracking-[0.25em] text-[#F54900] font-bold">
+                      <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900] animate-pulse" />
+                      <span className="font-sans text-[10.5px] uppercase tracking-[0.25em] text-bx-orange font-bold">
                         Founder &amp; Visionary
                       </span>
                     </div>
@@ -877,7 +877,7 @@ export default function AboutPage() {
                         aria-label="Pradeep Kumar on LinkedIn"
                         title="Pradeep Kumar on LinkedIn"
                         data-cursor="link"
-                        className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#0A66C2] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0F19]"
+                        className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-linkedin focus-visible:ring-offset-2 focus-visible:ring-offset-bx-night-ink"
                       >
                         <LinkedInLogo onDark className="h-7 w-7" />
                       </a>
@@ -892,7 +892,7 @@ export default function AboutPage() {
                           key={school}
                           className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 font-sans text-[11px] font-semibold text-white"
                         >
-                          <Icon name="graduation-cap" width={13} height={13} className="text-[#FF8904]" />
+                          <Icon name="graduation-cap" width={13} height={13} className="text-bx-orange-light" />
                           {school} Alumnus
                         </span>
                       ))}
@@ -904,32 +904,32 @@ export default function AboutPage() {
                 <div className="flex flex-col justify-between p-2 sm:p-4 lg:p-6 lg:pl-2">
                   <div>
                     {/* Vision Badge */}
-                    <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1.5 font-sans text-xs uppercase tracking-widest text-[#9f2d00] font-bold mb-6 shadow-xs">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/15 px-4 py-1.5 font-sans text-xs uppercase tracking-widest text-bx-orange-deep font-bold mb-6 shadow-xs">
                       <DuotoneIcon name="sparkles" size={14} />
                       <span>National Economic Vision</span>
                     </div>
 
-                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-[#111827] tracking-tight leading-tight transition-colors duration-300">
-                      Architecting India’s <span className="text-[#163A7A] transition-colors duration-300">Next Economic Decade.</span>
+                    <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium text-bx-ink tracking-tight leading-tight transition-colors duration-300">
+                      Architecting India’s <span className="text-bx-navy-700 transition-colors duration-300">Next Economic Decade.</span>
                     </h3>
 
                     {/* Featured Decorated Quote Block */}
                     <div
                       data-cursor="card"
-                      className="relative overflow-hidden mt-6 rounded-2xl border-l-4 border-l-[#F54900] border-y border-r border-white/10 bg-[#0B1F47] p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-lg fx-lift"
+                      className="relative overflow-hidden mt-6 rounded-2xl border-l-4 border-l-bx-orange border-y border-r border-white/10 bg-bx-navy-900 p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-lg fx-lift"
                     >
-                      <div aria-hidden className="absolute -top-3 right-6 font-heading text-7xl font-semibold text-[#F54900]/20 select-none pointer-events-none">
+                      <div aria-hidden className="absolute -top-3 right-6 font-heading text-7xl font-semibold text-bx-orange/20 select-none pointer-events-none">
                         “
                       </div>
                       <blockquote className="relative z-10 text-[15.5px] sm:text-[17px] font-normal leading-relaxed text-white italic">
                         “Aligned with the national vision of{" "}
-                        <strong className="text-[#FF8904] not-italic font-semibold">
+                        <strong className="text-bx-orange-light not-italic font-semibold">
                           Viksit Bharat 2047
                         </strong>
                         , he is committed to building sustainable, technology-driven enterprises that strengthen India’s industrial ecosystem and contribute to the country’s long-term economic leadership.”
                       </blockquote>
                       <div className="relative mt-4 flex items-center justify-between pt-3 border-t border-white/15 text-xs font-sans text-slate-200">
-                        <span className="text-[#FF8904] font-bold">— Pradeep Kumar IIT Delhi & IIM Alumni</span>
+                        <span className="text-bx-orange-light font-bold">— Pradeep Kumar IIT Delhi & IIM Alumni</span>
                         <span className="font-medium text-slate-200">BharatX Group</span>
                       </div>
                     </div>
@@ -940,7 +940,7 @@ export default function AboutPage() {
                         <div
                           key={item.title}
                           data-cursor="card"
-                          className={`flex items-start gap-4 rounded-xl border border-l-4 border-[#E3E5EF] p-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1 fx-lift ${item.borderHover}`}
+                          className={`flex items-start gap-4 rounded-xl border border-l-4 border-bx-line p-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1 fx-lift ${item.borderHover}`}
                           style={{
                             backgroundColor: `color-mix(in srgb, ${item.accent} 9%, white)`,
                             borderLeftColor: item.accent,
@@ -948,10 +948,10 @@ export default function AboutPage() {
                         >
                           <FeatureIcon name={item.icon} accent={item.accent} size={40} className="fx-icon-pop" />
                           <div>
-                            <div className="font-heading text-base font-medium text-[#111827]">
+                            <div className="font-heading text-base font-medium text-bx-ink">
                               {item.title}
                             </div>
-                            <p className="mt-1 text-xs sm:text-[13px] text-[#374151] leading-relaxed font-normal">
+                            <p className="mt-1 text-xs sm:text-[13px] text-bx-ink-soft leading-relaxed font-normal">
                               {item.desc}
                             </p>
                           </div>
@@ -961,12 +961,12 @@ export default function AboutPage() {
                   </div>
 
                   {/* Trust & Alignment Footer Bar */}
-                  <div className="mt-8 pt-5 border-t border-[#E3E5EF] flex flex-wrap items-center justify-between gap-4 text-xs font-sans text-[#374151]">
-                    <span className="flex items-center gap-2 text-[#111827] font-medium">
-                      <DuotoneIcon name="shield-check" size={17} className="text-[#15966B]" />
+                  <div className="mt-8 pt-5 border-t border-bx-line flex flex-wrap items-center justify-between gap-4 text-xs font-sans text-bx-ink-soft">
+                    <span className="flex items-center gap-2 text-bx-ink font-medium">
+                      <DuotoneIcon name="shield-check" size={17} className="text-bx-green" />
                       Constitutional Governance Standard
                     </span>
-                    <span className="text-[#9f2d00] font-bold">Viksit Bharat 2047 Committed</span>
+                    <span className="text-bx-orange-deep font-bold">Viksit Bharat 2047 Committed</span>
                   </div>
                 </div>
               </div>
@@ -983,17 +983,17 @@ export default function AboutPage() {
             {/* Desktop: the intro sits beside the heading */}
             <div className="max-w-3xl mb-8 sm:mb-10 lg:max-w-none lg:mb-6 short:mb-4 lg:flex lg:items-end lg:justify-between lg:gap-12">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/30 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#CA3500] font-bold shadow-xs mb-4">
+                <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/30 bg-bx-orange/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-orange-dark font-bold shadow-xs mb-4">
                   <DuotoneIcon name="users" size={14} />
                   <span>LEADERSHIP TEAM</span>
                 </div>
 
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-                  The People Leading <span className="text-[#163A7A]">BharatX.</span>
+                <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+                  The People Leading <span className="text-bx-navy-700">BharatX.</span>
                 </h2>
               </div>
 
-              <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed font-normal lg:mt-0 lg:max-w-sm lg:shrink-0 lg:pb-1 lg:text-base">
+              <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed font-normal lg:mt-0 lg:max-w-sm lg:shrink-0 lg:pb-1 lg:text-base">
                 Experienced leaders across technology, operations and people, building the Group and its businesses.
               </p>
             </div>
@@ -1012,7 +1012,7 @@ export default function AboutPage() {
                 >
                   <article
                     data-cursor="card"
-                    className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[#E3E5EF] bg-[#FAF9F6] shadow-xs transition-[translate,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1.5 hover:border-[#F54900]/30 hover:shadow-[0_28px_55px_-28px_rgba(11,31,71,0.45)]"
+                    className="group flex h-full flex-col overflow-hidden rounded-3xl border border-bx-line bg-bx-cream shadow-xs transition-[translate,box-shadow,border-color] duration-500 ease-out hover:-translate-y-1.5 hover:border-bx-orange/30 hover:shadow-[0_28px_55px_-28px_rgba(11,31,71,0.45)]"
                   >
                     {/*
                       Phones: the original photo in a square frame, cropped from the top. Desktop: cardPhoto, a 4:3
@@ -1020,7 +1020,7 @@ export default function AboutPage() {
                       <picture>, so a hot reload or resize can't leave the wrong one showing; the hidden one is lazy and
                       display:none, so it never downloads. Slow zoom on hover.
                     */}
-                    <div className="relative m-3 mb-0 aspect-square lg:aspect-[4/3] overflow-hidden rounded-2xl bg-[#EEF0F6]">
+                    <div className="relative m-3 mb-0 aspect-square lg:aspect-[4/3] overflow-hidden rounded-2xl bg-bx-surface-blue">
                       <img
                         src={person.photo}
                         alt={`${person.name}, ${person.role}`}
@@ -1035,13 +1035,13 @@ export default function AboutPage() {
                         decoding="async"
                         className="hidden h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105 lg:block"
                       />
-                      <span aria-hidden className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#0B1F47]/25 to-transparent" />
+                      <span aria-hidden className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-bx-navy-900/25 to-transparent" />
                     </div>
 
                     <div className="flex flex-1 flex-col px-6 pb-7 pt-5 sm:px-7 lg:pb-5 lg:pt-4 short:pb-4">
                       {/* Name with the LinkedIn profile link on the same line */}
                       <div className="flex items-center justify-between gap-3">
-                        <h3 className="font-heading text-2xl sm:text-[1.65rem] lg:text-xl font-medium leading-tight tracking-tight text-[#0B1F47]">
+                        <h3 className="font-heading text-2xl sm:text-[1.65rem] lg:text-xl font-medium leading-tight tracking-tight text-bx-navy-900">
                           {person.name}
                         </h3>
                         <a
@@ -1051,15 +1051,15 @@ export default function AboutPage() {
                           aria-label={`${person.name} on LinkedIn`}
                           title={`${person.name} on LinkedIn`}
                           data-cursor="link"
-                          className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#0A66C2] focus-visible:ring-offset-2"
+                          className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-linkedin focus-visible:ring-offset-2"
                         >
                           <LinkedInLogo className="h-7 w-7 lg:h-6 lg:w-6" />
                         </a>
                       </div>
                       {/* Two lines reserved from sm, so rules and bios line up when one title wraps */}
-                      <p className="mt-1.5 lg:mt-1 text-[15px] lg:text-[13px] font-semibold leading-snug text-[#CA3500] sm:min-h-[2.75em]">{person.role}</p>
-                      <span aria-hidden className="mt-4 lg:mt-2.5 block h-0.5 w-10 rounded-full bg-gradient-to-r from-[#F54900] to-[#FFB86A] transition-all duration-500 group-hover:w-16" />
-                      <p className="mt-4 lg:mt-2.5 text-[15px] lg:text-[13px] leading-relaxed text-[#374151]">{person.bio}</p>
+                      <p className="mt-1.5 lg:mt-1 text-[15px] lg:text-[13px] font-semibold leading-snug text-bx-orange-dark sm:min-h-[2.75em]">{person.role}</p>
+                      <span aria-hidden className="mt-4 lg:mt-2.5 block h-0.5 w-10 rounded-full bg-gradient-to-r from-bx-orange to-bx-orange-pale transition-all duration-500 group-hover:w-16" />
+                      <p className="mt-4 lg:mt-2.5 text-[15px] lg:text-[13px] leading-relaxed text-bx-ink-soft">{person.bio}</p>
                     </div>
                   </article>
                 </StaggerItem>
@@ -1150,19 +1150,19 @@ export default function AboutPage() {
 
       {/* ── 06. OUR PRINCIPLES (What Guides Us) ────────────────────────── */}
       <SectionTransition>
-        <section className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+        <section className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
           <div className="container-x relative z-10">
             <div className="max-w-3xl text-center mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#15966B]/30 bg-[#15966B]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#15966B] font-bold shadow-xs mb-4">
-                <span className="h-2 w-2 rounded-full bg-[#15966B] animate-pulse" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-green/30 bg-bx-green/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-green font-bold shadow-xs mb-4">
+                <span className="h-2 w-2 rounded-full bg-bx-green animate-pulse" />
                 <span>WHAT GUIDES US</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight transition-colors duration-300">
-                Our <span className="text-[#163A7A] transition-colors duration-300">Principles</span>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight transition-colors duration-300">
+                Our <span className="text-bx-navy-700 transition-colors duration-300">Principles</span>
               </h2>
 
-              <p className="mt-3 text-base text-[#596579]">
+              <p className="mt-3 text-base text-bx-slate">
                 Core convictions that anchor our operating culture and enterprise stewardship.
               </p>
             </div>
@@ -1174,7 +1174,7 @@ export default function AboutPage() {
                   <div
                     data-cursor="card"
                     tabIndex={0}
-                    className={`group relative overflow-hidden h-full rounded-2xl border border-white/10 bg-[#0D1026] p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 fx-lift focus-visible:ring-2 focus-visible:ring-[#163A7A] focus:outline-none ${p.borderHover}`}
+                    className={`group relative overflow-hidden h-full rounded-2xl border border-white/10 bg-bx-night p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 fx-lift focus-visible:ring-2 focus-visible:ring-bx-navy-700 focus:outline-none ${p.borderHover}`}
                   >
                     <CardPhoto src={p.image} accent={p.color} />
                     <div className="relative flex items-center gap-3.5 mb-4 [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -1207,16 +1207,16 @@ export default function AboutPage() {
 
       {/* ── 07. CLOSING / LEADERSHIP STATEMENT (The Journey Ahead) ─────── */}
       <SectionTransition>
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9">
+        <section className="relative overflow-hidden bg-gradient-to-br from-bx-navy-800 via-bx-navy-900 to-bx-navy-950 text-white py-6 sm:py-9">
           <SectionPhoto src={cardImage("about-cta-journey-ahead")} />
           {/* Ambient radial lighting */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-bx-navy-600/35 via-bx-orange/20 to-transparent blur-[140px] pointer-events-none" />
 
           <div className="container-x relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               {/* Eyebrow */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6 hover:bg-[#F54900]/25 transition-colors">
-                <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900] animate-pulse" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-bx-orange font-bold shadow-xs mb-6 hover:bg-bx-orange/25 transition-colors">
+                <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900] animate-pulse" />
                 <span>THE JOURNEY AHEAD</span>
               </div>
 
@@ -1236,7 +1236,7 @@ export default function AboutPage() {
 
               {/* Signature Statement */}
               <div className="mt-4 pt-4 border-t border-white/15 max-w-xl mx-auto">
-                <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
+                <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-bx-orange font-bold">
                   Building Businesses. Enabling Bharat.
                 </p>
               </div>
@@ -1247,7 +1247,7 @@ export default function AboutPage() {
                   to="/verticals"
                   data-cursor="button"
                   data-motion="true"
-                  className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 sm:px-9 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 hover:scale-105 active:scale-95 fx-shine"
+                  className="group inline-flex items-center justify-center gap-3 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 sm:px-9 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 hover:scale-105 active:scale-95 fx-shine"
                 >
                   <span>Explore Our Businesses</span>
                   <Icon

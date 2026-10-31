@@ -5,16 +5,16 @@ import { FeatureIcon } from "../common/FeatureIcon";
 
 const chipStyles: Record<PartnershipType, { light: string; dark: string }> = {
   MoU: {
-    light: "bg-[#163A7A]/[0.07] text-[#163A7A] ring-[#163A7A]/20",
-    dark: "bg-[#8F88FF]/15 text-[#C9C5FF] ring-[#8F88FF]/35",
+    light: "bg-bx-navy-700/[0.07] text-bx-navy-700 ring-bx-navy-700/20",
+    dark: "bg-bx-violet/15 text-bx-violet-mist ring-bx-violet/35",
   },
   Programme: {
-    light: "bg-[#15966B]/10 text-[#0F7A56] ring-[#15966B]/25",
-    dark: "bg-[#34D399]/15 text-[#7BEBC0] ring-[#34D399]/35",
+    light: "bg-bx-green/10 text-bx-green-dark ring-bx-green/25",
+    dark: "bg-bx-green-light/15 text-bx-mint ring-bx-green-light/35",
   },
   Collaboration: {
-    light: "bg-[#00B8D9]/10 text-[#008299] ring-[#00B8D9]/30",
-    dark: "bg-[#5EE4F8]/15 text-[#A5F0FB] ring-[#5EE4F8]/35",
+    light: "bg-bx-cyan/10 text-bx-cyan-dark ring-bx-cyan/30",
+    dark: "bg-bx-cyan-light/15 text-bx-cyan-mist ring-bx-cyan-light/35",
   },
 };
 
@@ -43,8 +43,8 @@ function ReadMore({ href, tone = "light" }: { href: string; tone?: "light" | "da
       className={cn(
         "flex h-9 w-9 items-center justify-center rounded-full border transition-colors duration-300",
         tone === "light"
-          ? "border-[#E3E5EF] text-[#163A7A] hover:border-[#163A7A] hover:bg-[#163A7A] hover:text-white"
-          : "border-white/30 text-white hover:border-[#F54900] hover:bg-[#F54900]",
+          ? "border-bx-line text-bx-navy-700 hover:border-bx-navy-700 hover:bg-bx-navy-700 hover:text-white"
+          : "border-white/30 text-white hover:border-bx-orange hover:bg-bx-orange",
       )}
     >
       <Icon name="arrow-up-right" width={16} height={16} strokeWidth={2} />
@@ -60,7 +60,7 @@ export function PartnershipCard({ partnership: p }: { partnership: Partnership }
   const { accent } = partnershipTypes[p.type];
 
   return (
-    <article className="group relative isolate h-full overflow-hidden rounded-[22px] bg-[#E6E7F0] p-px shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-[translate,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-30px_rgba(33,27,114,0.5)]">
+    <article className="group relative isolate h-full overflow-hidden rounded-[22px] bg-bx-line-alt p-px shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-[translate,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-30px_rgba(33,27,114,0.5)]">
       {/* Border beam: a rotating conic sweep, visible only through the 1px gap around the panel */}
       <span
         aria-hidden
@@ -102,11 +102,11 @@ export function PartnershipCard({ partnership: p }: { partnership: Partnership }
           )}
         </div>
 
-        <div className="border-t border-[#EEF0F6] pt-4">
-          <h3 className="font-heading text-xl sm:text-[1.4rem] font-medium leading-tight tracking-tight text-[#111827] transition-colors duration-300">
+        <div className="border-t border-bx-surface-blue pt-4">
+          <h3 className="font-heading text-xl sm:text-[1.4rem] font-medium leading-tight tracking-tight text-bx-ink transition-colors duration-300">
             {p.name}
           </h3>
-          <p className="mt-1.5 text-[13.5px] leading-snug text-[#596579]">{p.description}</p>
+          <p className="mt-1.5 text-[13.5px] leading-snug text-bx-slate">{p.description}</p>
         </div>
       </div>
     </article>
@@ -118,14 +118,14 @@ export function FeaturedPartnershipCard({ partnership: p, image }: { partnership
   const { accent } = partnershipTypes[p.type];
 
   return (
-    <article className="group relative isolate flex h-full min-h-[380px] flex-col overflow-hidden rounded-[22px] bg-[#0D1026] p-6 text-white shadow-[0_30px_60px_-30px_rgba(13,16,38,0.65)] sm:p-7 [text-shadow:0_1px_12px_rgba(13,16,38,0.6)]">
+    <article className="group relative isolate flex h-full min-h-[380px] flex-col overflow-hidden rounded-[22px] bg-bx-night p-6 text-white shadow-[0_30px_60px_-30px_rgba(13,16,38,0.65)] sm:p-7 [text-shadow:0_1px_12px_rgba(13,16,38,0.6)]">
       <img
         src={image}
         alt=""
         loading="lazy"
         className="absolute inset-0 -z-10 h-full w-full object-cover transition-[scale] duration-[1400ms] ease-out group-hover:scale-105"
       />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0D1026] via-[#0D1026]/45 to-transparent" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-bx-night via-bx-night/45 to-transparent" />
       <div
         aria-hidden
         className="absolute -left-20 -top-20 -z-10 h-64 w-64 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-100 opacity-70"
@@ -152,7 +152,7 @@ export function FeaturedPartnershipCard({ partnership: p, image }: { partnership
         )}
 
         {p.affiliation && (
-          <p className="mt-6 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-[#FF8904]">{p.affiliation}</p>
+          <p className="mt-6 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-bx-orange-light">{p.affiliation}</p>
         )}
         <h3 className="mt-2 font-heading text-3xl sm:text-4xl font-medium leading-[1.1] tracking-tight">{p.name}</h3>
         <p className="mt-3 max-w-sm text-[15px] leading-relaxed text-white/85">{p.description}</p>

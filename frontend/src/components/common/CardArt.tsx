@@ -696,7 +696,7 @@ export function CardArt({ seed, motif, accent, tone = "dark", anchor, className 
           art.layers[layer] ? <path key={layer} d={art.layers[layer]} {...layerProps[layer]} /> : null,
         )}
       </svg>
-      {dark && <div className="absolute inset-0 bg-[#0D1026]/15" />}
+      {dark && <div className="absolute inset-0 bg-bx-night/15" />}
     </div>
   );
 }

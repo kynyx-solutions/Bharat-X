@@ -19,7 +19,7 @@ export const heroSlides: HeroSlide[] = [
     name: "AI-First Group",
     shortLabel: "AI-FIRST GROUP",
     image: "/assets/slides/hero-ai-first.webp",
-    companyLogo: "/bharatxgroup.png",
+    companyLogo: "/bharatxgroup.webp",
     heroTagline: "AI-First. Built For Bharat.",
   },
   {
@@ -27,7 +27,7 @@ export const heroSlides: HeroSlide[] = [
     name: "Technology, AI & Automation",
     shortLabel: "TECHNOLOGY & AI",
     image: "/assets/slides/hero-tech-ai.webp",
-    companyLogo: "/Ai-Experts_logo.png",
+    companyLogo: "/Ai-Experts_logo.webp",
     heroTagline: "Intelligence Engineered for Bharat.",
   },
   {
@@ -66,7 +66,7 @@ export const heroSlides: HeroSlide[] = [
     id: "manufacturing",
     name: "Precision Mobility & Manufacturing",
     shortLabel: "MANUFACTURING",
-    image: "/assets/hero4.png",
+    image: "/assets/hero4.webp",
     companyLogo: "/Casters_logo.png",
     heroTagline: "Precision Engineering At Scale",
   },
@@ -82,7 +82,7 @@ export const heroSlides: HeroSlide[] = [
     id: "sustainability",
     name: "Sustainability & Circular Economy",
     shortLabel: "CIRCULAR ECONOMY",
-    image: "/assets/hero7.png",
+    image: "/assets/hero7.webp",
     companyLogo: "/Bharatxlabs_logo.svg",
     heroTagline: "Pioneering Sustainable Horizons",
   },
@@ -90,7 +90,7 @@ export const heroSlides: HeroSlide[] = [
     id: "clean-energy",
     name: "Renewable Energy & Solar Infrastructure",
     shortLabel: "CLEAN ENERGY",
-    image: "/assets/hero8.png",
+    image: "/assets/hero8.webp",
     companyLogo: "/Bharatxlabs_logo.svg",
     heroTagline: "Powering Sovereign Clean Energy",
   },
@@ -98,8 +98,8 @@ export const heroSlides: HeroSlide[] = [
     id: "ecosystem",
     name: "Connected Conglomerate Operations",
     shortLabel: "BHARATX GROUP",
-    image: "/assets/hero9.png",
-    companyLogo: "/bharatxgroup.png",
+    image: "/assets/hero9.webp",
+    companyLogo: "/bharatxgroup.webp",
     heroTagline: "Building Businesses. Enabling Bharat.",
   },
 ];
@@ -214,7 +214,7 @@ export function HomeHeroSection() {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -20, filter: "blur(4px)" }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.85rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.85)] min-h-[2.2em] text-balance lg:min-h-0 lg:whitespace-nowrap cursor-default transition-colors duration-300 hover:text-[#F54900]"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.85rem] font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.85)] min-h-[2.2em] text-balance lg:min-h-0 lg:whitespace-nowrap cursor-default transition-colors duration-300 hover:text-bx-orange"
               >
                 {current.heroTagline}
               </motion.h1>
@@ -255,15 +255,15 @@ export function HomeHeroSection() {
             data-cursor="button"
             onClick={() => setIsPaused((p) => !p)}
             aria-label={isPaused ? "Play slide rotation" : "Pause slide rotation"}
-            className="flex h-5 w-5 items-center justify-center rounded-full text-[#F54900] hover:scale-110 transition-transform"
+            className="flex h-5 w-5 items-center justify-center rounded-full text-bx-orange hover:scale-110 transition-transform"
           >
             <span
-              className={`block h-2 w-2 rounded-full bg-[#F54900] ${isPaused ? "opacity-40" : "animate-pulse"
+              className={`block h-2 w-2 rounded-full bg-bx-orange ${isPaused ? "opacity-40" : "animate-pulse"
                 }`}
             />
           </button>
 
-          <span className="font-sans text-[11px] font-bold text-[#F54900] tracking-wider">
+          <span className="font-sans text-[11px] font-bold text-bx-orange tracking-wider">
             {String(currentIndex + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}
           </span>
 
@@ -293,7 +293,7 @@ export function HomeHeroSection() {
               duration: isPaused ? 0 : SLIDE_DURATION / 1000,
               ease: "linear",
             }}
-            className="h-full bg-[#F54900] shadow-[0_0_8px_rgba(245,73,0,0.6)]"
+            className="h-full bg-bx-orange shadow-[0_0_8px_rgba(245,73,0,0.6)]"
           />
         </div>
 
@@ -318,7 +318,7 @@ export function HomeHeroSection() {
                 onClick={() => handleSelect(idx)}
                 aria-label={`Jump to ${s.name}`}
                 className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex
-                  ? "w-6 bg-[#F54900] shadow-[0_0_8px_#F54900]"
+                  ? "w-6 bg-bx-orange shadow-[0_0_8px_#F54900]"
                   : "w-2 bg-white/30 hover:bg-white/60"
                   }`}
               />

@@ -22,12 +22,12 @@ export function PartnershipsSection() {
     <SectionTransition
       id="partnerships"
       aria-label="Partnerships and Programmes"
-      className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9"
+      className="relative overflow-hidden bg-bx-cream py-6 sm:py-9"
     >
       {/* Soft brand light behind the grid */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-40 top-1/3 h-[480px] w-[480px] rounded-full bg-[#163A7A]/[0.07] blur-[110px]" />
-        <div className="absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-[#F54900]/[0.07] blur-[110px]" />
+        <div className="absolute -left-40 top-1/3 h-[480px] w-[480px] rounded-full bg-bx-navy-700/[0.07] blur-[110px]" />
+        <div className="absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-bx-orange/[0.07] blur-[110px]" />
       </div>
 
       <div className="container-x relative z-10">
@@ -36,15 +36,15 @@ export function PartnershipsSection() {
           partner logos right). Mobile: heading, intro, logos, then the button last.
         */}
         <div className="group/header">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/30 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#CA3500] font-bold shadow-xs cursor-default">
-            <span className="h-2 w-2 rounded-full bg-[#F54900] transition-transform duration-300 group-hover/header:scale-125" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/30 bg-bx-orange/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-orange-dark font-bold shadow-xs cursor-default">
+            <span className="h-2 w-2 rounded-full bg-bx-orange transition-transform duration-300 group-hover/header:scale-125" />
             <span>PARTNERSHIPS &amp; PROGRAMMES</span>
           </div>
 
           {/* No divider line: 20px from heading to intro row, then 32px down to the cards */}
           <div className="mt-4 grid gap-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-12 lg:gap-y-5">
-            <h2 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.08] tracking-tight text-[#111827] text-balance lg:self-end">
-              Working with <span className="text-[#163A7A]">India&apos;s institutions</span>.
+            <h2 className="font-heading text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.08] tracking-tight text-bx-ink text-balance lg:self-end">
+              Working with <span className="text-bx-navy-700">India&apos;s institutions</span>.
             </h2>
 
             <Link to="/partnerships" data-cursor="button" className="order-last justify-self-start lg:order-none lg:self-end lg:pb-1">
@@ -54,7 +54,7 @@ export function PartnershipsSection() {
             </Link>
 
             <div className="grid gap-6 lg:col-span-2 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-12">
-              <p className="max-w-xl text-base sm:text-lg leading-relaxed text-[#596579]">
+              <p className="max-w-xl text-base sm:text-lg leading-relaxed text-bx-slate">
                 Our AI and technology business works with government, leading institutions and public-sector
                 companies on AI adoption and skills.
               </p>
@@ -64,7 +64,7 @@ export function PartnershipsSection() {
                   <li
                     key={p.name}
                     title={p.name}
-                    className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white shadow-[0_6px_16px_-6px_rgba(16,24,40,0.3)] ring-[3px] ring-[#FAF9F6] transition-transform duration-300 hover:z-10 hover:-translate-y-1"
+                    className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white shadow-[0_6px_16px_-6px_rgba(16,24,40,0.3)] ring-[3px] ring-bx-cream transition-transform duration-300 hover:z-10 hover:-translate-y-1"
                   >
                     <img src={p.logo} alt={p.name} loading="lazy" className="h-8 w-8 sm:h-9 sm:w-9 object-contain" />
                   </li>
@@ -93,18 +93,18 @@ export function PartnershipsSection() {
             <Link
               to="/contact?inquiry=partner"
               data-cursor="card"
-              className="group relative isolate flex h-full min-h-[250px] flex-col overflow-hidden rounded-[22px] bg-gradient-to-br from-[#163A7A] via-[#0B1F47] to-[#06122E] p-6 text-white shadow-[0_30px_60px_-30px_rgba(11,31,71,0.7)] transition-[translate] duration-500 ease-out hover:-translate-y-1.5 sm:p-7"
+              className="group relative isolate flex h-full min-h-[250px] flex-col overflow-hidden rounded-[22px] bg-gradient-to-br from-bx-navy-700 via-bx-navy-900 to-bx-navy-950 p-6 text-white shadow-[0_30px_60px_-30px_rgba(11,31,71,0.7)] transition-[translate] duration-500 ease-out hover:-translate-y-1.5 sm:p-7"
             >
               <span
                 aria-hidden
-                className="absolute -right-16 -top-16 -z-10 h-56 w-56 rounded-full bg-[#F54900]/45 blur-3xl transition-transform duration-700 ease-out group-hover:scale-125"
+                className="absolute -right-16 -top-16 -z-10 h-56 w-56 rounded-full bg-bx-orange/45 blur-3xl transition-transform duration-700 ease-out group-hover:scale-125"
               />
               <span
                 aria-hidden
                 className="absolute inset-0 -z-10 opacity-[0.08] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:28px_28px] [mask-image:linear-gradient(to_bottom,#000,transparent_80%)]"
               />
 
-              <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-[#FF8904]">Become a partner</p>
+              <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-bx-orange-light">Become a partner</p>
               <h3 className="mt-3 font-heading text-2xl sm:text-[1.75rem] font-medium leading-tight tracking-tight">
                 Partner with BharatX
               </h3>
@@ -114,7 +114,7 @@ export function PartnershipsSection() {
               </p>
 
               <span className="mt-auto inline-flex items-center gap-3 pt-6 text-[15px] font-semibold">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F54900] text-[#111827] shadow-[0_8px_24px_-6px_rgba(245,73,0,0.7)] transition-transform duration-500 ease-out group-hover:translate-x-1 group-hover:-rotate-45">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-bx-orange text-bx-ink shadow-[0_8px_24px_-6px_rgba(245,73,0,0.7)] transition-transform duration-500 ease-out group-hover:translate-x-1 group-hover:-rotate-45">
                   <Icon name="arrow-right" width={18} height={18} strokeWidth={2.2} />
                 </span>
                 Get in touch

@@ -10,12 +10,12 @@ const corePillars = [
     label: "Build",
     subtext: "Enterprise Creation & Core Operations",
     icon: "hard-hat" as const,
-    image: "/companies/bharatx-infratech/hero.jpg",
+    image: "/companies/bharatx-infratech/hero.webp",
     accent: "#163A7A",
-    textAccent: "text-[#B9B4FF]",
-    hoverText: "group-hover:text-[#B9B4FF]",
-    tint: "from-[#163A7A]/45",
-    borderHover: "hover:border-[#163A7A]",
+    textAccent: "text-bx-violet-light",
+    hoverText: "group-hover:text-bx-violet-light",
+    tint: "from-bx-navy-700/45",
+    borderHover: "hover:border-bx-navy-700",
     glowClass: "fx-lift-glow-indigo",
   },
   {
@@ -23,12 +23,12 @@ const corePillars = [
     label: "Scale",
     subtext: "Capital Compounding & Market Expansion",
     icon: "trending-up" as const,
-    image: "/assets/backgrounds/conglomerate-panorama.jpg",
+    image: "/assets/backgrounds/conglomerate-panorama.webp",
     accent: "#F54900",
-    textAccent: "text-[#FF8904]",
-    hoverText: "group-hover:text-[#FF8904]",
-    tint: "from-[#CA3500]/40",
-    borderHover: "hover:border-[#F54900]",
+    textAccent: "text-bx-orange-light",
+    hoverText: "group-hover:text-bx-orange-light",
+    tint: "from-bx-orange-dark/40",
+    borderHover: "hover:border-bx-orange",
     glowClass: "fx-lift-glow-gold",
   },
   {
@@ -36,12 +36,12 @@ const corePillars = [
     label: "Innovate",
     subtext: "Technology, Talent & Future Capabilities",
     icon: "brain-circuit" as const,
-    image: "/companies/aixperts-labs/hero.jpg",
+    image: "/companies/aixperts-labs/hero.webp",
     accent: "#00B8D9",
-    textAccent: "text-[#67E8F9]",
-    hoverText: "group-hover:text-[#67E8F9]",
-    tint: "from-[#0E7490]/45",
-    borderHover: "hover:border-[#00B8D9]",
+    textAccent: "text-bx-cyan-pale",
+    hoverText: "group-hover:text-bx-cyan-pale",
+    tint: "from-bx-cyan-deep/45",
+    borderHover: "hover:border-bx-cyan",
     glowClass: "fx-lift-glow-cyan",
   },
   {
@@ -49,12 +49,12 @@ const corePillars = [
     label: "Impact",
     subtext: "Sovereign Resilience & National Progress",
     icon: "sparkles" as const,
-    image: "/assets/backgrounds/impact-story.jpg",
+    image: "/assets/backgrounds/impact-story.webp",
     accent: "#15966B",
-    textAccent: "text-[#6EE7B7]",
-    hoverText: "group-hover:text-[#6EE7B7]",
-    tint: "from-[#15966B]/45",
-    borderHover: "hover:border-[#15966B]",
+    textAccent: "text-bx-green-pale",
+    hoverText: "group-hover:text-bx-green-pale",
+    tint: "from-bx-green/45",
+    borderHover: "hover:border-bx-green",
     glowClass: "fx-lift-glow-cyan",
   },
 ];
@@ -64,7 +64,7 @@ export function AboutBharatXSection() {
     <SectionTransition
       id="about"
       aria-label="About BharatX Group"
-      className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9"
+      className="relative overflow-hidden bg-bx-cream py-6 sm:py-9"
     >
       {/* Subtle architectural grid pattern */}
       <div aria-hidden className="grid-bg grid-bg-fade absolute inset-0 opacity-25 pointer-events-none" />
@@ -77,9 +77,9 @@ export function AboutBharatXSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#9f2d00] font-bold shadow-xs cursor-default"
+            className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-orange-deep font-bold shadow-xs cursor-default"
           >
-            <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900] transition-transform duration-300 group-hover/header:scale-125" />
+            <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900] transition-transform duration-300 group-hover/header:scale-125" />
             <span>WHO WE ARE</span>
           </motion.div>
 
@@ -89,10 +89,10 @@ export function AboutBharatXSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.12] tracking-tight text-[#111827] transition-colors"
+            className="mt-6 font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.12] tracking-tight text-bx-ink transition-colors"
           >
             Building Across India’s{" "}
-            <span className="text-[#163A7A] transition-colors">Growth Economy</span>
+            <span className="text-bx-navy-700 transition-colors">Growth Economy</span>
           </motion.h2>
 
           {/* Short High-Contrast Copy */}
@@ -101,7 +101,7 @@ export function AboutBharatXSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-[#596579] max-w-3xl mx-auto"
+            className="mt-6 text-base sm:text-lg md:text-xl font-normal leading-relaxed text-bx-slate max-w-3xl mx-auto"
           >
             BharatX Group is a diversified Indian business group bringing together businesses, capital, technology and talent to create enduring enterprises.
           </motion.p>
@@ -118,7 +118,7 @@ export function AboutBharatXSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.12 * idx }}
                 data-cursor="card"
-                className={`group relative flex min-h-[260px] sm:min-h-[300px] flex-col items-center justify-center text-center p-7 sm:p-8 lg:p-7 xl:p-9 rounded-2xl border border-white/10 bg-[#0B0F1E] shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 ${pillar.borderHover} ${pillar.glowClass}`}
+                className={`group relative flex min-h-[260px] sm:min-h-[300px] flex-col items-center justify-center text-center p-7 sm:p-8 lg:p-7 xl:p-9 rounded-2xl border border-white/10 bg-bx-night-deep shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 ${pillar.borderHover} ${pillar.glowClass}`}
               >
                 {/* Background image + overlays, clipped separately so the connector arrow can overhang the card edge */}
                 <div aria-hidden className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
@@ -130,7 +130,7 @@ export function AboutBharatXSection() {
                     className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108"
                   />
                   {/* Dark scrim for text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1E]/60 via-[#0B0F1E]/75 to-[#0B0F1E]/90" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-bx-night-deep/60 via-bx-night-deep/75 to-bx-night-deep/90" />
                   {/* Brand accent tint */}
                   <div className={`absolute inset-0 bg-gradient-to-t ${pillar.tint} to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100`} />
                 </div>
@@ -161,7 +161,7 @@ export function AboutBharatXSection() {
 
                 {/* Connecting arrow: only between cards in the same row (2-up on tablet, 4-up on desktop) */}
                 {idx < corePillars.length - 1 && (
-                  <div className={`${idx % 2 === 0 ? "hidden sm:flex" : "hidden lg:flex"} absolute -right-3.5 sm:-right-4 lg:-right-5.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white border border-[#E3E5EF] items-center justify-center text-[#163A7A] shadow-md group-hover:scale-110 group-hover:shadow-lg transition-transform`}>
+                  <div className={`${idx % 2 === 0 ? "hidden sm:flex" : "hidden lg:flex"} absolute -right-3.5 sm:-right-4 lg:-right-5.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white border border-bx-line items-center justify-center text-bx-navy-700 shadow-md group-hover:scale-110 group-hover:shadow-lg transition-transform`}>
                     <Icon name="chevron-right" width={14} height={14} strokeWidth={2.5} />
                   </div>
                 )}

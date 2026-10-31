@@ -24,9 +24,9 @@ export const companies: Company[] = [
     ],
     website: "https://bharatx.vc/",
     domain: "bharatx.vc",
-    logo: "/Ventures_logo.png",
-    heroImage: "/companies/bharatx-ventures/hero.jpg",
-    cinematicImage: "/companies/bharatx-ventures/hero.jpg",
+    logo: "/Ventures_logo.webp",
+    heroImage: "/companies/bharatx-ventures/hero.webp",
+    cinematicImage: "/companies/bharatx-ventures/hero.webp",
     accentColor: "#ff8904",
     capabilities: [
       {
@@ -138,9 +138,9 @@ export const companies: Company[] = [
     ],
     website: "https://aixpertslabs.com/",
     domain: "aixpertslabs.com",
-    logo: "/Ai-Experts_logo.png",
-    heroImage: "/companies/aixperts-labs/hero.jpg",
-    cinematicImage: "/assets/backgrounds/ai-circuit.jpg",
+    logo: "/Ai-Experts_logo.webp",
+    heroImage: "/companies/aixperts-labs/hero.webp",
+    cinematicImage: "/assets/backgrounds/ai-circuit.webp",
     accentColor: "#34e0c5",
     capabilities: [
       {
@@ -252,8 +252,8 @@ export const companies: Company[] = [
     website: "https://bharatxinfratech.com/",
     domain: "bharatxinfratech.com",
     logo: "/Infra_logo1.png",
-    heroImage: "/companies/bharatx-infratech/hero.jpg",
-    cinematicImage: "/assets/backgrounds/industrial.jpg",
+    heroImage: "/companies/bharatx-infratech/hero.webp",
+    cinematicImage: "/assets/backgrounds/industrial.webp",
     accentColor: "#9fb3c8",
     capabilities: [
       {
@@ -349,7 +349,7 @@ export const companies: Company[] = [
   {
     id: "casters",
     order: 4,
-    slug: "casters-global",
+    slug: "bharatx-engineering",
     name: "BharatX Engineering",
     shortName: "Engineering",
     monogram: "CG",
@@ -366,7 +366,7 @@ export const companies: Company[] = [
     domain: "castersglobal.com",
     logo: "/Casters_logo.png",
     heroImage: "/companies/casters-global/hero.jpg",
-    cinematicImage: "/assets/backgrounds/craft-metal.jpg",
+    cinematicImage: "/assets/backgrounds/craft-metal.webp",
     accentColor: "#d98a4b",
     capabilities: [
       {
@@ -475,8 +475,8 @@ export const companies: Company[] = [
     website: "https://bharatxagro.com/",
     domain: "bharatxagro.com",
     logo: "/Bharatxagro_logo.png",
-    heroImage: "/assets/backgrounds/agri-dusk.jpg",
-    cinematicImage: "/assets/backgrounds/agri-dusk.jpg",
+    heroImage: "/assets/backgrounds/agri-dusk.webp",
+    cinematicImage: "/assets/backgrounds/agri-dusk.webp",
     accentColor: "#c2603e",
     capabilities: [
       {
@@ -587,8 +587,8 @@ export const companies: Company[] = [
     ],
     website: "/bharatx-labs",
     domain: "labs.bharatxgroup.com",
-    heroImage: "/assets/backgrounds/ai-circuit.jpg",
-    cinematicImage: "/assets/backgrounds/ai-circuit.jpg",
+    heroImage: "/assets/backgrounds/ai-circuit.webp",
+    cinematicImage: "/assets/backgrounds/ai-circuit.webp",
     accentColor: "#00f0ff",
     isUpcoming: true,
     status: "Upcoming · Stealth R&D",
@@ -674,6 +674,147 @@ export const companies: Company[] = [
     vision: "Sovereign artificial intelligence and deep-tech, engineered in India for the world.",
     industries: ["ai-technology"],
     iframeEnabled: false,
+  },
+  // The three entries below are written from copy already published on the BharatX site and, for Enterprises, its
+  // own website (srm.kynyx.com). Sections without published copy are left empty and hidden on the detail page.
+  {
+    id: "enterprises",
+    order: 7,
+    slug: "bharatx-enterprises",
+    name: "BharatX Enterprises",
+    shortName: "Enterprises",
+    monogram: "BE",
+    category: "Packaging & Materials",
+    icon: "boxes",
+    description:
+      "Complete industrial packaging materials, corrugated boxes, protective cushioning and bulk logistics containers.",
+    longDescription: [
+      "We supply the packaging that keeps goods safe on the move: corrugated boxes, protective cushioning, industrial packaging materials and bulk logistics containers.",
+      "Packaging requirements can vary by product, application, handling conditions and supply volume. BharatX Enterprises works with businesses to provide packaging materials according to their specific requirements while supporting consistent quality and dependable bulk supply.",
+      "Our focus is packaging that is efficient and sustainable. We use eco-conscious materials to protect products as they travel through the supply chain, from the factory to the customer.",
+    ],
+    website: "https://srm.kynyx.com/",
+    domain: "srm.kynyx.com",
+    heroImage: "/assets/backgrounds/packaging.webp",
+    cinematicImage: "/assets/backgrounds/packaging.webp",
+    accentColor: "#D97706",
+    capabilities: [
+      {
+        icon: "shield-check",
+        title: "Quality Focus",
+        description: "Consistent attention to material, dimensions, thickness and product specifications.",
+      },
+      {
+        icon: "pencil-ruler",
+        title: "Custom Specifications",
+        description: "Packaging can be supplied according to required size, thickness, ply, printing and application.",
+      },
+      {
+        icon: "scale",
+        title: "Competitive Value",
+        description: "Packaging solutions designed to meet operational requirements while maintaining competitive pricing.",
+      },
+      {
+        icon: "truck",
+        title: "Reliable Supply",
+        description: "Planned dispatch and bulk-supply support for recurring and project-based packaging requirements.",
+      },
+    ],
+    applications: [
+      {
+        title: "Custom Packaging",
+        description:
+          "Custom sizes, thickness, multi-material fitments and branded prints developed from scratch to fit your exact part geometry and supply chain.",
+      },
+      {
+        title: "Transit Packaging",
+        description:
+          "Heavy-duty shipping boxes, edge reinforcement, pallet wrapping, and strapping systems designed to survive stacking, shock, and transit vibration.",
+      },
+      {
+        title: "Component Protection",
+        description:
+          "Custom CNC-routed and die-cut foam inserts, partitions, and pouches preventing metal-to-metal contact, abrasions, and mechanical deformation.",
+      },
+      {
+        title: "Surface Protection",
+        description:
+          "Self-adhesive protective films, anti-scratch EPE sheets, and LDPE bubble rolls that safeguard high-gloss, painted, and polished surfaces during handling.",
+      },
+    ],
+    focusAreas: ["Custom Specifications", "Bulk Supply", "Sample Approval", "Pan-India Supply"],
+    howWeWork: [
+      { title: "Requirement", description: "Share your product details, application and the protection it needs." },
+      { title: "Material Selection", description: "We suggest the right material — corrugated, EPE foam, bubble, films or accessories." },
+      { title: "Design", description: "Dimensions, ply, thickness and printing are finalised with you." },
+      { title: "Prototype / Sample", description: "A sample is prepared for your approval before bulk production." },
+      { title: "Production", description: "Bulk production and packaging supply as per the approved specification." },
+      { title: "Dispatch", description: "Planned dispatch for regular and bulk industrial requirements." },
+    ],
+    vision: "Building efficient and sustainable packaging solutions for India's industries.",
+    industries: [],
+    // srm.kynyx.com sends X-Frame-Options: SAMEORIGIN, so it can't be shown in an iframe
+    iframeEnabled: false,
+    previewImage: "/companies/bharatx-enterprises/site.webp",
+  },
+  {
+    id: "foundation",
+    order: 8,
+    slug: "bharatx-foundation",
+    name: "BharatX Foundation",
+    shortName: "Foundation",
+    monogram: "BF",
+    category: "Education & Social Impact",
+    icon: "graduation-cap",
+    description: "Building initiatives around education, skills and social development.",
+    longDescription: [
+      "We believe growth should open doors for people. Through the wider Group, we support education, skills and opportunity across India.",
+      "We are building programmes for education, skills training and community development, so that more people can take part in India's growth and share in what it creates.",
+    ],
+    website: "",
+    domain: "",
+    heroImage: "/assets/backgrounds/impact-story.webp",
+    cinematicImage: "/assets/backgrounds/impact-story.webp",
+    accentColor: "#F54900",
+    capabilities: [],
+    applications: [],
+    focusAreas: ["Education", "Programs", "Community", "Social Impact"],
+    howWeWork: [],
+    vision: "Through BharatX Foundation and the wider Group ecosystem, we aim to support education, skills and opportunity.",
+    industries: [],
+    iframeEnabled: false,
+    isUpcoming: true,
+    status: "Coming soon",
+  },
+  {
+    id: "sustainability",
+    order: 9,
+    slug: "bharatx-sustainability",
+    name: "BharatX Sustainability",
+    shortName: "Sustainability",
+    monogram: "BS",
+    category: "Waste Management & Sustainability",
+    icon: "recycle",
+    description:
+      "Building solutions around waste management, recycling, resource recovery and the circular economy.",
+    longDescription: [
+      "Our sustainability initiatives focus on better waste management, resource recovery, recycling and the development of circular business models.",
+      "We are creating smarter approaches to waste management and resource recovery: industrial waste recovery, closed-loop polymer recycling, and zero-effluent manufacturing systems.",
+    ],
+    website: "",
+    domain: "",
+    heroImage: "/assets/backgrounds/sustainability-story.webp",
+    cinematicImage: "/assets/backgrounds/sustainability-story.webp",
+    accentColor: "#059669",
+    capabilities: [],
+    applications: [],
+    focusAreas: ["Waste Management", "Operations", "Sustainability", "Circular Economy"],
+    howWeWork: [],
+    vision: "Turning Waste Into Opportunity.",
+    industries: [],
+    iframeEnabled: false,
+    isUpcoming: true,
+    status: "Coming soon",
   },
 ];
 

@@ -40,6 +40,8 @@ export interface Company {
   vision: string;
   industries: string[];
   iframeEnabled: boolean;
+  /** Screenshot of the website, shown instead of a live preview when the site can't be embedded */
+  previewImage?: string;
   isUpcoming?: boolean;
   status?: string;
 }

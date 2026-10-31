@@ -7,42 +7,42 @@ const impactAreas = [
   {
     title: "Infrastructure",
     description: "Arterial connectivity, civil utilities, and physical foundation for economic corridors.",
-    image: "/assets/backgrounds/infrastructure-real.jpg",
+    image: "/assets/backgrounds/infrastructure-real.webp",
     link: "/impact#infrastructure",
     accent: "#163A7A",
-    badgeBg: "bg-[#163A7A]",
+    badgeBg: "bg-bx-navy-700",
   },
   {
     title: "Agriculture",
     description: "Farmer-direct value chains, origin traceability, and export-grade commodity security.",
-    image: "/assets/backgrounds/agri-dusk.jpg",
+    image: "/assets/backgrounds/agri-dusk.webp",
     link: "/impact#agriculture",
     accent: "#15966B",
-    badgeBg: "bg-[#15966B]",
+    badgeBg: "bg-bx-green",
   },
   {
     title: "Manufacturing",
     description: "High-precision components, industrial mobility, and import-substitution capabilities.",
-    image: "/assets/backgrounds/craft-metal.jpg",
+    image: "/assets/backgrounds/craft-metal.webp",
     link: "/impact#manufacturing",
     accent: "#00B8D9",
-    badgeBg: "bg-[#008299]",
+    badgeBg: "bg-bx-cyan-dark",
   },
   {
     title: "Technology",
     description: "Sovereign enterprise intelligence, automated workflows, and digital infrastructure.",
-    image: "/assets/backgrounds/ai-circuit.jpg",
+    image: "/assets/backgrounds/ai-circuit.webp",
     link: "/impact#technology",
     accent: "#2B5299",
-    badgeBg: "bg-[#2B5299]",
+    badgeBg: "bg-bx-navy-500",
   },
   {
     title: "Sustainability",
     description: "Circular materials, resource recovery, and industrial decarbonization pathways.",
-    image: "/assets/backgrounds/sustainability-story.jpg",
+    image: "/assets/backgrounds/sustainability-story.webp",
     link: "/impact#sustainability",
     accent: "#10B981",
-    badgeBg: "bg-[#047857]",
+    badgeBg: "bg-bx-green-deep",
   },
 ];
 
@@ -51,7 +51,7 @@ export function HomeImpactSection() {
     <SectionTransition
       id="impact"
       aria-label="Impact and Economic Value"
-      className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9"
+      className="relative overflow-hidden bg-bx-cream py-6 sm:py-9"
     >
       <div className="container-x relative z-10">
         {/* Header */}
@@ -61,9 +61,9 @@ export function HomeImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[#15966B]/30 bg-[#15966B]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#15966B] font-bold shadow-xs cursor-default"
+            className="inline-flex items-center gap-2 rounded-full border border-bx-green/30 bg-bx-green/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-green font-bold shadow-xs cursor-default"
           >
-            <span className="h-2 w-2 rounded-full bg-[#15966B] transition-transform duration-300 group-hover/header:scale-125" />
+            <span className="h-2 w-2 rounded-full bg-bx-green transition-transform duration-300 group-hover/header:scale-125" />
             <span>IMPACT</span>
           </motion.div>
 
@@ -72,10 +72,10 @@ export function HomeImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors"
+            className="mt-2 font-heading text-3xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight text-bx-ink transition-colors"
           >
             Building Economic Value.<br />
-            <span className="text-[#15966B]">Creating Wider Impact.</span>
+            <span className="text-bx-green">Creating Wider Impact.</span>
           </motion.h2>
 
           <motion.p
@@ -83,7 +83,7 @@ export function HomeImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-3 text-base sm:text-lg leading-relaxed text-[#596579] font-normal max-w-2xl mx-auto"
+            className="mt-3 text-base sm:text-lg leading-relaxed text-bx-slate font-normal max-w-2xl mx-auto"
           >
             We measure our success not only by the businesses we build, but by the jobs, capabilities, infrastructure and opportunities they create.
           </motion.p>
@@ -102,7 +102,7 @@ export function HomeImpactSection() {
               <Link
                 to={area.link}
                 data-cursor="card"
-                className="fx-zoom-img group relative flex h-80 sm:h-88 flex-col justify-between overflow-hidden rounded-2xl border border-[#E3E5EF] p-6 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#15966B]"
+                className="fx-zoom-img group relative flex h-80 sm:h-88 flex-col justify-between overflow-hidden rounded-2xl border border-bx-line p-6 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-green"
               >
                 {/* Background image */}
                 <img
@@ -136,7 +136,7 @@ export function HomeImpactSection() {
                     {area.description}
                   </p>
 
-                  <div className="mt-4 inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-wider text-[#F54900] font-bold fx-arrow">
+                  <div className="mt-4 inline-flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-wider text-bx-orange font-bold fx-arrow">
                     <span className="fx-underline">Learn More</span>
                     <Icon name="arrow-right" width={12} height={12} className="fx-arrow-icon" />
                   </div>

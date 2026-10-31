@@ -36,7 +36,7 @@ const buildCycleSteps: {
       description: "We look for meaningful problems, market gaps and emerging opportunities where a strong business can be built.",
       icon: "target" as const,
       accent: "#163A7A",
-      borderHover: "hover:border-[#163A7A]",
+      borderHover: "hover:border-bx-navy-700",
       image: cardImage("how-we-build-02-step-identify"),
     },
     {
@@ -46,7 +46,7 @@ const buildCycleSteps: {
       description: "We develop the product, business model, team and operating foundation required to create a viable enterprise.",
       icon: "hard-hat" as const,
       accent: "#F54900",
-      borderHover: "hover:border-[#F54900]",
+      borderHover: "hover:border-bx-orange",
       image: cardImage("how-we-build-03-step-build"),
     },
     {
@@ -56,7 +56,7 @@ const buildCycleSteps: {
       description: "We bring together capital, technology, talent, partnerships and strategic capabilities.",
       icon: "landmark" as const,
       accent: "#00B8D9",
-      borderHover: "hover:border-[#00B8D9]",
+      borderHover: "hover:border-bx-cyan",
       image: cardImage("how-we-build-04-step-invest"),
     },
     {
@@ -66,7 +66,7 @@ const buildCycleSteps: {
       description: "We strengthen operations, distribution, technology, market access and organisational capability.",
       icon: "trending-up" as const,
       accent: "#15966B",
-      borderHover: "hover:border-[#15966B]",
+      borderHover: "hover:border-bx-green",
       image: cardImage("how-we-build-05-step-scale"),
     },
     {
@@ -76,7 +76,7 @@ const buildCycleSteps: {
       description: "We measure success through business performance, jobs, innovation, infrastructure, sustainability and wider economic contribution.",
       icon: "sparkles" as const,
       accent: "#2B5299",
-      borderHover: "hover:border-[#2B5299]",
+      borderHover: "hover:border-bx-navy-500",
       image: cardImage("how-we-build-06-step-impact"),
     },
   ];
@@ -137,13 +137,13 @@ export default function HowWeBuildPage() {
   });
 
   return (
-    <main className="w-full min-h-screen bg-[#FAF9F6] text-[#111827]">
+    <main className="w-full min-h-screen bg-bx-cream text-bx-ink">
       {/* ── 01. HERO (From Opportunity to Impact) ─────────────────────────── */}
       <section className="relative overflow-hidden min-h-[92vh] lg:min-h-screen w-full flex items-end justify-start pt-32 sm:pt-36 md:pt-40 pb-16 sm:pb-20 lg:pb-24">
         {/* Abstract/Industrial Progression Background Image: Blueprint -> Factory -> Tech -> People */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
-            src="/assets/backgrounds/how-we-build-hero.png"
+            src="/assets/backgrounds/how-we-build-hero.webp"
             alt="From Blueprint and Infrastructure to Technology and People"
             className="h-full w-full object-cover object-center filter brightness-[0.85] contrast-[1.12] animate-hero-zoom"
             data-cursor="image"
@@ -161,7 +161,7 @@ export default function HowWeBuildPage() {
               data-cursor="text"
             >
               Building Businesses.{" "}
-              <span className="text-[#F54900] transition-colors duration-300">Creating Wider Value.</span>
+              <span className="text-bx-orange transition-colors duration-300">Creating Wider Value.</span>
             </motion.h1>
 
             {/* CTA */}
@@ -180,7 +180,7 @@ export default function HowWeBuildPage() {
                   }}
                   data-cursor="button"
                   data-motion="true"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/25 transition-all duration-300 fx-shine active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/25 transition-all duration-300 fx-shine active:scale-95"
                 >
                   <span>Explore The Process</span>
                   <Icon
@@ -201,34 +201,34 @@ export default function HowWeBuildPage() {
         <div className="container-x relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4 hover:border-[#163A7A] transition-colors">
-                <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4 hover:border-bx-navy-700 transition-colors">
+                <span className="h-2 w-2 rounded-full bg-bx-navy-700" />
                 <span>OUR PHILOSOPHY</span>
               </div>
 
-              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-                We Are Builders, <span className="text-[#163A7A]">Not Just Investors.</span>
+              <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+                We Are Builders, <span className="text-bx-navy-700">Not Just Investors.</span>
               </AnimatedHeading>
 
-              <p className="mt-6 text-base sm:text-lg text-[#596579] leading-relaxed font-normal">
+              <p className="mt-6 text-base sm:text-lg text-bx-slate leading-relaxed font-normal">
                 BharatX was built around a simple belief: meaningful businesses are created by combining a strong opportunity with the right people, technology, capital and execution.
               </p>
 
-              <p className="mt-4 text-sm sm:text-base text-[#111827] font-medium leading-relaxed">
+              <p className="mt-4 text-sm sm:text-base text-bx-ink font-medium leading-relaxed">
                 We don’t believe in building businesses for the sake of having a portfolio. We build where we see a genuine opportunity to create long-term value.
               </p>
             </div>
 
             {/* Visual Formula: Opportunity + People + Capital + Technology + Execution -> Enterprise */}
             <div className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-[#E3E5EF] bg-[#F4F3FB] p-7 sm:p-9 shadow-lg fx-lift">
+              <div className="relative overflow-hidden rounded-3xl border border-bx-line bg-bx-surface-violet p-7 sm:p-9 shadow-lg fx-lift">
                 <CardFill accent="#163A7A" tone="tint" />
                 <div className="relative">
                   <div className="text-center mb-6">
-                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-[#163A7A] font-bold block">
+                    <span className="font-sans text-xs uppercase tracking-[0.24em] text-bx-navy-700 font-bold block">
                       The Enterprise Engine
                     </span>
-                    <span className="text-xs sm:text-[13px] text-[#374151] mt-1 block">
+                    <span className="text-xs sm:text-[13px] text-bx-ink-soft mt-1 block">
                       How core capabilities assemble into enduring institutions
                     </span>
                   </div>
@@ -248,7 +248,7 @@ export default function HowWeBuildPage() {
                             size={32}
                             className="transition-transform group-hover:scale-110"
                           />
-                          <span className="font-sans text-sm font-medium text-[#111827]">
+                          <span className="font-sans text-sm font-medium text-bx-ink">
                             {item.label}
                           </span>
                         </div>
@@ -257,8 +257,8 @@ export default function HowWeBuildPage() {
 
                     {/* 6th Slot: Compounding Catalyst */}
                     <StaggerItem>
-                      <div className="flex items-center justify-center rounded-xl border border-dashed border-[#0F2A5C]/35 bg-[color-mix(in_srgb,#0F2A5C_7%,white)] p-3 h-full">
-                        <span className="font-sans text-xs text-[#0F2A5C] font-bold tracking-wider">
+                      <div className="flex items-center justify-center rounded-xl border border-dashed border-bx-navy-800/35 bg-[color-mix(in_srgb,#0F2A5C_7%,white)] p-3 h-full">
+                        <span className="font-sans text-xs text-bx-navy-800 font-bold tracking-wider">
                           + DISCIPLINE
                         </span>
                       </div>
@@ -267,7 +267,7 @@ export default function HowWeBuildPage() {
 
                   {/* Downward Connector */}
                   <div className="my-5 flex items-center justify-center">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#163A7A] text-white shadow-md animate-bounce">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-bx-navy-700 text-white shadow-md animate-bounce">
                       <Icon name="arrow-right" width={16} height={16} className="rotate-90" strokeWidth={2.5} />
                     </div>
                   </div>
@@ -275,9 +275,9 @@ export default function HowWeBuildPage() {
                   {/* Result Node: Enterprise */}
                   <div
                     data-cursor="card"
-                    className="rounded-2xl border border-[#163A7A]/40 bg-gradient-to-r from-[#0B1F47] via-[#163A7A] to-[#0B1F47] p-5 sm:p-6 text-center text-white shadow-xl transition-all duration-300 hover:scale-[1.02] fx-glow-indigo"
+                    className="rounded-2xl border border-bx-navy-700/40 bg-gradient-to-r from-bx-navy-900 via-bx-navy-700 to-bx-navy-900 p-5 sm:p-6 text-center text-white shadow-xl transition-all duration-300 hover:scale-[1.02] fx-glow-indigo"
                   >
-                    <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-[#F54900] font-bold block mb-1">
+                    <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-bx-orange font-bold block mb-1">
                       CENTRAL OUTCOME
                     </span>
                     {/* `!` keeps the gold hover: the panel's light card-surface rule would otherwise force indigo on this dark box */}
@@ -296,19 +296,19 @@ export default function HowWeBuildPage() {
       </SectionTransition>
 
       {/* ── 03. THE BHARATX BUILD CYCLE (Our Five-Step Approach) ─────────── */}
-      <SectionTransition id="build-cycle" className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+      <SectionTransition id="build-cycle" className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#00B8D9]/30 bg-[#00B8D9]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#008299] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#00B8D9]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-cyan/30 bg-bx-cyan/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-cyan-dark font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-cyan" />
               <span>THE BHARATX BUILD CYCLE</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Our Five-Step <span className="text-[#163A7A]">Approach</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+              Our Five-Step <span className="text-bx-navy-700">Approach</span>
             </AnimatedHeading>
 
-            <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
               A systematic progression transforming market challenges into scalable industrial champions.
             </p>
           </div>
@@ -319,7 +319,7 @@ export default function HowWeBuildPage() {
               <StaggerItem key={step.name}>
                 <div
                   data-cursor="card"
-                  className={`group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0D1026] p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-2xl fx-lift h-full ${step.borderHover}`}
+                  className={`group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-bx-night p-6 sm:p-7 shadow-md transition-all duration-300 hover:shadow-2xl fx-lift h-full ${step.borderHover}`}
                 >
                   {/* No overflow-hidden: the connector chevron overhangs the edge; CardPhoto clips itself */}
                   <CardPhoto src={step.image} accent={step.accent} />
@@ -352,7 +352,7 @@ export default function HowWeBuildPage() {
 
                   {/* Connecting arrow indicator on desktop */}
                   {idx < buildCycleSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 h-7 w-7 rounded-full bg-white border border-[#E3E5EF] items-center justify-center text-[#163A7A] shadow-md group-hover:scale-110 transition-transform">
+                    <div className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 h-7 w-7 rounded-full bg-white border border-bx-line items-center justify-center text-bx-navy-700 shadow-md group-hover:scale-110 transition-transform">
                       <Icon name="chevron-right" width={13} height={13} strokeWidth={2.5} />
                     </div>
                   )}
@@ -362,7 +362,7 @@ export default function HowWeBuildPage() {
           </Stagger>
 
           <div className="mt-12 text-center">
-            <p className="text-sm sm:text-base text-[#111827] font-medium max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-bx-ink font-medium max-w-xl mx-auto leading-relaxed">
               Our approach is simple: build with discipline, scale with purpose and think long term.
             </p>
           </div>
@@ -373,16 +373,16 @@ export default function HowWeBuildPage() {
       <SectionTransition className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#15966B]/30 bg-[#15966B]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#15966B] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#15966B]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-green/30 bg-bx-green/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-green font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-green" />
               <span>WHAT WE BRING</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              The BharatX <span className="text-[#163A7A]">Advantage</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+              The BharatX <span className="text-bx-navy-700">Advantage</span>
             </AnimatedHeading>
 
-            <p className="mt-3 text-base text-[#596579]">
+            <p className="mt-3 text-base text-bx-slate">
               Five foundational pillars deployed synchronously across every venture.
             </p>
           </div>
@@ -393,7 +393,7 @@ export default function HowWeBuildPage() {
               <StaggerItem key={item.pillar}>
                 <div
                   data-cursor="card"
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] p-6 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-2xl fx-lift flex flex-col justify-between h-full"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-bx-night p-6 shadow-md transition-all duration-300 hover:border-bx-navy-700 hover:shadow-2xl fx-lift flex flex-col justify-between h-full"
                 >
                   <CardFill accent={item.color} />
                   <div className="relative">
@@ -422,7 +422,7 @@ export default function HowWeBuildPage() {
           </Stagger>
 
           {/* Central Anchor Line */}
-          <div className="mt-14 max-w-2xl mx-auto rounded-2xl border border-[#0B1F47] border-t-4 border-t-[#F54900] bg-[#0B1F47] p-6 text-center shadow-md fx-lift">
+          <div className="mt-14 max-w-2xl mx-auto rounded-2xl border border-bx-navy-900 border-t-4 border-t-bx-orange bg-bx-navy-900 p-6 text-center shadow-md fx-lift">
             <p className="font-heading text-base sm:text-lg font-medium text-white leading-relaxed">
               “When these capabilities come together, opportunities become scalable businesses.”
             </p>
@@ -431,19 +431,19 @@ export default function HowWeBuildPage() {
       </SectionTransition>
 
       {/* ── 05. WHERE WE BUILD (Building Across the Real and Digital Economy) ── */}
-      <SectionTransition className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+      <SectionTransition className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-navy-700" />
               <span>OPERATING FOOTPRINT</span>
             </div>
 
-            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight">
-              Building Across the <span className="text-[#163A7A]">Real and Digital Economy</span>
+            <AnimatedHeading as="h2" effect="words" hover="color" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+              Building Across the <span className="text-bx-navy-700">Real and Digital Economy</span>
             </AnimatedHeading>
 
-            <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
               Our sectors may differ, but the underlying approach remains the same: identify real opportunities, build strong businesses and create long-term value.
             </p>
           </div>
@@ -455,7 +455,7 @@ export default function HowWeBuildPage() {
                 <Link
                   to={sector.link}
                   data-cursor="card"
-                  className="group relative overflow-hidden flex items-center justify-between rounded-xl border border-white/10 bg-[#0D1026] p-4 shadow-md transition-all duration-300 hover:border-[#163A7A] hover:shadow-xl fx-lift h-full"
+                  className="group relative overflow-hidden flex items-center justify-between rounded-xl border border-white/10 bg-bx-night p-4 shadow-md transition-all duration-300 hover:border-bx-navy-700 hover:shadow-xl fx-lift h-full"
                 >
                   <CardPhoto src={sector.image} accent={sector.accent} />
                   <div className="relative flex items-center gap-3 [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -474,7 +474,7 @@ export default function HowWeBuildPage() {
                       </span>
                     </div>
                   </div>
-                  <Icon name="arrow-up-right" width={14} height={14} className="relative text-white/80 group-hover:text-[#FF8904] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <Icon name="arrow-up-right" width={14} height={14} className="relative text-white/80 group-hover:text-bx-orange-light transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </StaggerItem>
             ))}
@@ -485,16 +485,16 @@ export default function HowWeBuildPage() {
       {/* ── 06. CLOSING CTA (The Next Business Could Be Built Here.) ─────────── */}
       <SectionTransition
         backdrop={<SectionPhoto src={cardImage("how-we-build-cta-next-venture")} />}
-        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9"
+        className="relative overflow-hidden bg-gradient-to-br from-bx-navy-800 via-bx-navy-900 to-bx-navy-950 text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-bx-navy-600/35 via-bx-orange/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-bx-orange font-bold shadow-xs mb-6">
+              <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900]" />
               <span>THE NEXT VENTURE</span>
             </div>
 
@@ -515,7 +515,7 @@ export default function HowWeBuildPage() {
                   to="/contact?inquiry=partner"
                   data-cursor="button"
                   data-motion="true"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine active:scale-95"
                 >
                   <span>Partner With Us</span>
                   <Icon
@@ -558,7 +558,7 @@ export default function HowWeBuildPage() {
 
             {/* Signature Tagline */}
             <div className="mt-12 pt-8 border-t border-white/15 max-w-xl mx-auto">
-              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
+              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-bx-orange font-bold">
                 Building Businesses. Enabling Bharat.
               </p>
             </div>

@@ -59,7 +59,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
           <div aria-hidden className="grid-bg grid-bg-fade absolute inset-0 opacity-40" />
           <div className="container-x relative flex min-h-full flex-col pt-[calc(1.5rem+env(safe-area-inset-top,0px))] pb-[calc(2.5rem+env(safe-area-inset-bottom,0px))]">
             <div className="flex items-center justify-between">
-              <img src="/bharatxgroup.png" alt="BharatX Group" className="h-10 w-auto object-contain" />
+              <img src="/bharatxgroup.webp" alt="BharatX Group" className="h-10 w-auto object-contain" />
               <div className="flex items-center gap-2">
                 <button
                   type="button"
@@ -95,7 +95,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
 
             {/* Core Sectors */}
             <div className="mt-10">
-              <div className="mb-3 font-sans text-[10px] uppercase tracking-[0.28em] text-[#163A7A] dark:text-gold-400 font-semibold">
+              <div className="mb-3 font-sans text-[10px] uppercase tracking-[0.28em] text-bx-navy-700 dark:text-gold-400 font-semibold">
                 Core Operating Sectors
               </div>
               <div className="grid grid-cols-2 gap-2">
@@ -107,7 +107,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                       to={`/verticals#${svc.id}`}
                       onClick={onClose}
                       data-cursor="card"
-                      className="flex flex-col gap-1 rounded-xl border border-l-4 border-[color:var(--tile-border)] border-l-[color:var(--tile-accent)] p-3 text-left transition-all hover:border-[#163A7A] fx-lift shadow-xs"
+                      className="flex flex-col gap-1 rounded-xl border border-l-4 border-[color:var(--tile-border)] border-l-[color:var(--tile-accent)] p-3 text-left transition-all hover:border-bx-navy-700 fx-lift shadow-xs"
                       style={
                         {
                           backgroundColor: `color-mix(in srgb, ${accent} 9%, white)`,
@@ -119,7 +119,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                       <span className="font-sans text-[9px] font-semibold" style={{ color: accent }}>
                         0{i + 1}
                       </span>
-                      <span className="truncate text-[12.5px] font-medium text-[#111827]">{svc.name}</span>
+                      <span className="truncate text-[12.5px] font-medium text-bx-ink">{svc.name}</span>
                     </Link>
                   );
                 })}
@@ -131,7 +131,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                 to="/verticals"
                 onClick={onClose}
                 data-cursor="button"
-                className="group flex items-center justify-center gap-2 rounded-full bg-[#163A7A] px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#163A7A]/25 transition-all hover:bg-[#0F2A5C] fx-press fx-shine dark:bg-gold-500 dark:text-night-950 dark:hover:bg-gold-400"
+                className="group flex items-center justify-center gap-2 rounded-full bg-bx-navy-700 px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-bx-navy-700/25 transition-all hover:bg-bx-navy-800 fx-press fx-shine dark:bg-gold-500 dark:text-night-950 dark:hover:bg-gold-400"
               >
                 <span>Explore All Services</span>
                 <Icon name="arrow-right" width={15} height={15} className="transition-transform group-hover:translate-x-1" />
@@ -145,13 +145,13 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                     rel="noreferrer"
                     aria-label={s.label}
                     data-cursor="button"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E3E5EF] bg-white dark:border-white/10 dark:bg-white/5 text-[#596579] shadow-xs transition-all hover:border-[#163A7A] hover:text-[#163A7A] fx-lift"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-bx-line bg-white dark:border-white/10 dark:bg-white/5 text-bx-slate shadow-xs transition-all hover:border-bx-navy-700 hover:text-bx-navy-700 fx-lift"
                   >
                     <Icon name={socialIcons[s.label] ?? "arrow-up-right"} width={14} height={14} className="fx-icon-pop" />
                   </a>
                 ))}
               </div>
-              <p className="mt-5 text-center font-sans text-[10px] uppercase tracking-[0.2em] text-[#596579]">
+              <p className="mt-5 text-center font-sans text-[10px] uppercase tracking-[0.2em] text-bx-slate">
                 BharatX Group — {location.pathname}
               </p>
             </div>
@@ -164,7 +164,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
 
 function mobileLinkClass(isActive: boolean): string {
   return cn(
-    "flex items-center gap-3.5 border-b border-[#E3E5EF] dark:border-white/10 py-3 sm:py-3.5 font-sans text-[17px] sm:text-[19px] font-medium tracking-tight transition-colors",
-    isActive ? "text-[#163A7A] dark:text-gold-400 font-semibold" : "text-ink-900 dark:text-white hover:text-[#163A7A] dark:hover:text-gold-300",
+    "flex items-center gap-3.5 border-b border-bx-line dark:border-white/10 py-3 sm:py-3.5 font-sans text-[17px] sm:text-[19px] font-medium tracking-tight transition-colors",
+    isActive ? "text-bx-navy-700 dark:text-gold-400 font-semibold" : "text-ink-900 dark:text-white hover:text-bx-navy-700 dark:hover:text-gold-300",
   );
 }

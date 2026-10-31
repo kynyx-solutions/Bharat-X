@@ -19,15 +19,15 @@ export const contactRoute = {
 
 export const footerSections = {
   businesses: [
-    { label: "BharatX Labs", to: "/verticals#labs" },
-    { label: "BharatX Ventures", to: "/verticals#ventures" },
+    { label: "BharatX Labs", to: "/verticals/bharatx-labs" },
+    { label: "BharatX Ventures", to: "/verticals/bharatx-ventures" },
     // { label: "BharatX Agro", to: "/verticals#agriculture" },
-    { label: "BharatX Infratech", to: "/verticals#infrastructure" },
-    { label: "BharatX Foundation", to: "/verticals#foundation" },
-    { label: "BharatX Engineering", to: "/verticals#manufacturing" },
-    { label: "BharatX Enterprises", to: "/verticals#packaging" },
-    { label: "Aixperts Labs", to: "/verticals#tech-ai" },
-    { label: "BharatX Sustainability", to: "/#what-comes-next" },
+    { label: "BharatX Infratech", to: "/verticals/bharatx-infratech" },
+    { label: "BharatX Foundation", to: "/verticals/bharatx-foundation" },
+    { label: "BharatX Engineering", to: "/verticals/bharatx-engineering" },
+    { label: "BharatX Enterprises", to: "/verticals/bharatx-enterprises" },
+    { label: "Aixperts Labs", to: "/verticals/aixperts-labs" },
+    { label: "BharatX Sustainability", to: "/verticals/bharatx-sustainability" },
   ],
   group: [
     { label: "About", to: "/about" },

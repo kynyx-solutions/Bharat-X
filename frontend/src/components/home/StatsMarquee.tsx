@@ -48,7 +48,7 @@ function StatsRow({ hidden = false }: { hidden?: boolean }) {
             </span>
             <span className="whitespace-nowrap text-sm font-medium text-white/90">{s.label}</span>
           </div>
-          <svg aria-hidden viewBox="0 0 12 12" className="h-2.5 w-2.5 shrink-0 text-[#F54900]">
+          <svg aria-hidden viewBox="0 0 12 12" className="h-2.5 w-2.5 shrink-0 text-bx-orange">
             <path d="M6 0 L7.4 4.6 L12 6 L7.4 7.4 L6 12 L4.6 7.4 L0 6 L4.6 4.6 Z" fill="currentColor" />
           </svg>
         </li>
@@ -59,7 +59,7 @@ function StatsRow({ hidden = false }: { hidden?: boolean }) {
 
 export function StatsMarquee() {
   return (
-    <section aria-label="BharatX Group at a glance" className="marquee relative overflow-hidden bg-[#0B1F47] py-4 sm:py-5">
+    <section aria-label="BharatX Group at a glance" className="marquee relative overflow-hidden bg-bx-navy-900 py-4 sm:py-5">
       <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: BRAND_LIGHT }} />
 
       {/* Two identical rows: the track slides by half its width, so the loop is seamless */}
@@ -68,8 +68,8 @@ export function StatsMarquee() {
         <StatsRow hidden />
       </div>
 
-      <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0B1F47] to-transparent sm:w-28" />
-      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0B1F47] to-transparent sm:w-28" />
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-bx-navy-900 to-transparent sm:w-28" />
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-bx-navy-900 to-transparent sm:w-28" />
     </section>
   );
 }

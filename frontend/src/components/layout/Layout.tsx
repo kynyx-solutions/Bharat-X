@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { trackPageView } from "../../services/analytics";
 import { useLenis } from "../scroll/SmoothScrollProvider";
@@ -45,14 +45,21 @@ export function Layout() {
         <Preloader />
         <ScrollProgress />
         <Navbar />
-        {/* Full route transition with enter & exit and route sweep */}
-        <AnimatePresence mode="wait">
-          <PageTransition key={location.pathname} pathname={location.pathname}>
-            <div className="flex-1">
-              <Outlet />
-            </div>
-          </PageTransition>
-        </AnimatePresence>
+        {/*
+          Pages load on demand (routes/index.tsx). This boundary sits above the page transition so that navigating
+          keeps the current page on screen until the next one is ready; only a first visit straight to a page that
+          isn't loaded yet shows the fallback, which holds the footer below the fold.
+        */}
+        <Suspense fallback={<div className="flex-1 min-h-screen" />}>
+          {/* Full route transition with enter & exit and route sweep */}
+          <AnimatePresence mode="wait">
+            <PageTransition key={location.pathname} pathname={location.pathname}>
+              <div className="flex-1">
+                <Outlet />
+              </div>
+            </PageTransition>
+          </AnimatePresence>
+        </Suspense>
         {/* {location.pathname !== "/" && <FooterCTA />} */}
         <Footer />
         <WhatsAppButton />

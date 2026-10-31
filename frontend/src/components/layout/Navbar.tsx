@@ -151,7 +151,7 @@ export function Navbar() {
             className="group relative z-10 flex items-center shrink-0 rounded-xl transition-all duration-300 hover:scale-[1.02] lg:justify-self-start"
           >
             <img
-              src="/bharatxgroup.png"
+              src="/bharatxgroup.webp"
               alt="BharatX Group"
               className="h-12 sm:h-14 md:h-[60px] max-h-[60px] w-auto object-contain shrink-0"
             />
@@ -186,7 +186,7 @@ export function Navbar() {
           <div className="flex items-center lg:hidden">
             <button
               type="button"
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-[#E3E5EF] bg-white text-[#111827] shadow-xs transition-colors"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-bx-line bg-white text-bx-ink shadow-xs transition-colors"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
@@ -245,7 +245,7 @@ function NavItem({
         data-cursor="link"
         className={cn(
           "group relative flex items-center gap-1.5 rounded-full px-2.5 py-1.5 xl:px-3.5 xl:py-2 text-[14px] xl:text-[15px] font-medium transition-all duration-300",
-          active ? "text-[#163A7A] font-semibold" : "text-[#111827] hover:text-[#163A7A]",
+          active ? "text-bx-navy-700 font-semibold" : "text-bx-ink hover:text-bx-navy-700",
         )}
       >
         <DuotoneIcon
@@ -253,7 +253,7 @@ function NavItem({
           size={17}
           className={cn(
             "shrink-0 transition-transform duration-300 group-hover:scale-110 fx-icon-pop",
-            active ? "text-[#163A7A]" : "text-[#596579] group-hover:text-[#163A7A]",
+            active ? "text-bx-navy-700" : "text-bx-slate group-hover:text-bx-navy-700",
           )}
         />
         <span className="whitespace-nowrap">{item.label}</span>
@@ -265,7 +265,7 @@ function NavItem({
             strokeWidth={2}
             className={cn(
               "transition-transform duration-200 opacity-70 group-hover:opacity-100",
-              isMegaOpen ? "rotate-180 text-[#F54900]" : "",
+              isMegaOpen ? "rotate-180 text-bx-orange" : "",
             )}
           />
         )}
@@ -273,13 +273,13 @@ function NavItem({
           <motion.span
             aria-hidden
             layoutId="navbar-active-indicator"
-            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2.5px] rounded-full bg-gradient-to-r from-[#163A7A] to-[#F54900]"
+            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2.5px] rounded-full bg-gradient-to-r from-bx-navy-700 to-bx-orange"
             transition={{ type: "spring", stiffness: 380, damping: 30 }}
           />
         ) : (
           <span
             aria-hidden
-            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2px] rounded-full bg-[#163A7A]/30 origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+            className="absolute inset-x-2.5 xl:inset-x-3.5 bottom-0 h-[2px] rounded-full bg-bx-navy-700/30 origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
           />
         )}
       </NavLink>
@@ -311,7 +311,7 @@ function ServicesMega() {
               to={`/verticals#${svc.id}`}
               onMouseEnter={() => setPreview(i)}
               onFocus={() => setPreview(i)}
-              className="group flex items-start gap-3.5 rounded-xl border border-transparent p-3.5 transition-all duration-300 hover:border-[#E3E5EF] hover:bg-[#F7F7FC] hover:shadow-sm"
+              className="group flex items-start gap-3.5 rounded-xl border border-transparent p-3.5 transition-all duration-300 hover:border-bx-line hover:bg-bx-surface-cool hover:shadow-sm"
             >
               <span
                 className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white p-1 shadow-sm mt-0.5 transition-all duration-300 group-hover:shadow-md"
@@ -322,13 +322,13 @@ function ServicesMega() {
               <span className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <span
-                    className="truncate font-sans text-[14px] font-semibold text-[#111827] transition-colors block"
+                    className="truncate font-sans text-[14px] font-semibold text-bx-ink transition-colors block"
                     style={{ color: preview === i ? accent : undefined }}
                   >
                     {svc.name}
                   </span>
                 </div>
-                <span className="mt-0.5 line-clamp-1 block text-[11.5px] text-[#596579] group-hover:text-[#111827] transition-colors">
+                <span className="mt-0.5 line-clamp-1 block text-[11.5px] text-bx-slate group-hover:text-bx-ink transition-colors">
                   {svc.descriptor}
                 </span>
               </span>
@@ -336,7 +336,7 @@ function ServicesMega() {
                 name="arrow-up-right"
                 width={14}
                 height={14}
-                className="mt-1 shrink-0 text-[#596579] transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="mt-1 shrink-0 text-bx-slate transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 style={{ color: preview === i ? accent : undefined } as React.CSSProperties}
               />
             </Link>
@@ -345,7 +345,7 @@ function ServicesMega() {
       </div>
 
       {/* Right Image Preview Deck */}
-      <div className="relative hidden h-[260px] overflow-hidden rounded-2xl border border-[#E3E5EF] shadow-sm lg:block">
+      <div className="relative hidden h-[260px] overflow-hidden rounded-2xl border border-bx-line shadow-sm lg:block">
         {menuServices.map((svc, i) => (
           <img
             key={svc.id}
@@ -361,7 +361,7 @@ function ServicesMega() {
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         <div className="absolute bottom-3 left-4 right-4">
-          <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#F54900] block">
+          <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-bx-orange block">
             {activeSvc.shortLabel}
           </span>
           <span className="text-white text-xs line-clamp-1 mt-0.5 font-medium">

@@ -31,7 +31,7 @@ const pathways: {
       title: "Business Partnerships",
       description: "For companies, institutions and organisations interested in partnerships, projects or commercial opportunities.",
       accent: "#163A7A",
-      borderHover: "hover:border-[#163A7A]",
+      borderHover: "hover:border-bx-navy-700",
       image: cardImage("contact-01-pathway-partnerships"),
       cta: "Discuss a Partnership",
       option: "Business Partnership",
@@ -42,7 +42,7 @@ const pathways: {
       title: "Investors & Capital",
       description: "For investors, funds and strategic partners interested in BharatX and its venture-building ecosystem.",
       accent: "#0F2A5C",
-      borderHover: "hover:border-[#0F2A5C]",
+      borderHover: "hover:border-bx-navy-800",
       image: cardImage("contact-02-pathway-investors"),
       cta: "Connect With Ventures",
       option: "Investment / Capital",
@@ -53,7 +53,7 @@ const pathways: {
       title: "Entrepreneurs & Founders",
       description: "For entrepreneurs interested in building, partnering or exploring opportunities with BharatX.",
       accent: "#00B8D9",
-      borderHover: "hover:border-[#00B8D9]",
+      borderHover: "hover:border-bx-cyan",
       image: cardImage("contact-03-pathway-founders"),
       cta: "Build With Us",
       option: "Venture Building",
@@ -64,7 +64,7 @@ const pathways: {
       title: "Careers",
       description: "Looking to join one of the businesses within the BharatX ecosystem?",
       accent: "#15966B",
-      borderHover: "hover:border-[#15966B]",
+      borderHover: "hover:border-bx-green",
       image: cardImage("contact-04-pathway-careers"),
       cta: "Explore Careers",
       to: "/careers",
@@ -208,17 +208,17 @@ export default function ContactPage() {
 
     // 2. Correction done: green border immediately
     if (isValid) {
-      return `${base} border-2 border-emerald-500 bg-white text-[#111827] placeholder:text-[#8E9BAE] ${isActive ? "ring-2 ring-emerald-500/25" : ""
+      return `${base} border-2 border-emerald-500 bg-white text-bx-ink placeholder:text-bx-slate-light ${isActive ? "ring-2 ring-emerald-500/25" : ""
         }`;
     }
 
     // 3. Active text field: color theme of project (#163A7A)
     if (isActive) {
-      return `${base} border-2 border-[#163A7A] bg-white text-[#111827] ring-2 ring-[#163A7A]/25 shadow-sm`;
+      return `${base} border-2 border-bx-navy-700 bg-white text-bx-ink ring-2 ring-bx-navy-700/25 shadow-sm`;
     }
 
     // Idle neutral state
-    return `${base} border border-[#D5D8E6] bg-white text-[#111827] placeholder:text-[#8E9BAE] hover:border-[#B4BBD3]`;
+    return `${base} border border-bx-line-strong bg-white text-bx-ink placeholder:text-bx-slate-light hover:border-bx-mist`;
   };
 
   const getLabelClass = (hasError: boolean, isValid: boolean, isActive: boolean) => {
@@ -226,8 +226,8 @@ export default function ContactPage() {
       "block text-xs font-sans font-bold uppercase tracking-wider mb-2 transition-colors duration-200";
     if (hasError) return `${base} text-red-600`;
     if (isValid) return `${base} text-emerald-700`;
-    if (isActive) return `${base} text-[#163A7A]`;
-    return `${base} text-[#111827]`;
+    if (isActive) return `${base} text-bx-navy-700`;
+    return `${base} text-bx-ink`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -292,13 +292,13 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="w-full min-h-screen bg-[#FAF9F6] text-[#111827]">
+    <main className="w-full min-h-screen bg-bx-cream text-bx-ink">
       {/* ── 01. HERO (Contact BharatX — Let's Build What Comes Next.) ─────── */}
       <section className="relative overflow-hidden min-h-[92vh] lg:min-h-screen w-full flex items-end justify-start pt-32 sm:pt-36 md:pt-40 pb-16 sm:pb-20 lg:pb-24">
         {/* Full-bleed authentic panoramic visual */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/backgrounds/contact_hero.png"
+            src="/assets/backgrounds/contact_hero.webp"
             alt="BharatX Leadership, Infrastructure, and City Skyline"
             className="h-full w-full object-cover object-center filter brightness-[0.88] contrast-[1.10] animate-hero-zoom"
           />
@@ -313,7 +313,7 @@ export default function ContactPage() {
               hover="color"
               className="font-heading text-4xl sm:text-5xl lg:text-[length:clamp(2.5rem,3.9vw,3.5rem)] lg:whitespace-nowrap font-medium leading-[1.1] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
             >
-              Let’s Build What <span className="text-[#F54900]">Comes Next.</span>
+              Let’s Build What <span className="text-bx-orange">Comes Next.</span>
             </AnimatedHeading>
 
             {/* CTA */}
@@ -330,7 +330,7 @@ export default function ContactPage() {
                   onClick={() => {
                     document.getElementById("contact-form-section")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-8 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
                 >
                   <span>Start a Conversation</span>
                   <Icon
@@ -361,8 +361,8 @@ export default function ContactPage() {
       <SectionTransition id="contact-options" className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-navy-700" />
               <span>CONTACT PATHWAYS</span>
             </div>
 
@@ -370,12 +370,12 @@ export default function ContactPage() {
               as="h2"
               effect="mask"
               hover="color"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
             >
-              Choose Your <span className="text-[#163A7A]">Pathway</span>
+              Choose Your <span className="text-bx-navy-700">Pathway</span>
             </AnimatedHeading>
 
-            <p className="mt-4 text-base sm:text-lg text-[#596579] leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
               Direct routing to ensure your inquiry reaches the right leadership team immediately.
             </p>
           </div>
@@ -384,7 +384,7 @@ export default function ContactPage() {
           <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {pathways.map((p) => {
               const ctaClass =
-                "inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-[#FF8904] hover:text-white transition-colors group/link";
+                "inline-flex items-center gap-1.5 font-sans text-xs font-bold uppercase tracking-wider text-bx-orange-light hover:text-white transition-colors group/link";
               const ctaBody = (
                 <>
                   <span>{p.cta}</span>
@@ -395,7 +395,7 @@ export default function ContactPage() {
                 <StaggerItem key={p.key}>
                   <div
                     data-cursor="card"
-                    className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0D1026] text-white p-7 shadow-md transition-all duration-300 hover:shadow-xl fx-lift flex flex-col justify-between h-full ${p.borderHover}`}
+                    className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-bx-night text-white p-7 shadow-md transition-all duration-300 hover:shadow-xl fx-lift flex flex-col justify-between h-full ${p.borderHover}`}
                   >
                     <CardPhoto src={p.image} accent={p.accent} />
                     <div className="relative [text-shadow:0_0_2px_rgba(13,16,38,0.9),0_1px_12px_rgba(13,16,38,0.85)]">
@@ -440,12 +440,12 @@ export default function ContactPage() {
       </SectionTransition>
 
       {/* ── 03. MAIN CONTACT FORM (Start a Conversation) ──────────────────── */}
-      <SectionTransition id="contact-form-section" className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9">
+      <SectionTransition id="contact-form-section" className="relative overflow-hidden bg-bx-cream py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-9">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#163A7A]/25 bg-[#163A7A]/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#163A7A] font-bold shadow-xs mb-4">
-                <span className="h-2 w-2 rounded-full bg-[#163A7A]" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-bx-navy-700/25 bg-bx-navy-700/8 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-navy-700 font-bold shadow-xs mb-4">
+                <span className="h-2 w-2 rounded-full bg-bx-navy-700" />
                 <span>DIRECT INQUIRY</span>
               </div>
 
@@ -453,12 +453,12 @@ export default function ContactPage() {
                 as="h2"
                 effect="words"
                 hover="gradient"
-                className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
+                className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
               >
-                Start a <span className="text-[#163A7A]">Conversation</span>
+                Start a <span className="text-bx-navy-700">Conversation</span>
               </AnimatedHeading>
 
-              <p className="mt-3 text-base sm:text-lg text-[#596579]">
+              <p className="mt-3 text-base sm:text-lg text-bx-slate">
                 Share your proposal, project specifications, or collaboration concept with us.
               </p>
             </div>
@@ -486,11 +486,11 @@ export default function ContactPage() {
                       <Icon name="check" width={32} height={32} strokeWidth={2.5} />
                     </div>
 
-                    <h3 className="font-heading text-2xl sm:text-3xl font-medium text-[#111827] mb-3 transition-colors duration-300">
+                    <h3 className="font-heading text-2xl sm:text-3xl font-medium text-bx-ink mb-3 transition-colors duration-300">
                       Message Received
                     </h3>
 
-                    <p className="text-base sm:text-lg text-[#374151] max-w-lg mx-auto leading-relaxed">
+                    <p className="text-base sm:text-lg text-bx-ink-soft max-w-lg mx-auto leading-relaxed">
                       Thank you for reaching out to BharatX. Our team will review your message and get back to you.
                     </p>
 
@@ -507,7 +507,7 @@ export default function ContactPage() {
                         setTouched({});
                         setErrorMsg(null);
                       }}
-                      className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#E3E5EF] bg-white hover:bg-slate-100 text-[#111827] px-6 py-2.5 text-xs font-sans font-bold uppercase tracking-wider transition-colors fx-lift"
+                      className="mt-8 inline-flex items-center gap-2 rounded-full border border-bx-line bg-white hover:bg-slate-100 text-bx-ink px-6 py-2.5 text-xs font-sans font-bold uppercase tracking-wider transition-colors fx-lift"
                     >
                       <span>Send Another Inquiry</span>
                     </button>
@@ -581,7 +581,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "fullName" && !fullNameError && !isFullNameValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-bx-navy-700 animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -651,7 +651,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "email" && !emailError && !isEmailValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-bx-navy-700 animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -681,7 +681,7 @@ export default function ContactPage() {
                             activeField === "phone",
                           )}
                         >
-                          Phone Number <span className="text-xs font-normal text-[#4B5563] lowercase">(optional)</span>
+                          Phone Number <span className="text-xs font-normal text-bx-ink-muted lowercase">(optional)</span>
                         </label>
                         <div className="relative">
                           <input
@@ -726,7 +726,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "phone" && !phoneError && !isPhoneValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-bx-navy-700 animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -754,7 +754,7 @@ export default function ContactPage() {
                             activeField === "organization",
                           )}
                         >
-                          Organisation / Company <span className="text-xs font-normal text-[#4B5563] lowercase">(optional)</span>
+                          Organisation / Company <span className="text-xs font-normal text-bx-ink-muted lowercase">(optional)</span>
                         </label>
                         <div className="relative">
                           <input
@@ -799,7 +799,7 @@ export default function ContactPage() {
                               />
                             )}
                             {activeField === "organization" && !orgError && !isOrgValid && (
-                              <span className="h-2 w-2 rounded-full bg-[#163A7A] animate-pulse" />
+                              <span className="h-2 w-2 rounded-full bg-bx-navy-700 animate-pulse" />
                             )}
                           </div>
                         </div>
@@ -873,7 +873,7 @@ export default function ContactPage() {
                             ? "text-emerald-600 font-semibold"
                             : touched.message && message.trim().length < 10
                               ? "text-red-600 font-semibold"
-                              : "text-[#4B5563]"
+                              : "text-bx-ink-muted"
                             }`}
                         >
                           {message.trim().length} / 10 min chars
@@ -922,7 +922,7 @@ export default function ContactPage() {
                         type="submit"
                         data-cursor="button"
                         disabled={submitting}
-                        className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#163A7A] hover:bg-[#0F2A5C] text-white px-9 py-4 text-[15px] font-bold shadow-lg shadow-[#163A7A]/25 transition-all duration-300 fx-shine disabled:opacity-60 cursor-pointer"
+                        className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-bx-navy-700 hover:bg-bx-navy-800 text-white px-9 py-4 text-[15px] font-bold shadow-lg shadow-bx-navy-700/25 transition-all duration-300 fx-shine disabled:opacity-60 cursor-pointer"
                       >
                         <span>{submitting ? "Sending..." : "Send Message"}</span>
                         <Icon
@@ -933,7 +933,7 @@ export default function ContactPage() {
                         />
                       </button>
 
-                      <div className="flex items-center gap-2 text-xs sm:text-[13px] text-[#374151]">
+                      <div className="flex items-center gap-2 text-xs sm:text-[13px] text-bx-ink-soft">
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                         <span>Direct response from leadership within 24–48 hours</span>
                       </div>
@@ -950,8 +950,8 @@ export default function ContactPage() {
       <SectionTransition className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           <div className="max-w-3xl text-center mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#15966B]/30 bg-[#15966B]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#15966B] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#15966B]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-green/30 bg-bx-green/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-green font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-green" />
               <span>OUR OFFICES</span>
             </div>
 
@@ -959,12 +959,12 @@ export default function ContactPage() {
               as="h2"
               effect="mask"
               hover="color"
-              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-[#111827] leading-tight tracking-tight"
+              className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight"
             >
-              BharatX Group <span className="text-[#163A7A]">Offices</span>
+              BharatX Group <span className="text-bx-navy-700">Offices</span>
             </AnimatedHeading>
 
-            <p className="mt-3 text-base text-[#596579]">
+            <p className="mt-3 text-base text-bx-slate">
               Our registered office in New Delhi, with offices in Bihar and Uttar Pradesh.
             </p>
           </div>
@@ -976,16 +976,16 @@ export default function ContactPage() {
       {/* ── 05. FINAL CTA (Have an Idea Worth Building?) ──────────────────── */}
       <SectionTransition
         backdrop={<SectionPhoto src={cardImage("contact-cta-co-build")} />}
-        className="relative overflow-hidden bg-gradient-to-br from-[#0F2A5C] via-[#0B1F47] to-[#06122E] text-white py-6 sm:py-9"
+        className="relative overflow-hidden bg-gradient-to-br from-bx-navy-800 via-bx-navy-900 to-bx-navy-950 text-white py-6 sm:py-9"
       >
         {/* Ambient radial lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-[#1E4A9E]/35 via-[#F54900]/20 to-transparent blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] sm:w-[700px] rounded-full bg-gradient-to-r from-bx-navy-600/35 via-bx-orange/20 to-transparent blur-[140px] pointer-events-none" />
 
         <div className="container-x relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F54900]/40 bg-[#F54900]/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-[#F54900] font-bold shadow-xs mb-4">
-              <span className="h-2 w-2 rounded-full bg-[#F54900] shadow-[0_0_8px_#F54900]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-bx-orange/40 bg-bx-orange/15 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.28em] text-bx-orange font-bold shadow-xs mb-4">
+              <span className="h-2 w-2 rounded-full bg-bx-orange shadow-[0_0_8px_#F54900]" />
               <span>CO-BUILD THE FUTURE</span>
             </div>
 
@@ -1013,7 +1013,7 @@ export default function ContactPage() {
                   onClick={() => {
                     document.getElementById("contact-form-section")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#F54900] hover:bg-[#ca3500] text-[#111827] px-9 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-bx-orange hover:bg-bx-orange-dark text-bx-ink px-9 py-4 text-[15px] font-bold shadow-xl shadow-black/20 transition-all duration-300 fx-shine"
                 >
                   <span>Talk to Us</span>
                   <Icon
@@ -1036,7 +1036,7 @@ export default function ContactPage() {
 
             {/* Signature Conclusion */}
             <div className="mt-6 pt-6 border-t border-white/15 max-w-xl mx-auto">
-              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-[#F54900] font-bold">
+              <p className="font-sans text-sm sm:text-base uppercase tracking-[0.24em] text-bx-orange font-bold">
                 Building Businesses. Enabling Bharat.
               </p>
             </div>

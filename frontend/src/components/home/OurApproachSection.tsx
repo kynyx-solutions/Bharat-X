@@ -22,7 +22,7 @@ const approachSteps: {
       icon: "target",
       accent: "#163A7A",
       image: cardImage("home-01-approach-identify"),
-      borderHover: "hover:border-[#163A7A]",
+      borderHover: "hover:border-bx-navy-700",
       spotlight: "rgba(162, 157, 221, 0.2)",
     },
     {
@@ -32,7 +32,7 @@ const approachSteps: {
       icon: "hard-hat",
       accent: "#F54900",
       image: cardImage("home-02-approach-build"),
-      borderHover: "hover:border-[#F54900]",
+      borderHover: "hover:border-bx-orange",
       spotlight: "rgba(241, 209, 140, 0.2)",
     },
     {
@@ -42,7 +42,7 @@ const approachSteps: {
       icon: "landmark",
       accent: "#00B8D9",
       image: cardImage("home-03-approach-invest"),
-      borderHover: "hover:border-[#00B8D9]",
+      borderHover: "hover:border-bx-cyan",
       spotlight: "rgba(140, 223, 238, 0.2)",
     },
     {
@@ -52,7 +52,7 @@ const approachSteps: {
       icon: "trending-up",
       accent: "#15966B",
       image: cardImage("home-04-approach-scale"),
-      borderHover: "hover:border-[#15966B]",
+      borderHover: "hover:border-bx-green",
       spotlight: "rgba(150, 208, 188, 0.2)",
     },
     {
@@ -62,7 +62,7 @@ const approachSteps: {
       icon: "sparkles",
       accent: "#2B5299",
       image: cardImage("home-05-approach-impact"),
-      borderHover: "hover:border-[#2B5299]",
+      borderHover: "hover:border-bx-navy-500",
       spotlight: "rgba(174, 169, 236, 0.2)",
     },
   ];
@@ -96,7 +96,7 @@ export function OurApproachSection() {
     <SectionTransition
       id="our-approach"
       aria-label="Our Approach"
-      className="relative overflow-hidden bg-[#FAF9F6] py-6 sm:py-9"
+      className="relative overflow-hidden bg-bx-cream py-6 sm:py-9"
     >
       <div className="container-x relative z-10">
         {/* Header */}
@@ -106,9 +106,9 @@ export function OurApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[#00B8D9]/30 bg-[#00B8D9]/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-[#008299] font-bold shadow-xs cursor-default"
+            className="inline-flex items-center gap-2 rounded-full border border-bx-cyan/30 bg-bx-cyan/10 px-4 py-1 font-sans text-[11px] uppercase tracking-[0.26em] text-bx-cyan-dark font-bold shadow-xs cursor-default"
           >
-            <span className="h-2 w-2 rounded-full bg-[#00B8D9] transition-transform duration-300 group-hover/header:scale-125" />
+            <span className="h-2 w-2 rounded-full bg-bx-cyan transition-transform duration-300 group-hover/header:scale-125" />
             <span>OUR APPROACH</span>
           </motion.div>
 
@@ -117,9 +117,9 @@ export function OurApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-[#111827] transition-colors"
+            className="mt-4 font-heading text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight text-bx-ink transition-colors"
           >
-            From Opportunity to <br /> <span className="text-[#163A7A]">Enterprise</span>
+            From Opportunity to <br /> <span className="text-bx-navy-700">Enterprise</span>
           </motion.h2>
 
           <motion.p
@@ -127,7 +127,7 @@ export function OurApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-3 text-base sm:text-lg leading-relaxed text-[#596579] font-normal"
+            className="mt-3 text-base sm:text-lg leading-relaxed text-bx-slate font-normal"
           >
             How a new BharatX business goes from an idea to a company that stands on its own.
           </motion.p>
@@ -195,7 +195,7 @@ export function OurApproachSection() {
 
         {/* Mobile & tablet: the same journey as a vertical road */}
         <ol className="relative mt-6 lg:hidden">
-          <span aria-hidden className="absolute bottom-8 left-6 top-8 w-3.5 -translate-x-1/2 rounded-full bg-[#E3E5EF]">
+          <span aria-hidden className="absolute bottom-8 left-6 top-8 w-3.5 -translate-x-1/2 rounded-full bg-bx-line">
             <span className="absolute inset-y-2 left-1/2 -translate-x-1/2 border-l-2 border-dashed border-white" />
           </span>
           {approachSteps.map((step, idx) => (
@@ -224,7 +224,7 @@ type ApproachStep = (typeof approachSteps)[number];
 /** Stop on the road: white disc with the step number on the step's accent, dashed inner ring. */
 function JourneyStop({ step }: { step: ApproachStep }) {
   return (
-    <span aria-hidden className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_8px_20px_-6px_rgba(13,16,38,0.35)] ring-1 ring-[#E3E5EF]">
+    <span aria-hidden className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_8px_20px_-6px_rgba(13,16,38,0.35)] ring-1 ring-bx-line">
       <span
         className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-dashed border-white/70 font-sans text-xs font-bold text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
         style={{ background: step.accent }}
@@ -240,7 +240,7 @@ function ApproachCard({ step }: { step: ApproachStep }) {
     // The card box carries the photo; SpotlightCard sits on top (transparent) so its cursor glow stays visible over it
     <div
       data-cursor="card"
-      className={`group relative h-full rounded-2xl border border-white/10 bg-[#0D1026] shadow-md transition-all duration-300 hover:z-20 hover:shadow-xl hover:-translate-y-1.5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#163A7A] ${step.borderHover}`}
+      className={`group relative h-full rounded-2xl border border-white/10 bg-bx-night shadow-md transition-all duration-300 hover:z-20 hover:shadow-xl hover:-translate-y-1.5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-navy-700 ${step.borderHover}`}
     >
       <CardPhoto src={step.image} accent={step.accent} />
 
