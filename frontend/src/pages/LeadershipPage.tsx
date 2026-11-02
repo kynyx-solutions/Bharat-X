@@ -7,6 +7,7 @@ import { AnimatedHeading } from "../components/motion/AnimatedHeading";
 import { MagneticButton } from "../components/common/MagneticButton";
 import { CardFill, CardPhoto, cardImage } from "../components/common/CardSurface";
 import { FeatureIcon } from "../components/common/FeatureIcon";
+import { LeadershipTeamSection, LinkedInLogo } from "../components/leadership/LeadershipTeamSection";
 
 const governance = [
   { icon: "scale", t: "Clear Division of Decision Rights", d: "Group stewardship governs capital discipline, risk management, and shared standards. Tactical execution belongs to sector teams.", color: "#163A7A", image: cardImage("leadership-02-governance-decision-rights") },
@@ -76,6 +77,18 @@ export default function LeadershipPage() {
                   className="h-full w-full object-cover object-top filter brightness-[0.98] transition-all duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                {/* Credentials, as on the About page */}
+                <div className="absolute inset-x-0 bottom-0 z-10 flex flex-wrap gap-2 p-5 sm:p-6">
+                  {["IIT Delhi", "IIM"].map((school) => (
+                    <span
+                      key={school}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 font-sans text-[11px] font-semibold text-white backdrop-blur-sm"
+                    >
+                      <Icon name="graduation-cap" width={13} height={13} className="text-bx-orange-light" />
+                      {school} Alumnus
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Narrative & Quote */}
@@ -91,9 +104,23 @@ export default function LeadershipPage() {
                   <blockquote className="text-base sm:text-lg font-heading italic text-white leading-relaxed">
                     “Aligned with the national vision of <span className="text-bx-orange-light font-semibold not-italic">Viksit Bharat 2047</span>, we are committed to building sustainable, technology-driven industrial foundations that eliminate critical external dependencies and secure multi-generational prosperity.”
                   </blockquote>
-                  <div className="mt-3 text-xs font-sans text-bx-violet-pale font-semibold flex items-center gap-1.5">
-                    <span className="text-bx-orange">◆</span>
-                    <span>Pradeep Kumar, Institutional Founder</span>
+                  {/* Name with the LinkedIn profile link on the same line, as on the About page */}
+                  <div className="mt-3 flex items-center justify-between gap-3 text-xs font-sans text-bx-violet-pale font-semibold">
+                    <span className="flex items-center gap-1.5">
+                      <span className="text-bx-orange">◆</span>
+                      <span>Pradeep Kumar, Institutional Founder</span>
+                    </span>
+                    <a
+                      href="https://www.linkedin.com/in/pradeep-kumar-5170655b"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Pradeep Kumar on LinkedIn"
+                      title="Pradeep Kumar on LinkedIn"
+                      data-cursor="link"
+                      className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-linkedin focus-visible:ring-offset-2 focus-visible:ring-offset-bx-navy-900"
+                    >
+                      <LinkedInLogo onDark className="h-7 w-7" />
+                    </a>
                   </div>
                 </div>
 
@@ -142,6 +169,9 @@ export default function LeadershipPage() {
           </div>
         </div>
       </SectionTransition>
+
+      {/* ── LEADERSHIP TEAM (same section as the About page) ── */}
+      <LeadershipTeamSection />
 
       {/* ── 3. GOVERNANCE & DIVISION OF POWER ────────────────────────────── */}
       <SectionTransition className="py-6 sm:py-9">
