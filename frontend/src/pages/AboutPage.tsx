@@ -621,11 +621,11 @@ export default function AboutPage() {
                 <span>WHAT DRIVES US</span>
               </div>
 
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-ink leading-tight tracking-tight">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-bx-orange leading-tight tracking-tight">
                 Our{" "}
-                <span className="bg-gradient-to-r from-bx-navy-700 to-bx-cyan bg-clip-text text-transparent">Vision</span>{" "}
+                <span className="bg-gradient-to-r from-bx-navy-700 to-bx-navy-700 bg-clip-text text-transparent">Vision</span>{" "}
                 <span className="font-light italic text-bx-orange">&amp;</span>{" "}
-                <span className="bg-gradient-to-r from-bx-navy-700 to-bx-cyan bg-clip-text text-transparent">Mission</span>
+                <span className="bg-gradient-to-r from-bx-navy-700 to-bx-navy-700 bg-clip-text text-transparent">Mission</span>
               </h2>
 
               <p className="mt-4 text-base sm:text-lg text-bx-slate leading-relaxed max-w-2xl mx-auto">
@@ -870,17 +870,6 @@ export default function AboutPage() {
                       <div className="font-heading text-2xl sm:text-3xl font-medium text-white tracking-tight">
                         Pradeep Kumar
                       </div>
-                      <a
-                        href="https://www.linkedin.com/in/pradeep-kumar-5170655b"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Pradeep Kumar on LinkedIn"
-                        title="Pradeep Kumar on LinkedIn"
-                        data-cursor="link"
-                        className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-linkedin focus-visible:ring-offset-2 focus-visible:ring-offset-bx-night-ink"
-                      >
-                        <LinkedInLogo onDark className="h-7 w-7" />
-                      </a>
                     </div>
                     <div className="mt-1 text-xs font-sans uppercase tracking-wider text-slate-300">
                       BharatX Group · Institutional Founder
@@ -930,7 +919,17 @@ export default function AboutPage() {
                       </blockquote>
                       <div className="relative mt-4 flex items-center justify-between pt-3 border-t border-white/15 text-xs font-sans text-slate-200">
                         <span className="text-bx-orange-light font-bold">— Pradeep Kumar IIT Delhi & IIM Alumni</span>
-                        <span className="font-medium text-slate-200">BharatX Group</span>
+                        <a
+                          href="https://www.linkedin.com/in/pradeep-kumar-5170655b"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Pradeep Kumar on LinkedIn"
+                          title="Pradeep Kumar on LinkedIn"
+                          data-cursor="link"
+                          className="shrink-0 rounded-md transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-bx-linkedin focus-visible:ring-offset-2 focus-visible:ring-offset-bx-night-ink"
+                        >
+                          <LinkedInLogo onDark className="h-7 w-7" />
+                        </a>
                       </div>
                     </div>
 
