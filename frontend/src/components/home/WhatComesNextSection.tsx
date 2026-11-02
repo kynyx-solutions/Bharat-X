@@ -28,8 +28,8 @@ const upcomingCards = [
 export function WhatComesNextSection() {
   return (
     <SectionTransition id="what-comes-next" aria-label="Building What Comes Next">
-      {/* Desktop: fills one screen. Top padding minus bottom padding ≈ the fixed navbar (84px), so the content is centred below it */}
-      <section className="relative overflow-hidden bg-white py-6 sm:py-9 lg:flex lg:min-h-[100svh] lg:flex-col lg:justify-center lg:pt-[7.5rem] lg:pb-8">
+      {/* As tall as its content, with the standard section spacing (no full-screen height or extra top gap) */}
+      <section className="relative overflow-hidden bg-white py-6 sm:py-9">
         <div className="container-x relative z-10">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
