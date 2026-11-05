@@ -40,7 +40,7 @@ It takes about 15 minutes, once. The website keeps working throughout: until ste
 
 **Authentication → Providers → Email**: keep **Email** enabled and **Confirm email** on.
 
-> Supabase's built-in email sender is limited to a few emails an hour and is meant for testing. For a live site, send login emails from your own domain: **Authentication → Emails → SMTP settings** (e.g. Resend, free up to 3,000 emails a month: host `smtp.resend.com`, port `465`, username `resend`, password = Resend API key, sender `noreply@bharatxgroup.com`).
+> Supabase's built-in email sender is limited to a few emails an hour and is meant for testing. For a live site, send login emails from your own domain: **Authentication → Emails → SMTP settings** (e.g. Resend, free up to 3,000 emails a month; Resend's SMTP page lists the host, port and login to enter, with your Resend API key as the secret; sender `noreply@bharatxgroup.com`).
 
 ## 4. Connect the website
 
