@@ -1426,3 +1426,26 @@ button:hover img,
     transition: none;
   }
 }
+/* ── Blog post body (Markdown from the admin dashboard, rendered by utils/markdown.ts) ── */
+@layer components {
+  .post-body { color: #374151; font-size: 1.075rem; line-height: 1.8; }
+  .post-body > * + * { margin-top: 1.25em; }
+  .post-body h2, .post-body h3, .post-body h4 { font-family: var(--font-heading); color: #111827; font-weight: 500; letter-spacing: -0.01em; line-height: 1.25; margin-top: 2em; }
+  .post-body h2 { font-size: 1.75rem; }
+  .post-body h3 { font-size: 1.35rem; }
+  .post-body h4 { font-size: 1.125rem; }
+  .post-body a { color: #163A7A; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .post-body a:hover { color: #F54900; }
+  .post-body strong { color: #111827; }
+  .post-body ul { list-style: disc; padding-left: 1.4em; }
+  .post-body ol { list-style: decimal; padding-left: 1.4em; }
+  .post-body li + li { margin-top: 0.4em; }
+  .post-body blockquote { border-left: 3px solid #F54900; padding: 0.25em 0 0.25em 1.1em; color: #111827; font-style: italic; }
+  .post-body img { width: 100%; height: auto; border-radius: 1rem; }
+  .post-body hr { border: 0; border-top: 1px solid #E3E5EF; margin: 2.5em 0; }
+  .post-body code { background: #F1F2F8; border-radius: 0.35rem; padding: 0.1em 0.4em; font-size: 0.9em; }
+  .post-body pre { background: #0F172A; color: #e5e7eb; border-radius: 0.75rem; padding: 1rem 1.25rem; overflow-x: auto; }
+  .post-body pre code { background: none; padding: 0; color: inherit; }
+  .post-body table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-body th, .post-body td { border: 1px solid #E3E5EF; padding: 0.5em 0.75em; text-align: left; }
+}

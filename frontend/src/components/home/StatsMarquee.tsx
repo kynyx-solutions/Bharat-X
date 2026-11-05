@@ -1,4 +1,5 @@
 import { servicesData } from "../../data/servicesData";
+import { useHomeContent, type StatItem } from "../../services/siteContent";
 
 /**
  * Scrolling stats ticker under the home hero. It opens with the group's headline figures, then per-business
@@ -25,23 +26,27 @@ const picks: { id: string; label: string; color: string; display?: string }[] = 
   { id: "tech-ai", label: "Indic Languages Tested", color: "#C4B5FD" },
 ];
 
-const stats = [
-  ...groupStats.map((g) => ({ ...g, key: `group-${g.label}` })),
+/** The built-in ticker. The admin dashboard can replace the whole list (settings "home" → stats). */
+export const defaultStats: StatItem[] = [
+  ...groupStats,
   ...picks.flatMap((p) => {
     const service = servicesData.find((s) => s.id === p.id);
     const stat = service?.stats.find((s) => s.label === p.label);
-    return service && stat ? [{ value: stat.value, label: p.display ?? stat.label, color: p.color, key: `${p.id}-${p.label}` }] : [];
+    return service && stat ? [{ value: stat.value, label: p.display ?? stat.label, color: p.color }] : [];
   }),
 ];
+
+/** Colours offered for a stat in the dashboard (the ticker's existing palette). */
+export const statColors = ["#FF8904", "#8F88FF", "#34D399", "#5EE4F8", "#C4B5FD"];
 
 const BRAND_LIGHT =
   "radial-gradient(55% 140% at 12% 50%, rgba(0, 184, 217, 0.16), transparent 70%), radial-gradient(55% 140% at 88% 50%, rgba(245, 73, 0, 0.14), transparent 70%)";
 
-function StatsRow({ hidden = false }: { hidden?: boolean }) {
+function StatsRow({ stats, hidden = false }: { stats: StatItem[]; hidden?: boolean }) {
   return (
     <ul aria-hidden={hidden || undefined} className="flex shrink-0 items-center">
-      {stats.map((s) => (
-        <li key={s.key} className="flex items-center">
+      {stats.map((s, i) => (
+        <li key={`${i}-${s.label}`} className="flex items-center">
           <div className="flex items-center gap-3.5 px-7 sm:px-9">
             <span className="font-heading text-2xl sm:text-[1.75rem] font-medium leading-none tracking-tight" style={{ color: s.color }}>
               {s.value}
@@ -58,14 +63,16 @@ function StatsRow({ hidden = false }: { hidden?: boolean }) {
 }
 
 export function StatsMarquee() {
+  const homeContent = useHomeContent();
+  const stats = homeContent?.stats?.length ? homeContent.stats : defaultStats;
   return (
     <section aria-label="BharatX Group at a glance" className="marquee relative overflow-hidden bg-bx-navy-900 py-4 sm:py-5">
       <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: BRAND_LIGHT }} />
 
       {/* Two identical rows: the track slides by half its width, so the loop is seamless */}
       <div className="marquee-track relative" style={{ animationDuration: "55s" }}>
-        <StatsRow />
-        <StatsRow hidden />
+        <StatsRow stats={stats} />
+        <StatsRow stats={stats} hidden />
       </div>
 
       <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-bx-navy-900 to-transparent sm:w-28" />

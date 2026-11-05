@@ -1,4 +1,4 @@
-import { lazy, useEffect, type ComponentType } from "react";
+import { lazy, Suspense, useEffect, type ComponentType } from "react";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { Layout } from "../components/layout/Layout";
 import HomePage from "../pages/HomePage";
@@ -35,6 +35,7 @@ const pages = {
   "how-we-build": lazyPage(() => import("../pages/HowWeBuildPage")),
   innovation: lazyPage(() => import("../pages/InnovationPage")),
   insights: lazyPage(() => import("../pages/InsightsPage")),
+  insightPost: lazyPage(() => import("../pages/InsightPostPage")),
   leadership: lazyPage(() => import("../pages/LeadershipPage")),
   notFound: lazyPage(() => import("../pages/NotFoundPage")),
   partnerships: lazyPage(() => import("../pages/PartnershipsPage")),
@@ -52,6 +53,7 @@ const IndustriesPage = pages.industries.Page;
 const HowWeBuildPage = pages["how-we-build"].Page;
 const InnovationPage = pages.innovation.Page;
 const InsightsPage = pages.insights.Page;
+const InsightPostPage = pages.insightPost.Page;
 const LeadershipPage = pages.leadership.Page;
 const NotFoundPage = pages.notFound.Page;
 const PartnershipsPage = pages.partnerships.Page;
@@ -59,6 +61,13 @@ const PrivacyPage = pages.privacy.Page;
 const ServicesPage = pages.verticals.Page;
 const TermsPage = pages.terms.Page;
 const BusinessDetailPage = pages.businessDetail.Page;
+
+/*
+ * The admin dashboard is its own chunk (with the Supabase client). It is not in `pages`, so it is never
+ * prefetched for visitors; it loads only when someone opens /admin.
+ */
+const loadAdmin = () => import("../admin/AdminApp");
+const AdminApp = lazy(loadAdmin);
 
 /** Old /companies/:slug links go to the business detail page (casters-global was BharatX Engineering's old slug). */
 function CompanyRedirect() {
@@ -80,6 +89,8 @@ const pageForSegment: Record<string, keyof typeof pages> = {
 export function preloadFirstPage(): Promise<unknown> {
   const [, segment = "", detail] = window.location.pathname.split("/");
   if (!segment) return Promise.resolve();
+  if (segment === "admin") return loadAdmin();
+  if (segment === "insights" && detail) return pages.insightPost.load();
   // /verticals/<slug> and the old /companies/<slug> show a business detail page
   if ((segment === "verticals" || segment === "companies") && detail) return pages.businessDetail.load();
   const key = pageForSegment[segment] ?? (segment in pages && segment !== "notFound" ? (segment as keyof typeof pages) : "notFound");
@@ -112,6 +123,14 @@ export function AppRoutes() {
   usePrefetchPages();
   return (
     <Routes>
+      <Route
+        path="/admin/*"
+        element={
+          <Suspense fallback={null}>
+            <AdminApp />
+          </Suspense>
+        }
+      />
       <Route path="/" element={<Layout />}>
         {/* Layout renders <Outlet> via children — see Layout usage in App.tsx */}
         <Route index element={<HomePage />} />
@@ -128,6 +147,7 @@ export function AppRoutes() {
         <Route path="industries" element={<IndustriesPage />} />
         <Route path="innovation" element={<InnovationPage />} />
         <Route path="insights" element={<InsightsPage />} />
+        <Route path="insights/:slug" element={<InsightPostPage />} />
         <Route path="impact" element={<ImpactPage />} />
         <Route path="partnerships" element={<PartnershipsPage />} />
         <Route path="leadership" element={<LeadershipPage />} />

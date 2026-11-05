@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Icon } from "../../utils/icons";
 import { afterFirstSlidePaint } from "../../utils/homeLoadOrder";
+import { useHomeContent, type HomeContent } from "../../services/siteContent";
 import { Button } from "../common/Button";
 
 export interface HeroSlide {
@@ -105,11 +106,24 @@ export const heroSlides: HeroSlide[] = [
   },
 ];
 
+/** The built-in slides with any image/tagline set in the admin dashboard applied. */
+export function withHeroOverrides(content: HomeContent | null): HeroSlide[] {
+  const o = content?.heroSlides;
+  if (!o) return heroSlides;
+  return heroSlides.map((s) => ({
+    ...s,
+    image: o[s.id]?.image || s.image,
+    heroTagline: o[s.id]?.tagline || s.heroTagline,
+  }));
+}
+
 const SLIDE_DURATION = 5000; // 5.0 seconds per slide
 
 export function HomeHeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const homeContent = useHomeContent();
+  const slides = useMemo(() => withHeroOverrides(homeContent), [homeContent]);
 
   /*
    * Preload the other slides one at a time, starting once slide 1 has been painted (utils/homeLoadOrder.ts).
@@ -125,7 +139,7 @@ export function HomeHeroSection() {
         img.src = src;
       });
     void afterFirstSlidePaint().then(async () => {
-      for (const s of heroSlides) {
+      for (const s of slides) {
         if (cancelled) return;
         await load(s.image); // slide 1 is already loaded, so this moves straight on to slide 2
       }
@@ -133,7 +147,7 @@ export function HomeHeroSection() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [slides]);
 
   const handleNext = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % heroSlides.length);
@@ -158,7 +172,7 @@ export function HomeHeroSection() {
     return () => clearInterval(timer);
   }, [isPaused, currentIndex, handleNext]);
 
-  const current = heroSlides[currentIndex];
+  const current = slides[currentIndex];
 
   return (
     // flex-1: takes the height HomePage's one-screen wrapper leaves above the stats strip
@@ -174,7 +188,7 @@ export function HomeHeroSection() {
           tools report the LCP at whatever slide was showing when they stopped.
         */}
         <img
-          src={heroSlides[0].image}
+          src={slides[0].image}
           alt=""
           aria-hidden
           fetchPriority="high"
@@ -343,7 +357,7 @@ export function HomeHeroSection() {
           </button>
 
           <div className="flex items-center gap-1.5">
-            {heroSlides.map((s, idx) => (
+            {slides.map((s, idx) => (
               <button
                 key={s.id}
                 type="button"

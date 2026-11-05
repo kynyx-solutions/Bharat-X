@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { Icon } from "../utils/icons";
-import { submitContact } from "../services/api";
+import { submitInquiry } from "../services/api";
 import { SectionTransition } from "../components/motion/SectionTransition";
 import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { AnimatedHeading } from "../components/motion/AnimatedHeading";
@@ -264,7 +264,7 @@ export default function ContactPage() {
     setErrorMsg(null);
 
     try {
-      await submitContact({
+      await submitInquiry({
         name: fullName.trim(),
         email: email.trim(),
         phone: phone.trim(),
@@ -272,6 +272,8 @@ export default function ContactPage() {
         inquiryType: toInquiryType(interest),
         company: interest,
         message: `[Topic: ${interest}]\n\n${message.trim()}`,
+        interest,
+        plainMessage: message.trim(),
       });
       setSubmitted(true);
     } catch (err: unknown) {

@@ -5,6 +5,7 @@ import { companies } from "../../data/companies";
 import { cn } from "../../utils/cn";
 import { Icon } from "../../utils/icons";
 import { SectionTransition } from "../motion/SectionTransition";
+import { useHomeContent } from "../../services/siteContent";
 
 interface Vertical {
   id: string;
@@ -26,7 +27,7 @@ function company(id: string) {
   return found;
 }
 
-const verticals: Vertical[] = [
+export const verticals: Vertical[] = [
   {
     id: "ai-deeptech",
     label: "AI & Deeptech",
@@ -124,6 +125,7 @@ function PanelStep({ show, order, className, children }: { show: boolean; order:
 
 export function BusinessEcosystemGrid() {
   const reduced = useReducedMotion();
+  const homeContent = useHomeContent();
   const [active, setActive] = useState(0);
   const [keyboardFocus, setKeyboardFocus] = useState(false);
   const [userPicked, setUserPicked] = useState(false);
@@ -193,7 +195,7 @@ export function BusinessEcosystemGrid() {
           {verticals.map((v, i) => (
             <img
               key={v.id}
-              src={v.image}
+              src={homeContent?.verticals?.[v.id]?.image || v.image}
               alt=""
               loading="lazy"
               decoding="async"

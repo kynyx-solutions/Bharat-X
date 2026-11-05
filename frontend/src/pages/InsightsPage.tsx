@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { cn } from "../utils/cn";
@@ -7,15 +7,18 @@ import { Icon } from "../utils/icons";
 import { SectionTransition } from "../components/motion/SectionTransition";
 import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { insightCategories, insights, type Insight, type InsightCategory } from "../data/insights";
+import { usePublishedPosts } from "../services/posts";
 
 type Filter = InsightCategory | "All";
 
-const filters: { key: Filter; count: number }[] = [
-  { key: "All", count: insights.length },
-  ...(Object.keys(insightCategories) as InsightCategory[])
-    .map((key) => ({ key, count: insights.filter((i) => i.category === key).length }))
-    .filter((f) => f.count > 0),
-];
+function buildFilters(items: Insight[]): { key: Filter; count: number }[] {
+  return [
+    { key: "All", count: items.length },
+    ...(Object.keys(insightCategories) as InsightCategory[])
+      .map((key) => ({ key, count: items.filter((i) => i.category === key).length }))
+      .filter((f) => f.count > 0),
+  ];
+}
 
 function InsightCard({ item }: { item: Insight }) {
   const accent = insightCategories[item.category].accent;
@@ -74,7 +77,11 @@ export default function InsightsPage() {
   });
 
   const [filter, setFilter] = useState<Filter>("All");
-  const shown = filter === "All" ? insights : insights.filter((i) => i.category === filter);
+  // Posts published from the admin dashboard come first, then the built-in items
+  const posts = usePublishedPosts();
+  const all = useMemo(() => [...posts, ...insights], [posts]);
+  const filters = useMemo(() => buildFilters(all), [all]);
+  const shown = filter === "All" ? all : all.filter((i) => i.category === filter);
 
   return (
     <main className="w-full min-h-screen bg-bx-cream text-bx-ink">
