@@ -1,16 +1,37 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { insightCategories } from "../data/insights";
 import { formatPostDate, usePost } from "../services/posts";
-import { renderMarkdown } from "../utils/markdown";
+import { renderPostBody } from "../utils/markdown";
 import { Icon } from "../utils/icons";
 
 /** /insights/:slug — a blog post published from the admin dashboard. */
 export default function InsightPostPage() {
   const { slug } = useParams();
   const post = usePost(slug);
-  const html = useMemo(() => (post ? renderMarkdown(post.body) : ""), [post]);
+  const html = useMemo(() => (post ? renderPostBody(post.body) : ""), [post]);
+
+  // Article structured data, so search engines can show the date, author and image
+  useEffect(() => {
+    if (!post) return;
+    const el = document.createElement("script");
+    el.type = "application/ld+json";
+    el.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.seo_title || post.title,
+      description: post.seo_description || post.excerpt || undefined,
+      image: post.cover_image || undefined,
+      datePublished: post.published_at || undefined,
+      dateModified: post.updated_at,
+      author: { "@type": post.author_name ? "Person" : "Organization", name: post.author_name || "BharatX Group" },
+      publisher: { "@type": "Organization", name: "BharatX Group", logo: { "@type": "ImageObject", url: "https://www.bharatxgroup.com/bharatxgroup.png" } },
+      mainEntityOfPage: `https://www.bharatxgroup.com/insights/${post.slug}`,
+    });
+    document.head.appendChild(el);
+    return () => el.remove();
+  }, [post]);
 
   usePageMeta({
     title: post ? `${post.seo_title || post.title} | BharatX Group` : "Insights | BharatX Group",
@@ -60,7 +81,7 @@ export default function InsightPostPage() {
       <header className="relative w-full overflow-hidden bg-bx-navy-950 pt-32 pb-14 sm:pt-40 sm:pb-20">
         {post.cover_image && (
           <>
-            <img src={post.cover_image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={post.cover_image} alt={post.title} className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/40" />
           </>
         )}

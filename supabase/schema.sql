@@ -68,7 +68,7 @@ create table if not exists public.posts (
   slug text not null unique check (slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'),
   title text not null,
   excerpt text not null default '',
-  body text not null default '',                -- Markdown
+  body text not null default '',                -- HTML from the visual editor (older posts: Markdown)
   cover_image text,
   category text not null default 'Perspectives' check (category in ('Perspectives', 'Stories', 'Partnerships')),
   status text not null default 'draft' check (status in ('draft', 'published')),
@@ -76,9 +76,11 @@ create table if not exists public.posts (
   seo_title text,
   seo_description text,
   author_name text,
+  focus_keyword text,                          -- SEO focus keyphrase (dashboard only)
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+alter table public.posts add column if not exists focus_keyword text;  -- for projects set up before it existed
 drop trigger if exists posts_touch on public.posts;
 create trigger posts_touch before update on public.posts for each row execute function public.touch_updated_at();
 

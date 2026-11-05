@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { Insight, InsightCategory } from "../data/insights";
 import { restGet } from "./supabase";
 
-/** A blog post written in the admin dashboard (Supabase table `posts`). Body is Markdown. */
+/** A blog post written in the admin dashboard (Supabase table `posts`). Body is HTML (visual editor) or Markdown (older posts). */
 export interface Post {
   id: string;
   slug: string;
@@ -16,6 +16,8 @@ export interface Post {
   seo_title: string | null;
   seo_description: string | null;
   author_name: string | null;
+  /** SEO focus keyphrase (dashboard only). Missing on databases set up before it was added. */
+  focus_keyword?: string | null;
   updated_at: string;
 }
 

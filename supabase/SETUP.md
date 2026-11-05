@@ -85,6 +85,14 @@ A login whose email wasn't invited sees "No access yet"; the database rules bloc
 | Uploaded photos | storage bucket `media` (public) | Everyone sees them; only the team uploads |
 | Team and roles | `profiles`, `staff_invites` | Team sees the team; only owners manage it |
 
+### Updates after setup
+
+If your project was set up before an update below, run its file once in **SQL Editor** (each is safe to run again):
+
+| File | Adds |
+|---|---|
+| `supabase/migrations/002_focus_keyword.sql` | The SEO **focus keyphrase** for blog articles. Until it's run, articles still save, just without the keyphrase. |
+
 ### Good to know
 
 - **Photos are compressed in the browser** before upload (WebP; hero up to 2400 px, others up to 1920 px), so large camera files are fine.
