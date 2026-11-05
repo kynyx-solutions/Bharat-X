@@ -10,3 +10,4 @@ dist-ssr
 coverage
 CARD_IMAGE_PROMPTS.md
 ANIMATION_COVERAGE.md
+*.tsbuildinfo
