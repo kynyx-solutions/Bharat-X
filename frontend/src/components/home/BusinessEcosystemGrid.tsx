@@ -199,7 +199,7 @@ export function BusinessEcosystemGrid() {
               decoding="async"
               className={cn(
                 // Fade in, then a slow push-out on the active image.
-                "absolute inset-0 h-full w-full object-cover object-[62%_50%] [transition:opacity_900ms_ease-out,scale_7s_ease-out] motion-reduce:transition-none",
+                "absolute inset-0 h-full w-full object-cover object-[45%_50%] [transition:opacity_900ms_ease-out,scale_7s_ease-out] motion-reduce:transition-none",
                 i === active ? "opacity-100 scale-100" : "opacity-0 scale-110",
               )}
             />
