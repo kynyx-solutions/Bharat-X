@@ -46,6 +46,8 @@ export function submitContact(payload: ContactPayload): Promise<{ ok: boolean; m
   return request("/api/contact", {
     method: "POST",
     body: JSON.stringify(payload),
+    // Keep sending even if the visitor leaves the page right after the thank-you message
+    keepalive: true,
   });
 }
 
@@ -54,13 +56,18 @@ export function submitContact(payload: ContactPayload): Promise<{ ok: boolean; m
  * - the admin dashboard (Supabase `leads` table), when Supabase is configured;
  * - the Express backend (/api/contact), which stores it in MongoDB and emails the team.
  * It succeeds when at least one of them accepted it, so the form keeps working if one is down.
+ *
+ * Supabase answers in well under a second, while the backend (Render free tier) can take 30-60 s to wake up. So once
+ * the dashboard has saved the enquiry we return straight away and let the backend request (the email) finish in the
+ * background. Only when Supabase is unavailable do we wait for the backend.
  */
 export async function submitInquiry(
   payload: ContactPayload & { interest: string; plainMessage: string },
 ): Promise<void> {
   const { interest, plainMessage, ...contact } = payload;
-  const [saved, sent] = await Promise.allSettled([
-    restInsert("leads", {
+  const sent = submitContact(contact);
+  sent.catch(() => {}); // handled below if it matters; avoids an unhandled rejection when Supabase already succeeded
+  const saved = await restInsert("leads", {
       name: contact.name,
       email: contact.email,
       phone: contact.phone || null,
@@ -69,12 +76,15 @@ export async function submitInquiry(
       interest,
       message: plainMessage,
       source_page: typeof window !== "undefined" ? window.location.pathname : null,
-    }),
-    submitContact(contact),
-  ]);
-  if (saved.status === "fulfilled" && saved.value) return;
-  if (sent.status === "fulfilled") return;
-  throw sent.reason instanceof Error ? sent.reason : new ApiError(0, "Something went wrong. Please try again.");
+  });
+  if (saved) return;
+  await sent; // Supabase unavailable: the backend is the only copy, so wait for it (throws its error if it fails)
+}
+
+/** Wakes the backend (Render free tier sleeps when idle) so the enquiry email goes out quickly. Fire and forget. */
+export function warmUpBackend(): void {
+  if (!API_BASE) return;
+  fetch(`${API_BASE}/api/health`).catch(() => {});
 }
 
 export function getHealth(): Promise<{ ok: boolean; db: string }> {

@@ -1,9 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { Icon } from "../utils/icons";
-import { submitInquiry } from "../services/api";
+import { submitInquiry, warmUpBackend } from "../services/api";
 import { SectionTransition } from "../components/motion/SectionTransition";
 import { Stagger, StaggerItem } from "../components/motion/Stagger";
 import { AnimatedHeading } from "../components/motion/AnimatedHeading";
@@ -97,6 +97,8 @@ function toInquiryType(interest: string): string {
 }
 
 export default function ContactPage() {
+  // Wake the backend while the visitor fills in the form, so the enquiry email isn't held up by a cold start
+  useEffect(warmUpBackend, []);
   usePageMeta({
     title: "Contact BharatX Group | Let’s Build What Comes Next",
     description:
