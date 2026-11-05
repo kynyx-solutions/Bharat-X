@@ -52,6 +52,8 @@ It takes about 15 minutes, once. The website keeps working throughout: until ste
    | `VITE_SUPABASE_URL` | the Project URL, e.g. `https://xxxxxxxx.supabase.co` |
    | `VITE_SUPABASE_ANON_KEY` | the anon public key |
 
+   If you connected Supabase through **Vercel's Supabase integration** instead, you don't need to add these: the site also reads the integration's `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Only these public values reach the browser. The integration's `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_SECRET_KEY` and `SUPABASE_JWT_SECRET` never do.
+
 3. **Redeploy** (Deployments → ⋯ → Redeploy). Vite reads these at build time, so a redeploy is required.
 4. For local development, put the same two lines in `frontend/.env.local`.
 

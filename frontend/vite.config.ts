@@ -5,6 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // Vercel's Supabase integration names its public values NEXT_PUBLIC_SUPABASE_*. Expose only that prefix (URL, anon
+  // and publishable keys, all meant for browsers); never SUPABASE_* (service role key, JWT secret).
+  envPrefix: ["VITE_", "NEXT_PUBLIC_SUPABASE_"],
   server: {
     host: true,
     port: 5173,

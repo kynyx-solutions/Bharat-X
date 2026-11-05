@@ -37,7 +37,8 @@ function NotConfigured() {
       <p className="text-sm text-bx-ink-soft">
         Add <code className="rounded bg-bx-surface-grey px-1">VITE_SUPABASE_URL</code> and{" "}
         <code className="rounded bg-bx-surface-grey px-1">VITE_SUPABASE_ANON_KEY</code> to the frontend environment (Vercel →
-        Settings → Environment Variables), redeploy, then reload this page.
+        Settings → Environment Variables), or connect Vercel's Supabase integration, which adds the NEXT_PUBLIC_SUPABASE_*
+        names. Then redeploy and reload this page.
       </p>
       <p className="mt-3 text-xs text-bx-slate">Step-by-step: supabase/SETUP.md in the repository.</p>
     </AuthCard>
